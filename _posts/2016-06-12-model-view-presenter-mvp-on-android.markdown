@@ -3,10 +3,9 @@ published: true
 title: Model View Presenter (MVP) on Android
 layout: post
 ---
-
 The MVP pattern allows separate the presentation layer from the logic, so that everything about how the interface works is separated from how we represent it on screen. Ideally the MVP pattern would achieve that same logic might have completely different and interchangeable views. First thing to clarify is that MVP is not an architectural pattern, it’s only responsible for the presentation layer . In any case it is always better to use it for your architecture that not using it at all.
 
-Check this simplified MVP example for Android: https://github.com/maikotrindade/android-mvp
+Check this simplified [MVP example for Android](https://github.com/maikotrindade/android-mvp)
 
 Model: This is the well known model, present in many of the most common patterns and use cases. It represents the world we are working with, every real world element that our app should know how to represent. Both the View and the Presenter are aware of this model and they know how to use its properties and methods (the view doesn’t really need to know the model and originally shouldn’t but it’s a tradeoff that avoids the need to have setter methods for every field that we want to update).
 
