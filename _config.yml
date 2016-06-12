@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://maikotrindade.github.io
+title: Maiko Trindade
+tagline: A log of everyday life
+description: My awesome new site
+paginate: 5
