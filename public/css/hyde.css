@@ -99,6 +99,11 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
+.perfil-picture {
+	border-radius: 50%;
+	display: block;
+    margin: 0 auto;
+}
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
