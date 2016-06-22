@@ -113,7 +113,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    top: 10rem;
+    top: 7rem;
     left:   1rem;
   }
 }
