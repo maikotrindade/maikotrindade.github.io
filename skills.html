@@ -12,21 +12,23 @@ title: Skills
     var data = google.visualization.arrayToDataTable([
       ['Language/Technology', '%', { role: 'annotation' }],
       ['Java',            20,  'Java'],
+      ['Android',         29,   'Android'], 
       ['PHP',             8,   'PHP'],
       ['JavaEE',          17,   'JavaEE'],
       ['C#',              6,   'C#'],
-      ['Android',         29,   'Android'], 
       ['Others',          20,   'Others']
       ]);
-    
+
     var options = {
       title: '',
       backgroundColor: 'transparent',
       legend: {textStyle: {color: '#212121', fontSize: 18}},
       is3D:true,
+      sliceVisibilityThreshold: .2,
+      legend.position:bottom
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    var chart = new google.visualization.PieChart(document.getElementById('skills'));
     chart.draw(data, options);
   }
 </script>
@@ -34,7 +36,7 @@ title: Skills
 <section>
   <div class="container">
     <div class="row">
-      <div id="donutchart" style="width: 600px; height: 500px"></div>
+      <div id="skills" style="width: 600px; height: 400px"></div>
     </div>
   </div>
 </section>
