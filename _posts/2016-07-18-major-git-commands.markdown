@@ -1,6 +1,6 @@
 ---
 published: true
-title: Major GIT commands
+title: Some useful GIT commands
 layout: post
 ---
 [Git] is a version control system that is used for software development and other version control tasks developed by Linus Torvalds in 2005. As a distributed revision control system it is aimed at speed, data integrity, support for distributed and non-linear workflows.
