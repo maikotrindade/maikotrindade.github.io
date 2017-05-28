@@ -1,0 +1,43 @@
+---
+published: true
+title: Introduction to Reactive Programming with RxJava
+layout: post
+---
+
+[RxJava] is a Java VM implementation of ReactiveX, a library for composing asynchronous and event-based programs by using observable sequences. It is used for reactive programming which I like to refer as "programming with asynchronous data streams" or "programming waiting for something happens to trigger your code" or "programming to react inderteminates events" :neutral_face:
+
+I'm gonna be straightfoward because this topic it is a well known case that you only learn by doing. Basically, this is how it works: A Subscriber subscribes to Observable, then Observable calls Subscriber.onNext() for any number of items, if something goes wrong here is Subsciber.onError() and if all finishes fine, here is Subscriber.onCompleted().
+
+#### The foundations 
+
+Subscribers
+	-> It listens to the events/items;
+
+Observables 
+	-> It emits events/items - This class provides methods for subscribing to the Observable as well as delegate methods to the various Observers. It is necessary to trigger/listen/activate/start the observables otherwise they don’t do anything;
+
+Operators
+	-> Functions responsible for manipulate observables. It can applyed along other operators and it has seveval goals: creation, combination, transformation, filtering, etc;
+
+Schedulers
+	-> It manages the work with thread pools via Executors (java.util.concurrent);
+
+#### Transforming Streams with operators
+
+As it was said before, operators can manipulate observables. There are plenty of them and it is really important to know how/when use them. Here is the most popular RxJava operators:
+
+Category | Operator
+-------- | --------
+Combination | merge(), zip(), concat(), ...
+Filtering | cache(), retry(), replay(), ...
+Transforming | map(), flatMap(), concatMap(), ...
+Creating | just(), from(), defer(), ...
+
+#### Further details 
+
+I totally recommend this [talk] by [Jake Wharton], an outstanding developer and a reference in opensource projects. Another option is watch this [video] but don't forget to practice, try to implement what it is suggested in the video.
+
+[RxJava]: https://github.com/ReactiveX/RxJava
+[talk]: https://www.youtube.com/watch?v=htIXKI5gOQU
+[Jake Wharton]: http://jakewharton.com/
+[video]:  https://www.youtube.com/watch?v=k3D0cWyNno4 
