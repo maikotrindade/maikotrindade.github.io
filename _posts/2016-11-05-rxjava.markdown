@@ -4,7 +4,7 @@ title: Introduction to Reactive Programming with RxJava
 layout: post
 ---
 
-[RxJava] is a Java VM implementation of ReactiveX, a library for composing asynchronous and event-based programs by using observable sequences. It is used for reactive programming which I like to refer as "programming with asynchronous data streams" or "programming waiting for something happens to trigger your code" or "programming to react inderteminates events"
+[RxJava] is a Java VM implementation of ReactiveX, a library for composing asynchronous and event-based programs by using observable sequences. It is used for reactive programming which I like to refer as "programming with asynchronous data streams" or "programming waiting for something happens to trigger your code" or "programming to react undetermined events"
 
 I'm gonna be straightfoward because this topic it is a well known case that you only learn by doing. Basically, this is how it works: A Subscriber subscribes to Observable, then Observable calls Subscriber.onNext() for any number of items, if something goes wrong here is Subsciber.onError() and if all finishes fine, here is Subscriber.onCompleted().
 
