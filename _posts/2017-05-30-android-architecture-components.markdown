@@ -1,6 +1,6 @@
 ---
 published: true
-title: Let's make Android great again: Architecture Components
+title: Lets make Android great again: Architecture Components
 layout: post
 ---
 <img src="http://maikotrindade.github.io/public/img/android_great_again.jpg" height="360" width="640" alt="Android great again"/>
