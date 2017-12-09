@@ -3,7 +3,7 @@ published: true
 title: Lets make Android great again: Architecture Components
 layout: post
 ---
-<img src="http://maikotrindade.github.io/public/img/android_great_again.jpg" height="360" width="640" alt="Android great again"/>
+<img src="http://maikotrindade.github.io/public/img/android_great_again.jpg" height="215" width="340" alt="Android great again"/>
 Google I/O 2017 brought a new package of outstanding news. In my point of view, one of the most relevant news were [Architecture components](https://developer.android.com/topic/libraries/architecture/index.html), a new bunch of libraries that help developers design apps with testability, maintainability and clean code.
 
 ### Room
