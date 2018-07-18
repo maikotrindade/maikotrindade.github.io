@@ -1,6 +1,6 @@
 ---
 published: true
-title: Your data in everywhere using Cloud Firestore + Android
+title: Your data in everywhere using Cloud Firestore
 layout: post
 ---
 
@@ -9,7 +9,7 @@ As the Cloud [official Firestore docs] says, Firestore is a NoSQL document datab
 This [Realtime Database] (RTDB) is highly integrated with Firebase platform, including Google’s Cloud Functions serverless platforms. Besides Firestore was designed for making it easier for developers to build offline apps with the help of a local database for web, iOS and Android and to easily sync data between different apps and users in real time.
 
 
-#### Features
+### Features
 
 Designed for scaling – Cloud Firestore delivers the best of the Google Cloud platform;
 
