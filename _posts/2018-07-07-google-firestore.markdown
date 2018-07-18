@@ -21,8 +21,5 @@ Expressive Queries – Use queries to retrieve documents and choose the document
 
 Real-time updates –  Data is synchronizated to update data on any connected party;
 
-
-#### References  
-
 [official Firestore docs]: https://cloud.google.com/firestore/docs/
 [Realtime Database]: https://firebase.google.com/docs/database/
