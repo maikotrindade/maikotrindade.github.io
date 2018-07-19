@@ -5,7 +5,7 @@ layout: post
 ---
 
 
-###Hashes
+### Hashes
 In [Solidity], it is possible to use the keccak256 function to get a hash. Ethereum’s KECCAK-256 algorithm produces a 256-bit hexadecimal number. 
 
 > keccak256(...) returns (bytes32):
@@ -17,7 +17,7 @@ keccak256(6382179)
 keccak256(97, 98, 99)
 ```
 
-###Typecasting
+### Typecasting
 [Solidity] is a statically typed language, which means that the type of each variable (state and local) needs to be specified at compile-time. 
 Solidity is able to perform operations between two variables that have the same type. Therefore you can convert one of the variables to the type of the others. 
 
