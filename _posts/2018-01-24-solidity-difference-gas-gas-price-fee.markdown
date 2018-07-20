@@ -6,9 +6,9 @@ layout: post
 
 **gas** – is the name for a special unit used in Ethereum
 
-**gas price** is a value set by the creator of the transaction; it's a single gas unit's price;
+**gas price** – a value set by the creator of the transaction; it's a single gas unit's price;
 
-**fee** it's the result of  ` **gas** * **gas price** `
+**fee** – the result of  ` **gas** * **gas price** `
 
 ### Transactions costs x [Ethereum] system 
 
@@ -24,12 +24,12 @@ layout: post
 
 Gas is necessary for the execution of smart contracts, but you shouldn't specify too low or high price. Consider optimizing your smart contract to minimize the amount of gas required.
 
-#### What I should take into account for optimized contracts
+### What I should take into account for optimized contracts
 
-**Global Variables usage – storage**: Global variables are stored in a contract’s state on the blockchain, so you are going to be charged if you use global variables. Just use when it is necessary, this is a  practice in several languages, but it is especially crucial in ethereum development.;  
+**Global Variables usage – storage**: Global variables are stored in a contract’s state on the blockchain, so you are going to be charged if you use global variables. Just use when it is necessary, this is a  practice in several languages, but it is especially crucial in ethereum development;    
 
-**Contract Size**: The size of your contract will influence the transaction cost for all interactions with it. So how big is your contract, more expansive your contract will be to processed in the Ethereum's network. If you are able to break the [Solidity] contract up into smaller separate contracts, this will decrease user’s gas costs.  ;  
-
+**Contract Size**: The size of your contract will influence the transaction cost for all interactions with it. So how big is your contract, more expansive your contract will be to processed in the Ethereum's network. If you are able to break the [Solidity] contract up into smaller separate contracts, this will decrease user’s gas costs;   
+  
 #### Further Details
 Take a look in this [documentation from ConsenSys] for Ethereum Smart Contract Security Best Practices and this [Medium post] about Optimizing gas usage 
 
