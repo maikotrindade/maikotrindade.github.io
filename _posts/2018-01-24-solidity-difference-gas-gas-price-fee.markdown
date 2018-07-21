@@ -8,7 +8,7 @@ layout: post
 
 **gas price** – a value set by the creator of the transaction; it's a single gas unit's price;
 
-**fee** – the result of  `**gas** * **gas price**`
+**fee** – the result of  **gas** * **gas price**
 
 ### Transactions costs x [Ethereum] system 
 
