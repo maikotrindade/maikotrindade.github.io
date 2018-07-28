@@ -15,7 +15,7 @@ Using [Travis CI], the users can easily sync [Github] projects and test the code
 
 ### Truffle with Travis CI
 Firstly, as prerequisite you should follow the Travis CI docs in order to integrate your Github project with Travis.
-Then add the following chunk of your into you `.travis.yml`:
+Then add the following chunk of code into your `.travis.yml`:
 
 <script src="https://gist.github.com/maikotrindade/2d544de08215085abfbba59ce3378a2c.js"></script>
 
