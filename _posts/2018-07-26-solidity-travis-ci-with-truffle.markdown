@@ -1,40 +1,27 @@
 ---
 published: true
-title: Solidity – Gas, gas price, fee and gas usage
+title: Solidity – Travis CI with Truffle
 layout: post
 ---
 
-**gas** – is the name for a special unit used in Ethereum
+### Continuous Integration
+[Continuous Integration] aka _CI_ is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. By integrating regularly, you can detect errors quickly, and locate them more easily and not integrating continuously you will have longer periods between integrations. This makes it exponentially more difficult to find and fix problems. Such integration problems can easily knock a project off-schedule, or cause it to fail altogether.
 
-**gas price** – a value set by the creator of the transaction; it's a single gas unit's price;
-
-**fee** – the result of  **gas** * **gas price**
-
-### Transactions costs x [Ethereum] system 
-
-* Have in mind if the gas price is too low, no one will process your transaction;
-
-* The fees are paid in ether, though, which is different from gas; 
-
-* The transaction fails (still goes into the blockchain) in case of gas price is fine but the gas cost runs "over budget". You don't get the money back for the work that the miners did.
-
-* Transaction fee = Amount of work that goes into something + storage space your code will take;
-
-### Optimize gas usage of your smart contract
-
-Gas is necessary for the execution of smart contracts, but you shouldn't specify too low or high price. Consider optimizing your smart contract to minimize the amount of gas required.
-
-#### What should I take into account for optimized contracts?  
-
-**Global Variables usage – storage**: Global variables are stored in a contract’s state on the blockchain, so you are going to be charged if you use global variables. Just use when it is necessary, this is a  practice in several languages, but it is especially crucial in ethereum development;    
-
-**Contract Size**: The size of your contract will influence the transaction cost for all interactions with it. So how big is your contract, more expansive your contract will be to processed in the Ethereum's network. If you are able to break the [Solidity] contract up into smaller separate contracts, this will decrease user’s gas costs;   
-  
-#### Further Details
-Take a look in this [documentation from ConsenSys] for Ethereum Smart Contract Security Best Practices and this [Medium post] about Optimizing gas usage.
+<img src="http://maikotrindade.github.io/public/img/ci.png" height="470" width="345" alt="Continuous Integration"/>
 
 
-[Ethereum]: https://www.ethereum.org/
-[Solidity]: http://solidity.readthedocs.io
-[documentation from ConsenSys]: https://consensys.github.io/smart-contract-best-practices/
-[Medium post]: https://medium.com/coinmonks/optimizing-your-solidity-contracts-gas-usage-9d65334db6c7
+### Travis CI
+Using [Travis CI], the users can easily sync [Github] projects and test the code test the code in minutes. Travis CI can be configured to run the tests on a range of different machines, with different software installed (such as older versions of a programming language implementation, to test for compatibility), and supports building software in numerous languages, including C, C++, C#, Clojure, D, Erlang, F#, Go, Apache Groovy, Haskell, Java, JavaScript, Julia, Perl, PHP, Python, R, Ruby, Rust, Scala and Visual Basic. Several high-profile open source projects are using it to run builds and tests on every commit, such as Plone, Ruby on Rails, and Ruby.[8][9
+
+### Truffle with Travis CI
+Firstly, as prerequisite you should follow the Travis CI docs in order to integrate your Github project with Travis.
+Then add the following chunk of your into you `.travis.yml`:
+
+<script src="https://gist.github.com/maikotrindade/2d544de08215085abfbba59ce3378a2c.js"></script>
+
+In this script, we are selecting nodeJs version 8.11.3 with latest version of Node package manager (npm). Ganache (old testRPC) and truffle are also installed. The trigger mechanisms starts with ganache initialization and the truffle command `truffle test`.  In other words, the code will be compiled and the tests will ran too.
+
+[Continuous Integration]: https://www.thoughtworks.com/continuous-integration
+[Github] : https://github.com
+[Travis CI]: https://travis-ci.com
+[Travis CI docs]: 
