@@ -22,6 +22,6 @@ Then add the following chunk of your into you `.travis.yml`:
 In this script, we are selecting nodeJs version 8.11.3 with latest version of Node package manager (npm). Ganache (old testRPC) and truffle are also installed. The trigger mechanisms starts with ganache initialization and the truffle command `truffle test`.  In other words, the code will be compiled and the tests will ran too.
 
 [Continuous Integration]: https://www.thoughtworks.com/continuous-integration
-[Github] : https://github.com
+[Github]: https://github.com
 [Travis CI]: https://travis-ci.com
-[Travis CI docs]: 
+[Travis CI docs]: https://docs.travis-ci.com/user/getting-started/
