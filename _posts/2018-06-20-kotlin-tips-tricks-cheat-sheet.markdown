@@ -6,25 +6,25 @@ layout: post
 
 ### Setup
 
-> buildscript {
->     // ...
->     ext.kotlin_version = '<version to use>'
+> buildscript {  
+>     // ...  
+>     ext.kotlin_version = '<version to use>'  
 >  
->     dependencies {
->         classpath "org.jetbrains.kotlin" +
->             "kotlin-gradle-plugin:$kotlin_version"
->     }
-> }
->  
-> apply plugin: 'kotlin'
->  
-> dependencies {
->     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8"
-> }
+>     dependencies {  
+>         classpath "org.jetbrains.kotlin" +  
+>             "kotlin-gradle-plugin:$kotlin_version"  
+>     }  
+> }  
+>    
+> apply plugin: 'kotlin'  
+>    
+> dependencies {  
+>     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8"  
+> }  
 
 ### F
 
-**Designed for s
+**Designed for s**
 
 
 
