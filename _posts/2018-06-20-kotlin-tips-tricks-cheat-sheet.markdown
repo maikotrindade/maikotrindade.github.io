@@ -9,14 +9,14 @@ layout: post
 > buildscript {  
 >     // ...  
 >     ext.kotlin_version = '<version to use>'  
->  
->     dependencies {  
->         classpath "org.jetbrains.kotlin" +  
->             "kotlin-gradle-plugin:$kotlin_version"  
->     }  
-> }  
 >    
-> apply plugin: 'kotlin'  
+>     dependencies {  
+>         classpath "org.jetbrains.kotlin" +   
+>             "kotlin-gradle-plugin:$kotlin_version"    
+>     }   
+> }   
+>    
+> apply plugin: 'kotlin'    
 >    
 > dependencies {  
 >     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8"  
@@ -127,7 +127,6 @@ Note that, since throw and return are expressions in Kotlin, they can also be us
 > fun foo(node: Node): String? {  
 >   val parent = node.getParent() ?: return null  
 >   val name = node.getName() ?: throw IllegalArgumentException("name expected")  
->   // ...  
 > }  
   
 
