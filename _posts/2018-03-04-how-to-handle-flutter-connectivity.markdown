@@ -15,6 +15,8 @@ The process is really straightforward. First of all, you need to add the library
 `dependencies:
   flutter_offline: "^0.2.1"`
 
+Next step is import the package that you included in you project and start using the library as the following example shows:
+
 <script src="https://gist.github.com/maikotrindade/11bf4e8c34881f74db35f22ff724ebd2.js"></script>
 
 [Flutter]: https://flutter.io/
