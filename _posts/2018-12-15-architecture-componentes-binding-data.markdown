@@ -79,12 +79,13 @@ Use can freely interact with your data using `DataBindingUtil`. See the followin
 
 #### More details
 
-I recommend you to watch this amazing video-tutorial presented by Dan Galpin: Level up with Data Binding and simplify your Android coding – https://www.youtube.com/watch?v=qc_QNQzMSCE 
+I recommend you to watch this [amazing tutorial] presented by Dan Galpin: Level up with Data Binding and simplify your Android coding 
 
-[Data Binding Library] https://developer.android.com/topic/libraries/data-binding/
-[expressions] https://developer.android.com/topic/libraries/data-binding/expressions#expression_language
-[observable] https://netbasal.com/whos-afraid-of-observables-bde0dc4f48cc
-[Architecture] https://maikotrindade.github.io/2017/02/21/android-architecture-components.html
-[Android Jetpack] https://developer.android.com/jetpack
-[LiveData] https://developer.android.com/topic/libraries/architecture/livedata
 
+[Data Binding Library]: https://developer.android.com/topic/libraries/data-binding/
+[expressions]: https://developer.android.com/topic/libraries/data-binding/expressions#expression_language
+[observable]: https://netbasal.com/whos-afraid-of-observables-bde0dc4f48cc
+[Architecture]: https://maikotrindade.github.io/2017/02/21/android-architecture-components.html
+[Android Jetpack]: https://developer.android.com/jetpack
+[LiveData]: https://developer.android.com/topic/libraries/architecture/livedata
+[amazing tutorial]: https://www.youtube.com/watch?v=qc_QNQzMSCE
