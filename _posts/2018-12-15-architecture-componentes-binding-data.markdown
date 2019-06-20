@@ -1,6 +1,6 @@
 ---
 published: true
-title: Architecture Components: Binding Data
+title: Architecture Components – Binding Data
 layout: post
 ---
 
@@ -13,46 +13,47 @@ The [Data Binding Library] allows you to bind UI components in your layouts to d
 First thing we need to do is to enable the Data Binding library in yout project. So
 modify your `build.gradle` (app module context) and add the following code:
 
-> android {
-> ...
->     dataBinding {
->        enabled true
->     }
-> }
+> 	android {
+> 	...
+> 	     dataBinding {
+>        	enabled true
+>     	}
+> 	}
 
 Sync your project and now you are able to convert or create a layout to a Data Binding layout. You must wrap your layout with a `<layout>` tag and optionally use the tags `data`, `variables` and `expressions`. You can also automatically convert a regular layout to Data Binding using the Android Studio by right-clicking the parent layout tag and selecting  "Convert data binding layout".
 
 #### Example of usage 1
 
-> <layout xmlns:android="http://schemas.android.com/apk/res/android"
->        xmlns:tools="http://schemas.android.com/tools">
->    <data>
->
->        <variable
->            name="viewmodel"
->            type="com.android.databinding.viewmodels.MyExampleViewModel"/>
->
->    <variable name="funds" type="Integer"/>
->
->    </data>
->    <androidx.constraintlayout.widget.ConstraintLayout
+> 	<layout xmlns:android="http://schemas.android.com/apk/res/android"
+> 	xmlns:tools="http://schemas.android.com/tools">
+> 		<data>
+> 	
+>       	<variable
+>           	name="viewmodel"
+>           	type="com.android.databinding.viewmodels.MyExampleViewModel"/>
+> 	
+>     		<variable name="funds" type="Integer"/>
+> 	
+> 		</data>
+> 	
+> 		<androidx.constraintlayout.widget.ConstraintLayout
 >            android:layout_width="match_parent"
 >            android:layout_height="match_parent">
->
->  .....
->
->	</androidx.constraintlayout.widget.ConstraintLayout
-> </layout>
+> 	
+> 	.....
+> 	
+> 		</androidx.constraintlayout.widget.ConstraintLayout
+> 	</layout>
 
 Layout variables are used to write layout [expressions] which are placed in the value of element attributes and they use the `@{expression}` format. See the following example:
 
 #### Example of usage 2
 
-> <ImageView
->	android:id="@+id/imageView"
->	android:layout_width="wrap_content"
->	android:layout_height="wrap_content"
->	android:visibility="@{funds < 0 ? View.GONE : View.VISIBLE}"/>
+>	<ImageView
+>		android:id="@+id/imageView"
+>		android:layout_width="wrap_content"
+>		android:layout_height="wrap_content"
+>		android:visibility="@{funds < 0 ? View.GONE : View.VISIBLE}"/>
 
 
 ### Observing data
@@ -67,14 +68,14 @@ Use can freely interact with your data using `DataBindingUtil`. See the followin
 
 #### Example of usage 3
 
-> override fun onCreate(savedInstanceState: Bundle?) {
+> 	override fun onCreate(savedInstanceState: Bundle?) {
 >       super.onCreate(savedInstanceState)
->
+> 	
 >       val binding : MainActivityBinding =
 >       DataBindingUtil.setContentView(this, R.layout.main_activity)
->
->  		binding.viewmodel = viewModel
->  }
+> 	
+> 	  	binding.viewmodel = viewModel
+> 	}
 
 #### More details
 
