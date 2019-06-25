@@ -29,6 +29,8 @@ WorkManager is a simple, but incredibly flexible library that has many additiona
 7. Follows system health best practices
 8. LiveData support to easily display work request state in UI
 
+---
+
 ### Get started 
 
 Add the WorkManager dependency in Java or Kotlin to your Android project by openning the `build.gradle` file for your project and add the google() repository as shown below:
