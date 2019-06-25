@@ -86,7 +86,7 @@ Note that WorkManager may enable or disable some of its BroadcastReceivers at ru
 
 ### Further Details
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=pe_yqM16hPQ" frameborder="0" allowfullscreen> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pe_yqM16hPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Modern background execution in Android]: https://android-developers.googleblog.com/2018/10/modern-background-execution-in-android.html
 [WorkManager]: https://developer.android.com/topic/libraries/architecture/workmanager
