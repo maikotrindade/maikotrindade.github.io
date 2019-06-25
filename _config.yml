@@ -1,5 +1,5 @@
 excerpt_separator: ""
-pygments: true
+pygments: rouge
 markdown: kramdown
 url: http://maikotrindade.github.io
 title: Maiko Trindade
