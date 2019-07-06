@@ -11,7 +11,7 @@ Dependency Injection (DI) is a design pattern that removes the dependency from t
 Problems of Dependency
 There are mainly two problems of dependency lookup: 
 
- - tight coupling The dependency lookup approach makes the code tightly coupled. If resource is changed, we need to perform a lot of modification in the code.
+ - The dependency lookup approach makes the code tightly coupled. If resource is changed, we need to perform a lot of modification in the code.
 
  - Not easy for testing This approach creates a lot of problems while testing the application especially in black box testing.
 

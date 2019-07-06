@@ -14,16 +14,16 @@ The [ERC777] token standard specifies an improvement of [ERC20] while remaining 
 
 Transactions – Let's talk about of the most interesting features that this new standard is bringing to the world. [ERC777] has a function called `send()` consists in having a transaction with an amount field and a data bit field. Thus the parameters can be freely selected again by the token user and the token operator in order to forward data to the recipient.
 
-`
-	function send(address to, uint256 amount, bytes calldata data) external;
-	    function operatorSend(
-	        address from,
-	        address to,
-	        uint256 amount,
-	        bytes calldata data,
-	        bytes calldata operatorData
-	    ) external;
-`
+>
+>	function send(address to, uint256 amount, bytes calldata data) external;
+>	    function operatorSend(
+>	        address from,
+>	        address to,
+>	        uint256 amount,
+>	        bytes calldata data,
+>	        bytes calldata operatorData
+>	    ) external;
+>
 
 
 Burning Tokens – [ERC777] provides a feature called "Burning tokens". It is the act of destroying existing tokens that explicitly defines two functions to burn tokens (`burn` and `operatorBurn`). These functions facilitate the integration of the burning process in wallets and dapps. However, the token contract may prevent some or all holders from burning tokens for any reason. The token contract may also define other functions to burn tokens.
