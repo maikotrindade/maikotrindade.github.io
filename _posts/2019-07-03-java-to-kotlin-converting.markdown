@@ -12,13 +12,13 @@ Google announced official support for the Kotlin language at Google I/O 2017. Ma
 
 The very easy/initial thing you could do: use the Android Studio IDE to starting the convertion: 
 
-In the IDE, go to `Code->“Convert Java File to Kotlin File`:
+In the IDE, go to `Android Studio -> Code -> Convert Java File to Kotlin File`:
 The converter is really nice, it is smart and does the most of job gracefully. However during the automated process the converter would choose not the most appropriate choice, so you must look into the code and figure out if the converter was right in all the scenarios. Probably the most interesting issue you may face is the nullability, because by default, all the converted object will be non-nullable and you will have to explicitly specified them to be nullable or change your logic. Another issue is about usage of android-annontations will most likely break. There is a shortcut to access the converter: `CMD+SHFT+ALT+K` or `CTRL+SHIFT+ALT+K` depending of your operational system.
 
 Another option of converting the code is using the online tool [try.kotlinlang]. Access the URL [https://try.kotlinlang.org] and click on “Convert from Java”. In this way you can convert your project graduallly and observe all the changes clearly.
 
 
-<img src="http://maikotrindade.github.io/public/img/javatokoltin.png" width="410" height="380" alt="From Java to Kotlin Android"/>
+<img src="http://maikotrindade.github.io/public/img/javatokotlin.png" width="410" height="380" alt="From Java to Kotlin Android"/>
 
 ### Things to keep in mind
 
