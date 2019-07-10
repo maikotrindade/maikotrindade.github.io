@@ -26,6 +26,28 @@ Interoperability – Java and Kotlin work perfectly together. So don't be afraid
 Pitfalls –  Automatic conversions can also be dangerous to your project, there are some scenarios that you may face new bugs in your code, for example an unexpected nullability. Some code converted can be asserted as not null which in turn can lead to a NullPointerException.
 Usage of `val` and `lateinit` – the misusage of these can cause problems to your actual project. `val` is like Java `final` variable and it's known as immutable in kotlin and can be initialized only single time. A misusage of this field is setting a variable would be changed somehow, for example, a variable inside your model which will be used in a parcelable or as response of networki request. Make the property nullable if it makes better sense and improves null safety. `lateinit` might be good if used properly but it has its cons as well. Don't make it a replacement for NullPointerException.
 
+### Google Codelab "Refactoring to Kotlin"
+
+Google offers a Codelab specifically for refactoring [Java code to Kotlin]. Besides this course provides a very interesting channel to learn more about Koltin, its features and concepts, this is the list of what you will learn in the codelab:
+
+* Handling nullability
+* Implementing singletons
+* Data classes
+* Handling strings
+* Elvis operator
+* Destructuring
+* Properties and backing properties
+* Default arguments and named parameters
+* Working with collections
+* Extension functions
+* Top-level functions and parameters
+* let, apply, with, and run keywords
+
+Check the codelab versions in [Chinese] and [Brazilian Portuguese].
 
 [try.kotlinlang]: https://try.kotlinlang.org/
 [https://try.kotlinlang.org]: https://try.kotlinlang.org/
+[Codelab]: https://codelabs.developers.google.com/codelabs/java-to-kotlin/#0
+[Java code to Kotlin]: https://codelabs.developers.google.com/codelabs/java-to-kotlin/#0
+[Chinese]: https://codelabs.developers.google.com/codelabs/java-to-kotlin-zh/#0
+[Brazilian Portuguese]: https://codelabs.developers.google.com/codelabs/java-to-kotlin-pt-br/#0
