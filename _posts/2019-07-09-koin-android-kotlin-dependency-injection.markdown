@@ -7,7 +7,7 @@ layout: post
 ### Intro
 [Koin] is a lightweight dependency injection library for Kotlin and written in pure Kotlin. using functional resolution only: no proxy, no code generation, no reflection. Koin is a DSL, using Kotlin’s DSLs, that describes your dependencies into modules and sub-modules. You describe your definitions with certain key functions that mean something in the Koin context. 
 
-<img src="http://maikotrindade.github.io/public/img/koin.png" width="320" height="320" alt="Koin DI"/>
+<img src="http://maikotrindade.github.io/public/img/koin.png" width="320" height="233" alt="Koin DI"/>
 
 In this article, we are going to pass through the basic steps to setup and take advantage of dependency injection with Koin for a simple project.
 
