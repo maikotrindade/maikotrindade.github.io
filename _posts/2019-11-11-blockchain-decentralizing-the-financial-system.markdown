@@ -172,11 +172,11 @@ Number of trades and profits on Augur by ethereum address
 
 * DECENTRALIZED FINANCE SOLUTIONS
 
-- Adhara
-A real-time gross settlement platform providing liquidity management and international payments for decentralized financial networks
+	- Adhara
+	A real-time gross settlement platform providing liquidity management and international payments for decentralized financial networks
 
-- Kaleido
-An all-in-one SaaS blockchain business cloud
+	- Kaleido
+	An all-in-one SaaS blockchain business cloud
 
 
 ### References
