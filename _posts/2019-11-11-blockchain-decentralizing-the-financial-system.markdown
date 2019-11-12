@@ -50,125 +50,125 @@ The Ethereum blockchain enables more open, inclusive, and secure business networ
 
 * PAYMENTS
 
-- OmiseGO
-Interoperability and scaling solutions for payments over Ethereum
+	- OmiseGO
+	Interoperability and scaling solutions for payments over Ethereum
 
 * STABLECOINS
 
-- Dai
-A USD-pegged stablecoin built on the Ethereum and governed by the MakerDAO system
+	- Dai
+	A USD-pegged stablecoin built on the Ethereum and governed by the MakerDAO system
 
-- Digix
-Physical gold with DGX tokens, where 1 DGX represents 1 gram of gold on Ethereum.
+	- Digix
+	Physical gold with DGX tokens, where 1 DGX represents 1 gram of gold on Ethereum.
 
 * INFRASTRUCTURE
 
-- 0x
-An open protocol for the peer-to-peer, decentralized exchange of digital assets
+	- 0x
+	An open protocol for the peer-to-peer, decentralized exchange of digital assets
 
-- 0xcert
-Open source framework for creating, managing, and swapping NFTs and tokens
+	- 0xcert
+	Open source framework for creating, managing, and swapping NFTs and tokens
 
 * EXCHANGES & LIQUIDITY
 
-- Bancor
-A decentralized liquidity network
+	- Bancor
+	A decentralized liquidity network
 
- - Airswap
-Peer-to-peer trading on Ethereum
+	 - Airswap
+	Peer-to-peer trading on Ethereum
 
 * INVESTMENT
 
-- Meridio
-A platform for fractional ownership shares in real estate assets
+	- Meridio
+	A platform for fractional ownership shares in real estate assets
 
-- Polymath Network
-A platform for the creation of tokenized securities
+	- Polymath Network
+	A platform for the creation of tokenized securities
 
 * KYC & IDENTITY
 
-- uPort
-The open identity system for the decentralized web
+	- uPort
+	The open identity system for the decentralized web
 
-- Civic
-Secure blockchain identity toolbox and ecosystem
+	- Civic
+	Secure blockchain identity toolbox and ecosystem
 
- - Sovrin
-Open source, self-sovereign identity network
+	 - Sovrin
+	Open source, self-sovereign identity network
 
  * DERIVATIVES
 
- - dYdX
-Open-Source Protocols for decentralized margin trading and derivatives
+	 - dYdX
+	Open-Source Protocols for decentralized margin trading and derivatives
 
-- bZx (b0x)
-A decentralized margin lending protocol on Ethereum
+	- bZx (b0x)
+	A decentralized margin lending protocol on Ethereum
 
 * MARKETPLACES
 
-- Gitcoin
-A marketplace for open source development work
+	- Gitcoin
+	A marketplace for open source development work
 
-- OpenSea
-A peer to peer trading market for crypto collectibles and rare digital items
+	- OpenSea
+	A peer to peer trading market for crypto collectibles and rare digital items
 
-- District0x
-A network of decentralized markets on Ethereum that operate via DAOs by utilizing Aragon
+	- District0x
+	A network of decentralized markets on Ethereum that operate via DAOs by utilizing Aragon
 
-- Ethlance
-A marketplace for freelance work in the Ethereum space
+	- Ethlance
+	A marketplace for freelance work in the Ethereum space
 
-- Origin
-A protocol for creating peer-to-peer marketplaces utilizing Ethereum and IPFS
+	- Origin
+	A protocol for creating peer-to-peer marketplaces utilizing Ethereum and IPFS
 
 * PREDICTION MARKETS
 
-- Augur
-Prediction market protocol built on Ethereum
+	- Augur
+	Prediction market protocol built on Ethereum
 
-- Gnosis
-Open platform for creating prediction market applications on the Ethereum protocol
+	- Gnosis
+	Open platform for creating prediction market applications on the Ethereum protocol
 
-- Helena
-Prediction markets platform for forecasting blockchain developments, events, and projects
+	- Helena
+	Prediction markets platform for forecasting blockchain developments, events, and projects
 
 * CREDIT & LENDING
 
-- SALT
-A lending and borrowing platform that allows users to leverage their crypto-assets to secure loans.
+	- SALT
+	A lending and borrowing platform that allows users to leverage their crypto-assets to secure loans.
 
-- Dharma
-A suite of smart contracts and developer tools that make it possible to borrow and lend crypto-assets on blockchains like Ethereum
+	- Dharma
+	A suite of smart contracts and developer tools that make it possible to borrow and lend crypto-assets on blockchains like Ethereum
 
-- Compound Finance
-Open source protocol for algorithmic, efficient money markets on the Ethereum.
+	- Compound Finance
+	Open source protocol for algorithmic, efficient money markets on the Ethereum.
 
 * INSURANCE
 
-- Etherisc
-A decentralized insurance protocol to collectively build risk transfer solutions
+	- Etherisc
+	A decentralized insurance protocol to collectively build risk transfer solutions
 
 * CUSTODIAL SERVICES
 
-- MetaMask
-A browser extension that allows users to run Ethereum dApps
+	- MetaMask
+	A browser extension that allows users to run Ethereum dApps
 
-- MyEtherWallet
-A free, open-source, client-side interface for generating Ethereum wallets and more
+	- MyEtherWallet
+	A free, open-source, client-side interface for generating Ethereum wallets and more
 
-- Trust Wallet
-Ethereum wallet and multi cryptocurrency wallet to store your favorite ERC721 & ERC20 tokens
+	- Trust Wallet
+	Ethereum wallet and multi cryptocurrency wallet to store your favorite ERC721 & ERC20 tokens
 
 * DE-FI DATA & ANALYTICS
 
-- Prediction Global
-Shows a list of all the markets on Augur.
+	- Prediction Global
+	Shows a list of all the markets on Augur.
 
-- Stablecoin Index
-Tracks and monitors the price, volume, and stability of stablecoins
+	- Stablecoin Index
+	Tracks and monitors the price, volume, and stability of stablecoins
 
-- Augur Leaderboard
-Number of trades and profits on Augur by ethereum address
+	- Augur Leaderboard
+	Number of trades and profits on Augur by ethereum address
 
 * DECENTRALIZED FINANCE SOLUTIONS
 
