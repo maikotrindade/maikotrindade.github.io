@@ -22,13 +22,13 @@ See this example:
 >	import kotlinx.coroutines.*
 >	
 >	fun main() {
->	    GlobalScope.launch { // launch a new coroutine in background and continue
->		delay(1000L) // non-blocking delay for 1 second (default time unit is ms)
->		println("World!") // print after delay
+>	    GlobalScope.launch { // launch a new coroutine
+>		delay(1000L) // non-blocking delay
+>		println("World!")
 >	}
 >	
->		println("Hello,") // main thread continues while coroutine is delayed
->		Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
+>		println("Hello,") // main thread continues
+>		Thread.sleep(2000L) // block main thread
 >	}
  
 Coroutines allows us to mix _blocking_ and _non-blocking_ code in the same place. See the following example which has two delays. The first one is a _non-blocking_ code inside a courotine and the second is _blocking_. Both work correctly once they are wrapped bt another courotine.
@@ -38,13 +38,13 @@ Coroutines allows us to mix _blocking_ and _non-blocking_ code in the same place
 >	import kotlinx.coroutines.*
 >	
 >	fun main() = runBlocking<Unit> { // start main coroutine
->		GlobalScope.launch { // launch a new coroutine in background and continue
+>		GlobalScope.launch { // launch a new coroutine
 >		delay(1000L)
 >		println("World!")
 >	}
 >	    
->		println("Hello,") // main coroutine continues here immediately
->		delay(2000L)      // delaying for 2 seconds to keep JVM alive
+>		println("Hello,") // main coroutine continues
+>		delay(2000L)      // delaying
 >	}
 
 ### Designate a CoroutineScope
