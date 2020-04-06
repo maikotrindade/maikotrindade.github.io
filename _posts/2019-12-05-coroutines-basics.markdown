@@ -1,6 +1,6 @@
 ---
 published: true
-title: Coroutines basics
+title: Coroutines basics 
 layout: post
 ---
 
