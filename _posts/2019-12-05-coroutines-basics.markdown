@@ -9,7 +9,7 @@ layout: post
 Kotlin, as a language, provides only minimal low-level APIs in its standard library to enable various other libraries to utilize [coroutines]. Unlike many other languages with similar capabilities, *async* and *await* are not keywords in Kotlin and are not even part of its standard library. Moreover, Kotlin's concept of suspending function provides a safer and less error-prone abstraction for asynchronous operations than futures and promises.
 
 On Android, coroutines help to solve two primary problems:
-</br>
+	
 * Manage long-running tasks that might otherwise block the main thread and cause your app to freeze.
 * Providing main-safety, or safely calling network or disk operations from the main thread.
 
