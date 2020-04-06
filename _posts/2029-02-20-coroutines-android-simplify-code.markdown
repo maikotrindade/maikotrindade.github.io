@@ -11,7 +11,7 @@ layout: post
  The keyword `suspend` is Kotlin's way of marking a function, or function type, available to coroutines. When a coroutine calls a function marked `suspend`, instead of blocking until that function returns like a normal function call, it suspends execution until the result is ready then it resumes where it left off with the result. While it's suspended waiting for a result, it unblocks the thread that it's running on so other functions or coroutines can run.
 
 *Note*
->	The pattern of `async` and `await` in other languages is based on coroutines. If you're familiar with this pattern, the suspend keyword is similar to `async`. However in Kotlin, `await()` is implicit when calling a `suspend` function.
+>	The pattern of async and await in other languages is based on coroutines. If you're familiar with this pattern, the suspend keyword is similar to async. However in Kotlin, await() is implicit when calling a suspend function.
 
 ### Scopes
 
@@ -49,8 +49,11 @@ try {
 ### Additional Information
 
 [Use Kotlin Coroutines in your Android App] by Google
+
 [Android Kotlin Fundamentals 06.2: Coroutines and Room] by Google
+
 [Understand Kotlin Coroutines on Android] at Google/IO 19
+	
 
 [Use Kotlin Coroutines in your Android App]: https://codelabs.developers.google.com/codelabs/kotlin-coroutines/#0
 [Android Kotlin Fundamentals 06.2: Coroutines and Room]: https://codelabs.developers.google.com/codelabs/kotlin-android-training-coroutines-and-room/#0
