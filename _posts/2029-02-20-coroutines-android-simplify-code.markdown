@@ -16,9 +16,11 @@ layout: post
 ### Scopes
 
 All coroutines run inside a CoroutineScope. A scope controls the lifetime of coroutines through its job. When you cancel the job of a scope, it cancels all coroutines started in that scope. On Android, you can use a scope to cancel all running coroutines when, for example, the user navigates away from an Activity. Scopes also allow you to specify a default dispatcher. A dispatcher controls which thread runs a coroutine.
-
+	
 *GlobalScope* - Lifetime of the new coroutine is limited only by the lifetime of the whole application
+
 *CoroutineScope* - Is destroyed after all launched children are completed
+	
 *MainScope* - Scope for UI applications and uses Dispatchers.Main
 
 
@@ -47,13 +49,13 @@ try {
 ```
  
 ### Additional Information
-
+	
 [Use Kotlin Coroutines in your Android App] by Google
 
 [Android Kotlin Fundamentals 06.2: Coroutines and Room] by Google
 
 [Understand Kotlin Coroutines on Android] at Google/IO 19
-	
+
 
 [Use Kotlin Coroutines in your Android App]: https://codelabs.developers.google.com/codelabs/kotlin-coroutines/#0
 [Android Kotlin Fundamentals 06.2: Coroutines and Room]: https://codelabs.developers.google.com/codelabs/kotlin-android-training-coroutines-and-room/#0
