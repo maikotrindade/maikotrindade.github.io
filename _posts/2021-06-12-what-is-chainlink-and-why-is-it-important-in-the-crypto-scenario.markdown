@@ -59,6 +59,24 @@ retaining increased levels of privacy and being secured
 🔥 Increase number of services since ecosystem is more flexible and enhance its capabilities. Chainlink
 is the future of DeFi
 
+### Glossary
+
+ERC-20: technical standard used to issue and implement tokens on the Ethereum blockchain. It makes
+easier for developers to predict with more accuracy the interaction between different tokens and
+applications
+
+Faucet: website that distributes small amounts of crypto
+
+ICO: An Initial coin offering occurs when company looking to raise money to create a new coin, app, or
+service launches an ICO as a way to raise funds. Similar to an IPO
+
+Middleware: software that acts as a bridge between an operating system or database and applications,
+especially on a network
+
+Off-chain: Transactions which agree to happen outside the blockchain
+
+On-chain: normally refer to as blockchain transactions which happens inside the blockchain
+
 ### Additional Information
 [Top Oracles Tokens by Market Capitalization]
 
