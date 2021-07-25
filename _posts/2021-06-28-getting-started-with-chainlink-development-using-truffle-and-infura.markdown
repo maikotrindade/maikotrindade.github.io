@@ -43,6 +43,7 @@ You must acquire some `LINK` for interact with you smart contract.
 Get some `LINK` via [Chainlink Kovan Faucet website] 🤑 🤑 🤑 
 
 **Ganache deployment**
+
 `truffle migrate --network ganache --reset`
 
 **Kovan deployment**
@@ -58,17 +59,27 @@ Get some `LINK` via [Chainlink Kovan Faucet website] 🤑 🤑 🤑
 ### Helper scripts
 Scripts to interact with deployed smart contract without any frontend implementation:
 1. fund-contract.js
+
 `npx truffle exec scripts/fund-contract.js --network kovan`
+
 2. request-data.js
+
 `npx truffle exec scripts/request-data.js --network kovan`
+
 3. read-contract.js
+
 `npx truffle exec scripts/read-contract.js --network kovan`
 
 ● fund-contract.js
+
 ➢ Send 1 LINK to requesting contract
+
 ● request-data.js
+
 ➢ Chainlink request to be created from the requesting contract
+
 ● read-contract.js
+
 ➢ Read the data variable of the requesting contract (current price of pair ETH/USD)
 
 ### Additional Information
@@ -81,7 +92,6 @@ Scripts to interact with deployed smart contract without any frontend implementa
 [Code a REAL WORLD dApp with Chainlink - Ethereum, Solidity, Web3.js]
 
 [What Is Chainlink in 5 Minutes]
-
 
 [Chainlink docs]: https://docs.chain.link/docs/tutorials
 [Chainlink official website]: https://chain.link
