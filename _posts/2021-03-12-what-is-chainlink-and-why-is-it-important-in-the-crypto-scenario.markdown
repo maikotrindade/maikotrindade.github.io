@@ -9,24 +9,24 @@ layout: post
 
 Blockchain’s inability to fetch reliable information from the real world
 
-    ● Huge vulnerability in decentralized applications when Blockchain wants to take advantage of off-chain data
+● Huge vulnerability in decentralized applications when Blockchain wants to take advantage of off-chain data
 
-    ● Origins of data are also the points where data can be manipulated, compromised, or simply falsified
-    
-    ● Chainlink started on Ethereum but it's also available on Polkadot, Hyperledger, etc...
+● Origins of data are also the points where data can be manipulated, compromised, or simply falsified
+
+● Chainlink started on Ethereum but it's also available on Polkadot, Hyperledger, etc...
 
 ### Chainlink
 
 Decentralized network of nodes that provide data and information from off-blockchain sources to on-blockchain smart contracts via oracles.
 LINK is built on Ethereum in accordance with the ERC-20 standard for tokens
 
-    ❏ Sep 2017 – Chainlink raises $32 million in an ICO creating 1 billion LINK tokens
+❏ Sep 2017 – Chainlink raises $32 million in an ICO creating 1 billion LINK tokens
 
-    ❏ Nov 2018 – Chainlink acquires TownCrier
+❏ Nov 2018 – Chainlink acquires TownCrier
 
-    ❏ May 2019 – Chainlink is launched on Ethereum mainnet
+❏ May 2019 – Chainlink is launched on Ethereum mainnet
 
-    ❏ May 2021 – Chainlink 2.0 whitepaper
+❏ May 2021 – Chainlink 2.0 whitepaper
 
 ### The Chainlink's oracle
 *Oracle* – Middleware that acts as an intermediary, translating data from the real world to smart contracts on the blockchain and back again
@@ -47,9 +47,9 @@ Distribution of oracles and Use of trusted hardware
 	
 Chainlink 2.0: Next Steps in the Evolution of Decentralized Oracle Networks
 
-`Oracle networks go far beyond delivering highly validated data, they provide the various decentralized
-services that are combined with smart contracts to create real world outcomes. These hybrid smart
-contracts are already redefining our industry as DeFi.`
+    Oracle networks go far beyond delivering highly validated data, they provide the various decentralized
+    services that are combined with smart contracts to create real world outcomes. These hybrid smart
+    contracts are already redefining our industry as DeFi.
 
 🔥 Hybrid Smart Contracts that are seamlessly connected to all necessary off-chain resources, while
 retaining increased levels of privacy and being secured
@@ -70,4 +70,3 @@ is the future of DeFi
 [Top Oracles Tokens by Market Capitalization]: https://coinmarketcap.com/view/oracles/
 [77 Smart Contract Use Cases Enabled By Chainlink]: https://blog.chain.link/44-ways-to-enhance-your-smart-contract-with-chainlink/
 [Expanding Beyond Data Delivery With Chainlink 2.0]: https://www.youtube.com/watch?v=yNdS2A676TU
-
