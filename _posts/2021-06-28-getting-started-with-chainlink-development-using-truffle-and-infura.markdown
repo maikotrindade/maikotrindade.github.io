@@ -15,23 +15,22 @@ This tutorial will be based on this [repo] and we will use [Truffle] – a devel
 
 ### Prerequisite
     1. Install NodeJS
-
     2. Install Truffle: npm install -g truffle
-
     3. Install Metamask
-
     4. Install Ganache
-
     5. Install VSCode
-
     6. Install Solidity Plugin
 
 
 ### Hands on: Truffle + Chainlink
 `npm install --global yarn`
+
 `mkdir Chainlink`
+
 `cd Chainlink`
+
 `truffle unbox smartcontractkit/box`
+
 `yarn`
 
 **Running tests**
