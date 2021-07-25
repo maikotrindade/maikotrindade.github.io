@@ -14,12 +14,18 @@ Chainlink greatly expands the capabilities of smart contracts by enabling access
 This tutorial will be based on this [repo] and we will use [Truffle] – a development environment, testing framework and asset pipeline for Ethereum 
 
 ### Prerequisite
-    Install NodeJS
-    Install Truffle: npm install -g truffle
-    Install Metamask
-    Install Ganache
-    Install VSCode
-    Install Solidity Plugin
+    1. Install NodeJS
+
+    2. Install Truffle: npm install -g truffle
+
+    3. Install Metamask
+
+    4. Install Ganache
+
+    5. Install VSCode
+
+    6. Install Solidity Plugin
+
 
 ### Hands on: Truffle + Chainlink
 `npm install --global yarn`
