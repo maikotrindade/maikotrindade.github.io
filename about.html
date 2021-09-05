@@ -12,16 +12,18 @@ title: About
         var data = google.visualization.arrayToDataTable([
             ['Language/Technology', '%', { role: 'annotation' }],
             ['Solidity', 15, 'Solidity'],
-            ['Javascript, Typescript, Nodejs', 15, 'javascript, typescript, nodejs'],
-            ['Android', 40, 'Android (Kotlin and Java)'],
+            ['Javascript | Typescript', 10, 'javascript, typescript'],
+            ['Android', 20, 'Android (Kotlin and Java)'],
+            ['Kotlin', 20, 'Kotlin'],
+            ['Java', 10, 'Java'],
             ['Blockchain', 15, 'Blockchain'],
-            ['Others', 15, 'Others']
+            ['Others', 10, 'Others']
         ]);
 
         var options = {
-            title: '',
+            title: 'Skills',
             backgroundColor: 'transparent',
-            legend: { textStyle: { color: '#212121', fontSize: 18 } },
+            legend: { textStyle: { color: '#212121', fontSize: 16 } },
             is3D: true
         };
 
@@ -49,11 +51,9 @@ title: About
             <section>
                 <div class="container">
                     <div class="row">
+                        <div class="col-md-8"></div>
                         <div id="skills" style="width: 600px; height: 400px"></div>
                     </div>
                 </div>
-            </section>
-
         </div>
-    </div>
 </section>
