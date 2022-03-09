@@ -14,6 +14,11 @@ _italics inline_
 **bold inline**
 `code inline`
 
-<img src="http://maikotrindade.github.io/public/img/[IMAGE_HERE].png" width="580" height="230" alt="[ALT HERE]"/>
+<img src="http://maikotrindade.github.io/public/img/[IMAGE_HERE].png" width="580" height="230" alt="[ALT HERE]"/> 
+
+
+### Additional Information
+
+[My Link] by Link
 
 [My Link]: https://mylink.com
