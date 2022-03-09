@@ -1,6 +1,6 @@
 ---
 published: true
-title: What is Chainlink and why is it important in the crypto scenario?
+title: What is Chainlink and why it is important for crypto-ecosystem?
 layout: post
 ---
 
