@@ -24,6 +24,9 @@ Persistent data is referred to as storage and is represented by state variables.
 
 ### Structure 
 Structures or structs helps implement custom user-defined data types. A structure is a composite data type, consisting of multiple variables of different data types. They are very similar to contracts; however, they do not contain any code within them. They consist of only variables.
+
+
+### Additional Information
 	
 [ANATOMY OF SMART CONTRACTS] by Ethereum.org
 
