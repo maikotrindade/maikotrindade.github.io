@@ -41,7 +41,7 @@ Run Ganache or enable/integrate
 All tests of `/test` will be executed.
 There are tests about creating requests with and without Link tokens, sending these requests to oracle contract addresses, and testing contract ownership.
 
-<img src="http://maikotrindade.github.io/public/img/kovan-npm-tests-chainlink.jpeg" height="600" width="668" alt="Kovan npm tests chainlink"/>
+<img src="http://maikotrindade.github.io/public/img/kovan-npm-tests-chainlink.png" height="560" width="380" alt="Kovan npm tests chainlink"/>
 
 **Note** 
 You must acquire some `LINK` for interact with you smart contract. 
@@ -59,7 +59,7 @@ Get some `LINK` via [Chainlink Kovan Faucet website] 🤑 🤑 🤑
 
 `truffle migrate --network kovan --reset`
 
-<img src="http://maikotrindade.github.io/public/img/kovan-truffle-chainlink-deploy.jpeg" height="188" width="400" alt="Android great again"/>
+<img src="http://maikotrindade.github.io/public/img/kovan-truffle-chainlink-deploy.jpeg" height="180" width="380" alt="Android great again"/>
 
 ### Helper scripts
 Scripts to interact with deployed smart contract without any frontend implementation:
