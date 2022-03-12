@@ -16,7 +16,7 @@ For every instruction implemented on the EVM, a system that keeps track of execu
 
 In order to facilitate Keccak-256 cryptographic hash scheme, the EVM is a stack-based architecture with a word size of 256-bits. This architecture also allows for the use of elliptic-curve cryptography in Ethereum's signature scheme for validating the origin and integrity of transactions.
 
-<img src="http://maikotrindade.github.io/public/img/evm.png" width="360" height="160" alt="EVM"/>
+<img src="http://maikotrindade.github.io/public/img/evm.png" width="340" height="160" alt="EVM"/>
 
 
 ### Additional Information
