@@ -10,7 +10,7 @@ If you're using Jetpack Compose in your Android app development, you've likely e
 
 First, let's define what collections are in [Jetpack Compose]. Collections are simply groups of data that can be iterated over and manipulated. This can include lists, sets, and maps. In Jetpack Compose, you can use collections to build UI elements that display multiple items, such as lists or grids.
 
-One of the most useful ways to work with collections in **Jetpack Compose** is through the use of the [@Composable]function For. This function allows you to iterate over a collection and build a UI element for each item in the collection. For example, you could use For to build a list of items like this:
+One of the most useful ways to work with collections in **Jetpack Compose** is through the use of the [@Composable] function For. This function allows you to iterate over a collection and build a UI element for each item in the collection. For example, you could use For to build a list of items like this:
 
 ```
 @Composable
