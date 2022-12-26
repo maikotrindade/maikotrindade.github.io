@@ -16,6 +16,6 @@ Enhanced security: Blockchain provides a secure and decentralized platform for s
 
 Improved efficiency: By automating many of the processes involved in supply chain management, blockchain technology can help to streamline operations and reduce the need for manual intervention. This can lead to cost savings and improved efficiency.
 
-<img src="http://maikotrindade.github.io/public/img/supplychainblockchain.jpeg" width="400" height="250" alt="Supply chain blockchain"/> 
+<img src="http://maikotrindade.github.io/public/img/supplychainblockchain.jpeg" width="500" height="290" alt="Supply chain blockchain"/> 
 
 In conclusion, blockchain technology has the potential to significantly improve supply chain management by increasing transparency, improving traceability, enhancing security, and improving efficiency. As more and more businesses adopt blockchain technology, it is likely that we will see a transformation in the way supply chains are managed and operated.
