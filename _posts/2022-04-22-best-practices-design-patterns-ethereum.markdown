@@ -4,8 +4,6 @@ title: Best practices and design patterns for Ethereum development
 layout: post
 ---
 
-### Title
-
 As Ethereum continues to gain popularity as a platform for decentralized applications (dApps), it is important for developers to adhere to best practices and utilize design patterns in order to create robust and secure dApps.
 
 One key best practice for Ethereum development is to use a modular architecture. This involves breaking down the dApp into smaller, more manageable components that can be tested and developed independently. This not only makes the development process more efficient, but it also makes it easier to identify and fix issues.
