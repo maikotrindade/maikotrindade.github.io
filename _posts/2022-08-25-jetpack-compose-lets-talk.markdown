@@ -6,7 +6,7 @@ layout: post
 
 If you're using Jetpack Compose in your Android app development, you've likely encountered the concept of "collections". In this blog post, we'll explore what collections are in Jetpack Compose, how to work with them, and some best practices for using them effectively.
 
-<img src="http://maikotrindade.github.io/public/img/androidjetpackcompose.png" width="330" height="240" alt="Android Jetpack Compose"/> 
+<img src="http://maikotrindade.github.io/public/img/androidjetpackcompose.png" width="300" height="220" alt="Android Jetpack Compose"/> 
 
 First, let's define what collections are in [Jetpack Compose]. Collections are simply groups of data that can be iterated over and manipulated. This can include lists, sets, and maps. In Jetpack Compose, you can use collections to build UI elements that display multiple items, such as lists or grids.
 
