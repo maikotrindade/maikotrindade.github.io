@@ -4,7 +4,7 @@ title: The Future of Gaming
 layout: post
 ---
 
-<img src="http://maikotrindade.github.io/public/img/gaming-crypto.png" width="560" height="330" alt="The Future of Gaming"/> 
+<img src="http://maikotrindade.github.io/public/img/gaming-crypto.png" width="320" height="200" alt="The Future of Gaming"/> 
 
 The future of gaming in the world of cryptocurrency is an exciting and rapidly evolving space. As the use of cryptocurrency and blockchain technology continues to grow and gain mainstream acceptance, it's likely that we'll see more and more game developers integrating these technologies into their products.
 
