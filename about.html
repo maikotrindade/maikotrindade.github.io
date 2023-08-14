@@ -3,35 +3,6 @@ layout: page
 title: About
 ---
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-    google.load("visualization", "1", { packages: ["corechart"] });
-    google.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-        ['Language/Technology', '%', { role: 'annotation' }],
-        ['Solidity', 15, 'Solidity'],
-        ['Javascript | Typescript', 10, 'javascript, typescript'],
-        ['Android', 20, 'Android (Kotlin and Java)'],
-        ['Kotlin', 20, 'Kotlin'],
-        ['Java', 10, 'Java'],
-        ['Blockchain', 15, 'Blockchain'],
-        ['Others', 10, 'Others']
-        ]);
-        
-        var options = {
-            title: '',
-            backgroundColor: 'transparent',
-            legend: { textStyle: { color: '#212121', fontSize: 15 } },
-            is3D: true
-        };
-        
-        var chart = new google.visualization.PieChart(document.getElementById('skills'));
-        chart.draw(data, options);
-    }
-</script>
-
 <section>
     <div class="container">
         <div class="row">
@@ -46,17 +17,6 @@ title: About
                     href="http://br.linkedin.com/in/maikotrindade" target="_blank" rel="nofollow">Linkedin</a>.
                 </p>
             </div>
-            
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h4 class="cover-heading">Skills</h4>
-                            <div id="skills" style="width: 460px; height: 320px"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     </div>
 </section>
