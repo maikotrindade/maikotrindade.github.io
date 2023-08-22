@@ -14,7 +14,7 @@ On the other hand, Non-Fungible Token can’t be exchanged for any other NFT, be
 In the Ethereum network, there are popular patterns that have been specified by the community itself. Each standard is known as ERC which stands for Ethereum Request for Comments. It defines methods, technology, behaviors for a particular functionality in Ethereum and it is submitted either for peer review.
 
 
-<img src="http://maikotrindade.github.io/public/img/nonfungibletable.png" width="400" height="150" alt="ERC20 compared with ERC721"/>
+<img src="http://maikotrindade.github.io/public/img/nonfungibletable.png" width="430" height="150" alt="ERC20 compared with ERC721"/>
 
 ### ERC-1155
 ERC-1155 is a standard for contracts that manage any combination of fungible tokens and non-fungible tokens.
