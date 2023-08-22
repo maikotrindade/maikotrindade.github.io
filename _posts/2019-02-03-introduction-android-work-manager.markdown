@@ -10,12 +10,12 @@ Every Android app has a main thread which is in charge of handling UI (including
 
 Applications may also require some tasks to run even when the user is not actively using the app such as syncing periodically with a backend server or fetching new content within an app on a periodic basis. Applications may also require services to run immediately to completion even after the user has completed interacting with the app. Google created a guide called [Guide to background processing] which determines which solution best meets your needs for these use cases.
 
-<img src="http://maikotrindade.github.io/public/img/background_diagram.png" width="400" height="280" alt="Background Diagram on Android"/>
+<img src="http://maikotrindade.github.io/public/img/background_diagram.png" width="430" height="280" alt="Background Diagram on Android"/>
 
 _Diagram from [Modern background execution in Android]_
 
 ### WorkManager
-
+[Title](https://maikotrindade.github.io/2022/02/15/improving-accessibility-jetpack-compose-app.html)
 [WorkManager] is part of [Android Jetpack] and an Architecture Component for background work that needs a combination of opportunistic and guaranteed execution. Opportunistic execution means that WorkManager will do your background work as soon as it can. Guaranteed execution means that WorkManager will take care of the logic to start your work under a variety of situations, even if you navigate away from your app.
 
 WorkManager is a simple, but incredibly flexible library that has many additional benefits. These include:
@@ -88,7 +88,7 @@ Note that WorkManager may enable or disable some of its BroadcastReceivers at ru
 
 ### Further Details
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pe_yqM16hPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="400" height="270" src="https://www.youtube.com/embed/pe_yqM16hPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Modern background execution in Android]: https://android-developers.googleblog.com/2018/10/modern-background-execution-in-android.html
 [WorkManager]: https://developer.android.com/topic/libraries/architecture/workmanager
