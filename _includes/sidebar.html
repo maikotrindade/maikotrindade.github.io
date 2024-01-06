@@ -1,19 +1,11 @@
 <div class="sidebar">
     <div class="container sidebar-sticky">
-        <img class="perfil-picture" src="http://maikotrindade.github.io/public/img/maikotrindade.jpg" height="150"
+        <img class="perfil-picture" src="http://maikotrindade.com/public/img/maikotrindade.jpg" height="150"
             width="150" alt="Maiko Trindade" />
         <div class="sidebar-about">
-            <h1>{{ site.title }}</h1>
+            <h2>{{ site.title }}</h2>
         </div>
         <ul class="sidebar-nav">
-            <li class="sidebar-nav-item{% if page.title == " Home" %} active{% endif %}">
-                <a href="/">Home</a>
-            </li>
-
-            {% comment %}
-            The code below dynamically generates a sidebar nav of pages with
-            `layout: page` in the front-matter. See readme for usage.
-            {% endcomment %}
 
             {% assign pages_list = site.pages %}
             {% for node in pages_list %}
@@ -25,10 +17,6 @@
             {% endif %}
             {% endif %}
             {% endfor %}
-
-            <li class="sidebar-nav-item">
-                <a href="https://github.com/maikotrindade" target="_blank" rel="nofollow">Projects</a>
-            </li>
         </ul>
 
         <p>by <a href="https://twitter.com/maikotrindade" target="_blank" rel="nofollow">@maikotrindade</a> &copy; {{

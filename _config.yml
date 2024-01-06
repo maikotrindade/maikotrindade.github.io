@@ -1,7 +1,7 @@
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-url: http://maikotrindade.github.io
+url: http://maikotrindade.com
 title: Maiko Trindade
-description: Interesting stuff for technology related with Android, Blockchain, Cryptocurrency, Crypto, Solidity, Software Development, Linux, web, computer science, software development methodology and Open Source
-paginate: 8
+description: technology, Android, Jetpack Compose, Blockchain, Cryptocurrency, Crypto, Solidity, Software Development, Linux, web, computer science, software development methodology and Open Source
+paginate: 10
