@@ -1,10 +1,12 @@
 <div class="sidebar">
     <div class="container sidebar-sticky">
-        <img class="perfil-picture" src="http://maikotrindade.com/public/img/maikotrindade.jpg" height="150"
-            width="150" alt="Maiko Trindade" />
-        <div class="sidebar-about">
-            <h2>{{ site.title }}</h2>
-        </div>
+        <a href="https:maikotrindade.com/" target="_blank" rel="nofollow">
+            <img class="perfil-picture" src="http://maikotrindade.com/public/img/maikotrindade.jpg" height="150"
+                width="150" alt="Maiko Trindade" />
+            <div class="sidebar-about">
+                <h2>{{ site.title }}</h2>
+            </div>
+        </a>
         <ul class="sidebar-nav">
             {% assign pages_list = site.pages %}
             {% for node in pages_list %}
