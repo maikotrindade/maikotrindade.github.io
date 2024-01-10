@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Home
+title: Blog
 ---
-<div class="posts">
+<section>
     {% for post in paginator.posts %}
     <div class="post">
         <h1 class="post-title">
@@ -17,7 +17,7 @@ title: Home
         <hr>
     </div>
     {% endfor %}
-</div>
+</section>
 
 <div class="pagination">
     {% if paginator.next_page %}

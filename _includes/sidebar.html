@@ -1,12 +1,15 @@
 <div class="sidebar">
     <div class="container sidebar-sticky">
-        <a href="https:maikotrindade.com/" target="_blank" rel="nofollow">
+        <a href="/">
             <img class="perfil-picture" src="http://maikotrindade.com/public/img/maikotrindade.jpg" height="150"
                 width="150" alt="Maiko Trindade" />
             <div class="sidebar-about">
                 <h2>{{ site.title }}</h2>
             </div>
         </a>
+
+        <p>Android Developer</p>
+        
         <ul class="sidebar-nav">
             {% assign pages_list = site.pages %}
             {% for node in pages_list %}
@@ -20,7 +23,6 @@
             {% endfor %}
         </ul>
 
-        <p>by <a href="https://twitter.com/maikotrindade" target="_blank" rel="nofollow">@maikotrindade</a> &copy; {{
-            site.time | date: '%Y' }}</p>
+        <p>by @maikotrindade &copy; {{ site.time | date: '%Y' }}</p>
     </div>
 </div>
