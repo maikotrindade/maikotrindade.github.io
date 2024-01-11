@@ -67,30 +67,13 @@
     border-radius: var(--dl-radius-radius-radius8);
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
   .question-container {
     gap: var(--dl-space-space-unit);
     flex: 1;

@@ -7,10 +7,26 @@
                 <h2>{{ site.title }}</h2>
             </div>
         </a>
-
         <p>Android Developer</p>
+        <div style="display: flex; justify-content: flex-start; margin: 6px 0;">
+            <a style="margin-right: 10px;" href="https://www.linkedin.com/in/maikotrindade/" target="_blank" rel="nofollow">
+                <img src="http://maikotrindade.com/public/img/linkedin.png" width="28" height="28" alt="linkedin" />
+            </a>
+            <a style="margin-right: 10px;" href="https://github.com/maikotrindade" target="_blank" rel="nofollow">
+                <img src="http://maikotrindade.com/public/img/github.png" width="28" height="28" alt="linkedin" />
+            </a>
+            <a style="margin-right: 10px;" href="https://devpost.com/maikotrindade" target="_blank" rel="nofollow">
+                <img src="http://maikotrindade.com/public/img/devpost.png" width="28" height="28" alt="devpost" />
+            </a>
+            <a style="margin-right: 10px;" href="https://g.dev/maikotrindade" target="_blank" rel="nofollow">
+                <img src="http://maikotrindade.com/public/img/google.png" width="28" height="28" alt="gdev" />
+            </a>
+        </div>
         
         <ul class="sidebar-nav">
+            <li class="sidebar-nav-item active">
+                <a href="/blog">Blog</a>
+            </li>
             {% assign pages_list = site.pages %}
             {% for node in pages_list %}
             {% if node.title != null %}
