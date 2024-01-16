@@ -79,7 +79,8 @@ html {
 .sidebar-about h2 {
   color: #fff;
   margin-top: 16px;
-  font-size: 1.9rem;
+  display: flex;
+  font-size: 1.4rem;
 }
 
 /* Sidebar nav */
