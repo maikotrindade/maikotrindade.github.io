@@ -4,52 +4,82 @@ title: Home
 ---
 
 <div class="hero-section">
-    <div class="container">
-      <h1>Hello, I'm Maiko Trindade</h1>
-      <p>Experienced Senior Android Developer with 9 years in Android development and over 13 years in software development.</p>
-      <a href="/about" class="btn">Learn More</a>
-      <a href="/about" class="btn">Get CV</a>
-    </div>
+  <div class="container">
+    <h1>Hello, I'm Maiko Trindade</h1>
+    <p>Experienced Senior Android Developer with 9 years in Android development and over 13 years in software
+      development.</p>
+    <a href="/about" class="btn">Learn More</a>
+    <a href="/about" class="btn">Get CV</a>
   </div>
-  
-  <style>
-    .hero-section {
-      text-align: center;
-      padding: 100px 0;
-    }
-  
-    .hero-section h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-  
-    .hero-section p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-    }
-  
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1em;
-      text-decoration: none;
-      background-color: #fff;
-      color: #3498db;
-      border-radius: 5px;
-    }
-  
-    .btn:hover {
-      background-color: #eee;
-    }
-  
-    .about-section {
-      background-color: #f9f9f9;
-      padding: 80px 0;
-    }
-  
-    .about-section h2 {
-      color: #333;
-      margin-bottom: 40px;
-    }
-  
-  </style>
+</div>
+
+<section class="recent-posts-section">
+  <h2>Latest Updates</h2>
+  <ul class="recent-posts-nav">
+    {% for post in site.posts | limit:8 %}
+    <li class="recent-posts-nav-item">
+      <span>{{ post.date | date_to_string }}</span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<style>
+  .hero-section {
+    text-align: center;
+    padding: 100px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+
+  .hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #fff;
+    color: #3498db;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #eee;
+  }
+
+  .recent-posts-section {
+    padding: 80px 0;
+  }
+
+  .recent-posts-section h2 {
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .recent-posts-nav {
+    padding-left: 0;
+    list-style: none;
+  }
+  .recent-posts-nav-item {
+    display: block;
+  }
+  a.recent-posts-nav-item:hover,
+  a.recent-posts-nav-item:focus {
+    text-decoration: underline;
+  }
+
+  .recent-posts-section .recent-posts-nav-item span {
+  font-size: 0.8em;
+  color: #888;
+  opacity: 0.8; 
+}
+
+</style>

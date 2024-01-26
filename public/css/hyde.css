@@ -80,7 +80,8 @@ html {
   color: #fff;
   margin-top: 16px;
   display: flex;
-  text-align: center;
+  justify-content: center;
+  margin: 6px 0;
   font-size: 1.4rem;
 }
 
