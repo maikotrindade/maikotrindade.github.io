@@ -1,3 +1,32 @@
+.flagship-section {
+  padding: 80px 0;
+}
+
+.flagship-section h2 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.flagship-item {
+  margin-bottom: 40px;
+}
+
+.flagship-item h3 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.flagship-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flagship-period {
+  display: block;
+  color: #777;
+  font-size: 0.9em;
+}
+
 .feature-card-feature-card {
     width: 100%;
     display: flex;
