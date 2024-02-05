@@ -11,7 +11,6 @@
  *
  * Designed, built, and released under MIT license by @mdo. Learn more at
  * https://github.com/poole/poole.
- * Customized by Maiko Trindade
  */
 
 
@@ -400,4 +399,33 @@ a.pagination-item:hover {
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
+}
+
+.flagship-section {
+  padding: 80px 0;
+}
+
+.flagship-section h2 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.flagship-item {
+  margin-bottom: 40px;
+}
+
+.flagship-item h3 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.flagship-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.flagship-period {
+  display: block;
+  color: #777;
+  font-size: 0.9em;
 }
