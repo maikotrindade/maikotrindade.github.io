@@ -16,7 +16,7 @@ title: Home
 <section class="recent-posts-section">
   <h2>Latest Updates</h2>
   <ul class="recent-posts-nav">
-    {% for post in site.posts | limit:8 %}
+    {% for post in site.posts | limit:10 %}
     <li class="recent-posts-nav-item">
       <span>{{ post.date | date_to_string }}</span>
       <a href="{{ post.url }}">{{ post.title }}</a>
@@ -28,7 +28,7 @@ title: Home
 <style>
   .hero-section {
     text-align: center;
-    padding: 100px 0;
+    padding: 80px 0;
   }
 
   .hero-section h1 {
