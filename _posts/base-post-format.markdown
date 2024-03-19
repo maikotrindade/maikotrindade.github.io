@@ -14,7 +14,8 @@ _italics inline_
 **bold inline**
 `code inline`
 
-<img src="http://maikotrindade.github.io/public/img/[IMAGE_HERE].png" width="580" height="230" alt="[ALT HERE]"/> 
+max Width = 380 
+<img src="http://maikotrindade.github.io/public/img/[IMAGE_HERE].png" width="380" height="380" alt="[ALT HERE]"/> 
 
 
 ### Additional Information
