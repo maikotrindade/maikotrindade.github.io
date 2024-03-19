@@ -15,7 +15,7 @@ The app's home screen integrates with Nomad core (NodeJs app - Backend) which pr
 
 The user can go through the sign-in flow and create an account. For this step, the Nomad app integrates with Firebase Authentication (Firebase Authentication) and lets the user choose a Google account. This step is crucial because it is part of the Seamless Web3 wallet creation - the user creates a Web3 wallet with 3 clicks and does not need to worry about the bureaucratic Web3 wallet creation. During this process, the Backend will store the user's credentials on MongoDB (MongoDB Atlas). It will automagically ether.js create the user's Ethereum wallet and store the private key on the MongoDB. We are not really concerned about security here since the wallet will not store a huge number of tokens/rewards initially.
 
-<img src="http://maikotrindade.github.io/public/img/normad-smartcontract.png" width="480" height="230" alt="nomad-smartcontract"/> 
+<img src="http://maikotrindade.github.io/public/img/nomad-smartcontract.png" width="480" height="230" alt="nomad-smartcontract"/> 
 
 The app also has two other screens: Admin and Profile. Admin screen provides triggers to the Backend force interactions with the smart contract [NomadBadge] and the Flights API for only testing purposes. The Profile gives some information about User's data on the MongoDB database and also exposes the user's private key for testing purposes.
 
