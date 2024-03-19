@@ -29,7 +29,7 @@ type Token {
 }`
 ```
 
-In this schema, we have defined a Query type that has a single field called token. The token field takes an id argument of type ID!, which means that it is a required field. The token field returns a Token type, which has several fields: id, name, symbol, totalSupply, and balanceOf. The balanceOf field takes an address argument of type `String!`, which means that it is a required field.
+In this schema, we have defined a Query type that has a single field called token. The token field takes an id argument of type ID!, which means that it is a required field. The token field returns a Token type, which has several fields: `id`, `name`, `symbol`, `totalSupply`, and `balanceOf`. The `balanceOf` field takes an address argument of type `String!`, which means that it is a required field.
 
 **Step 3: Creating a GraphQL Resolver**
 A GraphQL resolver is a function that is called when a query is executed. The resolver is responsible for fetching the data for the query and returning it in the correct format. To create a GraphQL resolver for our app, we will use the graphql-tools library.
@@ -74,10 +74,11 @@ In this code, we have defined a schema object that contains our GraphQL schema. 
 
 **Step 4: Connecting to Ethereum Networking**
 To connect to the Ethereum network, we will use the web3 library.
+```
 const Web3 = require('web3');
 
 const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/YOUR_PROJECT_ID'));
-
+```
 In this code, we have created a new Web3 object and passed it a HttpProvider object that connects to the Ethereum mainnet through Infura/Alchemy.
 
 **Step 5: Querying ERC20 Tokens**
