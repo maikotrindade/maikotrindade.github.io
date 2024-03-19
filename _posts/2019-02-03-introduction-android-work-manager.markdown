@@ -10,7 +10,7 @@ Every Android app has a main thread which is in charge of handling UI (including
 
 Applications may also require some tasks to run even when the user is not actively using the app such as syncing periodically with a backend server or fetching new content within an app on a periodic basis. Applications may also require services to run immediately to completion even after the user has completed interacting with the app. Google created a guide called [Guide to background processing] which determines which solution best meets your needs for these use cases.
 
-<img src="http://maikotrindade.github.io/public/img/background_diagram.png" width="410" height="280" alt="Background Diagram on Android"/>
+<img src="http://maikotrindade.github.io/public/img/background_diagram.png" width="380" height="270" alt="Background Diagram on Android"/>
 
 _Diagram from [Modern background execution in Android]_
 
