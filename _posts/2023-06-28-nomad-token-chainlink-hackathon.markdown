@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Nomad token - Chainlink Spring 2023 Hackathon
 layout: post
 ---
