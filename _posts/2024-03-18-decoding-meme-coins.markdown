@@ -1,13 +1,13 @@
 ---
 published: true
-title: The Rise of Meme Coins – Navigating the Hype and Risks in the Crypto Market
+title: Decoding Meme Coins – Hype, Risks, and Reality
 layout: post
 ---
 
 ### Introduction to Meme Coins
 Meme coins, as highlighted in the article from [Investopedia] are a unique category of cryptocurrencies that have gained popularity through social media trends and viral marketing. Unlike traditional cryptocurrencies driven by technological advancements or real-world utility, meme coins derive their value primarily from community involvement and social media excitement. These digital assets have become a cultural phenomenon, offering emotional support or recognition to specific communities despite lacking substantial economic value.
 
-<img src="http://maikotrindade.github.io/public/img/memecoins.png" width="420" height="180" alt="memecoins"/> 
+<img src="http://maikotrindade.github.io/public/img/memecoins.png" width="480" height="180" alt="memecoins"/> 
 
 ### Why Meme Coins Lack Utility
 While meme coins can provide emotional backing to certain groups, they are often criticized for their lack of real-world application and limited utility. These coins are primarily driven by hype and social media trends rather than fundamental value or technological innovation. Critics argue that meme coins do not contribute significantly to the cryptocurrency ecosystem in terms of solving real-world problems or advancing blockchain technology.
