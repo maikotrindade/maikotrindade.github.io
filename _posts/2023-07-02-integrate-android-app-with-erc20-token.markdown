@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Integrate your Android app with a ERC20 smart contract
 layout: post
 ---
