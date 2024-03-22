@@ -2,7 +2,7 @@
     <div class="container sidebar-sticky">
         <a href="/">
             <img class="perfil-picture" src="http://maikotrindade.com/public/img/maikotrindade.jpg" height="150"
-                width="150" alt="Maiko Trindade" />
+            width="150" alt="Maiko Trindade" />
             <div class="sidebar-about">
                 <h2>{{ site.title }}</h2>
             </div>
@@ -38,7 +38,18 @@
             {% endif %}
             {% endfor %}
         </ul>
-
+        
+        <h3>Latest Updates</h3>
+        <ul class="sidebar-nav">
+            {% for post in site.posts | limit:5 %}
+            <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        
+        <a href="/blog" target="_blank">See more</a>
+        
         <p style="font-size: 15px;">by @maikotrindade &copy; {{ site.time | date: '%Y' }}</p>
     </div>
 </div>
