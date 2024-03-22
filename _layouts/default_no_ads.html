@@ -10,8 +10,13 @@
     <meta name="author" content="@maikotrindade">
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-    crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-NPGMKKGTDM');
+    </script>
     <title>
         {% if page.title == "Home" %}
         {{ site.title }}
