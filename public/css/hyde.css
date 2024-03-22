@@ -75,6 +75,10 @@ html {
   color: #fff;
 }
 
+.sidebar h4 {
+  color: rgba(255,255,255,.5);
+}
+
 /* About section */
 .sidebar-about h2 {
   color: #fff;
@@ -103,7 +107,7 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-nav-item.small {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .perfil-picture {
