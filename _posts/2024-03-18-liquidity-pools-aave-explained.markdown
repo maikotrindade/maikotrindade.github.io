@@ -1,6 +1,6 @@
 ---
 published: true
-title: Deep Dive into DeFi: Liquidity Pools and Aave Explained
+title: Deep Dive into DeFi – Liquidity Pools and Aave Explained
 layout: post
 ---
 
