@@ -1,6 +1,6 @@
 ---
 published: true
-title: Improving accessibility of a Jetpack Compose app
+title: Improving accessibility of Android app
 layout: post
 ---
 
