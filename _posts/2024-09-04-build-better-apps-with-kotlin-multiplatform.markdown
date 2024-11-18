@@ -29,15 +29,6 @@ KMP provides robust interoperability with both Java on Android and Swift/Objecti
 
 5. Future-Proof Solution
 As Kotlin is officially supported by Google and widely adopted for Android, KMP aligns with the long-term direction of modern Android development. Its active community and JetBrains’ backing ensure continued innovation.
-<p style="font-size: 0.8em;">
-| Feature               | Kotlin Multiplatform (KMP) | Flutter             | React Native       | Xamarin            |
-|-----------------------|---------------------------|---------------------|--------------------|--------------------|
-| **Code Sharing Scope**| Business logic only       | Full app (UI & logic)| Full app (UI & logic)| Full app (UI & logic)|
-| **Native UI**         | Platform-specific         | Custom (Skia engine)| Custom (Bridged)   | Bridged (native-like)|
-| **Performance**       | Native                    | High (custom engine)| Moderate (bridged) | Moderate (bridged) |
-| **Integration**       | Seamless with native tools| Requires custom setup| Requires custom setup| Tightly integrated|
-| **Learning Curve**    | Low for Kotlin devs       | Moderate            | Low to moderate    | Moderate           |
-</p>
 
 ### Why KMP is Better for Modern Teams
 
