@@ -11,27 +11,27 @@ Kotlin 2.0 is a significant milestone in the evolution of the Kotlin programming
 ### Performance Optimization
 One of the core focuses of [Kotlin 2.0] is to enhance performance. The compiler has been meticulously refined to generate highly optimized bytecode, resulting in faster application startup times and smoother overall execution.
 
-**Optimized Bytecode Generation:** The compiler diligently produces more efficient bytecode, minimizing instruction count and memory footprint.
-**Enhanced Garbage Collection:** The garbage collector has been meticulously tuned to reduce pause times and improve overall performance.
+- **Optimized Bytecode Generation:** The compiler diligently produces more efficient bytecode, minimizing instruction count and memory footprint.
+- **Enhanced Garbage Collection:** The garbage collector has been meticulously tuned to reduce pause times and improve overall performance.
 
 ### Innovative Language Features
 Kotlin 2.0 introduces a suite of new language features that empower developers to write more concise, expressive, and type-safe code.
 
-**Value Classes**: Value classes provide a lightweight and efficient mechanism to represent immutable data. They are akin to data classes but offer a more streamlined and performant implementation.
-**Inline Classes**: Inline classes enable the creation of custom types that are seamlessly integrated with primitive types, enhancing type safety and expressiveness.
-**Sealed Interfaces**: Sealed interfaces offer a powerful tool for defining a set of related classes, aiding in the construction of type-safe state machines and intricate data structures.
+- **Value Classes**: Value classes provide a lightweight and efficient mechanism to represent immutable data. They are akin to data classes but offer a more streamlined and performant implementation.
+- **Inline Classes**: Inline classes enable the creation of custom types that are seamlessly integrated with primitive types, enhancing type safety and expressiveness.
+- **Sealed Interfaces**: Sealed interfaces offer a powerful tool for defining a set of related classes, aiding in the construction of type-safe state machines and intricate data structures.
 
 ### Robust Tooling Support
 Kotlin 2.0 is accompanied by substantial improvements in tooling support, ensuring a seamless development experience.
 
-**IntelliJ IDEA**: The [IntelliJ IDEA] Kotlin plugin has been fortified with cutting-edge features and enhancements, including advanced code completion, refactoring, and navigation capabilities.
-**Android Studio**: The [Android Studio] Kotlin plugin has likewise been bolstered with new features and optimizations, such as refined code analysis, debugging, and testing tools.
+- **IntelliJ IDEA**: The [IntelliJ IDEA] Kotlin plugin has been fortified with cutting-edge features and enhancements, including advanced code completion, refactoring, and navigation capabilities.
+- **Android Studio**: The [Android Studio] Kotlin plugin has likewise been bolstered with new features and optimizations, such as refined code analysis, debugging, and testing tools.
 
 ### Why Kotlin 2.0 is a Game-Changer for Android Development
 Kotlin 2.0 represents a quantum leap for Kotlin, making it an even more compelling choice for Android development. With its performance optimizations, innovative language features, and robust tooling support, Kotlin 2.0 empowers developers to build more efficient, reliable, and maintainable Android applications.
 
 To delve deeper into Kotlin 2.0, explore the official documentation and tutorials.
 
-[Kotlin 2.0] : https://kotlinlang.org/docs/whatsnew20.html
-[IntelliJ IDEA] : https://www.jetbrains.com/idea/
-[Android Studio] : https://developer.android.com/studio
+[Kotlin 2.0]: https://kotlinlang.org/docs/whatsnew20.html
+[IntelliJ IDEA]: https://www.jetbrains.com/idea/
+[Android Studio]: https://developer.android.com/studio

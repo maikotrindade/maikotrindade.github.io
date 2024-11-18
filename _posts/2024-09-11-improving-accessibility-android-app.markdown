@@ -27,7 +27,7 @@ Users can Interact with Android app using one or more switches or a keyboard ins
 
 ### Jetpack Compose & Accessibility
 
-Jetpack Compose is great when it comes accessibility - it uses semantics properties to pass information to Accessibility services to transform what’s shown on screen to a more fitting format for a user with a specific need.
+Jetpack Compose is great when it comes [accessibility] - it uses semantics properties to pass information to Accessibility services to transform what’s shown on screen to a more fitting format for a user with a specific need.
 
 Most built-in composables like Text and Button fill these semantics properties with information inferred from the composable and its children. Some modifiers like toggleable and clickable will also set certain semantics properties.
 
@@ -63,8 +63,4 @@ For example if every single low-level visual element in your screen is focused i
 
 ### Additional Information
 
-[Accessibility in Compose] Android Developers
-
-
-
-[Accessibility in Compose]: https://developer.android.com/jetpack/compose/accessibility
+[accessibility]: https://developer.android.com/develop/ui/compose/accessibility
