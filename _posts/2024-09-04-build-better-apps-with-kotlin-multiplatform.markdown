@@ -39,6 +39,7 @@ As Kotlin is officially supported by Google and widely adopted for Android, KMP 
 | **Learning Curve**    | Low for Kotlin devs       | Moderate            | Low to moderate    | Moderate           |
 
 
+
 ### Why KMP is Better for Modern Teams
 
 1. Focus on Native-Like User Experiences
