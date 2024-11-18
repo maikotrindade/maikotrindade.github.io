@@ -60,7 +60,4 @@ You can describe the state of a component in order to Android to read out the st
 Sometimes you need to merge elements to make Talkback and Switch Access more efficient.
 For example if every single low-level visual element in your screen is focused independently, a user will have to interact a lot to move across the screen. Other issue you may face is a user not being able to understand lists of the app because each element of the list will be focused independently (instead of the item itself).
 
-
-### Additional Information
-
 [accessibility]: https://developer.android.com/develop/ui/compose/accessibility
