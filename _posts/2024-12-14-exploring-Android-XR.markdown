@@ -26,11 +26,11 @@ The world of extended reality (XR) is expanding rapidly, merging physical and di
 
 ARCore is Android’s primary SDK for building AR applications. It provides tools to:
 
-Track motion in 3D space.
+- Track motion in 3D space.
 
-Understand environmental features like flat surfaces.
+- Understand environmental features like flat surfaces.
 
-Estimate lighting conditions for realistic AR rendering.
+- Estimate lighting conditions for realistic AR rendering.
 
 **2. XR Interaction Tools**
 
@@ -47,11 +47,11 @@ Android XR supports frameworks like OpenXR, making it easier to build applicatio
 
 Start by installing Android Studio and configuring it for XR development:
 
-Install the latest version of Android Studio.
+- Install the latest version of Android Studio.
 
-Add the ARCore dependency to your project.
+- Add the ARCore dependency to your project.
 
-Use a physical device with ARCore support for testing.
+- Use a physical device with ARCore support for testing.
 
 **2. Learn the Basics**
 
@@ -70,7 +70,7 @@ Try creating a simple AR app that displays a 3D object on a flat surface. ARCore
 
 To help you jumpstart your journey, I’ve created a simple demo app showcasing basic XR features using ARCore and Jetpack Compose. This project serves as a practical example to learn XR development fundamentals.
 
-<img src="http://maikotrindade.github.io/public/img/AndroidXR.gif" width="380" height="260" alt="android-xr-bitcoin-ethereum"/>
+<img src="http://maikotrindade.github.io/public/img/AndroidXR.gif" width="380" height="240" alt="android-xr-bitcoin-ethereum"/>
 
 Check it out on GitHub: [Android XR Demo]
 
