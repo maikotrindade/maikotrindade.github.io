@@ -7,3 +7,5 @@ description: technology, Android, Jetpack Compose, Blockchain, Cryptocurrency, C
 
 paginate: 5
 paginate_path: "/blog/page:num/"
+include:
+  - ads.txt
