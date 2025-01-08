@@ -429,3 +429,7 @@ a.pagination-item:hover {
   color: #777;
   font-size: 0.9em;
 }
+
+.flagship-small {
+  font-size: 0.85em;
+}
