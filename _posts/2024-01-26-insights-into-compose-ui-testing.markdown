@@ -22,6 +22,6 @@ Jetpack Compose UI testing provides real-time feedback on UI interactions, allow
 Jetpack Compose introduces the concept of test tags, which serve as references for making specific components detectable in tests. By assigning test tags to composable functions, developers can easily locate and interact with UI elements during testing. This approach enhances test readability and maintainability, making it easier to identify and troubleshoot issues within the UI. 
 Don't overuse testTag once it may pollute your production code. Instead of that, you can use semantics to interact with the UI on your tests. Using semanatics improves your app's accessibility once Android utilizes semantics to offer alternative interaction methods for users with special needs, such as TalkBack, a screen reader, or Switch Access.
 
-<img src="http://maikotrindade.github.io/public/img/android-ui-testing.png" width="380" height="380" alt="android-ui-testing"/> 
+<img src="https://maikotrindade.com/public/img/android-ui-testing.png" width="380" height="380" alt="android-ui-testing"/> 
 
 In conclusion, Jetpack Compose UI testing in Android offers a comprehensive framework for validating UI components, interactions, and behaviors. By leveraging the testing capabilities provided by Jetpack Compose, developers can ensure the quality, reliability, and performance of their Android applications, leading to enhanced user experiences and increased app stability.

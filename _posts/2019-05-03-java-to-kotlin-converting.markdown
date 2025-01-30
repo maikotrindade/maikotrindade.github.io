@@ -18,7 +18,7 @@ The converter is really nice, it is smart and does the most of job gracefully. H
 Another option of converting the code is using the online tool [try.kotlinlang]. Access the URL [https://try.kotlinlang.org] and click on “Convert from Java”. In this way you can convert your project graduallly and observe all the changes clearly.
 
 
-<img src="http://maikotrindade.github.io/public/img/javatokotlin.png" width="380" height="370" alt="From Java to Kotlin Android"/>
+<img src="https://maikotrindade.com/public/img/javatokotlin.png" width="380" height="370" alt="From Java to Kotlin Android"/>
 
 ### Things to keep in mind
 

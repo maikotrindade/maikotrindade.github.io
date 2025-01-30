@@ -10,7 +10,7 @@ One of the main challenges facing Ethereum governance is balancing the needs of 
 
 Another challenge is ensuring that the Ethereum governance process is transparent and accountable. This is especially important given the decentralized nature of the platform, as it is critical that all stakeholders have the ability to have their voices heard and their concerns addressed.
 
-<img src="http://maikotrindade.github.io/public/img/ethreum-governance.jpeg" width="300" height="190" alt="Ethreum Governance"/> 
+<img src="https://maikotrindade.com/public/img/ethreum-governance.jpeg" width="300" height="190" alt="Ethreum Governance"/> 
 
 One way that Ethereum is addressing these challenges is through the use of voting mechanisms, such as the ECF, which allow for more democratic decision-making processes. In addition, the Ethereum Foundation has implemented a number of transparency initiatives, such as open meetings and the creation of a transparency portal, to ensure that stakeholders are able to stay informed about the latest developments and decisions being made within the Ethereum community.
 

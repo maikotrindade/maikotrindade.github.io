@@ -70,7 +70,7 @@ Try creating a simple AR app that displays a 3D object on a flat surface. ARCore
 
 To help you jumpstart your journey, I’ve created a simple demo app showcasing basic XR features using ARCore and Jetpack Compose. This project serves as a practical example to learn XR development fundamentals.
 
-<img src="http://maikotrindade.github.io/public/img/AndroidXR.gif" width="380" height="240" alt="android-xr-bitcoin-ethereum"/>
+<img src="https://maikotrindade.com/public/img/AndroidXR.gif" width="380" height="240" alt="android-xr-bitcoin-ethereum"/>
 
 Check it out on GitHub: [Android XR Demo]
 

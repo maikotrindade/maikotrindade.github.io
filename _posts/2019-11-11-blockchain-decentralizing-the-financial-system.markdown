@@ -30,7 +30,7 @@ A distributed ledger is a database of transactions that is shared and synchroniz
 
 A blockchain records data across a peer-to-peer network. Every participant can see the data and verify or reject it using consensus algorithms. Approved data is entered into the ledger as a collection of “blocks” and stored in a chronological “chain” that cannot be altered.
 
-<img src="http://maikotrindade.github.io/public/img/peer-to-peer-network.jpg" width="320" height="215" alt="Peer to peer network"/>
+<img src="https://maikotrindade.com/public/img/peer-to-peer-network.jpg" width="320" height="215" alt="Peer to peer network"/>
 
 ### Ethreum and the Smart Contracts
 

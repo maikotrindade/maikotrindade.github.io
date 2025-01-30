@@ -6,7 +6,7 @@ layout: post
 
 Android Jetpack Compose stands out as a powerful toolkit that empowers developers to build modern and engaging user interfaces for Android applications. Let's continue exploring the benefits of Jetpack Compose based on the insights gathered from various sources.
 
-<img src="http://maikotrindade.github.io/public/img/android-compose-jetpack-2.jpeg" width="380" height="380" alt="android-compose-benefits-jetpack"/> 
+<img src="https://maikotrindade.com/public/img/android-compose-jetpack-2.jpeg" width="380" height="380" alt="android-compose-benefits-jetpack"/> 
 
 ### Seamless Integration with Existing Code
 Jetpack Compose is designed to be compatible with existing codebases, allowing developers to adopt it gradually and integrate it seamlessly into their projects. This compatibility ensures that developers can leverage the power of Compose without the need for a complete overhaul of their existing codebase, enabling a smooth transition to modern UI development practices.

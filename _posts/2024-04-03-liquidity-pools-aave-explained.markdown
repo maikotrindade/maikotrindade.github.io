@@ -18,7 +18,7 @@ Imagine a giant pot of crypto assets. Anyone can add funds (deposit), and anyone
 - **Borrowing Crypto**: Users can borrow crypto from the pool by putting up collateral (another cryptocurrency). The interest rate on these loans depends on various factors like supply and demand for the specific crypto.
 - **Earning [AAVE]**: Aave has its own governance token, AAVE. By holding [AAVE], users can participate in the platform's governance and potentially earn additional rewards.
 
-<img src="http://maikotrindade.github.io/public/img/aave-ghost-bitcoin.jpeg" width="320" height="320" alt="aave-liquidity-bitcoin-crypto"/> 
+<img src="https://maikotrindade.com/public/img/aave-ghost-bitcoin.jpeg" width="320" height="320" alt="aave-liquidity-bitcoin-crypto"/> 
 
 ### Benefits of Aave
 

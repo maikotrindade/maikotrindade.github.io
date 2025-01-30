@@ -1,9 +1,9 @@
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-url: http://maikotrindade.com
+url: https://maikotrindade.com
 title: Maiko Trindade
-description: technology, Android, Jetpack Compose, Blockchain, Cryptocurrency, Crypto, Solidity, Software Development, Linux, web, computer science, software development methodology and Open Source
+description: technology, Android, Jetpack Compose, Blockchain, ESG, Crypto, Solidity, Software Development, Linux, web and computer science
 
 paginate: 5
 paginate_path: "/blog/page:num/"

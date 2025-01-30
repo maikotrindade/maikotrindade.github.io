@@ -12,7 +12,7 @@ Jetpack Compose simplifies UI development by allowing developers to describe the
 ### Enhanced Developer Satisfaction
 One of the key benefits highlighted by developers using Jetpack Compose is the satisfaction it brings. The technology is well-received among developers, who appreciate the modern approach to UI development and the ease of creating interactive and dynamic interfaces. By adopting Compose, developers can work more efficiently, leading to a more motivated and engaged team.
 
-<img src="http://maikotrindade.github.io/public/img/android-compose-jetpack.jpeg" width="380" height="380" alt="android-compose-benefits-jetpack"/> 
+<img src="https://maikotrindade.com/public/img/android-compose-jetpack.jpeg" width="380" height="380" alt="android-compose-benefits-jetpack"/> 
 
 ### Reduced Technological Debt
 Jetpack Compose offers a lower risk of technological debt compared to traditional UI development approaches. Google's emphasis on the adaptation and development of Compose, along with positive feedback from developers, positions it as a safer choice for long-term project development.

@@ -15,7 +15,7 @@ Practical guidelines for creating inclusive designs, such as optimizing touch ta
 Tools and methods for testing accessibility, including manual testing with TalkBack and automated testing using semantics in Jetpack Compose.
 The presentation also included practical demonstrations of accessibility testing, featuring examples from an app I created specifically to highlight accessibility issues and solutions ([InaccessibleApp]).
 
-<img src="http://maikotrindade.github.io/public/img/accessibility-dog.jpeg" width="380" height="370" alt="Accessibility pet"/>
+<img src="https://maikotrindade.com/public/img/accessibility-dog.jpeg" width="380" height="370" alt="Accessibility pet"/>
 
 ### Why Accessibility Matters
 As the [World Health Organization] notes, over 1.3 billion people live with some form of disability. Accessibility isn’t just about compliance; it’s about empathy and inclusion. By leveraging Jetpack Compose’s accessibility tools, we can build Android apps that make everyone feel welcome and empowered.

@@ -7,7 +7,7 @@ layout: post
 ### Continuous Integration
 [Continuous Integration] aka _CI_ is a development practice that requires developers to integrate code into a shared repository several times a day. Each check-in is then verified by an automated build, allowing teams to detect problems early. By integrating regularly, you can detect errors quickly, and locate them more easily and not integrating continuously you will have longer periods between integrations. This makes it exponentially more difficult to find and fix problems. Such integration problems can easily knock a project off-schedule, or cause it to fail altogether.
 
-<img src="http://maikotrindade.github.io/public/img/ci.png" width="380" height="290" alt="Continuous Integration"/>
+<img src="https://maikotrindade.com/public/img/ci.png" width="380" height="290" alt="Continuous Integration"/>
 
 
 ### Travis CI

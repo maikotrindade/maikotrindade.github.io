@@ -6,7 +6,7 @@ layout: post
 
 The [Data Binding Library] allows you to bind UI components in your layouts to data sources in your app using a declarative format rather than programmatically. In this codelab you'll learn how to set it all up, use layout expressions, work with observable objects and create custom Binding Adapters to reduce boilerplate to a minimum.
 
-<img src="http://maikotrindade.github.io/public/img/androiddatabinding.png" width="380" height="160" alt="Android Data Binding"/>
+<img src="https://maikotrindade.com/public/img/androiddatabinding.png" width="380" height="160" alt="Android Data Binding"/>
 
 
 ### Get Started

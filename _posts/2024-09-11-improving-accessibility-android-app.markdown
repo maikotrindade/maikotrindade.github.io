@@ -33,7 +33,7 @@ Most built-in composables like Text and Button fill these semantics properties w
 
 However, sometimes the framework needs more information to understand how to describe a UI element to the user.
 
-<img src="http://maikotrindade.github.io/public/img/mobile-accessibility.png" width="350" height="220" alt="Jetpack compose accessibility"/> 
+<img src="https://maikotrindade.com/public/img/mobile-accessibility.png" width="350" height="220" alt="Jetpack compose accessibility"/> 
 
 ### Improving accessibility using Jetpack compose
 

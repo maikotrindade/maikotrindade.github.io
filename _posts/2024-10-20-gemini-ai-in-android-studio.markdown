@@ -6,7 +6,7 @@ layout: post
 
 Android development just got smarter with the introduction of Gemini, an AI-powered assistant integrated into Android Studio. Gemini is designed to enhance productivity, reduce repetitive tasks, and support developers throughout the app lifecycle. Here's a closer look at how [Gemini] transforms your coding experience.
 
-<img src="http://maikotrindade.github.io/public/img/gemini-android.gif" width="340" height="200" alt="gemini-ai"/> 
+<img src="https://maikotrindade.com/public/img/gemini-android.gif" width="340" height="200" alt="gemini-ai"/> 
 
 ### 1. Code Writing and Refactoring Made Easy
 Gemini doesn’t just suggest code snippets—it can write, refactor, and document code. With Gemini, you can:

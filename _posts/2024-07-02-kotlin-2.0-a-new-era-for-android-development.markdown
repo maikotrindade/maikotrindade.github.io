@@ -6,7 +6,7 @@ layout: post
 
 Kotlin 2.0 is a significant milestone in the evolution of the Kotlin programming language. This major release brings forth a host of performance enhancements, innovative language features, and robust tooling support, solidifying Kotlin's position as a premier choice for Android development.
 
-<img src="http://maikotrindade.github.io/public/img/kotlin-2-future.png" width="320" height="320" alt="kotlin-2"/> 
+<img src="https://maikotrindade.com/public/img/kotlin-2-future.png" width="320" height="320" alt="kotlin-2"/> 
 
 ### Performance Optimization
 One of the core focuses of [Kotlin 2.0] is to enhance performance. The compiler has been meticulously refined to generate highly optimized bytecode, resulting in faster application startup times and smoother overall execution.
