@@ -1,372 +1,329 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://maikotrindade.com/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://maikotrindade.com/</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/blog/</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/about.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/about.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/education.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/education.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/experience.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/experience.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/12/14/exploring-Android-XR.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2025/05/22/2025-03-08-untangling-state-android-app-management.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/12/03/a-guide-to-accessibiliy-in-android-apps-jetpack-compose.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2025/01/28/execution-order-in-jetpack-compose.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/10/20/gemini-ai-in-android-studio.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/12/14/exploring-Android-XR.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/09/11/improving-accessibility-android-app.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/12/03/a-guide-to-accessibiliy-in-android-apps-jetpack-compose.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/about</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/blog/archive</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/public/maikotrindade.pdf</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/about</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/09/04/build-better-apps-with-kotlin-multiplatform.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/public/maikotrindade.pdf</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/07/02/kotlin-2.0-a-new-era-for-android-development.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/10/20/gemini-ai-in-android-studio.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/04/03/liquidity-pools-aave-explained.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/09/11/improving-accessibility-android-app.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/03/18/decoding-meme-coins.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/09/04/build-better-apps-with-kotlin-multiplatform.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/02/29/enhancing-ethereum-security-through-ai-based-code-audits.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/07/02/kotlin-2.0-a-new-era-for-android-development.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2024/01/26/insights-into-compose-ui-testing.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/04/03/liquidity-pools-aave-explained.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/11/15/benefits-of-compose-part-2.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/03/18/decoding-meme-coins.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/10/05/benefits-of-compose-part-1.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://maikotrindade.com/2024/02/29/enhancing-ethereum-security-through-ai-based-code-audits.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page2/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://maikotrindade.com/2024/01/26/insights-into-compose-ui-testing.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page3/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.51</priority>
+<loc>https://maikotrindade.com/2023/11/15/benefits-of-compose-part-2.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/08/02/integrate-android-app-with-erc20-token.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://maikotrindade.com/2023/10/05/benefits-of-compose-part-1.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://maikotrindade.com/2023/08/02/integrate-android-app-with-erc20-token.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/04/21/explore-material3-jetpack-compose.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page4/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.41</priority>
+<loc>https://maikotrindade.com/2023/04/21/explore-material3-jetpack-compose.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/03/22/comparing-jetpack-compose-reactive-js.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2023/03/22/comparing-jetpack-compose-reactive-js.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/02/12/migration-from-jetpack-compose.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2023/02/12/migration-from-jetpack-compose.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2023/01/16/send_private_transaction_ethereum.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2023/01/16/send_private_transaction_ethereum.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/12/26/future-gamiing-crypto.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2022/12/26/future-gamiing-crypto.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/11/15/kotlin-interfaces-annontations.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2022/11/15/kotlin-interfaces-annontations.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page5/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.33</priority>
+<loc>https://maikotrindade.com/2022/08/25/jetpack-compose-lets-talk.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/08/25/jetpack-compose-lets-talk.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2022/06/12/supply-chain-blockchain.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/06/12/supply-chain-blockchain.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2022/05/27/ethereum-governance.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/05/27/ethereum-governance.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2022/04/22/best-practices-design-patterns-ethereum.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/04/22/best-practices-design-patterns-ethereum.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2022/03/12/consensus-types.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2022/03/12/consensus-types.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2021/06/28/getting-started-with-chainlink-development-using-truffle-and-infura.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page6/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.26</priority>
+<loc>https://maikotrindade.com/2021/06/12/what-is-chainlink-and-why-it-is-important-for-crypto-ecosystem.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2021/06/28/getting-started-with-chainlink-development-using-truffle-and-infura.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2020/09/29/inheritance-in-solidity-explained.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2021/06/12/what-is-chainlink-and-why-it-is-important-for-crypto-ecosystem.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2020/07/14/basic-of-solidity-mappings.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2020/09/29/inheritance-in-solidity-explained.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2020/05/01/structure-of-smart-contract.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2020/07/14/basic-of-solidity-mappings.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2020/04/11/the-ethereum-virtual-machine.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2020/05/01/structure-of-smart-contract.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2020/02/20/coroutines-android-simplify-code.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page7/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.21</priority>
+<loc>https://maikotrindade.com/2019/12/05/coroutines-basics.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2020/04/11/the-ethereum-virtual-machine.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/11/11/blockchain-decentralizing-the-financial-system.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2020/02/20/coroutines-android-simplify-code.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/07/09/koin-android-kotlin-dependency-injection.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/12/05/coroutines-basics.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/05/03/java-to-kotlin-converting.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/11/11/blockchain-decentralizing-the-financial-system.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/04/25/dependency-injection-with-dagger-2.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/07/09/koin-android-kotlin-dependency-injection.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/03/29/solidity-erc777-new-token-standard.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page8/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.17</priority>
+<loc>https://maikotrindade.com/2019/02/03/introduction-android-work-manager.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/05/03/java-to-kotlin-converting.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2019/01/19/lifecycle-aware-components-on-android.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/04/25/dependency-injection-with-dagger-2.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2018/12/15/architecture-componentes-binding-data.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/03/29/solidity-erc777-new-token-standard.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2018/11/20/what-is-special-about-ERC1155.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/02/03/introduction-android-work-manager.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2018/07/26/solidity-travis-ci-with-truffle.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2019/01/19/lifecycle-aware-components-on-android.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2018/07/07/google-firestore.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page9/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.13</priority>
+<loc>https://maikotrindade.com/2018/06/20/kotlin-tips-tricks-cheat-sheet.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/12/15/architecture-componentes-binding-data.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2018/03/04/how-to-handle-flutter-connectivity.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/11/20/what-is-special-about-ERC1155.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2018/02/20/solidity-call-vs-transaction.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/07/26/solidity-travis-ci-with-truffle.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2018/01/24/solidity-difference-gas-gas-price-fee.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/07/07/google-firestore.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2018/01/15/solidity-block-transaction-properties.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/06/20/kotlin-tips-tricks-cheat-sheet.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2017/12/11/solidity-hash-type-casting.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/blog/page10/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.11</priority>
+<loc>https://maikotrindade.com/2017/11/07/solidity-basics.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/03/04/how-to-handle-flutter-connectivity.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
+<loc>https://maikotrindade.com/2017/02/21/android-architecture-components.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/02/20/solidity-call-vs-transaction.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
+<loc>https://maikotrindade.com/2016/11/05/rxjava.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/01/24/solidity-difference-gas-gas-price-fee.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
+<loc>https://maikotrindade.com/2016/09/03/major-git-commands.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://maikotrindade.com/2018/01/15/solidity-block-transaction-properties.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
+<loc>https://maikotrindade.com/2016/06/12/model-view-presenter-mvp-on-android.html</loc>
+<lastmod>2025-05-22T15:00:52+00:00</lastmod>
+<priority>0.64</priority>
 </url>
-<url>
-  <loc>https://maikotrindade.com/2017/12/11/solidity-hash-type-casting.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/blog/page11/</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.09</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/2017/11/07/solidity-basics.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.07</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/2017/02/21/android-architecture-components.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.07</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/2016/11/05/rxjava.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.07</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/2016/09/03/major-git-commands.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.07</priority>
-</url>
-<url>
-  <loc>https://maikotrindade.com/2016/06/12/model-view-presenter-mvp-on-android.html</loc>
-  <lastmod>2024-12-24T17:21:06+00:00</lastmod>
-  <priority>0.07</priority>
-</url>
-
-
 </urlset>
