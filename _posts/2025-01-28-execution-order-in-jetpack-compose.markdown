@@ -58,12 +58,6 @@ So next time you add a `LaunchedEffect` or a `DisposableEffect`, ask yourself:
 
 - [LaunchedEffect] official docs.
 
-- [DisposableEffect] official docs.
-
-- [RecompositionOverview] official docs.
-
 
 [Side-Effect]:https://developer.android.com/jetpack/compose/side-effects
-[LaunchedEffect]:https://developer.android.com/reference/kotlin/androidx/compose/runtime/LaunchedEffect
-[DisposableEffect]:https://developer.android.com/reference/kotlin/androidx/compose/runtime/DisposableEffect
-[RecompositionOverview]:https://developer.android.com/jetpack/compose/phases#recomposition
+[LaunchedEffect]:https://developer.android.com/reference/kotlin/androidx/compose/runtime/package-summary#LaunchedEffect
