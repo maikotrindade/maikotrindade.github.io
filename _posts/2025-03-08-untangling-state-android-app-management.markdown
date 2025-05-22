@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Untangling State: Easier Android App Management with Compose
+title: Untangling State - Easier Android App Management with Compose
 categories: android compose development
 published: true
 ---
