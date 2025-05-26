@@ -24,6 +24,8 @@ The feature integrates seamlessly with Android Studio's preview environment, off
 
 To explore Gemini Journeys' capabilities, I created a demo project called [KoinBase](https://github.com/maikotrindade/koinbase) - a simple cryptocurrency tracking application built with Jetpack Compose. The app showcases modern Android development practices while serving as a perfect testing ground for AI-assisted test generation.
 
+<video src="https://github.com/maikotrindade/koinbase/blob/main/journeysDemo.mp4"/>
+
 ### Key Features of the Demo:
 - **Clean Architecture**: Implementing MVVM pattern with proper separation of concerns
 - **Jetpack Compose UI**: Modern declarative UI framework
