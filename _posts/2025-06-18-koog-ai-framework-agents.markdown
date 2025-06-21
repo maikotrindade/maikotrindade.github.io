@@ -7,13 +7,9 @@ categories: [AI, Kotlin, Development, Agents]
 tags: [Koog, Kotlin, AI, Agents, JetBrains, JVM, AI Agentic Projects]
 ---
 
-The world of Artificial Intelligence is evolving at an incredible pace, and one of the most exciting areas right now is the rise of **AI agents**. These intelligent systems go beyond simple chatbots, capable of understanding context, making decisions, and taking autonomous actions. For Kotlin developers, the good news is that JetBrains has introduced a fantastic open-source framework called **Koog**, designed to make building these AI agents intuitive and powerful.
-
-### What is Koog AI?
-
 **Koog** is an innovative, open-source **agentic framework** built by JetBrains. It empowers Kotlin developers to create and run AI agents entirely within the **JVM ecosystem**, leveraging a modern **Kotlin DSL**. This means you can build intelligent, autonomous agents with the same ease and productivity that Kotlin brings to everyday development.
 
-Prior to Koog, a comprehensive, Kotlin-native agentic framework solution was largely missing. Koog fills this gap, providing a robust and flexible platform for a wide range of AI problems.
+<img src="https://maikotrindade.com/public/img/koog-ai-agent.png" width="350" height="350" alt="koog-ai-agent"/> 
 
 ### The Benefits of Koog for Your AI Agentic Projects
 
@@ -22,14 +18,10 @@ Koog offers a compelling set of features and advantages that make it an excellen
 * **Pure Kotlin Implementation:** Build and run your AI agents entirely in idiomatic Kotlin. This means leveraging all the benefits of Kotlin – conciseness, null safety, and excellent tooling – for your AI projects.
 * **Modular Feature System:** Extend your agent's capabilities through a highly composable feature system. This allows for flexible and scalable agent design.
 * **Tool Integration:** Koog allows you to create and integrate custom tools, giving your agents access to external systems and resources. This is crucial for agents that need to interact with the real world or specific APIs.
-* **Out-of-the-Box Solutions:** Koog comes with ready-to-use components and solutions for popular use cases and common AI engineering challenges, accelerating your development process.
 * **Powerful Streaming API:** Process responses from Large Language Models (LLMs) in real-time. This is essential for responsive user interfaces and efficient handling of large outputs. It even supports invoking multiple tools on the fly from a single LLM request.
 * **Intelligent History Compression:** Optimize token usage while maintaining conversation context through various pre-built strategies. This helps manage costs and improves efficiency when dealing with long conversations.
 * **Persistent Agent Memory:** Enable knowledge retention across different sessions and even between different agents, leading to more robust and capable AI.
 * **Comprehensive Tracing:** Debug and monitor agent execution with detailed and configurable tracing of LLM calls, tools, and agent stages. This provides invaluable insight into your agent's behavior.
-* **Flexible Graph Workflows:** Design complex agent behaviors using intuitive graph-based workflows, offering a clear visual representation of your agent's logic.
-* **Scalable Architecture:** Koog is designed to handle workloads ranging from simple chatbots to enterprise-level applications.
-* **Multiplatform Support:** Run your agents on both JVM and JS targets, thanks to Kotlin Multiplatform, opening up diverse deployment possibilities.
 * **Support for Various LLM Providers:** Koog integrates with popular LLM providers like Google, OpenAI, Anthropic, OpenRouter, and Ollama, giving you flexibility in choosing your underlying AI models.
 
 ### My Experience with Koog
