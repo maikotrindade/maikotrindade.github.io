@@ -21,7 +21,35 @@ As an Android developer, I’ve used Espresso, UIAutomator, and other frameworks
 ## How It Works
 The project is powered by **Koog.ai** and **Kotlin**, using an **LLM as the reasoning engine** (options include Gemini, Llama, GPT, or Gwen). Here’s the flow:
 
-1. **User Input (Frontend Dashboard)**  
+
+### [Ktor API & Koog Agent (Backend)](https://github.com/maikotrindade/mobile-tester-agent)
+
+The backend is built with **Ktor** in Kotlin and powered by a custom **Koog agent** (`MobileTestAgent`) plus a toolkit of device actions (`MobileTestTools`).
+
+**Ktor API**
+The Ktor server exposes endpoints that receive test scenarios and configuration (LLM model, temperature, iterations). Each request is routed to the `MobileTestAgent`, which runs the scenario with the chosen parameters.
+
+**MobileTestAgent (Koog Agent)**
+`MobileTestAgent` encapsulates the Koog agent setup. It translates high-level test goals into an iterative reasoning process, where the LLM plans actions like *"tap login button"* or *"enter text"*. The agent respects limits such as max iterations and temperature to balance creativity and determinism.
+
+**MobileTestTools (Device Interaction)**
+`MobileTestTools` provides the executable layer via **ADB commands**. It includes functions for:
+- Interactions: `tap()`, `typeText()`, `scroll()`, `swipe()`
+- Checks: `assertTextVisible()`, `getUiHierarchy()`
+- Utilities: `launchApp()`, `installApk()`, `takeScreenshot()`
+
+These functions are registered as tools within Koog, so when the agent plans an action, Koog calls the corresponding method directly.
+
+**Execution Flow**
+- Ktor receives a scenario and sends it to the agent.  
+- Koog plans the next step using the LLM.  
+- The selected `MobileTestTools` method executes the action on the device.  
+- Feedback (UI state, success/failure) is fed back into the agent.  
+- This loop continues until the scenario ends or max iterations are hit.  
+
+At the end, a structured report is generated with actions, results, and optional artifacts (like screenshots), and returned to the frontend dashboard.
+
+### [User Input (Frontend Dashboard)](https://github.com/maikotrindade/mobile-tester-agent-frontend)  
    - Users create test scenarios (goals & steps) via a ReactJS dashboard.  
    - The site was designed with [Stitch](https://stitch.withgoogle.com/) and stores data in **Cloud Firestore**.  
    - Users can also tweak AI agent parameters like:  
@@ -29,21 +57,9 @@ The project is powered by **Koog.ai** and **Kotlin**, using an **LLM as the reas
      - Temperature  
      - Max iterations  
 
-   👉 [Frontend Repo](https://github.com/maikotrindade/mobile-tester-agent-frontend)
-
-2. **Ktor API & Koog Agent (Backend)**  
-   - The AI tester runs inside a **Ktor-based API** in Kotlin.  
-   - Scenarios are passed to the Koog agent, which uses **agentic reasoning** to decide the sequence of actions.  
-   - The agent is connected to an Android emulator or physical device through **ADB tools**.  
-   - Results are collected and turned into **test execution reports**.  
-
-   👉 [Agent Repo](https://github.com/maikotrindade/mobile-tester-agent)
-
-3. **Sample Android App**  
+### [Sample Android App](https://github.com/maikotrindade/mobile-tester-agent-sample-app)  
    - To showcase the system, I created a simple demo Android app.  
    - The agent can interact with it and validate flows end-to-end.  
-
-   👉 [Sample App Repo](https://github.com/maikotrindade/mobile-tester-agent-sample-app)
 
 ---
 
@@ -60,25 +76,26 @@ No need to maintain test scripts—just provide the goal.
 
 ---
 
-## Why Kotlin + Koog?
+### Why Kotlin + Koog?
 Kotlin gave me the flexibility to build a clean API with Ktor and manage complex agent logic easily. Koog.ai, with its **Model Context Protocol (MCP)** integration and agentic design, allowed me to connect the LLM with Android tooling like ADB seamlessly.  
 
 This mix of **Kotlin, LLMs, and Android dev tools** opens a new way of thinking about mobile testing: instead of scripting, you describe intentions.
 
 ---
 
-## What’s Next
-- Improving reporting (screenshots, structured logs).  
-- Expanding to multi-app flows.  
+### What’s Next
+- Improving reporting (screenshots, videos, structured logs).  
+- Expanding to iOS and Web end-to-end testing.  
 - Exploring CI/CD integration for real-world teams.  
 
 ---
 
-## Links
+### Links
 - 🔗 [Koog - Agentic Mobile Tester (Agent)](https://github.com/maikotrindade/mobile-tester-agent)  
 - 🔗 [Frontend Dashboard](https://github.com/maikotrindade/mobile-tester-agent-frontend)  
 - 🔗 [Sample Android App](https://github.com/maikotrindade/mobile-tester-agent-sample-app)  
+- 🔗 [LinkedIn post](https://www.linkedin.com/posts/maikotrindade_ai-aiagents-android-activity-7362894658969985025-02Jw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAUawAwBJqLuU627P_RUiatzkteEsE66KbY) 
 
 ---
 
-This was a fun experiment mixing **Kotlin + AI agents + Android testing**. If you’re curious about agentic AI, Koog, or just want to rethink mobile testing, I’d love feedback! 🚀
+This was a fun experiment mixing **Kotlin + AI agents + Android testing**. If you’re curious about agentic AI, Koog, or just want to rethink mobile testing, I’d love feedback, feel free to DM on LinkedIn! 🚀
