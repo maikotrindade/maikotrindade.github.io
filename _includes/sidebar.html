@@ -43,20 +43,19 @@
         </ul>
         <h4>Latest Updates</h4>
         <ul class="sidebar-nav">
-            {% for post in site.posts | limit:4 %}
+            {% for post in site.posts | limit:3 %}
             <li class="sidebar-nav-item small">
                 <a href="{{ post.url }}">{{ post.title }}</a>
             </li>
             {% endfor %}
             <br/>
             <li class="sidebar-nav-item small"></li>
-                <a href="/blog" style="font-size: 15px;">See other articles</a>
+                <a href="/blog" style="font-size: 14px;">See other articles</a>
             </li>
             <li class="sidebar-nav-item small"></li>
-                <a href="/blog/archive" style="font-size: 15px;">Archive</a>
+                <a href="/blog/archive" style="font-size: 14px;">Archive</a>
             </li>
         </ul>
-        
-        <p style="font-size: 14px;">by @maikotrindade &copy; {{ site.time | date: '%Y' }}</p>
+        <p style="font-size: 13px;">by @maikotrindade &copy; {{ site.time | date: '%Y' }}</p>
     </div>
 </div>
