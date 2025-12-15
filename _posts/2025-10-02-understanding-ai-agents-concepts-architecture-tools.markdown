@@ -4,7 +4,7 @@ title: "Understanding AI Agents: Concepts, Architecture, and Tools"
 date: 2025-10-02
 published: true
 categories: [AI, agents, automation, agentic systems, llm]
-tags: [AI, agents, automation, agentic systems, llm]]
+tags: [AI, agents, automation, agentic systems, llm]
 ---
 
 
@@ -130,18 +130,17 @@ Agent performance improves through experimentation, logging, and refinement rath
 
 Agentic AI requires thinking beyond prompts — considering orchestration, observability, failure modes, and scalability.
 
-### Popular Tools to Build AI Agents
+### Agent Frameworks for Developers*
 
-The ecosystem for building AI agents is rapidly evolving. Below are some of the most widely used tools and frameworks today.
 
-*Agent Frameworks for Developers*
+The ecosystem for building AI agents is rapidly evolving. Below are some of the most widely used tools today.
 
-LangChain – A popular framework for chaining LLMs with tools, memory, and control logic.
+*LangChain* – A popular framework for chaining LLMs with tools, memory, and control logic.
 
-CrewAI – Focuses on multi‑agent collaboration, where agents have specialized roles.
+*CrewAI* – Focuses on multi‑agent collaboration, where agents have specialized roles.
 
-AutoGPT‑style frameworks – Early autonomous agents that iterate through planning and execution loops.
+*AutoGPT‑style frameworks* – Early autonomous agents that iterate through planning and execution loops.
 
-OpenAI Agent Builder / AgentKit – Tools for building structured, tool‑driven agents with safety guardrails.
+*OpenAI Agent Builder / AgentKit* – Tools for building structured, tool‑driven agents with safety guardrails.
 
-Koog.ai – A Kotlin‑first framework for building AI agents with strong typing, modular prompt executors, and clear separation of reasoning, tools, and orchestration. Particularly well‑suited for backend and Android‑adjacent ecosystems.
+*Koog.ai* – A Kotlin‑first framework for building AI agents with strong typing, modular prompt executors, and clear separation of reasoning, tools, and orchestration. Particularly well‑suited for backend and Android‑adjacent ecosystems.
