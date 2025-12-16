@@ -8,139 +8,135 @@ tags: [AI, agents, automation, agentic systems, llm]
 ---
 
 
-AI agents represent a major shift in how we build and interact with artificial intelligence systems. Instead of responding to a single prompt, AI agents are designed to reason, plan, act, and iterate autonomously in order to achieve a goal.
+AI agents are a paradigm shift in how we design and interact with artificial intelligence. [AI agents](https://www.ibm.com/think/topics/ai-agents) are programmed not only to respond to a single query but to reason, plan, act, and iterate on their own in order to reach a goal.
 
-This article explores what AI agents are, how they work, how they differ from traditional AI workflows, the skills required to master agentic AI, and the most popular tools you can use to build them today.
+This piece will examine what AI agents are, how they function, what distinguishes them from traditional AI processes, the skills needed to excel at agentic AI, and the most popular tools you can currently utilize to build your own AI agents.
 
-### What Is an AI Agent?
+### What is an AI Agent?
 
-An AI agent is an intelligent system that can:
+An [AI agent](https://www.ibm.com/think/topics/ai-agents) is a smart system capable of:
 
-Receive a high‑level goal
+Obtain a high-level goal
 
 Break it down into steps
 
-Decide which tools or actions to use
+Decide on the tools or actions to employ
 
-Execute those actions
+Perform those actions
 
-Observe the results and adjust its strategy
+Observe the outcomes and make adjustments in strategy
 
-Unlike traditional AI models (such as chatbots), AI agents are goal‑driven systems. They do not just answer questions — they decide what to do next.
+Unlike conventional AI models (e.g., chatbots), AI agents are goal-oriented. They do not merely respond to inquiries — they make decisions on what actions to take next.
 
-This makes AI agents particularly powerful for automation, research, testing, software development, data analysis, and decision‑making systems.
+This renders the AI agent a very effective tool for automation, research, testing, software development, data analysis, and decision-making systems.
 
 ### Core Components of an AI Agent
 
-Most AI agents are built around a few fundamental components:
+Most AI agents are based upon a few key elements:
 
 1. Reasoning Engine
 
-The reasoning layer is responsible for understanding goals, decomposing tasks, and deciding the next best action. This is typically powered by an LLM (Large Language Model).
+The reasoning layer is accountable for goal understanding, task breakdown, and determining the best possible next action. This is usually done with the help of an [LLM (Large Language Model)](https://en.wikipedia.org/wiki/Large_language_model).
 
 2. Planning
 
-Planning allows the agent to sequence actions instead of reacting one step at a time. Some agents plan upfront, while others plan dynamically after each action.
+Planning enables the agent to plan the sequence of actions rather than acting step by step. Some agents plan ahead, while others plan dynamically after the execution of each action.
 
 3. Tools & Actions
 
-Agents interact with the world using tools, such as:
+The agents interact with the world through tools such as:
 
 APIs
+APIs, or application programming interfaces, are dynamic links between software systems that enable different components of an application to work together in order to provide a function or service. They can be considered as middle-tier services that communicate with other components of an application to deliver a specific task. APIs are built using programming languages such as Java or C++. They can be exposed as web services that can be easily accessed by other applications.
+APIs are mainly used for integration purposes. They allow different applications to interact with each other and share data. This is done by creating a web service that can be accessed by other applications. APIs can also be used to connect to different databases. APIs can be used to build various types of applications, including those for mobile devices. APIs can be classified into two categories: private APIs and public APIs. 
+Private APIs are used within an organization, whereas public APIs can be accessed by anyone. Private APIs are secured with credentials, while public APIs do not require authentication since they are accessible to everyone. APIs have several benefits, including reusability, flexibility, and simplicity. APIs are reusable because they can be reused throughout the entire application. APIs are flexible because they can be called from anywhere in the application. APIs are also simple because they can be invoked directly.
 
 Databases
 
 File systems
 
 Browsers
+================
+Browser applications interface with the web by rendering web pages. Each browser has a user interface that allows users to interact with it. The following are some of the browsers that exist today.
+* Internet Explorer
+* Mozilla Firefox
+* Google Chrome
+* Opera
+* Safari
 
-Code execution environments
+Code Execution Environments
 
-This is what enables agents to do real work instead of only generating text.
+It is this that allows agents to actually do the work rather than just produce text.
 
 4. Memory
 
-Memory allows agents to store:
+Memory enables agents to store: Past behavior, Intermediate results and Long-term knowledge.
 
-Past actions
+The knowledge that can be maintained within long-term memory needs to be adequate for the character to progress appropriately in the story. The type of knowledge that should be stored in this region of memory is the ability to ride a bicycle. This skill requires practice, and the character should demonstrate that they have learned it.
 
-Intermediate results
-
-Long‑term knowledge
-
-This can include short‑term context windows or persistent storage such as vector databases.
+This could range from short-term context windows to more permanent storage solutions like [vector databases](https://www.pinecone.io/learn/vector-database/).
 
 5. Feedback & Iteration
 
-Agents evaluate the outcome of their actions and decide whether to continue, retry, or change strategy. This feedback loop is what gives agents autonomy.
+The agents assess the outcome of their actions and make decisions on whether to continue, retry, or modify their strategy. This process is what gives the agents autonomy.
 
 ### From Workflows to Agentic Systems
 
-It’s helpful to distinguish between:
+It is useful to distinguish between:
 
-LLMs → Single responses to prompts
+**LLMs** → Responses to individual prompts
 
-Workflows → Predefined, human‑designed sequences of steps
+**Workflows** → Predefined, human-designed sequences of steps
 
-Agents → Systems that choose and control the workflow themselves
+**Agents** → Systems that choose and control the workflow themselves
 
-In agentic systems, decision‑making is delegated to the AI, not hard‑coded by developers.
+In agentic systems, decision-making is entrusted to the AI itself and not hard-coded by programmers.
 
-### Skills Required to Master Agentic AI
+### Skills Needed to Master Agentic AI
 
-Mastering agentic AI is less about prompt writing and more about system design. Key skills include:
+Agentic AI requires more system design skill than prompt writing skill. The important skills are:
 
 1. Goal Decomposition
 
-The ability to break complex objectives into smaller, solvable tasks that an agent can reason about.
+The capacity to decompose complex objectives into smaller, solvable tasks that the agent can reason about.
 
 2. Tool Design
 
-Well‑designed tools are critical. Agents perform better when tools are:
-
-Clearly defined
-
-Narrow in scope
-
-Deterministic when possible
+Well-designed tools are essential. Agents work better when tools are: Clearly defined, Narrow in scope and Deterministic when possible.
 
 3. Evaluation & Guardrails
 
-Agents need constraints to avoid infinite loops, hallucinations, or unsafe actions. This includes:
+Agents must have constraints to prevent infinite loops, hallucinations, or unsafe behaviors. These include: Success criteria and Step limits.
 
-Success criteria
-
-Step limits
-
-Validation rules
+Validation Rules
 
 4. Memory Management
 
-Deciding what the agent should remember — and for how long — is a core architectural decision.
+How much the agent should remember, and for how long, is a major architectural choice.
 
-5. Human‑in‑the‑Loop Design
+5. Human-in-the-Loop Design
 
-In many real systems, agents operate semi‑autonomously with human approval checkpoints rather than full autonomy.
+In most practical scenarios, the agents would be working semi-autonomously with human approval checkpoints rather than full autonomy.
 
 6. Iterative Improvement
 
-Agent performance improves through experimentation, logging, and refinement rather than one‑shot implementation.
+Performance is improved through experimentations, logging, and refinements rather than one-shot executions.
 
 7. Systems Thinking
 
-Agentic AI requires thinking beyond prompts — considering orchestration, observability, failure modes, and scalability.
-
-### Agent Frameworks for Developers*
+In Agentic AI, one has to think beyond the response, including orchestration, observability, failure modes, and scalability.
 
 
-The ecosystem for building AI agents is rapidly evolving. Below are some of the most widely used tools today.
+### Agent Frameworks for Developers
 
-*LangChain* – A popular framework for chaining LLMs with tools, memory, and control logic.
+The environment for developing AI agents is an ever-changing one. Some of the most popular tools being used currently are listed below.
 
-*CrewAI* – Focuses on multi‑agent collaboration, where agents have specialized roles.
+**[LangChain](https://www.langchain.com/)** – A widely used framework that chains LLMs together using tools, memory, and control logic.
 
-*AutoGPT‑style frameworks* – Early autonomous agents that iterate through planning and execution loops.
+**[CrewAI](https://www.crewai.com/)** – Emphasizes the collaboration of multiple agents with defined roles.
 
-*OpenAI Agent Builder / AgentKit* – Tools for building structured, tool‑driven agents with safety guardrails.
+**AutoGPT-like frameworks** – Early autonomous agents that cycled between planning and execution loops.
 
-*Koog.ai* – A Kotlin‑first framework for building AI agents with strong typing, modular prompt executors, and clear separation of reasoning, tools, and orchestration. Particularly well‑suited for backend and Android‑adjacent ecosystems.
+**[OpenAI Agent Builder / AgentKit](https://platform.openai.com/)** – Tools for building structured, tool-driven agents with safety guardrails.
+
+**[Koog.ai](https://www.koog.ai/)** – A Kotlin‑centric framework for developing AI agents, emphasizing strong typing, modular prompt executors, and a clean separation of reasoning, tools, and orchestration. Especially suited for backend and Android‑adjacent spaces.
