@@ -298,9 +298,14 @@
       <br/><br/>
       <strong>Capitol Trades Tracker</strong> – Transparent. Educational. Independent.
       <br/>
-      © 2025 Maiko Trindade. All rights reserved.
+      © <span id="footer-year"></span> Maiko Trindade. All rights reserved.
     </p>
   </div>
+
+    <script>
+    const year = new Date().getFullYear();
+    document.getElementById('footer-year').textContent = year;
+  </script>
 </body>
 </html>
 
