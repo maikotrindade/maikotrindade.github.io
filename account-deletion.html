@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Deletion – Capitol Trades Tracker</title>
+  <meta name="description" content="Request account deletion for Capitol Trades Tracker. Learn about data retention and the deletion process." />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #151922;
+      --text: #e8eaf0;
+      --muted: #9aa3b2;
+      --accent: #5ea0ff;
+      --error: #ff5555;
+      --success: #50fa7b;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      padding: 12px 0 24px;
+      border-bottom: 1px solid #1f2430;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 1.8rem; margin: 0 0 8px; color: var(--error); }
+    .updated { color: var(--muted); font-size: 0.95rem; }
+    h2 { font-size: 1.3rem; margin-top: 28px; color: var(--accent); }
+    h3 { font-size: 1.1rem; margin-top: 20px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 20px; }
+    li { margin: 8px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { 
+      background: var(--surface); 
+      border: 1px solid #212634; 
+      border-radius: 12px; 
+      padding: 18px; 
+      margin: 16px 0; 
+    }
+    .warning {
+      background: rgba(255, 85, 85, 0.1);
+      border: 1px solid var(--error);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .warning-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .info {
+      background: rgba(94, 160, 255, 0.1);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .footer { 
+      color: var(--muted); 
+      font-size: 0.9rem; 
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid #1f2430;
+    }
+    code { 
+      background: #1a1f2b; 
+      padding: 2px 6px; 
+      border-radius: 6px;
+      color: var(--accent);
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 8px 4px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .button-primary {
+      background: var(--error);
+      color: white;
+    }
+    .button-primary:hover {
+      background: #ff6b6b;
+      text-decoration: none;
+    }
+    .button-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid #212634;
+    }
+    .button-secondary:hover {
+      background: #1f2430;
+      text-decoration: none;
+    }
+    .steps {
+      counter-reset: step-counter;
+      list-style: none;
+      padding-left: 0;
+    }
+    .steps li {
+      counter-increment: step-counter;
+      margin: 16px 0;
+      padding-left: 40px;
+      position: relative;
+    }
+    .steps li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: var(--accent);
+      color: var(--bg);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚠️ Account Deletion</h1>
+      <p class="updated">Last Updated: December 29, 2025</p>
+    </header>
+
+    <div class="warning">
+      <div class="warning-icon">🚨</div>
+      <h3 style="margin-top: 0;">This Action is Permanent and Cannot Be Undone</h3>
+      <p>When you delete your account, all of your personal data will be permanently removed from our systems. This includes:</p>
+      <ul>
+        <li>Your profile information (name, email, profile picture)</li>
+        <li>Your account preferences and settings</li>
+        <li>Your authentication data</li>
+        <li>Any associated user activity logs</li>
+      </ul>
+      <p><strong>Once deleted, this data cannot be recovered.</strong></p>
+    </div>
+
+    <div class="section">
+      <h2>How to Delete Your Account</h2>
+      <p>You can delete your account directly from the Capitol Trades Tracker mobile app:</p>
+      
+      <ol class="steps">
+        <li>
+          <strong>Open the App</strong><br/>
+          Launch Capitol Trades Tracker on your mobile device and ensure you're logged in.
+        </li>
+        <li>
+          <strong>Navigate to Profile</strong><br/>
+          Tap on the <strong>More</strong> tab at the bottom, then select <strong>Profile</strong> from the menu.
+        </li>
+        <li>
+          <strong>Initiate Deletion</strong><br/>
+          Scroll down and tap the <strong>Delete Account</strong> button (displayed in red at the bottom of the screen).
+        </li>
+        <li>
+          <strong>Confirm Deletion</strong><br/>
+          Read the confirmation dialog carefully, then tap <strong>Delete</strong> to confirm. You will be immediately logged out, and your account will be permanently deleted.
+        </li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>What Happens After Deletion?</h2>
+      
+      <h3>Immediate Effects</h3>
+      <ul>
+        <li>You will be immediately logged out of the app</li>
+        <li>Your account will be permanently deactivated</li>
+        <li>Your authentication credentials will be revoked</li>
+      </ul>
+
+      <h3>Data Deletion Timeline</h3>
+      <ul>
+        <li><strong>User Profile Data:</strong> Deleted immediately from our production databases</li>
+        <li><strong>Authentication Data:</strong> Removed from Firebase Authentication within 24 hours</li>
+        <li><strong>Backup Systems:</strong> Purged from backups within 30 days (industry standard retention period)</li>
+        <li><strong>Analytics Data:</strong> Anonymized aggregated data may be retained for service improvement (contains no personally identifiable information)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>What Data is NOT Deleted</h2>
+      <p>For legal, security, and operational reasons, we may retain certain information:</p>
+      <ul>
+        <li><strong>Transaction Records:</strong> We do NOT collect or store any stock trading data—all trading information comes from public government sources and is not tied to your account</li>
+        <li><strong>Legal Compliance Data:</strong> Data required by law to be retained (e.g., for tax compliance, fraud prevention)</li>
+        <li><strong>Anonymized Analytics:</strong> Aggregated, non-identifiable usage statistics that cannot be traced back to you</li>
+        <li><strong>Server Logs:</strong> Technical logs may be retained for up to 90 days for security and debugging purposes</li>
+      </ul>
+    </div>
+
+    <div class="info">
+      <h3>💡 Alternative: Temporarily Stop Using the App</h3>
+      <p>If you're not sure about permanently deleting your account, you can simply log out and stop using the app. Your data will remain inactive but can be accessed again if you choose to return.</p>
+      <p>To log out: <strong>More → Logout</strong></p>
+    </div>
+
+    <div class="section">
+      <h2>Need Help?</h2>
+      <p>If you're experiencing issues with account deletion or have questions about data retention, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:hellojumbomob@gmail.com">hellojumbomob@gmail.com</a></li>
+        <li><strong>Subject Line:</strong> "Account Deletion Request - Capitol Trades Tracker"</li>
+      </ul>
+      <p>We typically respond within 2-3 business days.</p>
+    </div>
+
+    <div class="section">
+      <h2>Manual Deletion Request</h2>
+      <p>If you're unable to delete your account through the app, you can submit a manual deletion request:</p>
+      
+      <ol>
+        <li>Send an email to <a href="mailto:hellojumbomob@gmail.com">hellojumbomob@gmail.com</a></li>
+        <li>Use the subject line: <strong>"Manual Account Deletion Request"</strong></li>
+        <li>Include the following information:
+          <ul>
+            <li>Your registered email address</li>
+            <li>Your name (as shown in your profile)</li>
+            <li>Confirmation that you want your account permanently deleted</li>
+          </ul>
+        </li>
+        <li>We will verify your identity and process the deletion within <strong>7 business days</strong></li>
+        <li>You will receive a confirmation email once the deletion is complete</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>Your Rights Under Privacy Laws</h2>
+      <p>In accordance with GDPR, CCPA, and other data protection regulations, you have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of your personal data</li>
+        <li><strong>Rectification:</strong> Correct inaccurate personal data</li>
+        <li><strong>Erasure:</strong> Request deletion of your personal data (this page)</li>
+        <li><strong>Data Portability:</strong> Receive your data in a machine-readable format</li>
+        <li><strong>Object:</strong> Object to certain types of data processing</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:hellojumbomob@gmail.com">hellojumbomob@gmail.com</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>Frequently Asked Questions</h2>
+      
+      <h3>Can I recover my account after deletion?</h3>
+      <p>No. Account deletion is permanent and cannot be reversed. If you want to use Capitol Trades Tracker again, you will need to create a new account.</p>
+
+      <h3>Will I lose access to congressional trading data?</h3>
+      <p>No. All congressional trading data is publicly available and not tied to your account. You can access the same public data by creating a new account or through other public sources.</p>
+
+      <h3>How long does the deletion process take?</h3>
+      <p>The deletion is immediate. Your account will be deactivated and your profile data deleted as soon as you confirm. Backend systems and backups are purged within 30 days.</p>
+
+      <h3>Will my Google account be affected?</h3>
+      <p>No. Deleting your Capitol Trades Tracker account does not affect your Google account. We only remove the connection between your Google account and our app.</p>
+
+      <h3>Can I delete my account and create a new one with the same email?</h3>
+      <p>Yes. After your account is deleted, you can sign up again using the same Google account/email address. However, all previous data will be lost.</p>
+    </div>
+
+    <div class="warning">
+      <h3>⚠️ Before You Delete</h3>
+      <p>Please make sure you understand:</p>
+      <ul>
+        <li>This action is <strong>permanent and irreversible</strong></li>
+        <li>All your profile data will be <strong>permanently deleted</strong></li>
+        <li>You will need to <strong>create a new account</strong> to use the app again</li>
+        <li>There is <strong>no grace period</strong>—deletion is immediate</li>
+      </ul>
+      <p>If you're ready to proceed, open the Capitol Trades Tracker app and follow the steps outlined above.</p>
+    </div>
+
+    <p class="footer">
+      This account deletion policy is part of our commitment to user privacy and data protection. 
+      For more information about how we handle your data, please review our 
+      <a href="privacy_policy.html">Privacy Policy</a>.
+      <br/><br/>
+      <strong>Capitol Trades Tracker</strong> – Transparent. Educational. Independent.
+      <br/>
+      © 2025 Maiko Trindade. All rights reserved.
+    </p>
+  </div>
+</body>
+</html>
+
