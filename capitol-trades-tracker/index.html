@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Capitol Trades Tracker – Congressional Trading Transparency</title>
+  <meta name="description" content="Capitol Trades Tracker is an educational Android app that tracks publicly disclosed U.S. congressional stock trades using AI-powered analysis for transparency and research." />
+
+  <!-- SEO / Social -->
+  <meta property="og:title" content="Capitol Trades Tracker" />
+  <meta property="og:description" content="Educational AI-powered platform for analyzing publicly disclosed congressional stock trades." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #121a33;
+      --card: #18214a;
+      --primary: #5eead4;
+      --secondary: #60a5fa;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #f87171;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1e293b 0%, transparent 50%),
+                  radial-gradient(1000px 600px at 90% 10%, #0f766e 0%, transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      background: rgba(94, 234, 212, 0.15);
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .notice {
+      border-left: 4px solid var(--danger);
+      background: rgba(248, 113, 113, 0.1);
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .tech span {
+      display: inline-block;
+      background: rgba(96, 165, 250, 0.15);
+      color: var(--secondary);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin: 0.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer strong {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <span class="badge">Educational · Transparency · AI</span>
+      <h1>Capitol Trades Tracker</h1>
+      <p>
+        An educational Android platform that analyzes <strong>publicly disclosed U.S. congressional stock trades</strong>
+        using AI-powered insights to promote transparency and civic awareness.
+      </p>
+    </header>
+
+    <section>
+      <div class="notice">
+        <strong>Compliance Notice</strong><br />
+        Capitol Trades Tracker provides informational and educational content only.
+        It does <strong>not</strong> offer financial, investment, or trading advice.
+        Formerly known as <em>Insider Watcher</em>, the app was renamed to comply with Google Play policies.
+      </div>
+    </section>
+
+    <section>
+      <h2>Why This Platform Exists</h2>
+      <div class="card">
+        <p>
+          Under the <strong>STOCK Act of 2012</strong>, U.S. members of Congress are legally required to disclose
+          their stock transactions.
+        </p>
+        <p>
+          Capitol Trades Tracker makes this public data easier to explore by aggregating disclosures,
+          applying AI-driven analysis, and presenting information in a clear, accessible format.
+        </p>
+        <ul>
+          <li>Aggregates official congressional trading disclosures</li>
+          <li>Highlights historical and behavioral patterns</li>
+          <li>Improves access to public transparency data</li>
+          <li>Operates independently of any government body</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>📊 Trading Feed</h3>
+          <p>Browse publicly disclosed buy and sell transactions by U.S. politicians.</p>
+        </div>
+        <div class="card">
+          <h3>🤖 AI Analysis</h3>
+          <p>Koog-based AI examines patterns, timing, and historical context.</p>
+        </div>
+        <div class="card">
+          <h3>🔍 Search & Filters</h3>
+          <p>Find trades by politician, stock symbol, or disclosure date.</p>
+        </div>
+        <div class="card">
+          <h3>📚 Insights Archive</h3>
+          <p>Access historical AI insights with transparent methodology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technology Stack</h2>
+      <div class="card tech">
+        <span>Android (Native)</span>
+        <span>Material Design</span>
+        <span>Koog (Kotlin DSL)</span>
+        <span>AI Agents</span>
+        <span>PostgreSQL</span>
+        <span>Google OAuth 2.0</span>
+        <span>API-driven Backend</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who It’s For</h2>
+      <div class="card">
+        <ul>
+          <li>Researchers and journalists</li>
+          <li>Students studying public disclosure laws</li>
+          <li>Transparency and ethics advocates</li>
+          <li>Citizens interested in political accountability</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mission</h2>
+      <div class="card">
+        <p>
+          Capitol Trades Tracker exists to make political trading transparency more accessible.
+          By combining public records with AI-assisted analysis, the platform helps users
+          better understand how elected officials participate in financial markets—ethically,
+          responsibly, and clearly.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <strong>Capitol Trades Tracker</strong><br />
+    Public Data · AI-Assisted Analysis · Educational Transparency
+  </footer>
+
+</body>
+</html>
