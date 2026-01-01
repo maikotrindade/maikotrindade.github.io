@@ -5,68 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Terms of Service – Capitol Trades Tracker</title>
   <meta name="description" content="Terms of Service for Capitol Trades Tracker, outlining the rules and legal agreements for using our mobile app and services."/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #151922;
+      --text: #e8eaf0;
+      --muted: #9aa3b2;
+      --accent: #5ea0ff;
+    }
+    html, body { height: 100%; }
     body {
-      font-family: Inter, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      background: #fff;
-      color: #111;
     }
     .container {
       max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
+      margin: 0 auto;
+      padding: 24px;
     }
-    h1, h2 {
-      color: #0a1a33;
+    header {
+      padding: 12px 0 24px;
+      border-bottom: 1px solid #1f2430;
+      margin-bottom: 24px;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-size: 2.5rem;
-    }
-    p, li {
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    .small {
-      font-size: 0.9rem;
-      color: #555;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #666;
-    }
+    h1 { font-size: 1.8rem; margin: 0 0 8px; }
+    .updated { color: var(--muted); font-size: 0.95rem; }
+    h2 { font-size: 1.3rem; margin-top: 28px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 20px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { background: var(--surface); border: 1px solid #212634; border-radius: 12px; padding: 18px; margin: 16px 0; }
+    .footer { color: var(--muted); font-size: 0.9rem; margin-top: 28px; }
+    code { background: #1a1f2b; padding: 2px 6px; border-radius: 6px; }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
+    <header>
+      <h1>Terms of Service for Capitol Trades Tracker</h1>
+      <div class="updated">Last Updated: January 1, 2026</div>
+    </header>
 
-  <h1>Terms of Service</h1>
-
-  <p class="small">Last updated: <strong>January 1, 2026</strong></p>
-
-  <p>
-    These Terms of Service (“Terms”) govern your access to and use of the mobile application
-    <strong>Capitol Trades Tracker</strong> (“we”, “our”, or “the App”), including any related services
-    provided by us. By accessing or using the App in any way, you agree to be bound by these Terms.
-    If you do not agree, please discontinue use immediately. :contentReference[oaicite:1]{index=1}
-  </p>
+    <div class="section">
+      <p>
+        These Terms of Service ("Terms") govern your access to and use of the mobile application
+        <strong>Capitol Trades Tracker</strong> ("we", "our", or "the App"), including any related services
+        provided by us. By accessing or using the App in any way, you agree to be bound by these Terms.
+        If you do not agree, please discontinue use immediately.
+      </p>
+    </div>
 
   <div class="section">
     <h2>1. Acceptance of Terms</h2>
@@ -149,16 +141,13 @@
     </p>
   </div>
 
-  <div class="footer">
-  © <span id="current-year"></span> Capitol Trades Tracker. All rights reserved.
-</div>
+    <p class="footer">© <span id="current-year"></span> Capitol Trades Tracker. All rights reserved.</p>
 
-<script>
-  document.getElementById("current-year").textContent =
-    new Date().getFullYear();
-</script>
-
-</div>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </div>
 
 </body>
 </html>
