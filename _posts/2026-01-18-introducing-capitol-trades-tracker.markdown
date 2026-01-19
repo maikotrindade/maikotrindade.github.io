@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Capitol Trades Tracker: AI-Powered Investment Intelligence from Public Political Trading Data"
+title: "Capitol Trades Tracker: AI-Powered Investment Intelligence"
 date: 2026-01-18
 published: true
 categories: artificial-intelligence
@@ -23,6 +23,8 @@ Meanwhile, institutional investors and hedge funds employ teams of analysts to m
 
 ## The Solution: AI Agents Meet Public Transparency
 
+<img src="https://maikotrindade.com/public/img/capitol-trades-tracker-overview.png" height="120" width="380" alt="Capitol Trades Tracker"/>
+
 Capitol Trades Tracker bridges this gap by combining three powerful elements:
 
 ### 1. **Comprehensive Data Aggregation**
@@ -40,14 +42,6 @@ At the heart of Capitol Trades Tracker is an intelligent AI agent built with **[
 - **Generates actionable insights** in human-readable format
 - **Adapts and learns** from market outcomes and political contexts
 
-### 3. **Multi-LLM Intelligence**
-The system leverages **multiple large language models** to provide diverse analytical perspectives. Different LLMs bring different strengths:
-- Some excel at pattern recognition across historical data
-- Others specialize in contextual analysis of current events and pending legislation
-- Advanced models provide sophisticated risk assessment and investment implications
-
-For complete transparency, each AI-generated insight displays which LLM model performed the analysis, ensuring users understand the source and methodology behind every recommendation.
-
 ## How the AI Technology Works
 
 ### The Agentic Architecture
@@ -58,22 +52,6 @@ Unlike traditional applications that simply display data, Capitol Trades Tracker
 2. **Reason**: Apply complex analytical frameworks to identify unusual patterns, timing anomalies, and potential insider signals
 3. **Act**: Generate daily insights, flag significant trades, and deliver personalized notifications
 4. **Learn**: Improve analysis quality over time based on market outcomes
-
-### Multi-LLM Ensemble Approach
-
-The Koog-based backend orchestrates multiple LLMs in an ensemble approach:
-
-```
-Congressional Trading Data → Koog AI Agent → [LLM-1: Pattern Analysis]
-                                           → [LLM-2: Contextual Assessment]  → Daily Insight
-                                           → [LLM-3: Risk Evaluation]
-```
-
-This multi-model strategy ensures:
-- **Robust analysis** that isn't dependent on a single model's limitations
-- **Diverse perspectives** on the same trading activity
-- **Cross-validation** of significant findings
-- **Reduced bias** through consensus mechanisms
 
 ### Daily Intelligence Generation
 
@@ -94,7 +72,7 @@ Each insight is delivered in clear markdown format with:
 
 ## Key Features: Intelligence at Your Fingertips
 
-### 📊 **Real-Time Trading Feed**
+### 📊 **Trading Feed**
 Comprehensive, continuously updated feed of congressional stock transactions with visual indicators (green for purchases, red for sales), detailed trade information, and powerful filtering capabilities.
 
 ### 🤖 **AI-Powered Insights Library**
@@ -116,36 +94,6 @@ Google account integration for secure authentication, preference management, and
 
 ### 📱 **Mobile-First Design**
 Beautiful, responsive Android app built with modern Material Design, ensuring intuitive navigation and smooth performance.
-
-## The Technology Stack: Built for Scale and Intelligence
-
-### **Frontend: Modern Android Development**
-- Native Android app for optimal performance
-- Material Design UI/UX
-- Offline capability for previously loaded data
-- Secure Google Sign-In authentication
-- Real-time data synchronization
-
-### **Backend: Koog AI Agent Platform**
-- Autonomous AI agents for continuous monitoring
-- Multi-LLM orchestration for diverse analysis
-- Scalable cloud infrastructure
-- RESTful API architecture
-- Real-time data pipeline
-
-### **AI/ML Components**
-- Multiple large language models (GPT-4, Claude, Gemini, etc.)
-- Pattern recognition algorithms
-- Contextual analysis engines
-- Natural language generation for insights
-- Ensemble learning for robust predictions
-
-### **Data Sources**
-- Official U.S. Senate and House disclosure databases
-- Public congressional trading records
-- Real-time market data feeds
-- Legislative tracking systems
-- News and event APIs
 
 ## Who Benefits: Democratizing Investment Intelligence
 
@@ -173,17 +121,6 @@ Capitol Trades Tracker represents a fundamental shift in how public data can ser
 
 **Advancing Transparency**: Making public data truly accessible furthers democratic ideals and informed citizenship.
 
-## Privacy, Security, & Ethics
-
-- ✅ All trading data comes from **publicly disclosed government records**
-- ✅ Secure authentication through **Google Sign-In**
-- ✅ User data is **never shared** with third parties
-- ✅ Complete **transparency** about AI models and methodology
-- ✅ Educational purpose: promoting **informed decision-making**
-- ✅ Independent third-party tool, **not affiliated** with any government body
-
-**Important Disclaimer**: Capitol Trades Tracker is an educational and transparency tool. All information is sourced from publicly available government disclosure records required by federal law. This is not financial advice—users should conduct their own research and consult with financial professionals before making investment decisions.
-
 ## The Future: Expanding AI-Powered Transparency
 
 This is just the beginning. Future enhancements include:
@@ -194,17 +131,6 @@ This is just the beginning. Future enhancements include:
 - **Expanded coverage** to state-level officials
 - **Community insights** where users can share analysis
 - **API access** for developers and researchers
-
-## Get Started Today
-
-Capitol Trades Tracker is available now on the [Google Play Store](https://play.google.com/store/apps/details?id=com.maikotrindade.insiderwatcher). Download the app, sign in with your Google account, and start accessing AI-powered political trading intelligence immediately.
-
-**Experience the power of:**
-- ✨ Agentic AI built with Koog
-- 🧠 Multiple LLM models working in concert
-- 📊 Comprehensive congressional trading data
-- 🎯 Daily actionable insights
-- 🔓 Complete transparency and accountability
 
 ## Conclusion: AI for Good, Intelligence for All
 
@@ -218,10 +144,3 @@ Capitol Trades Tracker demonstrates how cutting-edge AI technology can serve the
 This isn't about creating unfair advantages—it's about eliminating them. It's about using the most advanced AI technology to ensure that public information serves the public, not just those with resources to analyze it.
 
 **The data is public. The AI is powerful. The insights are yours.**
-
-[Download Capitol Trades Tracker](https://play.google.com/store/apps/details?id=com.maikotrindade.insiderwatcher) | [Learn More](https://maikotrindade.com/capitol-trades-tracker/)
-
----
-
-*Built with ❤️ and AI. Powered by Koog agents, multiple LLMs, and a commitment to transparency. Track congressional trades. Understand the patterns. Make informed decisions.*
-
