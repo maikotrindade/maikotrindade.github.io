@@ -17,15 +17,17 @@
 
   <style>
     :root {
-      --bg: #0b1020;
+      --bg: #0a0e1a;
       --surface: #121a33;
-      --card: #18214a;
+      --card: #1a2332;
       --primary: #5eead4;
       --secondary: #60a5fa;
-      --text: #e5e7eb;
+      --accent: #a78bfa;
+      --text: #f3f4f6;
       --muted: #9ca3af;
       --danger: #f87171;
-      --radius: 16px;
+      --success: #34d399;
+      --radius: 20px;
     }
 
     * {
@@ -35,117 +37,370 @@
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #1e293b 0%, transparent 50%),
-                  radial-gradient(1000px 600px at 90% 10%, #0f766e 0%, transparent 40%),
-                  var(--bg);
+      background: 
+        radial-gradient(ellipse 1400px 800px at 50% -20%, rgba(94, 234, 212, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse 1200px 600px at 10% 40%, rgba(96, 165, 250, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse 1000px 600px at 90% 60%, rgba(167, 139, 250, 0.05) 0%, transparent 50%),
+        var(--bg);
       color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 1.5rem;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* Hero Screenshots Section */
+    .hero-screens {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin: 3rem auto 4rem;
+      padding: 2rem 0;
+      position: relative;
+      perspective: 1000px;
+    }
+
+    .phone-mockup {
+      position: relative;
+      max-width: 280px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .phone-mockup:nth-child(1) {
+      animation-delay: 0.2s;
+      transform: translateY(20px) rotateY(-8deg);
+    }
+
+    .phone-mockup:nth-child(2) {
+      animation-delay: 0.4s;
+      transform: translateY(20px) scale(1.08);
+      z-index: 2;
+    }
+
+    .phone-mockup:nth-child(3) {
+      animation-delay: 0.6s;
+      transform: translateY(20px) rotateY(8deg);
+    }
+
+    .phone-mockup:hover {
+      transform: translateY(-10px) scale(1.05);
+      filter: brightness(1.1);
+    }
+
+    .phone-mockup:nth-child(2):hover {
+      transform: translateY(-10px) scale(1.12);
+    }
+
+    .phone-mockup img {
+      width: 100%;
+      height: auto;
+      border-radius: 32px;
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(94, 234, 212, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+      display: block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .phone-mockup:nth-child(2) {
+      animation: fadeInUp 1s ease-out 0.4s forwards, float 4s ease-in-out 1.4s infinite;
+    }
+
+    @media (max-width: 900px) {
+      .hero-screens {
+        gap: 1rem;
+      }
+      .phone-mockup {
+        max-width: 220px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero-screens {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .phone-mockup {
+        max-width: 300px;
+      }
+      .phone-mockup:nth-child(1),
+      .phone-mockup:nth-child(3) {
+        transform: translateY(20px);
+      }
     }
 
     header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.8s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     header h1 {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--muted);
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
+      line-height: 1.7;
     }
 
     .badge {
-      display: inline-block;
-      padding: 0.4rem 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 999px;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
-      background: rgba(94, 234, 212, 0.15);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, rgba(94, 234, 212, 0.2), rgba(96, 165, 250, 0.2));
+      border: 1px solid rgba(94, 234, 212, 0.3);
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
     }
 
     section {
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
     }
 
+    section:nth-child(1) { animation-delay: 1s; }
+    section:nth-child(2) { animation-delay: 1.1s; }
+    section:nth-child(3) { animation-delay: 1.2s; }
+    section:nth-child(4) { animation-delay: 1.3s; }
+    section:nth-child(5) { animation-delay: 1.4s; }
+    section:nth-child(6) { animation-delay: 1.5s; }
+
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06) 0%,
+        rgba(255,255,255,0.02) 100%
+      );
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius);
-      padding: 2rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      padding: 2.5rem;
+      box-shadow: 
+        0 20px 50px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 30px 70px rgba(0,0,0,0.5),
+        0 0 50px rgba(94, 234, 212, 0.1);
+      border-color: rgba(94, 234, 212, 0.3);
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, var(--text) 0%, var(--muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.01em;
     }
 
     h3 {
       margin-top: 0;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
+      color: var(--muted);
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+
+    li::marker {
+      color: var(--primary);
     }
 
     .notice {
       border-left: 4px solid var(--danger);
-      background: rgba(248, 113, 113, 0.1);
-      padding: 1.2rem 1.5rem;
-      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(248, 113, 113, 0.15), rgba(248, 113, 113, 0.05));
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
       font-size: 0.95rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(248, 113, 113, 0.2);
+      box-shadow: 0 10px 30px rgba(248, 113, 113, 0.1);
+    }
+
+    .notice strong {
+      color: var(--danger);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
     .tech span {
-      display: inline-block;
-      background: rgba(96, 165, 250, 0.15);
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(167, 139, 250, 0.2));
       color: var(--secondary);
-      padding: 0.35rem 0.7rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      margin: 0.2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .tech span:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, rgba(96, 165, 250, 0.3), rgba(167, 139, 250, 0.3));
+      box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
     }
 
     footer {
       text-align: center;
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem 3rem;
       color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 4rem;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.2));
     }
 
     footer strong {
       color: var(--text);
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    footer a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary);
+    }
+
+    footer a:hover::after {
+      width: 100%;
+    }
+
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Add subtle parallax effect on scroll */
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-screens {
+        transition: transform 0.1s ease-out;
+      }
     }
   </style>
 </head>
@@ -154,13 +409,26 @@
   <div class="container">
 
     <header>
-      <span class="badge">Educational · Transparency · AI</span>
+      <span class="badge">📊 Educational · Transparency · AI</span>
       <h1>Capitol Trades Tracker</h1>
       <p>
         An educational Android platform that analyzes <strong>publicly disclosed U.S. congressional stock trades</strong>
         using AI-powered insights to promote transparency and civic awareness.
       </p>
     </header>
+
+    <!-- Hero Screenshots -->
+    <div class="hero-screens">
+      <div class="phone-mockup">
+        <img src="screenshot-insights.png" alt="Capitol Trades Insights Screen" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 360 780%27%3E%3Crect fill=%27%23121a33%27 width=%27360%27 height=%27780%27 rx=%2740%27/%3E%3Ctext x=%27180%27 y=%27400%27 font-family=%27Arial%27 font-size=%2724%27 fill=%27%235eead4%27 text-anchor=%27middle%27%3EInsights%3C/text%3E%3C/svg%3E'" />
+      </div>
+      <div class="phone-mockup">
+        <img src="screenshot-rankings.png" alt="Capitol Trades Rankings Screen" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 360 780%27%3E%3Crect fill=%27%231a2332%27 width=%27360%27 height=%27780%27 rx=%2740%27/%3E%3Ctext x=%27180%27 y=%27400%27 font-family=%27Arial%27 font-size=%2724%27 fill=%27%2360a5fa%27 text-anchor=%27middle%27%3ERankings%3C/text%3E%3C/svg%3E'" />
+      </div>
+      <div class="phone-mockup">
+        <img src="screenshot-activity.png" alt="Capitol Trades Activity Screen" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 360 780%27%3E%3Crect fill=%27%23121a33%27 width=%27360%27 height=%27780%27 rx=%2740%27/%3E%3Ctext x=%27180%27 y=%27400%27 font-family=%27Arial%27 font-size=%2724%27 fill=%27%23a78bfa%27 text-anchor=%27middle%27%3EActivity%3C/text%3E%3C/svg%3E'" />
+      </div>
+    </div>
 
     <section>
       <div class="notice">
