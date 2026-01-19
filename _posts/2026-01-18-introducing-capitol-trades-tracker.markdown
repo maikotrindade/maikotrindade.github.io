@@ -23,7 +23,7 @@ Meanwhile, institutional investors and hedge funds employ teams of analysts to m
 
 ## The Solution: AI Agents Meet Public Transparency
 
-<img src="https://maikotrindade.com/public/img/capitol-trades-tracker-overview.png" height="120" width="380" alt="Capitol Trades Tracker"/>
+<img src="https://maikotrindade.com/public/img/capitol-trades-tracker-overview.png" alt="Capitol Trades Tracker" style="max-width: 100%; height: auto;"/>
 
 Capitol Trades Tracker bridges this gap by combining three powerful elements:
 
