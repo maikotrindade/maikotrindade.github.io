@@ -1,0 +1,162 @@
+/* Theme Variables - Light and Dark Mode Support */
+
+:root {
+  /* Light theme (default) */
+  --bg-primary: #fff;
+  --bg-secondary: #f9f9f9;
+  --text-primary: #515151;
+  --text-secondary: #313131;
+  --text-strong: #303030;
+  --text-muted: #7a7a7a;
+  --border-color: #e5e5e5;
+  --code-text: #bf616a;
+  --link-color: #268bd2;
+  
+  /* Sidebar colors */
+  --sidebar-bg: #202020;
+  --sidebar-text: rgba(255,255,255,.5);
+  --sidebar-heading: #fff;
+  --sidebar-link: #fff;
+  --sidebar-h4: rgba(208, 205, 205, 0.5);
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #d4d4d4;
+  --text-secondary: #e0e0e0;
+  --text-strong: #f0f0f0;
+  --text-muted: #a0a0a0;
+  --border-color: #404040;
+  --code-text: #ff9999;
+  --link-color: #66b3ff;
+  
+  /* Sidebar colors for dark mode */
+  --sidebar-bg: #0a0a0a;
+  --sidebar-text: rgba(200,200,200,.7);
+  --sidebar-heading: #ffffff;
+  --sidebar-link: #e0e0e0;
+  --sidebar-h4: rgba(180, 180, 180, 0.6);
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-secondary);
+}
+
+strong {
+  color: var(--text-strong);
+}
+
+a {
+  color: var(--link-color);
+}
+
+blockquote {
+  color: var(--text-muted);
+  border-left-color: var(--border-color);
+}
+
+code {
+  color: var(--code-text);
+  background-color: var(--bg-secondary);
+}
+
+pre {
+  background-color: var(--bg-secondary);
+}
+
+hr {
+  border-top-color: var(--border-color);
+  border-bottom-color: var(--bg-primary);
+}
+
+abbr {
+  color: var(--text-muted);
+  border-bottom-color: var(--border-color);
+}
+
+table {
+  border-color: var(--border-color);
+}
+
+td, th {
+  border-color: var(--border-color);
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--bg-secondary);
+}
+
+.message {
+  color: var(--text-muted);
+  background-color: var(--bg-secondary);
+}
+
+/* Sidebar theming */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+.sidebar a {
+  color: var(--sidebar-link);
+}
+
+.sidebar-about h2 {
+  color: var(--sidebar-heading);
+}
+
+.sidebar h4 {
+  color: var(--sidebar-h4);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Mobile responsive positioning */
+@media (min-width: 48rem) {
+  .theme-toggle {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* Ensure smooth transitions for all themed elements */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
