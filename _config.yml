@@ -5,7 +5,34 @@ url: https://maikotrindade.com
 title: Maiko Trindade
 description: technology, Android, Jetpack Compose, Blockchain, ESG, Crypto, Solidity, Software Development, Linux, web and computer science
 
+# Author information for SEO
+author:
+  name: Maiko Trindade
+  email: contact@maikotrindade.com
+  twitter: maikotrindade
+  
+# Social profiles for schema markup
+social:
+  name: Maiko Trindade
+  links:
+    - https://twitter.com/maikotrindade
+    - https://github.com/maikotrindade
+    - https://www.linkedin.com/in/maikotrindade
+
+# SEO settings
+lang: en_US
+timezone: America/Vancouver
+
 paginate: 5
 paginate_path: "/blog/page:num/"
 include:
   - ads.txt
+  
+# Improve build performance
+exclude:
+  - README.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
