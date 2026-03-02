@@ -178,6 +178,10 @@ tbody tr:nth-child(odd) th {
   color: #f0f0f0;
 }
 
+[data-theme="dark"] .flagship-small {
+  color: #d4d4d4;
+}
+
 [data-theme="dark"] .project-link {
   color: #66b3ff;
 }
