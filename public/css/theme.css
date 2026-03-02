@@ -25,7 +25,7 @@
   --bg-primary: #1a1a1a;
   --bg-secondary: #2d2d2d;
   --text-primary: #d4d4d4;
-  --text-secondary: #e0e0e0;
+  --text-secondary: #ffffff;
   --text-strong: #f0f0f0;
   --text-muted: #a0a0a0;
   --border-color: #404040;
@@ -117,6 +117,38 @@ tbody tr:nth-child(odd) th {
 
 .sidebar h4 {
   color: var(--sidebar-h4);
+}
+
+/* Button theming */
+.btn {
+  background-color: #fff;
+  color: #3498db;
+  border: 2px solid #3498db;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+[data-theme="dark"] .btn {
+  background-color: #2d2d2d;
+  color: #66b3ff;
+  border-color: #4a90e2;
+}
+
+[data-theme="dark"] .btn:hover {
+  background-color: #3a3a3a;
+  border-color: #66b3ff;
+}
+
+/* Recent posts section theming */
+.recent-posts-section h2 {
+  color: #333;
+}
+
+[data-theme="dark"] .recent-posts-section h2 {
+  color: #ffffff;
 }
 
 /* Theme toggle button */
