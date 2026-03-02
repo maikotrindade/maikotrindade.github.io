@@ -151,6 +151,103 @@ tbody tr:nth-child(odd) th {
   color: #ffffff;
 }
 
+/* Projects Page Dark Mode */
+[data-theme="dark"] .flagship-item {
+  background: #2d2d2d;
+  border-left-color: #4a90e2;
+}
+
+[data-theme="dark"] .flagship-item h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .flagship-title {
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .flagship-period {
+  background: #4a90e2;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .flagship-description {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .flagship-description strong {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .project-link {
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .project-link:hover {
+  color: #88ccff;
+}
+
+[data-theme="dark"] .explore-more-section {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  border-color: #404040;
+}
+
+[data-theme="dark"] .explore-more-section h2 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .explore-more-section p {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .explore-button {
+  background: #4a90e2;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+}
+
+[data-theme="dark"] .explore-button:hover {
+  background: #5aa3f5;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  color: #ffffff;
+}
+
+/* Recent posts nav items */
+[data-theme="dark"] .recent-posts-nav-item span {
+  color: #888;
+}
+
+/* Blog posts and pagination dark mode */
+[data-theme="dark"] .page-title,
+[data-theme="dark"] .post-title,
+[data-theme="dark"] .post-title a {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .post-date {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .related {
+  border-top-color: #404040;
+}
+
+[data-theme="dark"] .related-posts li small {
+  color: #999;
+}
+
+[data-theme="dark"] .pagination {
+  color: #666;
+}
+
+[data-theme="dark"] .pagination-item {
+  border-color: #404040;
+  background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] a.pagination-item:hover {
+  background-color: #2d2d2d;
+}
+
 /* Theme toggle button */
 .theme-toggle {
   position: fixed;
