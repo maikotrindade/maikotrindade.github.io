@@ -27,7 +27,7 @@
         </div>
         
         <ul class="sidebar-nav">
-            <li class="sidebar-nav-item active">
+            <li class="sidebar-nav-item{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}">
                 <a href="/">Home</a>
             </li>
             {% assign pages_list = site.pages %}
