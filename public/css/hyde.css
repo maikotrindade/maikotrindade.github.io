@@ -70,6 +70,7 @@ html {
     text-align: left;
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 0;
     /* Smooth scrolling */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -168,17 +169,14 @@ a.sidebar-nav-item:focus {
 }
 /* Sticky sidebar
  *
- * Add the `sidebar-sticky` class to the sidebar's container to affix it the
- * contents to the bottom of the sidebar in tablets and up.
+ * Container for sidebar content with proper spacing for scrollable layout.
  */
 
 @media (min-width: 48rem) {
   .sidebar-sticky {
-    position: absolute;
-    right:  1rem;
-    top: 7rem;
-    left:   1rem;
-    padding-bottom: 2rem;
+    position: relative;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    min-height: 100%;
   }
 }
 
