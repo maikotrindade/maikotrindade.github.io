@@ -190,13 +190,19 @@ a.sidebar-nav-item:focus {
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 48rem) {
   .content {
     max-width: 42rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* Center content in the space after sidebar */
+    margin-left: calc(18rem + (100vw - 18rem - 42rem) / 2);
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   
   body {
@@ -207,8 +213,18 @@ a.sidebar-nav-item:focus {
 @media (min-width: 64rem) {
   .content {
     max-width: 46rem;
-    margin-left: 22rem;
-    margin-right: 4rem;
+    /* Center content in the space after sidebar */
+    margin-left: calc(18rem + (100vw - 18rem - 46rem) / 2);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Extra large screens - ensure content doesn't get too far from sidebar */
+@media (min-width: 90rem) {
+  .content {
+    /* Cap the centering to maintain comfortable reading distance */
+    margin-left: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
   }
 }
 
@@ -225,15 +241,21 @@ a.sidebar-nav-item:focus {
     right: 0;
   }
   .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
+    margin-right: calc(18rem + (100vw - 18rem - 42rem) / 2);
+    margin-left: auto;
   }
 }
 
 @media (min-width: 64rem) {
   .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
+    margin-right: calc(18rem + (100vw - 18rem - 46rem) / 2);
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 90rem) {
+  .layout-reverse .content {
+    margin-right: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
   }
 }
 
