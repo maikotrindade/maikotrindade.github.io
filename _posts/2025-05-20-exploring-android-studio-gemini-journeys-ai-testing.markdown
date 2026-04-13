@@ -4,6 +4,7 @@ title: "Exploring Android Studio's Gemini Journeys: AI-Powered Testing Revolutio
 date: 2025-05-20
 categories: [android, ai, testing]
 tags: [AndroidStudio, Gemini, AI, ArtificialIntelligence, E2ETesting, JetpackCompose, MobileDevelopment]
+description: "How Android Studio's Gemini Journeys feature uses AI to generate end-to-end tests from natural language prompts, transforming how developers approach mobile test automation."
 published: true
 ---
 

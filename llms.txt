@@ -1,0 +1,50 @@
+# Maiko Trindade
+
+> Senior Android Engineer and Software Developer with 10+ years in Android development. This site covers Android development, Jetpack Compose, Kotlin, AI agents, blockchain/Solidity, and software engineering.
+
+Author: Maiko Trindade
+Contact: contact@maikotrindade.com
+Site: https://maikotrindade.com
+Twitter: @maikotrindade
+GitHub: https://github.com/maikotrindade
+LinkedIn: https://linkedin.com/in/maikotrindade
+
+## Core Pages
+
+- [Home](https://maikotrindade.com/): Overview of Maiko Trindade's work and latest blog posts.
+- [Experience](https://maikotrindade.com/experience.html): Professional history at Neo Financial, Itaú Bank, SmartBank, Ubby Inc, Monitora, Cast IT Group, and Bluedotsoft. Technical skills covering Android, AI tools, blockchain, and miscellaneous technologies.
+- [Projects](https://maikotrindade.com/projects.html): Portfolio including Capitol Trades Tracker (AI agents), Mobile Tester Agent (agentic testing), Nomad Token (blockchain hackathon), and Android XR Demo.
+- [About](https://maikotrindade.com/about.html): Background and bio.
+- [Blog](https://maikotrindade.com/blog/): All articles on Android, Kotlin, AI agents, and blockchain.
+
+## Blog — AI & Agents
+
+- [Capitol Trades Tracker: AI-Powered Investment Intelligence](https://maikotrindade.com/artificial-intelligence/2026/01/18/introducing-capitol-trades-tracker.html): Agentic AI Android app tracking U.S. congressional stock trades using Koog, LLMs, and OpenRouter.
+- [Understanding AI Agents: Concepts, Architecture, and Tools](https://maikotrindade.com/ai/agents/automation/agentic%20systems/llm/2025/10/02/understanding-ai-agents-concepts-architecture-tools.html): Comprehensive overview of AI agent architecture, reasoning, planning, and tools like LangChain, CrewAI, and Koog.
+- [Building an Agentic AI Mobile Tester with Koog and Kotlin](https://maikotrindade.com/ai/kotlin/android/development/agents/2025/08/19/building-agentic-ai-mobile-tester-koog-kotlin.html): How to build an autonomous mobile testing agent using Koog, Kotlin, and LLMs.
+- [Unleashing the Power of AI Agents with Koog](https://maikotrindade.com/ai/kotlin/development/agents/2025/06/18/koog-ai-framework-agents.html): Introduction to JetBrains' Koog agentic framework for building AI agents in Kotlin/JVM.
+- [Exploring Android Studio's Gemini Journeys](https://maikotrindade.com/android/ai/testing/2025/05/20/exploring-android-studio-gemini-journeys-ai-testing.html): AI-powered E2E test generation in Android Studio using Gemini natural language prompts.
+- [Gemini AI in Android Studio](https://maikotrindade.com/2024/10/20/gemini-ai-in-android-studio.html): How Gemini AI assistant enhances Android development productivity in Android Studio.
+- [Enhancing Ethereum Security Through AI-Based Code Audits](https://maikotrindade.com/2024/02/29/enhancing-ethereum-security-through-ai-based-code-audits.html): Vitalik Buterin's proposal to use AI for smart contract security audits.
+
+## Blog — Android & Jetpack Compose
+
+- [AGSL: A Quick Introduction to Android Graphics Shading Language](https://maikotrindade.com/android/graphics/2025/11/28/introduction-to-android-shading-language.html): GPU shaders in Android using AGSL for visual effects in Compose.
+- [Untangling State: Easier Android App Management with Compose](https://maikotrindade.com/android/compose/development/2025/03/08/untangling-state-android-app-management.html): State hoisting and management patterns in Jetpack Compose.
+- [Execution Order in Jetpack Compose Explained](https://maikotrindade.com/2025/01/28/execution-order-in-jetpack-compose.html): How LaunchedEffect, DisposableEffect, and composables execute.
+- [A Guide to Accessibility in Android Apps with Jetpack Compose](https://maikotrindade.com/2024/12/03/a-guide-to-accessibiliy-in-android-apps-jetpack-compose.html): TalkBack, Switch Access, color contrast, and automated accessibility testing.
+- [Exploring Android XR](https://maikotrindade.com/2024/12/14/exploring-Android-XR.html): Introduction to building AR/VR apps on Android XR.
+- [Build Better Apps with Kotlin Multiplatform](https://maikotrindade.com/2024/09/04/build-better-apps-with-kotlin-multiplatform.html): KMP for sharing code between Android and iOS while keeping native UIs.
+- [Kotlin 2.0 – A New Era for Android Development](https://maikotrindade.com/2024/07/02/kotlin-2.0-a-new-era-for-android-development.html): Kotlin 2.0 compiler improvements, new language features, and performance gains.
+- [Insights into Compose UI Testing](https://maikotrindade.com/2024/01/26/insights-into-compose-ui-testing.html): Practical guide to Jetpack Compose UI test setup, ComposeTestRule, and best practices.
+- [Improving Accessibility of Android Apps](https://maikotrindade.com/2024/09/11/improving-accessibility-android-app.html): Android accessibility tools — TalkBack, font size, high contrast text.
+
+## Blog — Blockchain & Solidity
+
+- [Deep Dive into DeFi: Liquidity Pools and Aave](https://maikotrindade.com/2024/04/03/liquidity-pools-aave-explained.html): How DeFi liquidity pools work and how Aave uses them for lending and borrowing.
+- [Decoding Meme Coins](https://maikotrindade.com/2024/03/18/decoding-meme-coins.html): Hype, risks, and reality behind meme coin cryptocurrencies.
+- [Nomad Token – Chainlink Hackathon](https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html): Building a full blockchain ecosystem for a Chainlink hackathon.
+
+## Content License
+
+Content is written by Maiko Trindade and may be referenced or cited with attribution. Please link to the original article URL.

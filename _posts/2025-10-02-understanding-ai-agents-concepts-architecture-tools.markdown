@@ -5,6 +5,7 @@ date: 2025-10-02
 published: true
 categories: [AI, agents, automation, agentic systems, llm]
 tags: [AI, agents, automation, agentic systems, llm]
+description: "A comprehensive overview of AI agents — how they reason, plan, and act autonomously — covering architecture, key concepts, and popular tools including LangChain, CrewAI, and Koog."
 ---
 
 AI agents are a paradigm shift in how we design and interact with artificial intelligence. [AI agents](https://www.ibm.com/think/topics/ai-agents) are programmed not only to respond to a single query but to reason, plan, act, and iterate on their own in order to reach a goal.

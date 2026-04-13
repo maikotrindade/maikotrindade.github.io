@@ -5,6 +5,7 @@ date: 2025-06-18
 published: true
 categories: [AI, Kotlin, Development, Agents]
 tags: [Koog, Kotlin, AI, Agents, JetBrains, JVM, AI Agentic Projects]
+description: "Introduction to Koog, JetBrains' open-source agentic AI framework for Kotlin developers, covering how to build and run autonomous AI agents entirely within the JVM ecosystem."
 ---
 
 **Koog** is an innovative, open-source **agentic framework** built by JetBrains. It empowers Kotlin developers to create and run AI agents entirely within the **JVM ecosystem**, leveraging a modern **Kotlin DSL**. This means you can build intelligent, autonomous agents with the same ease and productivity that Kotlin brings to everyday development.

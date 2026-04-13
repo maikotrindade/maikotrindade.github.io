@@ -2,6 +2,7 @@
 published: true
 title: Execution Order in Jetpack Compose Explained with Analogies
 layout: post
+description: "A clear explanation of how LaunchedEffect, DisposableEffect, and composables execute in Jetpack Compose, using real-world analogies to demystify the rendering lifecycle."
 ---
 
 Understanding when `LaunchedEffect`, `DisposableEffect`, and composables run in Jetpack Compose can be tricky. Let’s simplify with a few real-world analogies.

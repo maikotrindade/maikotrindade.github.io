@@ -1,4 +1,4 @@
-excerpt_separator: ""
+excerpt_separator: "\n\n"
 highlighter: rouge
 markdown: kramdown
 url: https://maikotrindade.com

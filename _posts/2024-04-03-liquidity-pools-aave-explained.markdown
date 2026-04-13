@@ -2,6 +2,7 @@
 published: true
 title: Deep Dive into DeFi – Liquidity Pools and Aave Explained
 layout: post
+description: "A beginner-friendly explanation of how DeFi liquidity pools work and how the Aave protocol uses them for decentralized lending, borrowing, and yield generation."
 ---
 
 The world of [Decentralized Finance] (DeFi) offers exciting new opportunities for cryptocurrency users. But how does it all work? A key concept in DeFi is the liquidity pool, and platforms like Aave are built around them. Let's dive in and explore what liquidity pools are, how Aave utilizes them, and the benefits and drawbacks of this innovative platform.

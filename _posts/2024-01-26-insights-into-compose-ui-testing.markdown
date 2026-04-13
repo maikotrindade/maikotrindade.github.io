@@ -2,6 +2,7 @@
 published: true
 title: Elevating Android Development – Insights into Compose UI Testing
 layout: post
+description: "A practical guide to Jetpack Compose UI testing — setup, ComposeTestRule, semantic assertions, and best practices for writing reliable and maintainable Android UI tests."
 ---
 
 Jetpack Compose has introduced a modern way of building user interfaces for Android applications, and part of its appeal lies in its robust testing capabilities. Let's delve into the world of Jetpack Compose UI testing in Android, exploring insights from various sources to understand the importance and implementation of testing in Jetpack Compose.

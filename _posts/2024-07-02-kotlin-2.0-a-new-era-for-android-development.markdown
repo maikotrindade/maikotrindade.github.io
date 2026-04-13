@@ -2,6 +2,7 @@
 published: true
 title: Kotlin 2.0 – A New Era for Android Development
 layout: post
+description: "What's new in Kotlin 2.0 for Android development — improved compiler performance, optimized bytecode generation, enhanced garbage collection, and new language features."
 ---
 
 Kotlin 2.0 is a significant milestone in the evolution of the Kotlin programming language. This major release brings forth a host of performance enhancements, innovative language features, and robust tooling support, solidifying Kotlin's position as a premier choice for Android development.

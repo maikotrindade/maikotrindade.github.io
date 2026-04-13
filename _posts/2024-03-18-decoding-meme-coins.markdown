@@ -2,6 +2,7 @@
 published: true
 title: Decoding Meme Coins – Hype, Risks, and Reality
 layout: post
+description: "A critical look at meme coins — how social media hype drives their value, why they lack real utility, and the risks investors should understand before buying."
 ---
 
 ### Introduction to Meme Coins

@@ -2,6 +2,7 @@
 published: true
 title: Gemini AI in Android Studio » Faster, Smarter, Better
 layout: post
+description: "How Gemini AI integrated into Android Studio boosts developer productivity through code writing, refactoring, documentation, commit messages, and intelligent suggestions."
 ---
 
 Android development just got smarter with the introduction of Gemini, an AI-powered assistant integrated into Android Studio. Gemini is designed to enhance productivity, reduce repetitive tasks, and support developers throughout the app lifecycle. Here's a closer look at how [Gemini] transforms your coding experience.

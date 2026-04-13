@@ -2,6 +2,7 @@
 published: true
 title: Improving accessibility of Android app
 layout: post
+description: "An overview of Android accessibility tools — TalkBack, Select to Speak, font size, and high contrast text — and practical steps developers can take to build more inclusive apps."
 ---
 
 ### Accessibility tooling on Android

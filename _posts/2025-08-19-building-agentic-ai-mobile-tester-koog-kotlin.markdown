@@ -5,6 +5,7 @@ date: 2025-08-19
 published: true
 categories: [AI, Kotlin, Android, Development, Agents]
 tags: [Koog, Kotlin, AI, Android, Agentic, Testing, Compose]
+description: "How to build an autonomous Android mobile testing agent using Koog and Kotlin, replacing repetitive manual test scripts with LLM-driven end-to-end test execution."
 ---
 
 Testing Android apps is often repetitive, time-consuming, and hard to scale. Recently, I started experimenting with **agentic AI** to automate mobile testing—combining Kotlin, Koog, and LLMs to build a smart tester that can execute real end-to-end scenarios.  
