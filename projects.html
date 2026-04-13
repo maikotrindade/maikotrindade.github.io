@@ -4,7 +4,14 @@ title: Projects
 description: Explore Maiko Trindade's portfolio of Android, blockchain, and AI projects including Capitol Trades Tracker, Koog AI Framework, and various open-source contributions.
 ---
 <section class="flagship-section">
-      <div class="flagship-item">
+      <div class="projects-columns">
+        <div class="column professional-column">
+          <h2>Professional Projects</h2>
+          <p class="column-placeholder">More to come...</p>
+        </div>
+        <div class="column personal-column">
+          <h2>Personal Projects</h2>
+          <div class="flagship-item">
         <h3>Capitol Trades Tracker</h3>
         <p class="flagship-title">Political Trading Intelligence Platform</p>
         <span class="flagship-period">Featured Project</span>
@@ -57,6 +64,8 @@ description: Explore Maiko Trindade's portfolio of Android, blockchain, and AI p
       <a href="https://github.com/maikotrindade/android-XR-demo" class="project-link" rel="nofollow">View Demo →</a>
     </p>
   </div>
+        </div>
+      </div>
 </section>
 <div class="explore-more-section">
   <h2>Explore More Projects</h2>
@@ -70,9 +79,38 @@ description: Explore Maiko Trindade's portfolio of Android, blockchain, and AI p
 </div>
 <style>
 .flagship-section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem 1rem;
+}
+
+.projects-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column h2 {
+  margin: 0 0 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.professional-column {
+  border-right: 1px solid #e0e0e0;
+  padding-right: 1rem;
+}
+
+.column-placeholder {
+  color: #a0a0a0;
+  font-style: italic;
+  margin: 2rem 0;
 }
 
 .flagship-item {
@@ -194,26 +232,43 @@ description: Explore Maiko Trindade's portfolio of Android, blockchain, and AI p
 }
 
 @media (max-width: 768px) {
+  .projects-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .professional-column {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
   .flagship-item {
     padding: 1.25rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .flagship-item h3 {
     font-size: 1.2rem;
   }
-  
+
+  .column h2 {
+    font-size: 1.2rem;
+  }
+
   .project-link {
     display: block;
     margin-right: 0;
     margin-bottom: 0.4rem;
   }
-  
+
   .explore-more-section {
     margin: 2.5rem auto 1rem;
     padding: 1.25rem 1rem;
   }
-  
+
   .explore-button {
     padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
