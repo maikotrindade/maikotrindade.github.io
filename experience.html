@@ -166,12 +166,49 @@ description: Professional experience of Maiko Trindade as Senior Android Develop
   font-size: 0.85rem;
 }
 
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .flagship-item {
+    background: #2a3139;
+    border-left-color: #0096d6;
+  }
+
+  .flagship-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 150, 214, 0.15);
+  }
+
+  .flagship-item h3 {
+    color: #e8eef7;
+  }
+
+  .flagship-title {
+    color: #0096d6;
+  }
+
+  .flagship-period {
+    background: #0096d6;
+    color: white;
+  }
+
+  .flagship-description {
+    color: #b8c5d6;
+  }
+
+  .flagship-description strong {
+    color: #e8eef7;
+  }
+
+  .flagship-small {
+    color: #b8c5d6;
+  }
+}
+
 @media (max-width: 768px) {
   .flagship-item {
     padding: 1.25rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .flagship-item h3 {
     font-size: 1.2rem;
   }
