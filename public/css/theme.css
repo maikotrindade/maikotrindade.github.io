@@ -282,6 +282,80 @@ tbody tr:nth-child(odd) th {
   transform: translateY(-2px);
 }
 
+/* Projects page card dark mode */
+[data-theme="dark"] .filter-btn {
+  border-color: #404040;
+  background: #2d2d2d;
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .filter-btn:hover {
+  border-color: #66b3ff;
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background: #4a90e2;
+  border-color: #4a90e2;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .project-card {
+  background: #2d2d2d;
+  border-color: #404040;
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.15);
+}
+
+[data-theme="dark"] .card-header h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .project-badge {
+  background: #3a3a3a;
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .card-subtitle {
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .card-description {
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .tag {
+  background: #3a3a3a;
+  color: #b0b0b0;
+}
+
+[data-theme="dark"] .card-links {
+  border-top-color: #404040;
+}
+
+[data-theme="dark"] .link-primary {
+  color: #66b3ff;
+}
+
+[data-theme="dark"] .link-primary:hover {
+  color: #88ccff;
+}
+
+[data-theme="dark"] .professional-placeholder {
+  border-color: #404040;
+}
+
+[data-theme="dark"] .placeholder-content h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .placeholder-content p {
+  color: #888888;
+}
+
 /* Recent posts nav items */
 [data-theme="dark"] .recent-posts-nav-item span {
   color: #888;
