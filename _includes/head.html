@@ -156,8 +156,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "{{ page.title }}",
-        "description": "{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}",
+        "headline": {{ page.title | jsonify }},
+        "description": {% if page.description %}{{ page.description | jsonify }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }}{% else %}{{ site.description | jsonify }}{% endif %},
         "url": "{{ site.url }}{{ page.url }}",
         "datePublished": "{{ page.date | date_to_xmlschema }}",
         "dateModified": "{{ page.date | date_to_xmlschema }}",
