@@ -40,5 +40,6 @@ validation-report.json
 # Folders to ignore
 node_modules
 
-# AI Tools
-.claude/
+# AI Tools (ignore local settings but track shared context docs)
+.claude/settings.json
+.claude/settings.local.json
