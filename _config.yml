@@ -3,14 +3,15 @@ highlighter: rouge
 markdown: kramdown
 url: https://maikotrindade.com
 title: Maiko Trindade
-description: technology, Android, Jetpack Compose, Blockchain, ESG, Crypto, Solidity, Software Development, Linux, web and computer science
+description: Technology, Mobile, Android, Artificial Intelligence, Jetpack Compose, React Native, Blockchain, ESG, Crypto, Solidity, Software Development, Open Source, and more.
+keywords: technology, mobile, android, artificial intelligence, jetpack compose, react native, blockchain, ESG, crypto, solidity, software development, open source
+author_profile: https://maikotrindade.com/about 
 
 # Author information for SEO
 author:
   name: Maiko Trindade
-  email: contact@maikotrindade.com
-  twitter: maikotrindade
-  
+  email: maikocharles@gmail.com
+ 
 # Social profiles for schema markup
 social:
   name: Maiko Trindade
@@ -29,9 +30,12 @@ include:
   - ads.txt
   
 # Improve build performance
+future: true
+
 exclude:
   - README.md
   - LICENSE.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - node_modules

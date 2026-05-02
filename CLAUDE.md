@@ -1,7 +1,3 @@
----
-published: false
----
-
 # CLAUDE.md — maikotrindade.github.io
 
 ## Project Identity
