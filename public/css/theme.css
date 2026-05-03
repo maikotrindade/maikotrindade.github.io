@@ -51,10 +51,6 @@ body {
   body {
     background: linear-gradient(to right, var(--sidebar-bg) 18rem, var(--bg-secondary) 18rem);
   }
-  
-  [data-theme="dark"] body {
-    background: linear-gradient(to right, var(--sidebar-bg) 18rem, #1a1a1a 18rem);
-  }
 }
 
 /* Content cards for better visual hierarchy */
@@ -94,15 +90,18 @@ a {
 blockquote {
   color: var(--text-muted);
   border-left-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
   color: var(--code-text);
   background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 pre {
   background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 hr {
@@ -154,23 +153,28 @@ tbody tr:nth-child(odd) th {
 /* Button theming */
 .btn {
   background-color: #fff;
-  color: #4a90e2;
-  border: 2px solid #4a90e2;
+  color: #2c6db5;
+  border: 2px solid #2c6db5;
   padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  border-radius: 12px;
   font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+  margin: 0 0.25rem;
 }
 
 .btn:hover {
-  background-color: #4a90e2;
+  background-color: #2c6db5;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 4px 12px rgba(44, 109, 181, 0.3);
   border-bottom: none;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 3px;
 }
 
 [data-theme="dark"] .btn {
@@ -183,15 +187,6 @@ tbody tr:nth-child(odd) th {
   background-color: #4a90e2;
   color: #ffffff;
   border-color: #66b3ff;
-}
-
-/* Recent posts section theming */
-.recent-posts-section h2 {
-  color: #333;
-}
-
-[data-theme="dark"] .recent-posts-section h2 {
-  color: #ffffff;
 }
 
 /* Projects Page Dark Mode */
@@ -431,7 +426,87 @@ tbody tr:nth-child(odd) th {
   }
 }
 
-/* Ensure smooth transitions for all themed elements */
-*:not(.theme-toggle):not(.sidebar a):not(.perfil-picture) {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+/* Skip navigation link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 6px 0;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: -4px;
+}
+
+/* Theme toggle focus */
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 3px;
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+  padding: 80px 0;
+}
+.hero-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: var(--text-muted);
+}
+
+/* Recent posts section */
+.recent-posts-section {
+  padding: 80px 0;
+}
+.recent-posts-section h2 {
+  margin-bottom: 40px;
+}
+.recent-posts-nav {
+  padding-left: 0;
+  list-style: none;
+}
+.recent-posts-nav-item {
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.recent-posts-nav-item span {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* Page fade-in animation */
+@media (prefers-reduced-motion: no-preference) {
+  .content {
+    animation: page-fade-in 0.4s ease forwards;
+  }
+  @keyframes page-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

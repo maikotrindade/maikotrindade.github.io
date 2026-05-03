@@ -4,16 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Enable responsiveness on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-4415452186185932">
 
     <!-- Primary Meta Tags -->
-    {% if page.title %}
-        <meta name="title" content="{{ page.title }} | {{ site.title }}" />
-    {% else %}
-        <meta name="title" content="{{ site.title }}" />
-    {% endif %}
-    
     {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
     {% elsif page.excerpt %}
@@ -120,9 +114,24 @@
         <link rel="canonical" href="{{ site.url }}" />
     {% endif %}
 
+    {% if paginator %}
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                <link rel="prev" href="{{ site.url }}/blog/" />
+            {% else %}
+                <link rel="prev" href="{{ site.url }}/blog/page{{ paginator.previous_page }}/" />
+            {% endif %}
+        {% endif %}
+        {% if paginator.next_page %}
+            <link rel="next" href="{{ site.url }}/blog/page{{ paginator.next_page }}/" />
+        {% endif %}
+    {% endif %}
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPGMKKGTDM"></script>
+    {% unless page.layout == "default_no_ads" %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4415452186185932"
      crossorigin="anonymous"></script>
+    {% endunless %}
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -130,20 +139,16 @@
         
         gtag('config', 'G-NPGMKKGTDM');
     </script>
-    <title>
-        {% if page.title == "Home" %}
-        {{ site.title }}
-        {% else %}
-        {{ page.title }}
-        {% endif %}
-    </title>
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="/public/css/poole.css">
     <link rel="stylesheet" href="/public/css/syntax.css">
     <link rel="stylesheet" href="/public/css/hyde.css">
     <link rel="stylesheet" href="/public/css/theme.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface&display=swap">
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/public/favicon.ico">
@@ -160,7 +165,7 @@
         "description": {% if page.description %}{{ page.description | jsonify }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }}{% else %}{{ site.description | jsonify }}{% endif %},
         "url": "{{ site.url }}{{ page.url }}",
         "datePublished": "{{ page.date | date_to_xmlschema }}",
-        "dateModified": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
         {% if page.image %}
         "image": "{{ site.url }}{{ page.image }}",
         {% else %}

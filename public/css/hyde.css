@@ -133,11 +133,15 @@ html {
   transition: all 0.2s ease;
 }
 
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
+a.sidebar-nav-item:hover {
   text-decoration: none;
   border-left-color: #4fc3f7;
   background-color: rgba(255, 255, 255, 0.05);
+}
+a.sidebar-nav-item:focus-visible {
+  outline: 3px solid #4fc3f7;
+  outline-offset: -3px;
+  border-left-color: #4fc3f7;
 }
 .sidebar-nav-item.active {
   font-weight: 600;
@@ -208,7 +212,7 @@ a.sidebar-nav-item:focus {
   }
 
   body {
-    background: linear-gradient(to right, #2c3e50 18rem, #f8f9fa 18rem);
+    background: linear-gradient(to right, var(--sidebar-bg) 18rem, var(--bg-secondary) 18rem);
   }
 }
 
@@ -345,15 +349,17 @@ a.sidebar-nav-item:focus {
 
 .logotipo {
   margin: 0px;
+}
 
-  animation-name: floating;
-  -webkit-animation-name: floating;
-
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .logotipo {
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
 }
 
 @keyframes floating {
