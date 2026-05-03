@@ -1,0 +1,27 @@
+---
+layout: default
+title: Tags
+---
+
+<div class="taxonomy-archive">
+  <h1 class="taxonomy-archive-title">Tags</h1>
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign tag_name = tag[0] %}
+    {% assign tag_posts = tag[1] %}
+    <section class="taxonomy-group" id="{{ tag_name | slugify }}">
+      <h2 class="taxonomy-group-heading">
+        <span class="post-tag">{{ tag_name }}</span>
+        <span class="taxonomy-count">{{ tag_posts.size }} post{% if tag_posts.size != 1 %}s{% endif %}</span>
+      </h2>
+      <ul class="taxonomy-post-list">
+        {% for post in tag_posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <small>{{ post.date | date_to_string }}</small>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

@@ -556,10 +556,24 @@ tbody tr:nth-child(odd) th {
   border-radius: 20px;
   font-size: 0.72rem;
   font-weight: 500;
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--link-color);
+  border: 1.5px solid var(--link-color);
   letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+
+a.post-category,
+a.post-tag {
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+a.post-category:hover,
+a.post-tag:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 [data-theme="dark"] .post-category {
@@ -568,7 +582,52 @@ tbody tr:nth-child(odd) th {
 }
 
 [data-theme="dark"] .post-tag {
-  background-color: #2d2d2d;
-  color: #d4d4d4;
-  border-color: #444;
+  background-color: transparent;
+  color: #66b3ff;
+  border-color: #66b3ff;
+}
+
+/* Taxonomy archive pages (blog/tags, blog/categories) */
+.taxonomy-archive-title {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.taxonomy-group {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.taxonomy-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.taxonomy-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.taxonomy-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taxonomy-post-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.3rem 0;
+}
+
+.taxonomy-post-list li small {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
 }

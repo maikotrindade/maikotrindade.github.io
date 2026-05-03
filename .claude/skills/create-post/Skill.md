@@ -43,6 +43,11 @@ description: "SEO description — max 160 chars"
 Category rules:
 - Array syntax, **lowercase hyphenated values only** — spaces become `%20` in URLs (bad)
 - Established patterns: `[android, kotlin]`, `[ai-agents, kotlin]`, `[blockchain, solidity]`, `[AI, agents, Claude, Anthropic]`
+- Each category pill links to `/blog/categories#<slugified-category>` — the slug must match an anchor that Jekyll generates via `| slugify`
+
+Tag rules:
+- Each tag pill links to `/blog/tags#<slugified-tag>` — use the same value you put in the `tags` array, slugified (e.g. `JetpackCompose` → `#jetpackcompose`)
+- Prefer specific, searchable terms over generic ones
 
 Description rules:
 - Hard max **160 characters**
