@@ -1,5 +1,7 @@
 # Blog Post Patterns
 
+> Reference file for the `create-post` skill. The canonical checklist and rules live in `.claude/skills/create-post/Skill.md`.
+
 ## Frontmatter Schema (complete)
 
 ```yaml

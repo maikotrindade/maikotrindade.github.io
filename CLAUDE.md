@@ -49,61 +49,7 @@ ads.txt                  AdSense verification — do not modify
 
 ## Blog Post Conventions
 
-### Filename
-
-`YYYY-MM-DD-descriptive-slug.markdown` in `_posts/`
-
-### Required frontmatter
-
-```yaml
----
-layout: post
-title: "Post Title in Quotes"
-date: YYYY-MM-DD
-published: true
-categories: [Category1, Category2]
-tags: [tag1, tag2, tag3]
-description: "SEO description, max 160 characters"
----
-```
-
-### Optional frontmatter
-
-```yaml
-image: /public/img/filename.png # OG/Twitter/JSON-LD image; defaults to android-dev.png
-keywords: "comma, separated" # Overrides tags for keywords meta
-```
-
-### Content conventions
-
-- First paragraph is the **excerpt** (shown on blog index). Must be standalone.
-- Never use `#` (H1) in post body — the layout renders `page.title` as H1.
-- Headings: `###` (H3) for main sections, `####` (H4) for subsections.
-- Images: inline HTML with absolute URL, max width 380px:
-  ```html
-  <img
-    src="https://maikotrindade.com/public/img/filename.png"
-    width="380"
-    height="380"
-    alt="description"
-  />
-  ```
-- Code blocks: fenced with language identifier for Rouge: ` ```kotlin `, ` ```solidity `, etc.
-- External links: reference-style at bottom of file.
-
-### Template reference
-
-`_posts/base-post-format.markdown` — kept with `published: false` as a formatting reference.
-
-### New post checklist
-
-- [ ] Filename: `YYYY-MM-DD-slug.markdown`
-- [ ] All required frontmatter fields present
-- [ ] `description` ≤ 160 chars
-- [ ] First paragraph is a self-contained excerpt
-- [ ] No H1 (`#`) in body
-- [ ] Images use absolute URLs and `width="380"`
-- [ ] Update `llms.txt` if the post is significant (it is manually maintained)
+See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the complete post creation guide, frontmatter schema, content conventions, and checklist.
 
 ## Layout System
 
@@ -147,6 +93,6 @@ keywords: "comma, separated" # Overrides tags for keywords meta
 
 ## AI / LLM Files
 
-- `llms.txt` — manually maintained blog index (update when adding significant posts)
+- `llms.txt` — manually maintained blog index
 - `robots.txt` — AI crawlers explicitly allowed; do not add Disallow rules for AI agents
 - JSON-LD Article schema auto-injected on every `layout: post` page via `head.html`
