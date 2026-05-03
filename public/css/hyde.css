@@ -13,7 +13,6 @@
  * https://github.com/poole/hyde.
  */
 
-
 /*
  * Contents
  *
@@ -24,7 +23,6 @@
  * Themes
  */
 
-
 /*
  * Global resets
  *
@@ -32,7 +30,9 @@
  */
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
 }
 @media (min-width: 48rem) {
   html {
@@ -45,7 +45,6 @@ html {
   }
 }
 
-
 /*
  * Sidebar
  *
@@ -56,7 +55,7 @@ html {
 .sidebar {
   text-align: center;
   padding: 2rem 1rem;
-  color: rgba(255,255,255,.6);
+  color: rgba(255, 255, 255, 0.6);
   background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
 }
@@ -75,22 +74,22 @@ html {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   /* Custom scrollbar styling for better UX */
   .sidebar::-webkit-scrollbar {
     width: 8px;
   }
-  
+
   .sidebar::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);
   }
-  
+
   .sidebar::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     transition: background 0.2s ease;
   }
-  
+
   .sidebar::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
   }
@@ -99,7 +98,9 @@ html {
 /* Sidebar links */
 .sidebar a {
   color: #fff;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 .sidebar a:hover {
   color: #4fc3f7;
@@ -125,7 +126,7 @@ html {
 }
 .sidebar-nav-item {
   display: block;
-  padding: 0.4rem 0;
+  padding: 0.3rem 0;
   border-left: 3px solid transparent;
   padding-left: 0.5rem;
   margin-left: -0.5rem;
@@ -153,19 +154,21 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-nav-item.small {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .perfil-picture {
-	border-radius: 50%;
-	display: block;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .perfil-picture:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 /* Sticky sidebar
  *
@@ -180,7 +183,6 @@ a.sidebar-nav-item:focus {
   }
 }
 
-
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
@@ -188,7 +190,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top: 4rem;
   padding-bottom: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -204,7 +206,7 @@ a.sidebar-nav-item:focus {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  
+
   body {
     background: linear-gradient(to right, #2c3e50 18rem, #f8f9fa 18rem);
   }
@@ -227,7 +229,6 @@ a.sidebar-nav-item:focus {
     margin-left: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
   }
 }
-
 
 /*
  * Reverse layout
@@ -258,8 +259,6 @@ a.sidebar-nav-item:focus {
     margin-right: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
   }
 }
-
-
 
 /*
  * Themes
@@ -344,14 +343,13 @@ a.sidebar-nav-item:focus {
 
 /*                 Customized     by   Maiko Trindade           */
 
-.logotipo{
-
+.logotipo {
   margin: 0px;
 
   animation-name: floating;
   -webkit-animation-name: floating;
 
-  animation-duration: 1.5s; 
+  animation-duration: 1.5s;
   -webkit-animation-duration: 1.5s;
 
   animation-iteration-count: infinite;
@@ -360,42 +358,41 @@ a.sidebar-nav-item:focus {
 
 @keyframes floating {
   0% {
-    transform: translateY(1%);  
+    transform: translateY(1%);
   }
   50% {
-    transform: translateY(9%);  
-  } 
+    transform: translateY(9%);
+  }
   100% {
     transform: translateY(1%);
-  }     
+  }
 }
 
 @-webkit-keyframes floating {
-    0% {
-        -webkit-transform: translateY(1%);  
-    }
-    50% {
-        -webkit-transform: translateY(9%);  
-    }   
-    100% {
-        -webkit-transform: translateY(1%);
-    }           
+  0% {
+    -webkit-transform: translateY(1%);
+  }
+  50% {
+    -webkit-transform: translateY(9%);
+  }
+  100% {
+    -webkit-transform: translateY(1%);
+  }
 }
 
-.social-web{
-    margin-top: 60px;
+.social-web {
+  margin-top: 60px;
 }
 
-.btn-primary:hover{
-    text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.btn-primary:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.lead{
-    font-size: 16px;
-    margin: 40px;
-    line-height: 1.7;
-    color: #5a6c7d;
+.lead {
+  font-size: 16px;
+  margin: 40px;
+  line-height: 1.7;
+  color: #5a6c7d;
 }
-
