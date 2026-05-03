@@ -50,9 +50,11 @@ ads.txt                  AdSense verification — do not modify
 ## Blog Post Conventions
 
 ### Filename
+
 `YYYY-MM-DD-descriptive-slug.markdown` in `_posts/`
 
 ### Required frontmatter
+
 ```yaml
 ---
 layout: post
@@ -66,26 +68,35 @@ description: "SEO description, max 160 characters"
 ```
 
 ### Optional frontmatter
+
 ```yaml
-image: /public/img/filename.png    # OG/Twitter/JSON-LD image; defaults to android-dev.png
-keywords: "comma, separated"       # Overrides tags for keywords meta
+image: /public/img/filename.png # OG/Twitter/JSON-LD image; defaults to android-dev.png
+keywords: "comma, separated" # Overrides tags for keywords meta
 ```
 
 ### Content conventions
+
 - First paragraph is the **excerpt** (shown on blog index). Must be standalone.
 - Never use `#` (H1) in post body — the layout renders `page.title` as H1.
 - Headings: `###` (H3) for main sections, `####` (H4) for subsections.
 - Images: inline HTML with absolute URL, max width 380px:
   ```html
-  <img src="https://maikotrindade.com/public/img/filename.png" width="380" height="380" alt="description"/>
+  <img
+    src="https://maikotrindade.com/public/img/filename.png"
+    width="380"
+    height="380"
+    alt="description"
+  />
   ```
 - Code blocks: fenced with language identifier for Rouge: ` ```kotlin `, ` ```solidity `, etc.
 - External links: reference-style at bottom of file.
 
 ### Template reference
+
 `_posts/base-post-format.markdown` — kept with `published: false` as a formatting reference.
 
 ### New post checklist
+
 - [ ] Filename: `YYYY-MM-DD-slug.markdown`
 - [ ] All required frontmatter fields present
 - [ ] `description` ≤ 160 chars
@@ -96,13 +107,13 @@ keywords: "comma, separated"       # Overrides tags for keywords meta
 
 ## Layout System
 
-| Layout            | Has ads? | `head.html` included? | Used by                        |
-|-------------------|----------|-----------------------|--------------------------------|
-| `default`         | yes      | yes                   | blog/index.html                |
-| `default_no_ads`  | no       | **no (inlined)**      | index.html (Home)              |
-| `post`            | yes      | yes (via default)     | all blog posts                 |
-| `page`            | yes      | yes (via default)     | static pages (with ads)        |
-| `page_no_ads`     | no       | **no (inlined)**      | about, experience, projects, education |
+| Layout           | Has ads? | `head.html` included? | Used by                                |
+| ---------------- | -------- | --------------------- | -------------------------------------- |
+| `default`        | yes      | yes                   | blog/index.html                        |
+| `default_no_ads` | no       | **no (inlined)**      | index.html (Home)                      |
+| `post`           | yes      | yes (via default)     | all blog posts                         |
+| `page`           | yes      | yes (via default)     | static pages (with ads)                |
+| `page_no_ads`    | no       | **no (inlined)**      | about, experience, projects, education |
 
 **Critical quirk:** `default_no_ads.html` does NOT use `{% include head.html %}`. It has its own hardcoded `<head>`. When editing SEO/meta behavior, check **both** `_includes/head.html` AND `_layouts/default_no_ads.html`.
 
@@ -110,13 +121,14 @@ keywords: "comma, separated"       # Overrides tags for keywords meta
 
 ## Includes
 
-| File | Purpose |
-|------|---------|
-| `_includes/head.html` | Meta tags, OG, Twitter Cards, JSON-LD schema, GA4, AdSense, CSS links, `theme-toggle.js` |
-| `_includes/sidebar.html` | Profile photo, social links, auto-generated nav, last 3 posts |
-| `_includes/analytics.html` | Legacy UA analytics (`UA-66120129-1`) — keep intact |
+| File                       | Purpose                                                                                  |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| `_includes/head.html`      | Meta tags, OG, Twitter Cards, JSON-LD schema, GA4, AdSense, CSS links, `theme-toggle.js` |
+| `_includes/sidebar.html`   | Profile photo, social links, auto-generated nav, last 3 posts                            |
+| `_includes/analytics.html` | Legacy UA analytics (`UA-66120129-1`) — keep intact                                      |
 
 ### SEO metadata fallback chain (`head.html`)
+
 - **description:** `page.description` → `page.excerpt` (strip HTML, truncate to 160) → `site.description`
 - **image:** `page.image` → `https://maikotrindade.com/public/img/android-dev.png`
 - **JSON-LD schema:** `layout == "post"` → Article schema; all other layouts → WebSite schema
@@ -124,6 +136,7 @@ keywords: "comma, separated"       # Overrides tags for keywords meta
 ## Critical Constraints
 
 **Never modify:**
+
 - GA4 ID: `G-NPGMKKGTDM` (in `head.html` and `default_no_ads.html`)
 - AdSense ID: `ca-pub-4415452186185932` (in `head.html`)
 - Legacy UA ID: `UA-66120129-1` (in `analytics.html`)

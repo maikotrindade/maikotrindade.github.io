@@ -19,6 +19,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — AI & Agents
 
+- [Building Reusable Skills for Claude: A Complete Guide](https://maikotrindade.com/ai/agents/claude/anthropic/2026/05/02/building-reusable-skills-for-claude.html): How to build, configure, and distribute reusable markdown-based Skills for Claude using progressive disclosure, SKILL.md frontmatter, and MCP integration.
 - [Capitol Trades Tracker: AI-Powered Investment Intelligence](https://maikotrindade.com/artificial-intelligence/2026/01/18/introducing-capitol-trades-tracker.html): Agentic AI Android app tracking U.S. congressional stock trades using Koog, LLMs, and OpenRouter.
 - [Understanding AI Agents: Concepts, Architecture, and Tools](https://maikotrindade.com/ai/agents/automation/agentic%20systems/llm/2025/10/02/understanding-ai-agents-concepts-architecture-tools.html): Comprehensive overview of AI agent architecture, reasoning, planning, and tools like LangChain, CrewAI, and Koog.
 - [Building an Agentic AI Mobile Tester with Koog and Kotlin](https://maikotrindade.com/ai/kotlin/android/development/agents/2025/08/19/building-agentic-ai-mobile-tester-koog-kotlin.html): How to build an autonomous mobile testing agent using Koog, Kotlin, and LLMs.
@@ -38,12 +39,59 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 - [Kotlin 2.0 – A New Era for Android Development](https://maikotrindade.com/2024/07/02/kotlin-2.0-a-new-era-for-android-development.html): Kotlin 2.0 compiler improvements, new language features, and performance gains.
 - [Insights into Compose UI Testing](https://maikotrindade.com/2024/01/26/insights-into-compose-ui-testing.html): Practical guide to Jetpack Compose UI test setup, ComposeTestRule, and best practices.
 - [Improving Accessibility of Android Apps](https://maikotrindade.com/2024/09/11/improving-accessibility-android-app.html): Android accessibility tools — TalkBack, font size, high contrast text.
+- [Exploring the Benefits of Android Jetpack Compose II](https://maikotrindade.com/2023/11/15/benefits-of-compose-part-2.html): Second part of the Jetpack Compose benefits series.
+- [Exploring the Benefits of Android Jetpack Compose I](https://maikotrindade.com/2023/10/05/benefits-of-compose-part-1.html): First part of the Jetpack Compose benefits series.
+- [Exploring Material3 for Android with Jetpack Compose](https://maikotrindade.com/2023/04/21/explore-material3-jetpack-compose.html): How to adopt Material You and Material3 design tokens in Jetpack Compose.
+- [Comparing Jetpack Compose and Reactive JS](https://maikotrindade.com/2023/03/22/comparing-jetpack-compose-reactive-js.html): Similarities and differences between Android's Compose and reactive JavaScript UI frameworks.
+- [Migration from XML-based UI to Jetpack Compose](https://maikotrindade.com/2023/02/12/migration-from-jetpack-compose.html): Practical strategies for migrating an existing Android XML layout app to Jetpack Compose.
+- [Let's talk about Jetpack Compose again](https://maikotrindade.com/2022/08/25/jetpack-compose-lets-talk.html): A revisit of Jetpack Compose concepts and best practices for Android UI development.
+- [Kotlin – Interfaces, Inline and Higher-Order Functions](https://maikotrindade.com/2022/11/15/kotlin-interfaces-annontations.html): Deep dive into Kotlin interfaces, inline functions, and higher-order function patterns.
+- [Koin – Dependency Injection for Kotlin](https://maikotrindade.com/2019/07/09/koin-android-kotlin-dependency-injection.html): Introduction to Koin as a lightweight dependency injection framework for Kotlin and Android.
+- [Dependency Injection with Dagger 2](https://maikotrindade.com/2019/04/25/dependency-injection-with-dagger-2.html): How to set up and use Dagger 2 for dependency injection in Android apps.
+- [Simplify your Android code with Coroutines](https://maikotrindade.com/2020/02/20/coroutines-android-simplify-code.html): Practical patterns for using Kotlin Coroutines to simplify async Android code.
+- [Coroutines basics](https://maikotrindade.com/2019/12/05/coroutines-basics.html): Introduction to Kotlin Coroutines — launch, async, suspend functions, and structured concurrency.
+- [Converting Java to Kotlin](https://maikotrindade.com/2019/05/03/java-to-kotlin-converting.html): Tips and pitfalls when converting existing Java Android code to idiomatic Kotlin.
+- [Kotlin – tricks and tips](https://maikotrindade.com/2018/06/20/kotlin-tips-tricks-cheat-sheet.html): A cheat sheet of useful Kotlin language features and idioms for Android developers.
+- [Lifecycle-aware components on Android](https://maikotrindade.com/2019/01/19/lifecycle-aware-components-on-android.html): How to use Android Jetpack lifecycle-aware components to avoid common memory leak patterns.
+- [Introduction to Android WorkManager](https://maikotrindade.com/2019/02/03/introduction-android-work-manager.html): How to schedule deferrable background work reliably with Android WorkManager.
+- [Architecture Components – Binding Data](https://maikotrindade.com/2018/12/15/architecture-componentes-binding-data.html): Using Android Data Binding with Architecture Components for cleaner UI code.
+- [Architecture Components – let's make Android great again](https://maikotrindade.com/2017/02/21/android-architecture-components.html): Introduction to Android Architecture Components: ViewModel, LiveData, and Room.
+- [Your data everywhere using Cloud Firestore](https://maikotrindade.com/2018/07/07/google-firestore.html): Getting started with Google Cloud Firestore for real-time data sync in Android apps.
+- [How to handle Flutter connectivity](https://maikotrindade.com/2018/03/04/how-to-handle-flutter-connectivity.html): Detecting and reacting to network connectivity changes in Flutter applications.
+- [Model View Presenter (MVP) on Android](https://maikotrindade.com/2016/06/12/model-view-presenter-mvp-on-android.html): Implementing the MVP architecture pattern in Android to separate UI from business logic.
+- [Introduction to Reactive Programming with RxJava](https://maikotrindade.com/2016/11/05/rxjava.html): Core concepts of RxJava — Observables, Operators, and Schedulers — for Android developers.
 
 ## Blog — Blockchain & Solidity
 
 - [Deep Dive into DeFi: Liquidity Pools and Aave](https://maikotrindade.com/2024/04/03/liquidity-pools-aave-explained.html): How DeFi liquidity pools work and how Aave uses them for lending and borrowing.
 - [Decoding Meme Coins](https://maikotrindade.com/2024/03/18/decoding-meme-coins.html): Hype, risks, and reality behind meme coin cryptocurrencies.
+- [Integrate your Android app with a ERC20 smart contract](https://maikotrindade.com/2023/08/02/integrate-android-app-with-erc20-token.html): How to connect an Android app to an ERC20 token contract using Web3j.
 - [Nomad Token – Chainlink Hackathon](https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html): Building a full blockchain ecosystem for a Chainlink hackathon.
+- [Send private transactions on private Ethereum networks](https://maikotrindade.com/2023/01/16/send_private_transaction_ethereum.html): How to send private transactions on a permissioned Ethereum network.
+- [The Future of Gaming and Crypto](https://maikotrindade.com/2022/12/26/future-gamiing-crypto.html): How blockchain and crypto are reshaping the future of gaming and virtual economies.
+- [Supply chain on blockchains](https://maikotrindade.com/2022/06/12/supply-chain-blockchain.html): How blockchain technology improves transparency and traceability in supply chain management.
+- [Ethereum governance](https://maikotrindade.com/2022/05/27/ethereum-governance.html): How Ethereum's decentralized governance process works for protocol upgrades and EIPs.
+- [Best practices and design patterns for Ethereum development](https://maikotrindade.com/2022/04/22/best-practices-design-patterns-ethereum.html): Security patterns, common pitfalls, and best practices for writing robust Ethereum smart contracts.
+- [Different types of Consensus mechanisms](https://maikotrindade.com/2022/03/12/consensus-types.html): Overview of blockchain consensus mechanisms including PoW, PoS, DPoS, and BFT variants.
+- [Getting started with Chainlink development using Truffle and Infura](https://maikotrindade.com/2021/06/28/getting-started-with-chainlink-development-using-truffle-and-infura.html): Step-by-step guide to building Chainlink-powered smart contracts with Truffle and Infura.
+- [What is Chainlink and why it is important for crypto-ecosystem?](https://maikotrindade.com/2021/06/12/what-is-chainlink-and-why-it-is-important-for-crypto-ecosystem.html): Introduction to Chainlink oracles and why decentralized data feeds matter for DeFi and smart contracts.
+- [Inheritance in Solidity explained](https://maikotrindade.com/2020/09/29/inheritance-in-solidity-explained.html): How Solidity implements single and multiple inheritance, virtual functions, and the C3 linearization order.
+- [Basic of Mappings in Solidity](https://maikotrindade.com/2020/07/14/basic-of-solidity-mappings.html): How Solidity mappings work, their storage model, and common patterns for using them in smart contracts.
+- [How is the structure of a smart contract](https://maikotrindade.com/2020/05/01/structure-of-smart-contract.html): Anatomy of a Solidity smart contract — state variables, functions, events, modifiers, and constructors.
+- [EVM – Ethereum Virtual Machine](https://maikotrindade.com/2020/04/11/the-ethereum-virtual-machine.html): How the Ethereum Virtual Machine executes bytecode, manages the stack, and handles gas.
+- [Blockchain decentralizing the financial system](https://maikotrindade.com/2019/11/11/blockchain-decentralizing-the-financial-system.html): How blockchain technology enables decentralized finance and removes intermediaries from financial systems.
+- [How to start with the new token standard ERC777 with Solidity](https://maikotrindade.com/2019/03/29/solidity-erc777-new-token-standard.html): Introduction to the ERC777 advanced token standard and how it improves on ERC20.
+- [What is special about ERC1155?](https://maikotrindade.com/2018/11/20/what-is-special-about-ERC1155.html): Why ERC1155 is a powerful multi-token standard enabling both fungible and non-fungible tokens in one contract.
+- [Solidity – Travis CI with Truffle](https://maikotrindade.com/2018/07/26/solidity-travis-ci-with-truffle.html): Setting up continuous integration for Solidity smart contracts using Travis CI and Truffle.
+- [Solidity – Call x Transactions and Solidity functions](https://maikotrindade.com/2018/02/20/solidity-call-vs-transaction.html): The difference between read-only calls and state-changing transactions in Solidity.
+- [Solidity – Gas, gas price, fee and gas usage](https://maikotrindade.com/2018/01/24/solidity-difference-gas-gas-price-fee.html): Explaining gas, gas price, and transaction fees in Ethereum smart contract execution.
+- [Solidity – Block and Transaction Properties](https://maikotrindade.com/2018/01/15/solidity-block-transaction-properties.html): Global variables available in Solidity for accessing block and transaction context.
+- [Solidity – Hashes and Typecasting](https://maikotrindade.com/2017/12/11/solidity-hash-type-casting.html): How hashing functions and type conversion work in Solidity.
+- [Hello Solidity, hello Ethereum](https://maikotrindade.com/2017/11/07/solidity-basics.html): A beginner's introduction to writing smart contracts with Solidity on Ethereum.
+
+## Blog — General Development
+
+- [Some useful GIT commands](https://maikotrindade.com/2016/09/03/major-git-commands.html): A reference of essential and practical Git commands for everyday development workflows.
 
 ## Content License
 
