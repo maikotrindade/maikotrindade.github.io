@@ -131,6 +131,40 @@ Sections in `llms.txt`: `## Blog — AI & Agents`, `## Blog — Android & Jetpac
 
 ---
 
+## Writing Style
+
+Write like a thoughtful person explaining something to a smart friend — not like a machine generating content.
+
+### Sentence structure
+
+Mix short, medium, and longer sentences. Starting with "And", "But", or "So" is fine when it feels natural. Don't use em dashes (—) inside sentences.
+
+### Word choice
+
+Keep language simple and direct. Use contractions (it's, don't, you'll). Avoid buzzwords: "leverage", "delve into", "cutting-edge", "unlock", "transform".
+
+### Tone
+
+Slightly informal but not sloppy. Avoid sounding promotional unless the post is explicitly a product announcement. Soft qualifiers like "probably", "in most cases", or "it depends" are fine — they sound human.
+
+### Patterns to avoid
+
+- "Not only X, but also Y"
+- "In today's world…"
+- "It is important to note that…"
+- Generic filler phrases and obvious transitions
+- Rigid paragraph formulas (don't force 3 points everywhere)
+
+### Specificity and flow
+
+Be concrete. Use examples when helpful, but keep them natural. Ideas should connect logically — don't over-explain. Cut unnecessary filler.
+
+### Final check
+
+If the text sounds like a LinkedIn post, rewrite it. If it sounds slightly imperfect but clear and natural, it's probably good.
+
+---
+
 ## Example
 
 A complete minimal post demonstrating all required elements:

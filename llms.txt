@@ -30,6 +30,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — Android & Jetpack Compose
 
+- [Jetpack Compose and React Native: More Similar Than You Think](https://maikotrindade.com/android/react-native/2026/05/03/jetpack-compose-react-native-similarities.html): How Jetpack Compose concepts — state, composables, effects, navigation — map directly to React Native for Android developers.
 - [AGSL: A Quick Introduction to Android Graphics Shading Language](https://maikotrindade.com/android/graphics/2025/11/28/introduction-to-android-shading-language.html): GPU shaders in Android using AGSL for visual effects in Compose.
 - [Untangling State: Easier Android App Management with Compose](https://maikotrindade.com/android/compose/development/2025/03/08/untangling-state-android-app-management.html): State hoisting and management patterns in Jetpack Compose.
 - [Execution Order in Jetpack Compose Explained](https://maikotrindade.com/2025/01/28/execution-order-in-jetpack-compose.html): How LaunchedEffect, DisposableEffect, and composables execute.
