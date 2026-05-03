@@ -510,3 +510,65 @@ tbody tr:nth-child(odd) th {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Post taxonomy (categories + tags) */
+.post-taxonomy {
+  margin: 2rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.post-taxonomy > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.taxonomy-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+  min-width: 5rem;
+}
+
+.post-category {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #2c7fb8;
+  color: #fff;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  letter-spacing: 0.01em;
+}
+
+[data-theme="dark"] .post-category {
+  background-color: #1a5a8a;
+  color: #cce5ff;
+}
+
+[data-theme="dark"] .post-tag {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  border-color: #444;
+}
