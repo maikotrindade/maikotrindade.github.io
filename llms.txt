@@ -19,6 +19,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — AI & Agents
 
+- [Awesome React Native Skills: Claude Skills for Modern Mobile Dev](https://maikotrindade.com/ai/agents/claude/react-native/2026/05/12/awesome-react-native-skills.html): Curated collection of Claude Skills covering core, ecosystem, Expo, performance, and testing for production React Native apps.
 - [Building Reusable Skills for Claude: A Complete Guide](https://maikotrindade.com/ai/agents/claude/anthropic/2026/05/02/building-reusable-skills-for-claude.html): How to build, configure, and distribute reusable markdown-based Skills for Claude using progressive disclosure, SKILL.md frontmatter, and MCP integration.
 - [Capitol Trades Tracker: AI-Powered Investment Intelligence](https://maikotrindade.com/artificial-intelligence/2026/01/18/introducing-capitol-trades-tracker.html): Agentic AI Android app tracking U.S. congressional stock trades using Koog, LLMs, and OpenRouter.
 - [Understanding AI Agents: Concepts, Architecture, and Tools](https://maikotrindade.com/ai/agents/automation/agentic%20systems/llm/2025/10/02/understanding-ai-agents-concepts-architecture-tools.html): Comprehensive overview of AI agent architecture, reasoning, planning, and tools like LangChain, CrewAI, and Koog.
