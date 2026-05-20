@@ -105,76 +105,82 @@ description: Professional experience of Maiko Trindade as Senior Android Develop
 
 <style>
 .flagship-section {
-  max-width: 800px;
+  max-width: 52rem;
   margin: 0 auto;
   padding: 1.5rem 1rem;
 }
 
 .flagship-item {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   padding: 1.5rem;
-  border-left: 4px solid #007acc;
-  background: #f8f9fa;
-  border-radius: 0 8px 8px 0;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid var(--accent);
+  background: var(--bg-secondary);
+  border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+  transition: transform var(--duration-base, 0.28s) var(--ease-out, ease),
+              box-shadow var(--duration-base, 0.28s) var(--ease-out, ease),
+              background-color var(--duration-base, 0.28s) var(--ease-out, ease);
 }
 
 .flagship-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
 }
 
 .flagship-item h3 {
-  margin: 0 0 0.3rem 0;
-  color: #2c3e50;
-  font-size: 1.3rem;
-  font-weight: 600;
+  margin: 0 0 0.35rem 0;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .flagship-title {
-  color: #007acc;
+  color: var(--accent);
   font-weight: 600;
-  margin: 0 0 0.3rem 0;
-  font-size: 1rem;
+  margin: 0 0 0.35rem 0;
+  font-size: 0.98rem;
 }
 
 .flagship-period {
   display: inline-block;
-  background: #007acc;
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.22rem 0.7rem;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.74rem;
+  font-weight: 600;
   margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 .flagship-description {
-  color: #4a5568;
-  line-height: 1.5;
+  color: var(--text-primary);
+  line-height: 1.65;
   margin: 0.75rem 0 0 0;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
 .flagship-description strong {
-  color: #2c3e50;
+  color: var(--text-strong);
   font-weight: 600;
 }
 
 .flagship-small {
-  line-height: 1.5;
+  color: var(--text-primary);
+  line-height: 1.6;
   margin: 0.5rem 0 1rem 0;
-  font-size: 0.85rem;
+  font-size: 0.86rem;
 }
 
 
 @media (max-width: 768px) {
   .flagship-item {
     padding: 1.25rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .flagship-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 </style>

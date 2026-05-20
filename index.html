@@ -6,16 +6,18 @@ description: Experienced Senior Mobile Engineer with 10 years in Android develop
 
 <div class="hero-section">
   <div class="container">
+    <p class="hero-eyebrow">Senior Mobile Engineer</p>
     <h1>Hello, I'm Maiko Trindade</h1>
-    <p>Experienced Senior Mobile Engineer with 10 years in Android development and over 14 years in software
-      development.</p>
-    <a href="/about" class="btn">Learn More</a>
-    <a href="/public/maikotrindade.pdf" class="btn" target="_blank" rel="noreferrer">Get Résumé</a>
+    <p>Building high-performance mobile apps with Android, Kotlin, Jetpack Compose, React Native and AI agents — 14+ years shipping resilient products for fintech and beyond.</p>
+    <div class="hero-actions">
+      <a href="/about" class="btn">Learn More</a>
+      <a href="/public/maikotrindade.pdf" class="btn" target="_blank" rel="noopener noreferrer">Get Résumé</a>
+    </div>
   </div>
 </div>
 
-<section class="recent-posts-section">  
-  <h2>Latest Updates</h2>
+<section class="recent-posts-section" aria-labelledby="latest-updates-heading">
+  <h2 id="latest-updates-heading">Latest Updates</h2>
   <ul class="recent-posts-nav">
     {% for post in site.posts | limit:12 %}
     <li class="recent-posts-nav-item">
@@ -25,6 +27,35 @@ description: Experienced Senior Mobile Engineer with 10 years in Android develop
     {% endfor %}
   </ul>
 
-  <a href="/blog">See other articles</a>
+  <a href="/blog" class="see-more-link">See other articles &rarr;</a>
 </section>
+
+<style>
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--accent-soft, #dbeafe);
+  border-radius: var(--radius-pill, 999px);
+}
+.hero-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.see-more-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-weight: 600;
+}
+[data-theme="dark"] .hero-eyebrow {
+  background: rgba(96, 165, 250, 0.15);
+}
+</style>
 
