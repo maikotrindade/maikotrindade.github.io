@@ -20,7 +20,7 @@ The <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" r
 
 ### The four layers I care about
 
-After reading through the <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evals guide">agent evals guide</a>, the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents</a> manual, and the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap by Hamel Husain">AI Evals Roadmap</a> by Hamel Husain and friends, I keep coming back to four layers that need their own tests:
+After reading through the <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evals guide">agent evals guide</a>, the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents</a> manual, and the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish-i-had" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap by Hamel Husain">AI Evals Roadmap</a> by Hamel Husain and friends, I keep coming back to four layers that need their own tests:
 
 | Layer | What it measures | Why it matters |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ What I do in production:
 - Alert on trajectory anomalies, not just error rates. A 30 percent jump in average tool calls per task is a bug, even if nothing crashes.
 - Keep a small human-in-the-loop review queue for the lowest-confidence runs. The cost is low and the signal is the best you can get.
 
-This is the same loop the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents manual</a> recommends, and it matches what Husain calls operational evaluation in the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap">roadmap article</a>.
+This is the same loop the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents manual</a> recommends, and it matches what Husain calls operational evaluation in the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish-i-had" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap">roadmap article</a>.
 
 ### My assertive take
 
