@@ -88,7 +88,7 @@ Note that WorkManager may enable or disable some of its BroadcastReceivers at ru
 
 ### Further Details
 
-<iframe width="380" height="260" src="https://www.youtube.com/embed/pe_yqM16hPQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Watch the full session: [WorkManager — Android Jetpack (YouTube)](https://www.youtube.com/watch?v=pe_yqM16hPQ)
 
 [Modern background execution in Android]: https://android-developers.googleblog.com/2018/10/modern-background-execution-in-android.html
 [WorkManager]: https://developer.android.com/topic/libraries/architecture/workmanager

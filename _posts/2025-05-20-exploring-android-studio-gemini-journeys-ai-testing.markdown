@@ -25,7 +25,7 @@ The feature integrates seamlessly with Android Studio's preview environment, off
 
 To explore Gemini Journeys' capabilities, I created a demo project called [KoinBase](https://github.com/maikotrindade/koinbase) - a simple cryptocurrency tracking application built with Jetpack Compose. The app showcases modern Android development practices while serving as a perfect testing ground for AI-assisted test generation.
 
-<video controls width="100%" style="max-width: 800px;">
+<video controls width="100%">
   <source src="https://github.com/maikotrindade/koinbase/raw/main/journeysDemo.mp4" type="video/mp4">
   <p>Your browser doesn't support HTML5 video. <a href="https://github.com/maikotrindade/koinbase/raw/main/journeysDemo.mp4">Download the video</a> instead.</p>
 </video>

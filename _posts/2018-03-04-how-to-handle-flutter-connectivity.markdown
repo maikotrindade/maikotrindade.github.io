@@ -17,7 +17,7 @@ The process is really straightforward. First of all, you need to add the library
 
 Next step is import the package that you included in you project and start using the library as the following example shows:
 
-<script src="https://gist.github.com/maikotrindade/11bf4e8c34881f74db35f22ff724ebd2.js"></script>
+View the full usage example on [GitHub Gist](https://gist.github.com/maikotrindade/11bf4e8c34881f74db35f22ff724ebd2).
 
 [Flutter]: https://flutter.io/
 [flutter_offline]: https://github.com/jogboms/flutter_offline
