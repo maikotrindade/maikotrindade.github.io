@@ -19,7 +19,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — AI & Agents
 
-- [How to Actually Test Autonomous AI Agents in 2026](https://maikotrindade.com/ai-agents/testing/2026/05/20/testing-autonomous-ai-agents.html): A practical opinion on testing autonomous AI agents using trajectory evaluation, observability, real-workflow benchmarks, and production-grade reliability practices.
+- [How to Actually Test Autonomous AI Agents](https://maikotrindade.com/ai-agents/testing/2026/05/20/testing-autonomous-ai-agents.html): A practical opinion on testing autonomous AI agents using trajectory evaluation, observability, real-workflow benchmarks, and production-grade reliability practices.
 - [Awesome React Native Skills: Claude Skills for Modern Mobile Dev](https://maikotrindade.com/ai/agents/claude/react-native/2026/05/12/awesome-react-native-skills.html): Curated collection of Claude Skills covering core, ecosystem, Expo, performance, and testing for production React Native apps.
 - [Building Reusable Skills for Claude: A Complete Guide](https://maikotrindade.com/ai/agents/claude/anthropic/2026/05/02/building-reusable-skills-for-claude.html): How to build, configure, and distribute reusable markdown-based Skills for Claude using progressive disclosure, SKILL.md frontmatter, and MCP integration.
 - [Capitol Trades Tracker: AI-Powered Investment Intelligence](https://maikotrindade.com/artificial-intelligence/2026/01/18/introducing-capitol-trades-tracker.html): Agentic AI Android app tracking U.S. congressional stock trades using Koog, LLMs, and OpenRouter.
