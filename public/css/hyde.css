@@ -25,13 +25,11 @@
 
 /*
  * Global resets
- *
- * Update the foundational and global aspects of the page.
  */
 
 html {
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
 }
 @media (min-width: 48rem) {
@@ -41,7 +39,7 @@ html {
 }
 @media (min-width: 58rem) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
@@ -54,10 +52,10 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
-  color: rgba(255, 255, 255, 0.6);
-  background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  padding: 2.25rem 1rem;
+  color: rgba(226, 232, 240, 0.78);
+  background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.18);
 }
 @media (min-width: 48rem) {
   .sidebar {
@@ -70,52 +68,50 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 0;
-    /* Smooth scrolling */
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Custom scrollbar styling for better UX */
   .sidebar::-webkit-scrollbar {
     width: 8px;
   }
 
   .sidebar::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .sidebar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(148, 163, 184, 0.35);
     border-radius: 4px;
     transition: background 0.2s ease;
   }
 
   .sidebar::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(148, 163, 184, 0.55);
   }
 }
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #f1f5f9;
   transition:
     color 0.2s ease,
     transform 0.2s ease;
 }
 .sidebar a:hover {
-  color: #4fc3f7;
+  color: #60a5fa;
   transform: translateX(3px);
 }
 
 /* About section */
 .sidebar-about h2 {
-  color: #fff;
+  color: #ffffff;
   margin-top: 16px;
   display: flex;
   justify-content: center;
-  margin: 6px 0;
-  font-size: 1.5rem;
-  font-weight: 600;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.45rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -123,56 +119,63 @@ html {
 .sidebar-nav {
   padding-left: 0;
   list-style: none;
+  margin: 0.5rem 0 1rem;
 }
 .sidebar-nav-item {
   display: block;
-  padding: 0.3rem 0;
+  padding: 0.45rem 0.75rem;
   border-left: 3px solid transparent;
-  padding-left: 0.5rem;
-  margin-left: -0.5rem;
+  margin-left: -0.75rem;
+  border-radius: 0 4px 4px 0;
   transition: all 0.2s ease;
+  font-weight: 500;
 }
 
 a.sidebar-nav-item:hover {
   text-decoration: none;
-  border-left-color: #4fc3f7;
-  background-color: rgba(255, 255, 255, 0.05);
+  border-left-color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.08);
 }
 a.sidebar-nav-item:focus-visible {
-  outline: 3px solid #4fc3f7;
-  outline-offset: -3px;
-  border-left-color: #4fc3f7;
+  outline: 2px solid #60a5fa;
+  outline-offset: -2px;
+  border-left-color: #60a5fa;
+  border-radius: 4px;
 }
 .sidebar-nav-item.active {
-  font-weight: 600;
-  border-left-color: #4fc3f7;
-  background-color: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+  border-left-color: #60a5fa;
+  background-color: rgba(96, 165, 250, 0.12);
+  color: #ffffff;
 }
 
 .sidebar h4 {
-  color: rgba(200, 200, 200, 0.6);
-  font-weight: 600;
-  font-size: 0.85rem;
+  color: rgba(148, 163, 184, 0.85);
+  font-weight: 700;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar-nav-item.small {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 .perfil-picture {
   border-radius: 50%;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), 0 0 0 3px rgba(96, 165, 250, 0.18);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .perfil-picture:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(96, 165, 250, 0.32);
 }
 /* Sticky sidebar
  *
@@ -182,7 +185,7 @@ a.sidebar-nav-item:focus-visible {
 @media (min-width: 48rem) {
   .sidebar-sticky {
     position: relative;
-    padding: 0.5rem 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 1.5rem 2rem;
     min-height: 100%;
   }
 }
@@ -194,7 +197,7 @@ a.sidebar-nav-item:focus-visible {
  */
 
 .content {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -205,7 +208,6 @@ a.sidebar-nav-item:focus-visible {
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
-    /* Center content in the space after sidebar */
     margin-left: calc(18rem + (100vw - 18rem - 42rem) / 2);
     padding-left: 2rem;
     padding-right: 2rem;
@@ -219,25 +221,20 @@ a.sidebar-nav-item:focus-visible {
 @media (min-width: 64rem) {
   .content {
     max-width: 46rem;
-    /* Center content in the space after sidebar */
     margin-left: calc(18rem + (100vw - 18rem - 46rem) / 2);
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-/* Extra large screens - ensure content doesn't get too far from sidebar */
 @media (min-width: 90rem) {
   .content {
-    /* Cap the centering to maintain comfortable reading distance */
     margin-left: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
   }
 }
 
 /*
  * Reverse layout
- *
- * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
 
 @media (min-width: 48rem) {
@@ -265,125 +262,50 @@ a.sidebar-nav-item:focus-visible {
 }
 
 /*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
+ * Themes (base16 — kept as-is for compatibility)
  */
 
-/* Base16 (http://chriskempson.github.io/base16/#default) */
-
-/* Red */
-.theme-base-08 .sidebar {
-  background-color: #ac4142;
-}
+.theme-base-08 .sidebar { background-color: #ac4142; }
 .theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
-
-/* Orange */
-.theme-base-09 .sidebar {
-  background-color: #d28445;
-}
+.theme-base-08 .related-posts li a:hover { color: #ac4142; }
+.theme-base-09 .sidebar { background-color: #d28445; }
 .theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
-
-/* Yellow */
-.theme-base-0a .sidebar {
-  background-color: #f4bf75;
-}
+.theme-base-09 .related-posts li a:hover { color: #d28445; }
+.theme-base-0a .sidebar { background-color: #f4bf75; }
 .theme-base-0a .content a,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
-
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
+.theme-base-0a .related-posts li a:hover { color: #f4bf75; }
+.theme-base-0b .sidebar { background-color: #90a959; }
 .theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
+.theme-base-0b .related-posts li a:hover { color: #90a959; }
+.theme-base-0c .sidebar { background-color: #75b5aa; }
 .theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
+.theme-base-0c .related-posts li a:hover { color: #75b5aa; }
+.theme-base-0d .sidebar { background-color: #6a9fb5; }
 .theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
+.theme-base-0d .related-posts li a:hover { color: #6a9fb5; }
+.theme-base-0e .sidebar { background-color: #aa759f; }
 .theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
+.theme-base-0e .related-posts li a:hover { color: #aa759f; }
+.theme-base-0f .sidebar { background-color: #8f5536; }
 .theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
-}
+.theme-base-0f .related-posts li a:hover { color: #8f5536; }
 
-/*                 Customized     by   Maiko Trindade           */
+/*                 Customized by Maiko Trindade           */
 
 .logotipo {
-  margin: 0px;
+  margin: 0;
 }
 
+/* Subtle, restrained float — only at user's preference */
 @media (prefers-reduced-motion: no-preference) {
   .logotipo {
-    animation-name: floating;
-    -webkit-animation-name: floating;
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
+    animation: floating 4s ease-in-out infinite;
   }
 }
 
 @keyframes floating {
-  0% {
-    transform: translateY(1%);
-  }
-  50% {
-    transform: translateY(9%);
-  }
-  100% {
-    transform: translateY(1%);
-  }
-}
-
-@-webkit-keyframes floating {
-  0% {
-    -webkit-transform: translateY(1%);
-  }
-  50% {
-    -webkit-transform: translateY(9%);
-  }
-  100% {
-    -webkit-transform: translateY(1%);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
 }
 
 .social-web {
@@ -393,12 +315,12 @@ a.sidebar-nav-item:focus-visible {
 .btn-primary:hover {
   text-decoration: none;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
 }
 
 .lead {
   font-size: 16px;
-  margin: 40px;
+  margin: 2rem 0;
   line-height: 1.7;
-  color: #5a6c7d;
+  color: #475569;
 }

@@ -3,8 +3,30 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Enable responsiveness on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Theme color (synced by theme-toggle.js for runtime) -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Pre-paint theme to avoid FOUC -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme-preference');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored === 'light' || stored === 'dark' ? stored : (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) { /* ignore */ }
+      })();
+    </script>
+
     {% unless page.layout == "page_no_ads" %}<meta name="google-adsense-account" content="ca-pub-4415452186185932">{% endunless %}
 
     <!-- Primary Meta Tags -->
@@ -15,9 +37,11 @@
     {% else %}
         <meta name="description" content="{{ site.description }}" />
     {% endif %}
-    
-    <meta name="author" content="@maikotrindade">
-    
+
+    <meta name="author" content="Maiko Trindade">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+
     {% if page.keywords %}
         <meta name="keywords" content="{{ page.keywords }}" />
     {% elsif page.tags %}
@@ -34,6 +58,10 @@
         {% if page.date %}
             <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
         {% endif %}
+        {% if page.last_modified_at %}
+            <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}" />
+        {% endif %}
+        <meta property="article:author" content="https://maikotrindade.com/about" />
         {% if page.categories %}
             {% for category in page.categories %}
                 <meta property="article:section" content="{{ category }}" />
@@ -47,19 +75,19 @@
     {% else %}
         <meta property="og:type" content="website" />
     {% endif %}
-    
+
     {% if page.url %}
         <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     {% else %}
         <meta property="og:url" content="{{ site.url }}" />
     {% endif %}
-    
+
     {% if page.title %}
         <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
     {% else %}
         <meta property="og:title" content="{{ site.title }}" />
     {% endif %}
-    
+
     {% if page.description %}
         <meta property="og:description" content="{{ page.description }}" />
     {% elsif page.excerpt %}
@@ -67,47 +95,53 @@
     {% else %}
         <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
-    
+
     {% if page.image %}
         <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+        <meta property="og:image:alt" content="{{ page.title | default: site.title }}" />
     {% else %}
         <meta property="og:image" content="https://maikotrindade.com/public/img/android-dev.png" />
+        <meta property="og:image:alt" content="{{ site.title }}" />
     {% endif %}
-    
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@maikotrindade" />
     <meta name="twitter:creator" content="@maikotrindade" />
-    
+
     {% if page.url %}
-        <meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
     {% else %}
-        <meta property="twitter:url" content="{{ site.url }}" />
+        <meta name="twitter:url" content="{{ site.url }}" />
     {% endif %}
-    
+
     {% if page.title %}
-        <meta property="twitter:title" content="{{ page.title }} | {{ site.title }}" />
+        <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
     {% else %}
-        <meta property="twitter:title" content="{{ site.title }}" />
+        <meta name="twitter:title" content="{{ site.title }}" />
     {% endif %}
-    
+
     {% if page.description %}
-        <meta property="twitter:description" content="{{ page.description }}" />
+        <meta name="twitter:description" content="{{ page.description }}" />
     {% elsif page.excerpt %}
-        <meta property="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
+        <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
     {% else %}
-        <meta property="twitter:description" content="{{ site.description }}" />
+        <meta name="twitter:description" content="{{ site.description }}" />
     {% endif %}
-    
+
     {% if page.image %}
-        <meta property="twitter:image" content="{{ site.url }}{{ page.image }}" />
+        <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+        <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}" />
     {% else %}
-        <meta property="twitter:image" content="https://maikotrindade.com/public/img/android-dev.png" />
+        <meta name="twitter:image" content="https://maikotrindade.com/public/img/android-dev.png" />
+        <meta name="twitter:image:alt" content="{{ site.title }}" />
     {% endif %}
-    
+
     {% if page.url %}
         <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     {% else %}
@@ -136,19 +170,24 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        
+
         gtag('config', 'G-NPGMKKGTDM');
     </script>
     <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    
+
+    <!-- DNS / connection hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
     <!-- CSS -->
     <link rel="stylesheet" href="/public/css/poole.css">
     <link rel="stylesheet" href="/public/css/syntax.css">
     <link rel="stylesheet" href="/public/css/hyde.css">
     <link rel="stylesheet" href="/public/css/theme.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=PT+Sans:wght@400;700&family=Abril+Fatface&display=swap">
+
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/public/favicon.ico">
@@ -167,6 +206,7 @@
         "url": "{{ site.url }}{{ page.url }}",
         "datePublished": "{{ page.date | date_to_xmlschema }}",
         "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+        "inLanguage": "en-US",
         {% if page.image %}
         "image": "{{ site.url }}{{ page.image }}",
         {% else %}
@@ -175,11 +215,19 @@
         "author": {
             "@type": "Person",
             "name": "Maiko Trindade",
-            "url": "https://maikotrindade.com/"
+            "url": "https://maikotrindade.com/",
+            "sameAs": [
+                "https://www.linkedin.com/in/maikotrindade",
+                "https://github.com/maikotrindade",
+                "https://twitter.com/maikotrindade",
+                "https://mastodon.social/@maikotrindade",
+                "https://devpost.com/maikotrindade",
+                "https://g.dev/maikotrindade"
+            ]
         },
         "publisher": {
             "@type": "Organization",
-            "name": "{{ site.title }}",
+            "name": {{ site.title | jsonify }},
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://maikotrindade.com/public/img/android-dev.png"
@@ -194,22 +242,38 @@
     }
     </script>
     {% else %}
-    <!-- Website/Organization Schema -->
+    <!-- Website + Person Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "{{ site.title }}",
+        "name": {{ site.title | jsonify }},
         "url": "{{ site.url }}",
-        "description": "{{ site.description }}",
+        "description": {{ site.description | jsonify }},
+        "inLanguage": "en-US",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{{ site.url }}/blog/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
         "author": {
             "@type": "Person",
             "name": "Maiko Trindade",
-            "url": "https://maikotrindade.com/"
+            "url": "https://maikotrindade.com/",
+            "image": "https://maikotrindade.com/public/img/maiko-trindade.webp",
+            "jobTitle": "Senior Mobile Engineer",
+            "sameAs": [
+                "https://www.linkedin.com/in/maikotrindade",
+                "https://github.com/maikotrindade",
+                "https://twitter.com/maikotrindade",
+                "https://mastodon.social/@maikotrindade",
+                "https://devpost.com/maikotrindade",
+                "https://g.dev/maikotrindade"
+            ]
         },
         "publisher": {
             "@type": "Organization",
-            "name": "{{ site.title }}",
+            "name": {{ site.title | jsonify }},
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://maikotrindade.com/public/img/android-dev.png"
@@ -218,7 +282,7 @@
     }
     </script>
     {% endif %}
-    
+
     <!-- Theme Toggle Script -->
-    <script src="/public/js/theme-toggle.js"></script>
+    <script defer src="/public/js/theme-toggle.js"></script>
 </head>

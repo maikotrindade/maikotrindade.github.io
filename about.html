@@ -3,18 +3,82 @@ layout: page_no_ads
 title: About
 description: Learn about Maiko Trindade, an experienced Senior Android Engineer and Tech Lead specialized in Kotlin, Android Jetpack Compose, and MVVM architecture with 13+ years in software development.
 ---
-<section>
-    <p style="font-size: 17px;">
-        <hr />
-        Senior Mobile Engineer focused on architecture modernization and performance optimization for high-growth fintech platforms. Led end-to-end migrations to Jetpack Compose, Kotlin Coroutines and modular MVVM architectures, significantly improving scalability, testability, and app size. Strong expertise in React Native and TypeScript, driving cross-platform mobile strategy and delivering high-performance applications with seamless native integration. Recognized for reducing technical debt and scaling resilient mobile systems.        <br /> <br />
+<section class="about-section">
+    <hr />
+    <p class="about-lead">
+        Senior Mobile Engineer focused on architecture modernization and performance optimization for high-growth fintech platforms. Led end-to-end migrations to Jetpack Compose, Kotlin Coroutines and modular MVVM architectures, significantly improving scalability, testability, and app size. Strong expertise in React Native and TypeScript, driving cross-platform mobile strategy and delivering high-performance applications with seamless native integration. Recognized for reducing technical debt and scaling resilient mobile systems.
+    </p>
+    <p class="about-body">
         Mobile Specialist with a postgraduate degree in Development for Mobile Devices and a bachelor's degree in
         Systems Analysis and Development from Federal Institute of São Paulo (IFSP).
-        <br />
         With 14 years in software development, I specialize in Android, React Native, Kotlin, TypeScript and Jetpack Compose.
-        <br /><br />
-        <span style="font-size: 15px; color: rgb(66, 101, 178);">
-            #Android #JetpackCompose #Blockchain # ReactNative #AI #Kotlin #ArtificialIntelligence #ClimateChange #web3 #Education #ReactNative #Startup #DeFi #Fintech #KMP
-            #Typescript #Cleantech #Solidity #Accessibility #ReactJS #ArtificialIntelligence #betterUX #ESG #Linux
-        </span>
     </p>
+
+    <div class="about-tags" aria-label="Areas of expertise">
+        <span class="about-tag">Android</span>
+        <span class="about-tag">Jetpack Compose</span>
+        <span class="about-tag">Kotlin</span>
+        <span class="about-tag">KMP</span>
+        <span class="about-tag">React Native</span>
+        <span class="about-tag">TypeScript</span>
+        <span class="about-tag">AI</span>
+        <span class="about-tag">Blockchain</span>
+        <span class="about-tag">Solidity</span>
+        <span class="about-tag">web3</span>
+        <span class="about-tag">DeFi</span>
+        <span class="about-tag">Fintech</span>
+        <span class="about-tag">Accessibility</span>
+        <span class="about-tag">ESG</span>
+        <span class="about-tag">Cleantech</span>
+        <span class="about-tag">Climate</span>
+        <span class="about-tag">Education</span>
+        <span class="about-tag">Startup</span>
+        <span class="about-tag">Linux</span>
+        <span class="about-tag">ReactJS</span>
+        <span class="about-tag">betterUX</span>
+    </div>
 </section>
+
+<style>
+.about-section {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.about-lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+}
+.about-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+.about-tag {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    background: var(--accent-soft, #dbeafe);
+    color: var(--accent);
+    border-radius: var(--radius-pill, 999px);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform var(--duration-fast, 0.18s) ease,
+                background-color var(--duration-fast, 0.18s) ease;
+}
+.about-tag:hover {
+    transform: translateY(-1px);
+}
+[data-theme="dark"] .about-tag {
+    background: rgba(96, 165, 250, 0.15);
+    color: var(--accent);
+}
+</style>
