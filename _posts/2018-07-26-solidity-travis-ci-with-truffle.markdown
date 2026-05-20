@@ -17,7 +17,7 @@ Using [Travis CI], the users can easily sync [Github] projects and test the code
 Firstly, as prerequisite you should follow the Travis CI docs in order to integrate your Github project with Travis.
 Then add the following chunk of code into your `.travis.yml`:
 
-<script src="https://gist.github.com/maikotrindade/2d544de08215085abfbba59ce3378a2c.js"></script>
+View the full `.travis.yml` snippet on [GitHub Gist](https://gist.github.com/maikotrindade/2d544de08215085abfbba59ce3378a2c).
 
 In this script, we are selecting nodeJs version 8.11.3 with latest version of Node package manager (npm). Ganache (old testRPC) and truffle are also installed. The trigger mechanisms starts with ganache initialization and the truffle command `truffle test`.  In other words, the code will be compiled and the tests will ran too.
 
