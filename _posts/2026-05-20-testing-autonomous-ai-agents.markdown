@@ -5,20 +5,22 @@ date: 2026-05-20
 published: true
 categories: [ai-agents, testing]
 tags: [AI, agents, testing, evaluation, LLM, observability, production]
-description: "A practical opinion on how to test autonomous AI agents, drawing on trajectory evaluation, observability, and production-grade reliability practices."
+description: "Practical guide to testing autonomous AI agents using trajectory evaluation, LLM judges, observability, and production reliability practices."
+keywords: "ai agent testing, agent evaluation, trajectory evaluation, llm evals, agent observability, production ai, llm judge, ai reliability"
+image: /public/img/android-dev.png
 ---
 
-Testing autonomous AI agents is the part of the stack that most teams underestimate. We have spent the last two years getting comfortable with prompt evaluation, golden datasets, and the occasional LLM judge. None of that is enough once the system starts planning, calling tools, and looping over its own decisions. Below is my synthesis of the best material I have read on agent evaluation recently, plus the approach that is actually working in production for [Capitol Trades Tracker][ctt], the agentic AI app I run for tracking congressional stock trades.
+Testing autonomous AI agents is the part of the stack that most teams underestimate. We have spent the last two years getting comfortable with prompt evaluation, golden datasets, and the occasional LLM judge. None of that is enough once the system starts planning, calling tools, and looping over its own decisions. Below is my synthesis of the best material I have read on agent evaluation recently, plus the approach that is actually working in production for <a href="https://maikotrindade.com/capitol-trades-tracker/" target="_blank" rel="noopener" title="Capitol Trades Tracker, an agentic AI app for congressional trades">Capitol Trades Tracker</a>, the agentic AI app I run for tracking congressional stock trades.
 
 ### Why classic input output testing breaks
 
-The clearest framing comes from [Comet's piece on agent evaluation][comet]. Traditional testing assumes a single input maps to a single output. Agents do not behave that way. They branch, retry, recover, and sometimes solve the right problem the wrong way. A pass or fail on the final answer hides everything interesting about how the agent got there.
+The clearest framing comes from <a href="https://www.comet.com/site/blog/ai-agent-evaluation/" target="_blank" rel="noopener noreferrer" title="Comet on AI agent evaluation">Comet's piece on agent evaluation</a>. Traditional testing assumes a single input maps to a single output. Agents do not behave that way. They branch, retry, recover, and sometimes solve the right problem the wrong way. A pass or fail on the final answer hides everything interesting about how the agent got there.
 
-The [agent evaluation deep dive][wolfe] makes the same point when it separates outcome evaluation from trajectory evaluation. Outcome tells you the agent finished. Trajectory tells you whether it should be trusted to finish again next time. Both matter, and they fail in different ways.
+The <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evaluation deep dive">agent evaluation deep dive</a> makes the same point when it separates outcome evaluation from trajectory evaluation. Outcome tells you the agent finished. Trajectory tells you whether it should be trusted to finish again next time. Both matter, and they fail in different ways.
 
 ### The four layers I care about
 
-After reading through the [agent evals guide][wolfe], the [Evaluating AI Agents][eai] manual, and the [AI Evals Roadmap][roadmap] by Hamel Husain and friends, I keep coming back to four layers that need their own tests:
+After reading through the <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evals guide">agent evals guide</a>, the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents</a> manual, and the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap by Hamel Husain">AI Evals Roadmap</a> by Hamel Husain and friends, I keep coming back to four layers that need their own tests:
 
 | Layer | What it measures | Why it matters |
 | --- | --- | --- |
@@ -31,7 +33,7 @@ If you only test the first one, you ship an agent that passes your evals and qui
 
 ### Trajectory evaluation is the unlock
 
-The single biggest shift for me was treating trajectories as the primary unit of evaluation. The [agent evals guide][wolfe] describes this well, and the [O11yBench benchmark][o11y] takes it further by measuring agents on real observability workflows like log triage and incident response. The benchmark scores the path, not just the conclusion. That matches what I see when reviewing agent traces. A correct answer reached through six redundant tool calls is a failure waiting to happen at scale.
+The single biggest shift for me was treating trajectories as the primary unit of evaluation. The <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evals guide">agent evals guide</a> describes this well, and the <a href="https://o11ybench.ai/" target="_blank" rel="noopener noreferrer" title="O11yBench observability benchmark for AI agents">O11yBench benchmark</a> takes it further by measuring agents on real observability workflows like log triage and incident response. The benchmark scores the path, not just the conclusion. That matches what I see when reviewing agent traces. A correct answer reached through six redundant tool calls is a failure waiting to happen at scale.
 
 Practical version of this in code looks like trace based assertions. Capture the full execution, then write checks like:
 
@@ -47,11 +49,11 @@ This is closer to integration testing than unit testing. That is the point.
 
 The agent evals guide and the roadmap article both spend time on LLM as judge patterns. They work for grading open ended responses where a rubric is hard to encode. They are unreliable as the only signal. The pattern I trust is rubric scoring with a small, fixed rubric per task type, calibrated against human labels on a sample. Anything beyond that drifts.
 
-The [AlphaEval][alpha] approach pushes this further by grounding evaluation in real business workflows across software engineering, finance, and operations. The lesson is that synthetic benchmarks tell you the agent can do tasks. Real workflow benchmarks tell you the agent can do *your* tasks.
+The <a href="https://arxiv.org/abs/2604.12162" target="_blank" rel="noopener noreferrer" title="AlphaEval benchmark for agents in production">AlphaEval</a> approach pushes this further by grounding evaluation in real business workflows across software engineering, finance, and operations. The lesson is that synthetic benchmarks tell you the agent can do tasks. Real workflow benchmarks tell you the agent can do *your* tasks.
 
 ### Production is its own test environment
 
-The [Reinventing.ai piece on production testing][reinventing] argues that synthetic benchmarks systematically miss the failure modes that matter. I agree. Evaluation drift is real. The distribution of user requests in week six rarely matches the distribution you designed evals for in week one.
+The <a href="https://insights.reinventing.ai/articles/ai-agents-evaluation-production-reliability-2026-04-27" target="_blank" rel="noopener noreferrer" title="Production AI agent testing in 2026">Reinventing.ai piece on production testing</a> argues that synthetic benchmarks systematically miss the failure modes that matter. I agree. Evaluation drift is real. The distribution of user requests in week six rarely matches the distribution you designed evals for in week one.
 
 What I do in production:
 
@@ -59,7 +61,7 @@ What I do in production:
 - Alert on trajectory anomalies, not just error rates. A 30 percent jump in average tool calls per task is a bug, even if nothing crashes.
 - Keep a small human-in-the-loop review queue for the lowest-confidence runs. The cost is low and the signal is the best you can get.
 
-This is the same loop the [Evaluating AI Agents manual][eai] recommends, and it matches what Husain calls operational evaluation in the [roadmap article][roadmap].
+This is the same loop the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents manual</a> recommends, and it matches what Husain calls operational evaluation in the <a href="https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish" target="_blank" rel="noopener noreferrer" title="AI Evals Roadmap">roadmap article</a>.
 
 ### My assertive take
 
@@ -74,13 +76,4 @@ Most teams testing agents today are still doing prompt evals dressed up as agent
 
 The teams shipping reliable agents are not the ones with the cleverest prompts. They are the ones who treat evaluation as engineering infrastructure, with the same seriousness they would give a database migration or a payments pipeline. That is the bar.
 
-If you want a single starting point, read the [agent evals guide][wolfe] for the conceptual frame, then go straight to the [Evaluating AI Agents][eai] manual for the operational playbook. Everything else is variations on those two themes.
-
-[wolfe]: https://cameronrwolfe.substack.com/p/agent-evals
-[o11y]: https://o11ybench.ai/
-[alpha]: https://arxiv.org/abs/2604.12162
-[reinventing]: https://insights.reinventing.ai/articles/ai-agents-evaluation-production-reliability-2026-04-27
-[comet]: https://www.comet.com/site/blog/ai-agent-evaluation/
-[eai]: https://evaluating-ai-agents.com/
-[roadmap]: https://www.decodingai.com/p/the-ai-evals-roadmap-i-wish
-[ctt]: https://maikotrindade.com/capitol-trades-tracker/
+If you want a single starting point, read the <a href="https://cameronrwolfe.substack.com/p/agent-evals" target="_blank" rel="noopener noreferrer" title="Agent evals guide">agent evals guide</a> for the conceptual frame, then go straight to the <a href="https://evaluating-ai-agents.com/" target="_blank" rel="noopener noreferrer" title="Evaluating AI Agents manual">Evaluating AI Agents</a> manual for the operational playbook. Everything else is variations on those two themes.

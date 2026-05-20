@@ -93,12 +93,17 @@ Supported languages: `kotlin`, `java`, `solidity`, `javascript`, `swift`, `bash`
 - `*italic*` — emphasis or foreign terms
 - `` `code` `` — function names, class names, code identifiers
 
-**External links** — reference-style at bottom of file:
-```markdown
-See [official docs][kotlin-docs] for details.
+**External links** — use inline HTML anchor tags so we can set `target="_blank"` and SEO/security attributes. Markdown reference style does not support these attributes, so do not use it for new posts.
 
-[kotlin-docs]: https://kotlinlang.org/docs/
+```html
+See the <a href="https://kotlinlang.org/docs/" target="_blank" rel="noopener noreferrer" title="Kotlin official docs">official docs</a> for details.
 ```
+
+Link attribute rules:
+- **External links** (different domain): `target="_blank" rel="noopener noreferrer"`. Always include a descriptive `title` for SEO and accessibility.
+- **Internal links** (same domain, `maikotrindade.com`): `target="_blank" rel="noopener"`. Do NOT use `noreferrer` for internal links so analytics keep tracking referrers.
+- **Anchor text** must be descriptive and keyword-relevant. Avoid generic anchors like "click here" or "this article".
+- Never add `rel="nofollow"` to legitimate citations or your own internal links.
 
 ### Post-Creation Checklist
 
@@ -117,6 +122,8 @@ Run through every item before presenting the final file:
 [ ] No H1 (#) in body
 [ ] Images: inline HTML, absolute URL (https://maikotrindade.com/…), width="380"
 [ ] Code: fenced with language identifier
+[ ] Links: inline HTML anchors with target="_blank", rel="noopener noreferrer" (external) or rel="noopener" (internal), descriptive title attribute
+[ ] SEO: description ≤160 chars with primary keywords, optional keywords meta, image set when a relevant asset exists
 [ ] Update llms.txt if post is significant
 ```
 
