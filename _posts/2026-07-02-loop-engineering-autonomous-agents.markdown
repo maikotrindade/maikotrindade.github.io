@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Loop Engineering: Designing the Control Loop Behind Autonomous Agents"
-date: 2026-07-02
+date: 2026-07-02 12:00:00 -0700
 published: true
 categories: [ai-agents, engineering]
 tags: [AI, agents, loop engineering, autonomous agents, LLM, context management, production]
