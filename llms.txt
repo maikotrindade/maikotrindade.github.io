@@ -19,6 +19,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — AI & Agents
 
+- [Loop Engineering in Practice: What No Middleman Taught Me About Verifying AI-Written Code](https://maikotrindade.com/ai-agents/engineering/2026/07/24/loop-engineering-verifying-ai-written-code-no-middleman.html): How the No Middleman loop verifies AI-written React Native code with a Detox oracle, an adversarial checker, and hard invariants instead of trusting the diff.
 - [Loop Engineering: Designing the Control Loop Behind Autonomous Agents](https://maikotrindade.com/ai-agents/engineering/2026/07/02/loop-engineering-autonomous-agents.html): Practical guide to designing the plan, act, observe loop behind autonomous agents, covering termination conditions, context budgets, and failure handling.
 - [How to Actually Test Autonomous AI Agents](https://maikotrindade.com/ai-agents/testing/2026/05/20/testing-autonomous-ai-agents.html): A practical opinion on testing autonomous AI agents using trajectory evaluation, observability, real-workflow benchmarks, and production-grade reliability practices.
 - [Awesome React Native Skills: Claude Skills for Modern Mobile Dev](https://maikotrindade.com/ai/agents/claude/react-native/2026/05/12/awesome-react-native-skills.html): Curated collection of Claude Skills covering core, ecosystem, Expo, performance, and testing for production React Native apps.
