@@ -26,6 +26,7 @@
   --sidebar-heading: #ffffff;
   --sidebar-link: #f1f5f9;
   --sidebar-link-hover: #60a5fa;
+  --sidebar-icon: #94a3b8;
   --sidebar-h4: rgba(148, 163, 184, 0.85);
   --sidebar-active: #60a5fa;
 
@@ -72,6 +73,7 @@
   --sidebar-heading: #ffffff;
   --sidebar-link: #e2e8f0;
   --sidebar-link-hover: #93c5fd;
+  --sidebar-icon: #8391a7;
   --sidebar-h4: rgba(148, 163, 184, 0.7);
   --sidebar-active: #60a5fa;
 
@@ -223,6 +225,34 @@ tbody tr:hover {
 
 .sidebar a:hover {
   color: var(--sidebar-link-hover);
+}
+
+/* Social icons: color change only on hover, no movement or underline */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.social-links a,
+.social-links a:hover,
+.social-links a:focus-visible {
+  display: inline-flex;
+  color: var(--sidebar-icon);
+  border-bottom: none;
+  transform: none;
+  transition: color var(--duration-base) var(--ease-out);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--sidebar-link-hover);
+}
+
+.social-links a:focus-visible {
+  outline-color: var(--sidebar-link-hover);
+  border-radius: var(--radius-sm);
 }
 
 .sidebar-about h2 {
