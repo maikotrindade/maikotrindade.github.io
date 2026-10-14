@@ -114,6 +114,13 @@ body {
               border-color var(--duration-base) var(--ease-out);
 }
 
+@media (max-width: 47.99rem) {
+  .post,
+  .page {
+    padding: 1.25rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .post,
   .page {

@@ -220,8 +220,8 @@ a.sidebar-nav-item:focus-visible {
 
 @media (min-width: 64rem) {
   .content {
-    max-width: 46rem;
-    margin-left: calc(18rem + (100vw - 18rem - 46rem) / 2);
+    max-width: 53rem;
+    margin-left: max(18rem, calc(18rem + (100vw - 18rem - 53rem) / 2));
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -229,7 +229,7 @@ a.sidebar-nav-item:focus-visible {
 
 @media (min-width: 90rem) {
   .content {
-    margin-left: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
+    margin-left: min(max(18rem, calc(18rem + (100vw - 18rem - 53rem) / 2)), 30rem);
   }
 }
 
@@ -250,14 +250,14 @@ a.sidebar-nav-item:focus-visible {
 
 @media (min-width: 64rem) {
   .layout-reverse .content {
-    margin-right: calc(18rem + (100vw - 18rem - 46rem) / 2);
+    margin-right: max(18rem, calc(18rem + (100vw - 18rem - 53rem) / 2));
     margin-left: auto;
   }
 }
 
 @media (min-width: 90rem) {
   .layout-reverse .content {
-    margin-right: min(calc(18rem + (100vw - 18rem - 46rem) / 2), 30rem);
+    margin-right: min(max(18rem, calc(18rem + (100vw - 18rem - 53rem) / 2)), 30rem);
   }
 }
 
