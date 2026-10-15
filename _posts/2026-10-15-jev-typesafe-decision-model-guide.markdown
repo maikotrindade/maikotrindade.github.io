@@ -6,10 +6,13 @@ published: true
 categories: [ai-agents, llm]
 tags: [Jev, TypeSafe, LLM, Classification, AIAgents, StructuredOutput]
 description: "What Jev, TypeSafe AI's type-safe decision model, is good for, what changed in Jev 1.14, and how to use it for cheap classification next to an LLM."
+image: /public/img/jev-typesafe.png
 keywords: "Jev, TypeSafe AI, Jev 1.14, decision model, System One model, LLM classification, structured output"
 ---
 
 Most of the LLM calls I've put in production aren't really asking the model to write anything. They're asking it to decide: is this ticket urgent, which bucket does this PR belong in, does this comment need a reply. **Jev**, the first model from TypeSafe AI, is built for exactly that kind of call. It doesn't generate text at all. It returns typed values, and after reading through the Jev 1.14 release notes and Claire Vo's beginner episode on it, I think it's worth a closer look for anyone building agents or data pipelines.
+
+<img src="https://maikotrindade.com/public/img/jev-typesafe.png" width="380" height="291" alt="Line-art eye with radiating rays and sparkles on a pink background, illustrating Jev as a decision model"/>
 
 ### What Jev actually is
 
