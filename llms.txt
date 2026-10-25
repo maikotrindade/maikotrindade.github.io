@@ -1,6 +1,6 @@
 # Maiko Trindade
 
-> Senior Android Engineer and Software Developer with 10+ years in Android development. This site covers Android development, Jetpack Compose, Kotlin, AI agents, blockchain/Solidity, and software engineering.
+> Senior Android Engineer and Software Developer with 14+ years in software development and 10+ in Android. This site covers Android development, Jetpack Compose, Kotlin, AI agents, blockchain/Solidity, and software engineering.
 
 Author: Maiko Trindade
 Contact: contact@maikotrindade.com
@@ -26,7 +26,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 - [Loop Engineering: Designing the Control Loop Behind Autonomous Agents](https://maikotrindade.com/ai-agents/engineering/2026/07/02/loop-engineering-autonomous-agents.html): Practical guide to designing the plan, act, observe loop behind autonomous agents, covering termination conditions, context budgets, and failure handling.
 - [How to Actually Test Autonomous AI Agents](https://maikotrindade.com/ai-agents/testing/2026/05/20/testing-autonomous-ai-agents.html): A practical opinion on testing autonomous AI agents using trajectory evaluation, observability, real-workflow benchmarks, and production-grade reliability practices.
 - [Awesome React Native Skills: Claude Skills for Modern Mobile Dev](https://maikotrindade.com/ai/agents/claude/react-native/2026/05/12/awesome-react-native-skills.html): Curated collection of Claude Skills covering core, ecosystem, Expo, performance, and testing for production React Native apps.
-- [Building Reusable Skills for Claude: A Complete Guide](https://maikotrindade.com/ai/agents/claude/anthropic/2026/05/02/building-reusable-skills-for-claude.html): How to build, configure, and distribute reusable markdown-based Skills for Claude using progressive disclosure, SKILL.md frontmatter, and MCP integration.
+- [Building Reusable Skills for Claude: A Complete Guide](https://maikotrindade.com/ai/agents/claude/anthropic/2026/03/27/building-reusable-skills-for-claude.html): How to build, configure, and distribute reusable markdown-based Skills for Claude using progressive disclosure, SKILL.md frontmatter, and MCP integration.
 - [Capitol Trades Tracker: AI-Powered Investment Intelligence](https://maikotrindade.com/artificial-intelligence/2026/01/18/introducing-capitol-trades-tracker.html): Agentic AI Android app tracking U.S. congressional stock trades using Koog, LLMs, and OpenRouter.
 - [Understanding AI Agents: Concepts, Architecture, and Tools](https://maikotrindade.com/ai/agents/automation/agentic%20systems/llm/2025/10/02/understanding-ai-agents-concepts-architecture-tools.html): Comprehensive overview of AI agent architecture, reasoning, planning, and tools like LangChain, CrewAI, and Koog.
 - [Building an Agentic AI Mobile Tester with Koog and Kotlin](https://maikotrindade.com/ai/kotlin/android/development/agents/2025/08/19/building-agentic-ai-mobile-tester-koog-kotlin.html): How to build an autonomous mobile testing agent using Koog, Kotlin, and LLMs.
@@ -37,7 +37,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — Android & Jetpack Compose
 
-- [Jetpack Compose and React Native: More Similar Than You Think](https://maikotrindade.com/android/react-native/2026/05/03/jetpack-compose-react-native-similarities.html): How Jetpack Compose concepts — state, composables, effects, navigation — map directly to React Native for Android developers.
+- [Jetpack Compose and React Native: More Similar Than You Think](https://maikotrindade.com/android/react-native/2026/04/25/jetpack-compose-react-native-similarities.html): How Jetpack Compose concepts — state, composables, effects, navigation — map directly to React Native for Android developers.
 - [AGSL: A Quick Introduction to Android Graphics Shading Language](https://maikotrindade.com/android/graphics/2025/11/28/introduction-to-android-shading-language.html): GPU shaders in Android using AGSL for visual effects in Compose.
 - [Untangling State: Easier Android App Management with Compose](https://maikotrindade.com/android/compose/development/2025/03/08/untangling-state-android-app-management.html): State hoisting and management patterns in Jetpack Compose.
 - [Execution Order in Jetpack Compose Explained](https://maikotrindade.com/2025/01/28/execution-order-in-jetpack-compose.html): How LaunchedEffect, DisposableEffect, and composables execute.

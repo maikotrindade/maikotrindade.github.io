@@ -29,6 +29,8 @@
 
     {% unless page.layout == "page_no_ads" %}<meta name="google-adsense-account" content="ca-pub-4415452186185932">{% endunless %}
 
+    {% if page.title and page.title != "Home" %}{% assign full_title = page.title | append: " | " | append: site.title %}{% else %}{% assign full_title = site.title | append: " | Senior Android, Kotlin & AI Engineer" %}{% endif %}
+
     <!-- Primary Meta Tags -->
     {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
@@ -82,11 +84,7 @@
         <meta property="og:url" content="{{ site.url }}" />
     {% endif %}
 
-    {% if page.title %}
-        <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
-    {% else %}
-        <meta property="og:title" content="{{ site.title }}" />
-    {% endif %}
+    <meta property="og:title" content="{{ full_title }}" />
 
     {% if page.description %}
         <meta property="og:description" content="{{ page.description }}" />
@@ -100,11 +98,11 @@
         <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
         <meta property="og:image:alt" content="{{ page.title | default: site.title }}" />
     {% else %}
-        <meta property="og:image" content="https://maikotrindade.com/public/img/android-dev.png" />
+        <meta property="og:image" content="https://maikotrindade.com/public/img/og-default.jpg" />
         <meta property="og:image:alt" content="{{ site.title }}" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
     {% endif %}
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
 
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:locale" content="en_US" />
@@ -120,11 +118,7 @@
         <meta name="twitter:url" content="{{ site.url }}" />
     {% endif %}
 
-    {% if page.title %}
-        <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
-    {% else %}
-        <meta name="twitter:title" content="{{ site.title }}" />
-    {% endif %}
+    <meta name="twitter:title" content="{{ full_title }}" />
 
     {% if page.description %}
         <meta name="twitter:description" content="{{ page.description }}" />
@@ -138,7 +132,7 @@
         <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
         <meta name="twitter:image:alt" content="{{ page.title | default: site.title }}" />
     {% else %}
-        <meta name="twitter:image" content="https://maikotrindade.com/public/img/android-dev.png" />
+        <meta name="twitter:image" content="https://maikotrindade.com/public/img/og-default.jpg" />
         <meta name="twitter:image:alt" content="{{ site.title }}" />
     {% endif %}
 
@@ -173,7 +167,7 @@
 
         gtag('config', 'G-NPGMKKGTDM');
     </script>
-    <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{{ full_title }}</title>
 
     <!-- DNS / connection hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,7 +194,7 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         "headline": {{ page.title | jsonify }},
         "description": {% if page.description %}{{ page.description | jsonify }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }}{% else %}{{ site.description | jsonify }}{% endif %},
         "url": "{{ site.url }}{{ page.url }}",
@@ -210,7 +204,7 @@
         {% if page.image %}
         "image": "{{ site.url }}{{ page.image }}",
         {% else %}
-        "image": "https://maikotrindade.com/public/img/android-dev.png",
+        "image": "https://maikotrindade.com/public/img/og-default.jpg",
         {% endif %}
         "author": {
             "@type": "Person",
@@ -226,12 +220,9 @@
             ]
         },
         "publisher": {
-            "@type": "Organization",
-            "name": {{ site.title | jsonify }},
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://maikotrindade.com/public/img/android-dev.png"
-            }
+            "@type": "Person",
+            "name": "Maiko Trindade",
+            "url": "https://maikotrindade.com/"
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -251,17 +242,12 @@
         "url": "{{ site.url }}",
         "description": {{ site.description | jsonify }},
         "inLanguage": "en-US",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{{ site.url }}/blog/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
         "author": {
             "@type": "Person",
             "name": "Maiko Trindade",
             "url": "https://maikotrindade.com/",
             "image": "https://maikotrindade.com/public/img/maiko-trindade.webp",
-            "jobTitle": "Senior Mobile Engineer",
+            "jobTitle": "Senior Software Engineer",
             "sameAs": [
                 "https://www.linkedin.com/in/maikotrindade",
                 "https://github.com/maikotrindade",
@@ -270,14 +256,6 @@
                 "https://devpost.com/maikotrindade",
                 "https://g.dev/maikotrindade"
             ]
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": {{ site.title | jsonify }},
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://maikotrindade.com/public/img/android-dev.png"
-            }
         }
     }
     </script>

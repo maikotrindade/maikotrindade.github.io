@@ -42,7 +42,7 @@ projects.html            Portfolio with filter tabs (layout: page_no_ads)
 education.html           Education (layout: page_no_ads)
 llms.txt                 Manually maintained blog index for LLM crawlers
 robots.txt               Allows all AI crawlers (ClaudeBot, GPTBot, anthropic-ai…)
-sitemap.xml, atom.xml    Liquid-generated; do not edit by hand
+sitemap.xml, atom.xml    Liquid-generated from posts, pages and static .html; do not hand-list URLs
 CNAME                    Custom domain — do not modify
 ads.txt                  AdSense verification — do not modify
 ```
@@ -56,12 +56,12 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 | Layout           | Has ads? | `head.html` included? | Used by                                |
 | ---------------- | -------- | --------------------- | -------------------------------------- |
 | `default`        | yes      | yes                   | blog/index.html                        |
-| `default_no_ads` | no       | **no (inlined)**      | index.html (Home)                      |
+| `default_no_ads` | no       | yes                   | index.html (Home)                      |
 | `post`           | yes      | yes (via default)     | all blog posts                         |
 | `page`           | yes      | yes (via default)     | static pages (with ads)                |
-| `page_no_ads`    | no       | **no (inlined)**      | about, experience, projects, education |
+| `page_no_ads`    | no       | yes (via no_ads)      | about, experience, projects, education |
 
-**Critical quirk:** `default_no_ads.html` does NOT use `{% include head.html %}`. It has its own hardcoded `<head>`. When editing SEO/meta behavior, check **both** `_includes/head.html` AND `_layouts/default_no_ads.html`.
+All layouts include `_includes/head.html`, so SEO/meta changes go there only. Ads are suppressed via `page.layout` checks inside it.
 
 **Sidebar auto-nav:** `sidebar.html` discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the sidebar — no changes to `sidebar.html` needed.
 
@@ -76,8 +76,8 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 ### SEO metadata fallback chain (`head.html`)
 
 - **description:** `page.description` → `page.excerpt` (strip HTML, truncate to 160) → `site.description`
-- **image:** `page.image` → `https://maikotrindade.com/public/img/android-dev.png`
-- **JSON-LD schema:** `layout == "post"` → Article schema; all other layouts → WebSite schema
+- **image:** `page.image` → `https://maikotrindade.com/public/img/og-default.jpg` (1200×630; width/height meta emitted only for this default)
+- **JSON-LD schema:** `layout == "post"` → BlogPosting schema (publisher is the Person); all other layouts → WebSite schema
 
 ## Critical Constraints
 
@@ -95,4 +95,4 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 
 - `llms.txt` — manually maintained blog index
 - `robots.txt` — AI crawlers explicitly allowed; do not add Disallow rules for AI agents
-- JSON-LD Article schema auto-injected on every `layout: post` page via `head.html`
+- JSON-LD BlogPosting schema auto-injected on every `layout: post` page via `head.html`
