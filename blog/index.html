@@ -3,14 +3,15 @@ layout: default
 title: Blog
 description: "Maiko Trindade's blog on Android development, Jetpack Compose, Kotlin, AI agents, blockchain, and software engineering."
 ---
+<h1 class="page-title">Blog{% if paginator.page > 1 %} – Page {{ paginator.page }}{% endif %}</h1>
 <section>
     {% for post in paginator.posts %}
     <div class="post">
-        <h1 class="post-title">
+        <h2 class="post-title">
             <a href="{{ post.url }}">
                 {{ post.title }}
             </a>
-        </h1>
+        </h2>
 
         <span class="post-date">{{ post.date | date_to_string }}</span>
 
@@ -22,7 +23,7 @@ description: "Maiko Trindade's blog on Android development, Jetpack Compose, Kot
 
 <div class="pagination">
     {% if paginator.next_page %}
-    <a class="pagination-item older" href="/blog/page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="/blog/page{{paginator.next_page}}/">Older</a>
     {% else %}
     <span class="pagination-item older">Older</span>
     {% endif %}
@@ -30,7 +31,7 @@ description: "Maiko Trindade's blog on Android development, Jetpack Compose, Kot
     {% if paginator.page == 2 %}
     <a class="pagination-item newer" href="/blog/">Newer</a>
     {% else %}
-    <a class="pagination-item newer" href="/blog/page{{paginator.previous_page}}">Newer</a>
+    <a class="pagination-item newer" href="/blog/page{{paginator.previous_page}}/">Newer</a>
     {% endif %}
     {% else %}
     <span class="pagination-item newer">Newer</span>

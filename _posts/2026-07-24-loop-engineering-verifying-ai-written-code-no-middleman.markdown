@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Loop Engineering in Practice: What No Middleman Taught Me About Verifying AI-Written Code"
+seo_title: "Loop Engineering: Verifying AI-Written Code"
 date: 2026-07-24 09:00:00 -0700
 published: true
 categories: [ai-agents, engineering]

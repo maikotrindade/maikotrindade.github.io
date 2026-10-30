@@ -1,6 +1,7 @@
 ---
 published: true
 title: How to start with the new token standard ERC777 with Solidity
+seo_title: "ERC777 Token Standard: Getting Started with Solidity"
 layout: post
 ---
 
@@ -68,4 +69,4 @@ See [ERC777: a New Advanced Token Standard] by Jordi Baylina, ERC777's author, a
 [npm website]: https://www.npmjs.com/get-npm
 [issue-1159]: https://github.com/OpenZeppelin/openzeppelin-solidity/issues/1159
 [ERC777.sol]: https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/token/ERC777/ERC777.sol
-[ERC777: a New Advanced Token Standard]: https://www.youtube.com/watch?v=CVdZ09iqQj8
+[ERC777: a New Advanced Token Standard]: https://www.youtube.com/watch?v=CVdZ09iqQj8

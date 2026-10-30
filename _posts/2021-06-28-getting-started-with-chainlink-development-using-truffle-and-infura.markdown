@@ -1,6 +1,7 @@
 ---
 published: true
 title: Getting started with Chainlink development using Truffle and Infura
+seo_title: "Chainlink Development with Truffle and Infura"
 layout: post
 ---
 
@@ -106,4 +107,4 @@ Scripts to interact with deployed smart contract without any frontend implementa
 [Truffle]: https://www.trufflesuite.com
 [repo]: https://github.com/smartcontractkit/truffle-starter-kit
 [step-by-step tutorial]: https://walkingtree.tech/deploying-a-smart-contract-in-rinkeby-using-infura/
-[Chainlink Kovan Faucet website]: https://kovan.chain.link/
+[Chainlink Kovan Faucet website]: https://kovan.chain.link/

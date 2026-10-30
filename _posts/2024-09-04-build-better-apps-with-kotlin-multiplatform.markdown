@@ -1,8 +1,9 @@
 ---
 published: true
 title: Build Better Apps with Kotlin Multiplatform for Android & iOS
+seo_title: "Kotlin Multiplatform for Android & iOS Apps"
 layout: post
-description: "How Kotlin Multiplatform (KMP) enables sharing business logic between Android and iOS while keeping native UIs, compared with React Native, Flutter, and Xamarin."
+description: "How Kotlin Multiplatform shares business logic between Android and iOS while keeping native UIs, compared with React Native, Flutter and Xamarin."
 ---
 
 

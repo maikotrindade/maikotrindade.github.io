@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Untangling State - Easier Android App Management with Compose
+seo_title: "State Management in Jetpack Compose, Untangled"
 categories: android compose development
-description: "A practical guide to state management in Jetpack Compose, covering state hoisting, ViewModel integration, and patterns for keeping Android app state clean and maintainable."
+description: "A practical guide to Jetpack Compose state management: state hoisting, ViewModel integration and patterns for clean, maintainable Android app state."
 published: true
 ---
 

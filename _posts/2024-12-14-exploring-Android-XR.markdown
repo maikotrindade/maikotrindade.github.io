@@ -2,7 +2,7 @@
 published: true
 title: Exploring Android XR
 layout: post
-description: "An introduction to Android XR development — how to build augmented and virtual reality applications on Android using the XR platform, covering AR, VR, and spatial computing fundamentals."
+description: "An introduction to Android XR development: building augmented and virtual reality apps on Android, with AR, VR and spatial computing fundamentals."
 ---
 
 The world of extended reality (XR) is expanding rapidly, merging physical and digital realms to create immersive experiences. Android XR offers a versatile platform for developers to build applications that blend augmented reality (AR) and virtual reality (VR) into everyday life. In this post, we’ll explore the essentials of Android XR and provide you with a starting point to dive into this exciting technology.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Awesome React Native Skills: Claude Skills for Modern Mobile Dev"
+seo_title: "Awesome React Native Skills for Claude"
 date: 2026-05-12
 published: true
 categories: [AI, agents, Claude, react-native]
