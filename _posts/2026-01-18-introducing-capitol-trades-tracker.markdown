@@ -5,7 +5,7 @@ date: 2026-01-18
 published: true
 categories: artificial-intelligence
 tags: [ai, investing, llm, koog, agentic-ai, stocks]
-description: "AI-powered Android app using agentic AI and multiple LLMs to track and analyze U.S. congressional stock trades, making political trading intelligence accessible to individual investors."
+description: "An Android app that uses agentic AI and multiple LLMs to track and analyze U.S. congressional stock trades for individual investors."
 ---
 
 ## Introduction

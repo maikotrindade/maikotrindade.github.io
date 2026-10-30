@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "AGSL: A Quick Introduction to Android Graphics Shading Language"
+seo_title: "AGSL: Intro to Android Graphics Shading Language"
 date: 2025-11-28
 published: true
 categories: android graphics
 tags: [android, agsl, shaders, graphics, compose, rendering]
-description: "A practical introduction to AGSL (Android Graphics Shading Language) — how to run custom GPU shaders within the Android rendering pipeline for rich visual effects in Compose."
+description: "A practical introduction to AGSL, the Android Graphics Shading Language: running custom GPU shaders in the Android rendering pipeline from Compose."
 ---
 
 ## Introduction

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jetpack Compose and React Native: More Similar Than You Think"
+seo_title: "Jetpack Compose vs React Native: Surprising Similarities"
 date: 2026-04-25
 published: true
 categories: [android, react-native]

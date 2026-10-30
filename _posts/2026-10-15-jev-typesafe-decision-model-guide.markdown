@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jev: A Decision Model for the Boring, Important Parts of Your Pipeline"
+seo_title: "Jev: A Type-Safe Decision Model for Your Pipeline"
 date: 2026-10-15
 published: true
 categories: [ai-agents, llm]

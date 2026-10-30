@@ -1,8 +1,9 @@
 ---
 published: true
 title: A Guide to Accessibility in Android Apps with Jetpack Compose
+seo_title: "Android Accessibility with Jetpack Compose: A Guide"
 layout: post
-description: "Comprehensive guide to Android accessibility with Jetpack Compose — TalkBack, Switch Access, touch targets, color contrast, and automated accessibility testing using semantics."
+description: "A guide to Android accessibility with Jetpack Compose: TalkBack, Switch Access, touch targets, color contrast and automated testing with semantics."
 ---
 
 

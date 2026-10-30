@@ -5,7 +5,7 @@ date: 2026-03-27
 published: true
 categories: [AI, agents, Claude, Anthropic]
 tags: [claude, ai-agents, skills, anthropic, productivity]
-description: "Learn how to build, configure, and share reusable Skills for Claude — markdown-based instruction folders that teach Claude your workflows once so you never repeat yourself again."
+description: "How to build, configure and share reusable Skills for Claude: markdown instruction folders that teach Claude your workflows once."
 ---
 
 Claude Skills let you package your workflows, domain expertise, and preferences into reusable instruction folders that Claude loads automatically when relevant. The core philosophy: **stop repeating yourself and start teaching Claude once**. Instead of re-explaining your processes in every conversation, a skill captures that knowledge permanently — and applies it consistently across Claude.ai, Claude Code, and the API.
