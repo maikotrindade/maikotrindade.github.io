@@ -29,20 +29,27 @@
 
     {% unless page.layout == "page_no_ads" %}<meta name="google-adsense-account" content="ca-pub-4415452186185932">{% endunless %}
 
-    {% if page.title and page.title != "Home" %}{% assign full_title = page.title | append: " | " | append: site.title %}{% else %}{% assign full_title = site.title | append: " | Senior Android, Kotlin & AI Engineer" %}{% endif %}
+    {% if page.title and page.title != "Home" %}
+        {% assign base_title = page.seo_title | default: page.title %}
+        {% if paginator %}{% if paginator.page > 1 %}{% assign base_title = base_title | append: " – Page " | append: paginator.page %}{% endif %}{% endif %}
+        {% assign full_title = base_title | append: " | " | append: site.title %}
+        {% assign full_title_size = full_title | size %}
+        {% if full_title_size > 60 %}{% assign full_title = base_title %}{% endif %}
+    {% else %}{% assign full_title = site.title | append: " | Senior Android, Kotlin & AI Engineer" %}{% endif %}
+
+    {% if page.description %}{% assign meta_desc = page.description %}{% elsif page.excerpt %}{% assign meta_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}{% else %}{% assign meta_desc = site.description %}{% endif %}
+    {% if paginator %}{% if paginator.page > 1 %}{% assign meta_desc = "Page " | append: paginator.page | append: " of " | append: paginator.total_pages | append: ": older posts on Android, Kotlin, Jetpack Compose, AI agents and blockchain by Maiko Trindade." %}{% endif %}{% endif %}
 
     <!-- Primary Meta Tags -->
-    {% if page.description %}
-        <meta name="description" content="{{ page.description }}" />
-    {% elsif page.excerpt %}
-        <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
-    {% else %}
-        <meta name="description" content="{{ site.description }}" />
-    {% endif %}
+    <meta name="description" content="{{ meta_desc }}" />
 
     <meta name="author" content="Maiko Trindade">
+    {% if page.url == "/404.html" %}
+    <meta name="robots" content="noindex, follow">
+    {% else %}
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
+    {% endif %}
 
     {% if page.keywords %}
         <meta name="keywords" content="{{ page.keywords }}" />
@@ -86,13 +93,7 @@
 
     <meta property="og:title" content="{{ full_title }}" />
 
-    {% if page.description %}
-        <meta property="og:description" content="{{ page.description }}" />
-    {% elsif page.excerpt %}
-        <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
-    {% else %}
-        <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
+    <meta property="og:description" content="{{ meta_desc }}" />
 
     {% if page.image %}
         <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
@@ -120,13 +121,7 @@
 
     <meta name="twitter:title" content="{{ full_title }}" />
 
-    {% if page.description %}
-        <meta name="twitter:description" content="{{ page.description }}" />
-    {% elsif page.excerpt %}
-        <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}" />
-    {% else %}
-        <meta name="twitter:description" content="{{ site.description }}" />
-    {% endif %}
+    <meta name="twitter:description" content="{{ meta_desc }}" />
 
     {% if page.image %}
         <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />

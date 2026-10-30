@@ -32,6 +32,7 @@ This skill produces a complete, publish-ready `_posts/YYYY-MM-DD-slug.markdown` 
 ---
 layout: post
 title: "Title in Quotes"
+seo_title: "Optional ≤60-char title for <title>/OG only, when title is longer"
 date: YYYY-MM-DD
 published: true
 categories: [category1, category2]
