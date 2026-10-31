@@ -52,4 +52,4 @@ From there, Claude's progressive disclosure does the rest. The frontmatter of ea
 The repo is a starting point, not a finished thing. More skills are coming, and contributions are welcome if you've worked out a pattern that should be there. Check the project on [GitHub][repo] and open an issue or PR if something's missing or out of date.
 
 [repo]: https://github.com/maikotrindade/awesome-react-native-skills
-[skills-post]: https://maikotrindade.com/ai/agents/claude/anthropic/2026/05/02/building-reusable-skills-for-claude.html
+[skills-post]: https://maikotrindade.com/ai/agents/claude/anthropic/2026/03/27/building-reusable-skills-for-claude.html
