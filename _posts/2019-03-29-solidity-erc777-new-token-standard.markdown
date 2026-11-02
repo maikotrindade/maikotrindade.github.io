@@ -5,13 +5,13 @@ seo_title: "ERC777 Token Standard: Getting Started with Solidity"
 layout: post
 ---
 
-### Introduction
+## Introduction
 
 [ERC20] is a standard which defines a common list of rules that an Ethereum token has to implement, giving developers the ability to program how new tokens will function within the Ethereum ecosystem. [ERC20] defines how the tokens are transferred between addresses and how data within each token is accessed.
 
 The [ERC777] token standard specifies an improvement of [ERC20] while remaining backward compatible. It defines advanced features to interact with tokens. Namely, operators to send tokens on behalf of another address—contract or regular account—and send/receive hooks to offer token holders more control over their tokens.
 
-### ERC777 in a nutshell
+## ERC777 in a nutshell
 
 Transactions – Let's talk about of the most interesting features that this new standard is bringing to the world. [ERC777] has a function called `send()` consists in having a transaction with an amount field and a data bit field. Thus the parameters can be freely selected again by the token user and the token operator in order to forward data to the recipient.
 
@@ -31,13 +31,13 @@ Burning Tokens – [ERC777] provides a feature called "Burning tokens". It is t
 
 Backward Compatibility – The standard does not use `transfer` and `transferFrom` and uses `send` and `operatorSend` to avoid confusion and mistakes when deciphering which token standard is being used. Besides, [ERC777] allows the implementation of ERC20 functions transfer, transferFrom, approve and allowance alongside to make a token fully compatible with [ERC20].
 
-### Reference Implementation - getting started 
+## Reference Implementation - getting started 
 
 I would suggest two references: 
 1. [0xjac]
 2. [OpenZeppelin]
 
-#### 0xjac
+### 0xjac
 
 This repository contains all reference implementation and all tests. The reference implementation is also available via npm. In order to use it, you can download and setup the npm in your machine, access the [npm website] to see the instructions.
 
@@ -45,7 +45,7 @@ After the npm configuration, install the erc777 with:
 
 `npm install erc777`
 
-#### OpenZeppelin
+### OpenZeppelin
 
 OpenZeppelin is an open framework of reusable and secure smart contracts in the Solidity. It provides implementations of standards like ERC20, ERC721 and now ERC777 too. The project started providing [ERC777] after implementing the [issue-1159]. 
 
@@ -58,7 +58,7 @@ After the npm configuration, install the openzeppelin with:
 
 `npm install openzeppelin-solidity`
 
-### Further details
+## Further details
 
 See [ERC777: a New Advanced Token Standard] by Jordi Baylina, ERC777's author, along Jacques Dafflon and Thomas Shababi
 

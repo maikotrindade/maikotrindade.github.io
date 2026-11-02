@@ -4,7 +4,7 @@ title: Dependency Injection with Dagger 2
 layout: post
 ---
 
-### Introduction
+## Introduction
 
 Dependency Injection (DI) is a design pattern that removes the dependency from the programming code so that it can be easy to manage and test the application. Dependency Injection makes our programming code loosely coupled. DI allows classes to define their dependencies without constructing them. At runtime, another class is responsible for providing these dependencies.
 
@@ -15,7 +15,7 @@ There are mainly two problems of dependency lookup:
 
  - Not easy for testing This approach creates a lot of problems while testing the application especially in black box testing.
 
-### Dagger 2 
+## Dagger 2 
 
 Dagger 2 automatically constructs objects by walking the dependency tree, and it provides compile-time guarantees on dependencies.
 Dagger 2 is also recommended by [Android team].
@@ -30,7 +30,7 @@ Can be used on a constructor, a field, or a method.
 `@Component`: enables selected modules and used for performing dependency injection.
 
 
-### Further Details
+## Further Details
 
 [The Future of Dependency Injection with Dagger 2] by Jake Wharton
 [DAGGER 2 - A New Type of dependency injection]

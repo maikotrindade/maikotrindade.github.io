@@ -6,7 +6,7 @@ layout: post
 ---
 
 
-### Why
+## Why
 
 Blockchain’s inability to fetch reliable information from the real world
 
@@ -16,7 +16,7 @@ Blockchain’s inability to fetch reliable information from the real world
 
 ● Chainlink started on Ethereum but it's also available on Polkadot, Hyperledger, etc...
 
-### Chainlink
+## Chainlink
 
 Decentralized network of nodes that provide data and information from off-blockchain sources to on-blockchain smart contracts via oracles.
 LINK is built on Ethereum in accordance with the ERC-20 standard for tokens
@@ -29,7 +29,7 @@ LINK is built on Ethereum in accordance with the ERC-20 standard for tokens
 
 ❏ May 2021 – Chainlink 2.0 whitepaper
 
-### The Chainlink's oracle
+## The Chainlink's oracle
 *Oracle* – Middleware that acts as an intermediary, translating data from the real world to smart contracts on the blockchain and back again
 
 *Chainlink* – Decentralized network of nodes that provide data and information from off-blockchain sources to on-blockchain smart contracts via oracles
@@ -44,7 +44,7 @@ Distribution of oracles and Use of trusted hardware
 
 ✅ The Chainlink Reputation Contract
  
-### Chainlink 2.0
+## Chainlink 2.0
 	
 Chainlink 2.0: Next Steps in the Evolution of Decentralized Oracle Networks
 
@@ -60,7 +60,7 @@ retaining increased levels of privacy and being secured
 🔥 Increase number of services since ecosystem is more flexible and enhance its capabilities. Chainlink
 is the future of DeFi
 
-### Glossary
+## Glossary
 
 ERC-20: technical standard used to issue and implement tokens on the Ethereum blockchain. It makes
 easier for developers to predict with more accuracy the interaction between different tokens and
@@ -78,7 +78,7 @@ Off-chain: Transactions which agree to happen outside the blockchain
 
 On-chain: normally refer to as blockchain transactions which happens inside the blockchain
 
-### Additional Information
+## Additional Information
 [Top Oracles Tokens by Market Capitalization]
 
 [77 Smart Contract Use Cases Enabled By Chainlink]

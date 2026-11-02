@@ -19,10 +19,10 @@ The presentation also included practical demonstrations of accessibility testing
 
 <img src="https://maikotrindade.com/public/img/accessibility-dog.jpeg" width="380" height="370" alt="Accessibility pet"/>
 
-### Why Accessibility Matters
+## Why Accessibility Matters
 As the [World Health Organization] notes, over 1.3 billion people live with some form of disability. Accessibility isn’t just about compliance; it’s about empathy and inclusion. By leveraging Jetpack Compose’s accessibility tools, we can build Android apps that make everyone feel welcome and empowered.
 
-### Thank You to the Community
+## Thank You to the Community
 I want to extend a heartfelt thank you to the organizers, attendees, and everyone who made this event possible. The energy in the room was fantastic, with engaging questions and thoughtful discussions. It was a delightful evening where we all learned so much about building better, more inclusive experiences.
 
 Looking forward to more opportunities to share knowledge and grow together with this vibrant community!

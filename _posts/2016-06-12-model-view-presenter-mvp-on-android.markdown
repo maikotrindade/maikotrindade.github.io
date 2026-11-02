@@ -13,7 +13,7 @@ The MVP pattern allows separate the presentation layer from the logic, so that e
 
 **Presenter**: This layer, introduced here, is implemented with native java code meaning it doesn’t need to know whether it’s used in an Android application or a web service. How does this work with our structure previously described? Easy, what we are going to add to each view is a simple interface which defines the actions that any view using a specific presenter would need to do in order to populate itself with the data it provides. The presenter is responsible to act as the middle man between view and model. It retrieves data from the model and returns it formatted to the view. But unlike the typical MVC, it also decides what happens when you interact with the view.
 
-### References
+## References
 
 * https://medium.com/mobiwise-blog/android-basic-project-architecture-for-mvp-72f4b33252d0#.gebnmc1rq
 * http://antonioleiva.com/mvp-android

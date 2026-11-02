@@ -5,7 +5,7 @@ seo_title: "Chainlink Development with Truffle and Infura"
 layout: post
 ---
 
-### Chainlink
+## Chainlink
 Chainlink is a decentralized network of nodes that provide data and
 information from off-blockchain sources to on-blockchain smart
 contracts via oracles
@@ -14,7 +14,7 @@ Chainlink greatly expands the capabilities of smart contracts by enabling access
 
 This tutorial will be based on this [repo] and we will use [Truffle] – a development environment, testing framework and asset pipeline for Ethereum 
 
-### Prerequisite
+## Prerequisite
     1. Install NodeJS
     2. Install Truffle: npm install -g truffle
     3. Install Metamask
@@ -23,7 +23,7 @@ This tutorial will be based on this [repo] and we will use [Truffle] – a devel
     6. Install Solidity Plugin
 
 
-### Hands on: Truffle + Chainlink
+## Hands on: Truffle + Chainlink
 `npm install --global yarn`
 
 `mkdir Chainlink`
@@ -62,7 +62,7 @@ Get some `LINK` via [Chainlink Kovan Faucet website] 🤑 🤑 🤑
 
 <img src="https://maikotrindade.com/public/img/kovan-truffle-chainlink-deploy.jpeg" height="170" width="360" alt="Android great again"/>
 
-### Helper scripts
+## Helper scripts
 Scripts to interact with deployed smart contract without any frontend implementation:
 1. fund-contract.js
 
@@ -88,7 +88,7 @@ Scripts to interact with deployed smart contract without any frontend implementa
 
 ➢ Read the data variable of the requesting contract (current price of pair ETH/USD)
 
-### Additional Information
+## Additional Information
 [Chainlink docs]
 
 [Chainlink official website]

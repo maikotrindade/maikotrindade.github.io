@@ -8,7 +8,7 @@ A profissional app handles offline/online connectivity in order to interact with
 A [Flutter] could not be different and in this post I will you an amazing library which will facilitate our development.
 The [flutter_offline] developed by [jogboms] is an utility library for handling offline/online connectivity. 
 
-### Installation and Usage
+## Installation and Usage
 
 The process is really straightforward. First of all, you need to add the library's dependency in your project:
 

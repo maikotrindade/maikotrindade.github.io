@@ -5,7 +5,7 @@ layout: post
 ---
 
 
-### Intro
+## Intro
 
 Solidity is a programming language targeting Ethereum Virtual Machine (EVM). 
 Ethereum blockchain helps extend its functionality by writing and executing code known as smart contracts. Ethereum Virtual Machines have been successfully implemented in various programming languages including C++, Java, JavaScript, Python, Ruby, and many others.
@@ -19,7 +19,7 @@ In order to facilitate Keccak-256 cryptographic hash scheme, the EVM is a stack-
 <img src="https://maikotrindade.com/public/img/evm.png" width="340" height="160" alt="EVM"/>
 
 
-### Additional Information
+## Additional Information
 	
 [ETHEREUM VIRTUAL MACHINE (EVM)] by Ethereum.org
 

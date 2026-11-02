@@ -7,11 +7,11 @@ description: "A beginner-friendly explanation of how DeFi liquidity pools work a
 
 The world of [Decentralized Finance] (DeFi) offers exciting new opportunities for cryptocurrency users. But how does it all work? A key concept in DeFi is the liquidity pool, and platforms like Aave are built around them. Let's dive in and explore what liquidity pools are, how Aave utilizes them, and the benefits and drawbacks of this innovative platform.
 
-### Understanding Liquidity Pools
+## Understanding Liquidity Pools
 
 Imagine a giant pot of crypto assets. Anyone can add funds (deposit), and anyone can borrow from this pot (withdraw). This pot is essentially a liquidity pool. They fuel DeFi by providing the necessary assets for lending and borrowing activities. Users who deposit their crypto into the pool earn interest on their holdings, while borrowers can access funds at market-determined rates.
 
-### Aave: A Liquidity Powerhouse
+## Aave: A Liquidity Powerhouse
 
 [Aave] is a prominent DeFi platform that leverages liquidity pools. Here's how it works:
 
@@ -21,7 +21,7 @@ Imagine a giant pot of crypto assets. Anyone can add funds (deposit), and anyone
 
 <img src="https://maikotrindade.com/public/img/aave-ghost-bitcoin.jpeg" width="320" height="320" alt="aave-liquidity-bitcoin-crypto"/> 
 
-### Benefits of Aave
+## Benefits of Aave
 
 - **Passive Income**: Supplying crypto to Aave's pools offers a way to earn interest on your holdings without actively trading.
 - **Flexible Borrowing**: Borrowers can access various cryptocurrencies at competitive rates.

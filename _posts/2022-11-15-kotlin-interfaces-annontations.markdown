@@ -6,7 +6,7 @@ layout: post
 
 Kotlin is a modern, statically typed programming language that runs on the Java Virtual Machine and can also be compiled to JavaScript. It is expressive, concise, and powerful, and has quickly become a popular choice for Android development. In this blog post, we will take a look at some of the advanced features of Kotlin that can make your code more concise, readable, and efficient.
 
-### Type Inference
+## Type Inference
 Type inference is a feature that allows the Kotlin compiler to infer the type of a variable or expression based on the context in which it is used. This means that you don't always have to specify the type explicitly, and the compiler will fill it in for you.
 
 For example, consider the following code:
@@ -27,7 +27,7 @@ val list = listOf(1, 2, 3)
 
 Here, the type of the list variable is inferred to be List<Int>, because it is assigned a list of integers.
 
-### Inline Functions
+## Inline Functions
 In Kotlin, you can use the inline keyword to annotate a function as inline. This means that the function will be inlined at the call site, which can improve the performance of your code by avoiding the overhead of function calls.
 
 For example, consider the following code:
@@ -54,7 +54,7 @@ After
 
 Inlining functions can be especially useful when working with higher-order functions, which we will discuss next.
 
-### Higher-Order Functions
+## Higher-Order Functions
 A higher-order function is a function that takes one or more functions as arguments or returns a function as a result. Kotlin has excellent support for higher-order functions, which can be used to write concise and expressive code.
 
 For example, consider the following code:

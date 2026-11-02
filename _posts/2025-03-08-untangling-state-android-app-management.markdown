@@ -11,7 +11,7 @@ Building Android apps today is a lot about managing "state." Think of state as a
 
 Thankfully, Jetpack Compose, Android's modern UI toolkit, offers some elegant patterns to keep your state under control. Let's break down some of the key ideas, making them easier to understand than a complex technical paper.
 
-### The Core Idea: State Hoisting
+## The Core Idea: State Hoisting
 
 Imagine you have a `Checkbox` in your app. It has two states: checked or unchecked. If the `Checkbox` manages its own state, it's called "internal state." But what if another part of your app needs to know if it's checked?
 
@@ -45,7 +45,7 @@ fun ParentScreen() {
 
 This makes MyFancyCheckbox reusable and testable because it doesn't care how its state is managed, only what its state is and when it's interacted with.
 
-### State Holders: Your State Organizers
+## State Holders: Your State Organizers
 As your app gets more complex, you'll have more and more state. Just having a bunch of vars in your @Composable function can get unwieldy. This is where State Holders come in handy.
 
 A State Holder is essentially a plain old Kotlin class that holds and manages a piece of your UI's state. It centralizes all the logic related to that state.
@@ -101,12 +101,12 @@ A **ViewModel** is a special kind of State Holder provided by Android Architectu
 
 Think of it as the brain of your screen or feature. It fetches data, processes it, and then exposes that data to your Composables.
 
-### When to Choose What?
+## When to Choose What?
 - State Hoisting: For simple UI elements where the parent needs to control the state. It makes components reusable and less coupled.
 - Simple State Holders (Plain Kotlin classes): When you have a group of related UI state that needs to be managed together within a single Composable, and it doesn't need to survive lifecycle changes or interact with deeper app layers.
 - ViewModels: For complex screens or features where you need to manage state that survives configuration changes, interacts with data sources (like network or database), or requires more complex business logic. They are typically used for a whole screen or a significant portion of it.
 
-### The Benefits of Good State Management
+## The Benefits of Good State Management
 By applying these patterns, you gain:
 
 - Cleaner Code: Your UI code focuses solely on how things look, not what data they hold or how that data changes.

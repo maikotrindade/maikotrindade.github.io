@@ -9,7 +9,7 @@ Python and JavaScript and is designed to target the Ethereum Virtual Machine (EV
 
 Alright, let's talk about Solidity' syntax and its features. Basically I'm mention the following subjects: Contracts, Types of variables, Math operations, Functions, Arrays, Structs and Events. 
 
-#### Let's start 
+## Let's start 
 
 A contract is the fundamental building block of Ethereum applications — everything goes inside the contracts. This is very similar to Java, commonly all the code is encapsuled in 'Class'.  
 
@@ -39,7 +39,7 @@ string: Dynamically-sized UTF-8-encoded string.
 **String Literals**
 They are written with either double or single-quotes ("foo" or 'bar'). They do not imply trailing zeroes as in C; "foo" represents three bytes not four. As with integer literals, their type can vary, but they are implicitly convertible to bytes1, …, bytes32, if they fit, to bytes and to string.
 
-#### Math Operations
+## Math Operations
 
 Solidity offers the following math operations (it is almost the same as in most programming languages):
 
@@ -50,7 +50,7 @@ Division: x / y
 Modulus / remainder: x % y 
 Support an exponential operator (i.e. "x to the power of y", x^y):
 
-#### Structs
+## Structs
 Sometimes you need a more complex data type. For this, Solidity provides structs:
 
 `struct Person {
@@ -59,13 +59,13 @@ Sometimes you need a more complex data type. For this, Solidity provides structs
 }
 Structs allow you to create more complicated data types that have multiple properties.
 
-#### Events
+## Events
 Events are a way for your contract to communicate that something happened on the blockchain to your app front-end, which can be 'listening' for certain events and take action when they happen.
 
 [Events] are inheritable members of contracts. When they are called, they cause the arguments to be stored in the transaction’s log - a special data structure in the blockchain. These logs are associated with the address of the contract and will be incorporated into the blockchain and stay there as long as a block is accessible (forever as of Frontier and Homestead, but this might change with Serenity). Log and event data is not accessible from within contracts (not even from the contract that created them).
 
 
-#### Further details 
+## Further details 
 
 I'd recommend this article [Ethereum Smart Contract Best Practices] for beginners.
 

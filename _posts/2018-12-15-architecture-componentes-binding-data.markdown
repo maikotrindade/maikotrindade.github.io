@@ -9,7 +9,7 @@ The [Data Binding Library] allows you to bind UI components in your layouts to d
 <img src="https://maikotrindade.com/public/img/androiddatabinding.png" width="380" height="160" alt="Android Data Binding"/>
 
 
-### Get Started
+## Get Started
 First thing we need to do is to enable the Data Binding library in yout project. So
 modify your `build.gradle` (app module context) and add the following code:
 
@@ -22,7 +22,7 @@ modify your `build.gradle` (app module context) and add the following code:
 
 Sync your project and now you are able to convert or create a layout to a Data Binding layout. You must wrap your layout with a `<layout>` tag and optionally use the tags `data`, `variables` and `expressions`. You can also automatically convert a regular layout to Data Binding using the Android Studio by right-clicking the parent layout tag and selecting  "Convert data binding layout".
 
-#### Example of usage 1
+### Example of usage 1
 
 > 	<layout xmlns:android="http://schemas.android.com/apk/res/android"
 > 	xmlns:tools="http://schemas.android.com/tools">
@@ -47,7 +47,7 @@ Sync your project and now you are able to convert or create a layout to a Data B
 
 Layout variables are used to write layout [expressions] which are placed in the value of element attributes and they use the `@{expression}` format. See the following example:
 
-#### Example of usage 2
+### Example of usage 2
 
 >	<ImageView
 >		android:id="@+id/imageView"
@@ -56,7 +56,7 @@ Layout variables are used to write layout [expressions] which are placed in the 
 >		android:visibility="@{funds < 0 ? View.GONE : View.VISIBLE}"/>
 
 
-### Observing data
+## Observing data
 
 Instead of explicitly updating the UI when values changes, you can use [observables] to automatically updates the UI. In this way, another [Architecture] component of [Android Jetpack] library is recommended: [LiveData]. 
 
@@ -66,7 +66,7 @@ Use can freely interact with your data using `DataBindingUtil`. See the followin
 
 `main_activity.xml` -> MainActivity + Binding ->  **MainActivityBinding**
 
-#### Example of usage 3
+### Example of usage 3
 
 > 	override fun onCreate(savedInstanceState: Bundle?) {
 >       super.onCreate(savedInstanceState)
@@ -77,7 +77,7 @@ Use can freely interact with your data using `DataBindingUtil`. See the followin
 > 	  	binding.viewmodel = viewModel
 > 	}
 
-#### More details
+### More details
 
 I recommend you to watch this [amazing tutorial] presented by Dan Galpin: Level up with Data Binding and simplify your Android coding 
 

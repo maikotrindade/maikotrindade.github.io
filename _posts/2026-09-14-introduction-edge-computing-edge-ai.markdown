@@ -14,7 +14,7 @@ Edge computing means running computation close to where data is produced, on a p
 
 <img src="https://maikotrindade.com/public/img/edge-ai-intro.png" width="380" height="240" alt="Edge AI diagram: phone, camera, drone and sensor each running a local neural network, loosely connected to a distant cloud"/>
 
-### What edge computing actually is
+## What edge computing actually is
 
 The cloud model is simple: devices collect data, send it to a big data center, and wait for an answer. That works until it doesn't. Bandwidth costs money, round trips add latency, and some places (a field, a ship, a mine) just don't have a reliable connection.
 
@@ -29,7 +29,7 @@ In practice there are a few layers:
 
 You don't pick one. Most real systems split the work across tiers.
 
-### From edge computing to Edge AI
+## From edge computing to Edge AI
 
 Edge AI is what you get when the workload you're moving closer to the data is model inference. Zhou et al. called it "the last mile of AI" in <a href="https://arxiv.org/abs/1905.10083" target="_blank" rel="noopener noreferrer" title="Edge Intelligence: Paving the Last Mile of Artificial Intelligence with Edge Computing">Edge Intelligence: Paving the Last Mile of Artificial Intelligence with Edge Computing</a> (Proceedings of the IEEE, 2019), and the reasons they gave still hold:
 
@@ -40,7 +40,7 @@ Edge AI is what you get when the workload you're moving closer to the data is mo
 
 The catch is obvious: devices have little memory, little power and slow memory bandwidth. So most of Edge AI is about making models smaller without making them dumb. The classic toolbox includes quantization, pruning and distillation (see Han et al.'s <a href="https://arxiv.org/abs/1510.00149" target="_blank" rel="noopener noreferrer" title="Deep Compression paper on arXiv">Deep Compression</a>), plus newer LLM-specific tricks like activation-aware quantization (<a href="https://arxiv.org/abs/2306.00978" target="_blank" rel="noopener noreferrer" title="AWQ: Activation-aware Weight Quantization paper on arXiv">AWQ</a>). Training can also stay distributed: <a href="https://arxiv.org/abs/1602.05629" target="_blank" rel="noopener noreferrer" title="Communication-Efficient Learning of Deep Networks from Decentralized Data (federated learning)">federated learning</a> lets devices improve a shared model without uploading their raw data.
 
-### The newest small models worth knowing
+## The newest small models worth knowing
 
 A couple of years ago "on-device LLM" mostly meant a demo. Now the open model hubs have a solid lineup sized for phones and single-board computers. A few I'd look at first on <a href="https://huggingface.co/models" target="_blank" rel="noopener noreferrer" title="Hugging Face model hub">Hugging Face</a>:
 
@@ -59,7 +59,7 @@ llama-cli -hf ggml-org/gemma-3-1b-it-GGUF -p "Explain edge computing in one sent
 
 One warning from recent research. The August 2026 study <a href="https://arxiv.org/abs/2608.15693" target="_blank" rel="noopener noreferrer" title="Large Models for Small Devices: Recent Advances and Empirical Analysis of Edge AI Deployment, arXiv 2608.15693">Large Models for Small Devices</a> (Das et al.) measured compression on real hardware and found that no technique wins everywhere. Q5_K_M quantization held up well for question answering, while pruning hurt it badly. For image segmentation the ranking flipped. Pruning also broke k-quant block alignment, made files 21 to 49% *bigger*, and slowed a Raspberry Pi by up to 3.4x. They even found a compressed model with 71% accuracy that was putting 97 of 100 answers in the same class. So benchmark your model on your device, with your data. Paper numbers don't transfer as well as we'd like.
 
-### A quick look at Edge AI in AgTech
+## A quick look at Edge AI in AgTech
 
 Agriculture is probably the best argument for Edge AI. Farms are big, connectivity is bad, margins are thin, and decisions are time-sensitive.
 
@@ -74,7 +74,7 @@ The March 2026 review <a href="https://arxiv.org/abs/2603.15085" target="_blank"
 
 I wrote about the human side of this in <a href="https://maikotrindade.com/ai/sustainability/2026/08/14/ai-beyond-tech-farms-data-center-race.html" target="_blank" rel="noopener" title="AI Beyond Tech: Slower Data Centers, Smarter Human Uses">AI Beyond Tech: farms and the data center race</a>. Edge AI is the technical piece that makes a lot of those ideas affordable.
 
-### The future of Edge AI
+## The future of Edge AI
 
 So where is this going? The academic work points in a few directions, and they mostly agree.
 
@@ -88,7 +88,7 @@ So where is this going? The academic work points in a few directions, and they m
 
 My own take: the cloud isn't going away, it's just becoming the place where models are trained and where the hard 10% of requests go. The other 90% (classify this leaf, summarize this note, answer this simple question) will happen on hardware you already own. For mobile developers that's good news. On-device AI is turning into a normal part of the app, like camera or location, and the people who understand memory, battery and latency on real devices are going to be useful for a long time.
 
-### References
+## References
 
 - Shi et al., <a href="https://ieeexplore.ieee.org/document/7488250" target="_blank" rel="noopener noreferrer" title="Edge Computing: Vision and Challenges">Edge Computing: Vision and Challenges</a>, IEEE IoT Journal, 2016
 - Satyanarayanan, <a href="https://ieeexplore.ieee.org/document/7807196" target="_blank" rel="noopener noreferrer" title="The Emergence of Edge Computing">The Emergence of Edge Computing</a>, IEEE Computer, 2017

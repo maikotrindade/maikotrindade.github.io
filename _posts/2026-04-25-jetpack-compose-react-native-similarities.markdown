@@ -12,7 +12,7 @@ image: /public/img/android-dev.png
 
 Android developers already fluent in Jetpack Compose will find React Native surprisingly familiar. Both share a declarative, component-driven model built around state — and if you've internalized the Compose mental model, the leap to React Native is much smaller than it looks from the outside.
 
-### Declarative UI: Composables vs. Components
+## Declarative UI: Composables vs. Components
 
 In Jetpack Compose, you build UI by writing `@Composable` functions that describe what the screen should look like for a given state. React Native uses function components that do exactly the same thing. The rendering philosophy — *describe, don't impeach* — is identical.
 
@@ -33,7 +33,7 @@ function Greeting({ name }) {
 
 Both frameworks re-run the function when inputs change and diff the result to update the UI. Compose calls this recomposition; React Native calls it re-rendering.
 
-### State Management
+## State Management
 
 This is where the parallel is most striking. Compose's `remember { mutableStateOf(...) }` maps almost one-to-one to React Native's `useState()`. Both keep local state tied to the lifetime of the component and trigger a UI update on every change.
 
@@ -62,7 +62,7 @@ function Counter() {
 
 The concept of **state hoisting** — lifting state up to the nearest common ancestor and passing it down as props — is equally central to both. Compose documentation uses the term explicitly; the React ecosystem calls it "lifting state up" and the outcome is the same pattern.
 
-### Props and Parameters
+## Props and Parameters
 
 Composable function parameters *are* props. Both systems use the same mechanism: data flows down from parent to child, and only the parent owns the state.
 
@@ -83,7 +83,7 @@ function UserCard({ username, avatarUrl, onClick }) {
 
 Kotlin's named arguments and default values map to React Native's destructuring with default prop values. The ergonomics differ but the concept is the same.
 
-### Side Effects and Lifecycle
+## Side Effects and Lifecycle
 
 Traditional Android had a full Activity/Fragment lifecycle — `onCreate`, `onResume`, `onPause`, `onDestroy`. Compose collapsed this into `LaunchedEffect` and `DisposableEffect`. React Native takes the same simplified view via `useEffect`.
 
@@ -117,7 +117,7 @@ useEffect(() => {
 
 The returned cleanup function in `useEffect` corresponds directly to `onDispose` in `DisposableEffect`. Even the dependency array in `useEffect` has a Compose analogue — the key you pass to `LaunchedEffect`.
 
-### Navigation
+## Navigation
 
 If you've internalized Android's back stack, React Navigation will feel natural. Pushing a screen is conceptually the same as starting an Activity with an Intent, just expressed in JavaScript.
 
@@ -135,7 +135,7 @@ navigation.navigate('Detail', { itemId: item.id });
 
 Both maintain a stack, both support passing parameters to the destination, and both expose a back-navigation mechanism. The underlying implementation differs (system Intents vs. a JS stack), but the mental model transfers directly.
 
-### Key Differences to Keep in Mind
+## Key Differences to Keep in Mind
 
 The similarities above are real, but a few structural differences matter:
 
@@ -143,7 +143,7 @@ The similarities above are real, but a few structural differences matter:
 - **Rendering:** Compose draws UI onto a canvas managed by the Android runtime. React Native (since the New Architecture, default in v0.76) uses JSI to bridge JavaScript to actual platform widgets — UIView on iOS, Android Views on Android. The output looks native because it *is* native.
 - **Tooling:** Gradle, Android Studio, and `adb` are replaced by npm/yarn, Metro bundler, and the React Native CLI or Expo. The ecosystem is different even if the patterns are familiar.
 
-### The Takeaway
+## The Takeaway
 
 The shift from Jetpack Compose to React Native is not a paradigm shift — it is a syntax shift with a different language underneath. Composables, state, props, effects, and the navigation stack all have direct counterparts. If you already think declaratively about UI, you're most of the way there.
 

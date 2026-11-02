@@ -13,7 +13,7 @@ layout: post
 *Note*
 >	The pattern of async and await in other languages is based on coroutines. If you're familiar with this pattern, the suspend keyword is similar to async. However in Kotlin, await() is implicit when calling a suspend function.
 
-### Scopes
+## Scopes
 
 All coroutines run inside a CoroutineScope. A scope controls the lifetime of coroutines through its job. When you cancel the job of a scope, it cancels all coroutines started in that scope. On Android, you can use a scope to cancel all running coroutines when, for example, the user navigates away from an Activity. Scopes also allow you to specify a default dispatcher. A dispatcher controls which thread runs a coroutine.
 	
@@ -27,13 +27,13 @@ All coroutines run inside a CoroutineScope. A scope controls the lifetime of cor
 *Note*
 >	Libraries like Room and Retrofit offer main-safety out of the box when using coroutines, so you don't need to manage threads to make network or database calls. This can often lead to substantially simpler code.
 
-### Channels
+## Channels
 
 `Channels`  are a way to communicate (transfer data) between coroutines similar to a blocking queue.
 It Uses `send` and `receive` for normal values, produce and consume for streams. Moreover, `Channels` can be closed to indicate no more elements are coming.
 
 
-### Exception handling
+## Exception handling
 Coroutines will delegate uncaught exceptions to the system's uncaught exception handler. On Android, the handler will output the exception and crash the app.
 
 ```
@@ -48,7 +48,7 @@ try {
 }
 ```
  
-### Additional Information
+## Additional Information
 	
 [Use Kotlin Coroutines in your Android App] by Google
 

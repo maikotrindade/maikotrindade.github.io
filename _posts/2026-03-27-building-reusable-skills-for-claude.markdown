@@ -10,7 +10,7 @@ description: "How to build, configure and share reusable Skills for Claude: mark
 
 Claude Skills let you package your workflows, domain expertise, and preferences into reusable instruction folders that Claude loads automatically when relevant. The core philosophy: **stop repeating yourself and start teaching Claude once**. Instead of re-explaining your processes in every conversation, a skill captures that knowledge permanently — and applies it consistently across Claude.ai, Claude Code, and the API.
 
-### What Is a Claude Skill?
+## What Is a Claude Skill?
 
 A skill is a folder containing a single required file — `SKILL.md` — plus optional supporting directories:
 
@@ -20,7 +20,7 @@ A skill is a folder containing a single required file — `SKILL.md` — plus op
 
 Skills are **portable**: the same skill works identically across Claude.ai, Claude Code, and the API without modification. They're also **composable** — Claude can load multiple skills at once, each contributing specialized expertise without interfering with the others.
 
-### The Three-Level Progressive Disclosure Architecture
+## The Three-Level Progressive Disclosure Architecture
 
 Skills use a three-level loading system designed to minimize token usage while preserving deep expertise:
 
@@ -30,7 +30,7 @@ Skills use a three-level loading system designed to minimize token usage while p
 
 This progressive approach means a skill library of dozens of entries adds minimal overhead until the right skill is needed.
 
-### Writing the SKILL.md Frontmatter
+## Writing the SKILL.md Frontmatter
 
 The YAML frontmatter is the most critical part of any skill — it determines whether Claude loads it at the right moment.
 
@@ -50,7 +50,7 @@ Key rules:
 
 A vague description like `"Helps with projects"` will never trigger reliably. A good description names file types, trigger phrases, and the concrete outcome the skill produces.
 
-### Three Categories of Skills
+## Three Categories of Skills
 
 Anthropic's guide identifies three common patterns in the wild:
 
@@ -60,7 +60,7 @@ Anthropic's guide identifies three common patterns in the wild:
 
 **MCP Enhancement** — If you have a working MCP server, skills add the knowledge layer on top. Without a skill, users connect your MCP but don't know what to do next and prompt inconsistently. With a skill, best practices are embedded: pre-built workflows activate automatically, reducing support burden and improving result consistency.
 
-### Testing, Iteration, and Distribution
+## Testing, Iteration, and Distribution
 
 Effective skills testing covers three areas:
 

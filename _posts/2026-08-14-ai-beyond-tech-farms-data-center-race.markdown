@@ -14,7 +14,7 @@ When people talk about large language models, they usually mean code, chatbots a
 
 <img src="https://maikotrindade.com/public/img/ai-farms-data-centers.png" width="380" height="200" alt="Illustration of a green farm field with a phone showing chat messages on the left, and a data center with smoking stacks over dry cracked land on the right"/>
 
-### The bottleneck is information
+## The bottleneck is information
 
 In a lot of agriculture, the bottleneck isn't tractors or sensors. It's getting the right information to the right farmer at the right time. A <a href="https://www.science.org/doi/10.1126/science.aay3038" target="_blank" rel="noopener noreferrer" title="Fabregas, Kremer and Schilbach (2019), Realizing the potential of digital development: The case of agricultural advice, Science">2019 review in *Science*</a> by Fabregas, Kremer and Schilbach found that advice sent by mobile phone in sub-Saharan Africa and India raised yields by about 4% and the odds of adopting recommended inputs by 22%. But <a href="https://www.atai-research.org/wp-content/uploads/2020/06/ueaa084.pdf" target="_blank" rel="noopener noreferrer" title="Cole and Fernando (2020), Mobile'izing Agricultural Advice, The Economic Journal">Cole and Fernando's randomized study</a> of a voice advisory service for cotton farmers in Gujarat is a useful warning: farmers trusted it and changed their practices, yet yields and profits didn't clearly improve.
 
@@ -22,17 +22,17 @@ LLMs add flexibility: a farmer can ask in their own language, by voice, with a p
 
 The engineering lesson matters. GPT-4 <a href="https://arxiv.org/abs/2310.06225" target="_blank" rel="noopener noreferrer" title="Silva et al. (2023), GPT-4 as an Agronomist Assistant? Answering Agriculture Exams Using Large Language Models">passes agronomy certification exams</a>, but Microsoft's <a href="https://arxiv.org/abs/2401.08406" target="_blank" rel="noopener noreferrer" title="RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture (arXiv 2401.08406)">*RAG vs Fine-tuning* study</a> found the real gains came from grounding models in local data. Digital Green <a href="https://knowledge4policy.ec.europa.eu/node/85236_et" target="_blank" rel="noopener noreferrer" title="Digital Green RLHF for FarmerChat, EU Knowledge for Policy">fine-tuned on 25,000+ expert-reviewed Q&A pairs</a>. Quality came from local knowledge and human experts, not a bigger model. A <a href="https://real.mtak.hu/id/eprint/232153" target="_blank" rel="noopener noreferrer" title="2026 academic review of FarmerChat">2026 review</a> still flags its one-way design, and a <a href="https://www.socialscienceregistry.org/trials/17035" target="_blank" rel="noopener noreferrer" title="FarmerChat randomized controlled trial registration, Nakuru County, Kenya">randomized trial across 600 Kenyan villages</a> is now testing whether it moves yields and income. Good. That's the evidence we should demand.
 
-### AI on the construction site
+## AI on the construction site
 
 Construction rarely shows up in AI keynotes, but its footprint is huge. Catherine De Wolf of ETH Zurich <a href="https://www.technologyreview.com/2025/02/25/1111253/using-ai-to-reduce-waste-in-the-construction-industry" target="_blank" rel="noopener noreferrer" title="MIT Technology Review: Using AI to reduce waste in the construction industry">points out</a> that about half of the materials we consume go into buildings, which produce roughly a third of global waste. Her team uses AI to catalogue materials from buildings slated for demolition and match them with new projects. At UWE Bristol, <a href="https://www.pbctoday.co.uk/news/digital-construction/artificial-intelligence/embodied-carbon-ai/87654/" target="_blank" rel="noopener noreferrer" title="ASPEC embodied carbon prediction, PBC Today">ASPEC</a> predicts embodied carbon at the planning stage, when changing materials is still cheap.
 
 LLMs fit here for the same reason they fit on the farm: the work is mostly documents. Reading a 300-page spec to flag high-carbon choices, or turning a safety manual into something a crew will read, doesn't need a frontier model. It needs accuracy, the right documents, and a low cost per run.
 
-### AI for sustainability work
+## AI for sustainability work
 
 Sustainability teams spend much of their time reading supplier reports and reconciling emissions data. For food companies, most of the footprint sits upstream on farms: fertilizer, land use, irrigation. Matching thousands of supplier sheets against farm data is tedious, text-heavy work, exactly where LLMs shine. They let a small team do what used to need a consultancy.
 
-### The race, and who pays for it
+## The race, and who pays for it
 
 While farmers and builders find modest uses for AI, the biggest companies are racing to build ever larger models, and the bill lands on people who never signed up for it.
 
@@ -48,13 +48,13 @@ While farmers and builders find modest uses for AI, the biggest companies are ra
 
 Let's be honest about what's going on. AI companies are big corporations chasing money and power. That's wild capitalism, and AI isn't an exception. But I don't think the technology itself is the problem. The internet gave us open knowledge and a way to stay close to family across the world. It also gave us surveillance, scams and misinformation. Same tech, very different outcomes. I believe AI is the same, and that we can point it at the good things. That's what I'm working towards. As a tech enthusiast, I want to use technology for good.
 
-### What good looks like
+## What good looks like
 
 The uses that actually help people don't need any of that excess. Take diabetic retinopathy, a leading cause of blindness that's easy to miss where eye specialists are scarce. Researchers in Bangalore tested <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7003589/" target="_blank" rel="noopener noreferrer" title="Sosale et al. (2020), Medios: An offline, smartphone-based artificial intelligence algorithm for the diagnosis of diabetic retinopathy, Indian Journal of Ophthalmology">Medios, an AI model that runs offline on the smartphone attached to a retinal camera</a>. No cloud, no internet. It caught 98.8% of referable cases and 100% of vision-threatening ones according to the study in the *Indian Journal of Ophthalmology*. Or a farmer in Kenya getting a straight answer about fall armyworm in Swahili, on a cheap Android phone, over WhatsApp. An architect reusing steel beams instead of ordering new ones. An analyst finding the 20% of suppliers behind 80% of the emissions. Real wins for food and the planet, and all small, specific tasks.
 
 <img src="https://maikotrindade.com/public/img/technologia-meme.jpg" width="380" height="396" alt="Technologia meme: a smiling man in a car raises his hand with a glowing Claude logo floating above it"/>
 
-### AI is getting cheaper. So why the endless buildout?
+## AI is getting cheaper. So why the endless buildout?
 
 Stanford's <a href="https://www.rdworldonline.com/ais-great-compression-20-charts-show-vanishing-gaps-but-still-soaring-costs/" target="_blank" rel="noopener noreferrer" title="Stanford 2025 AI Index coverage, R&D World">2025 AI Index</a> found that the cost of querying a GPT-3.5-level model fell from $20 per million tokens in November 2022 to $0.07 by October 2024, a drop of more than 280 times.
 
@@ -69,7 +69,7 @@ So who is the next hyperscale data center really for? Mostly the race to the nex
 - **Treat water as shared.** Where farms already compete for irrigation, weigh a data center's water use against agriculture and drinking water, in public, before approval.
 - **Give communities a real say,** with a vote before construction and fair compensation for health costs.
 
-### Blockchain already showed it can be done
+## Blockchain already showed it can be done
 
 Crypto went through this same fight first. Bitcoin's proof of work burns energy by design, and the <a href="https://jbs.cam.ac.uk/2025/cambridge-study-sustainable-energy-rising-in-bitcoin-mining/" target="_blank" rel="noopener noreferrer" title="Cambridge Centre for Alternative Finance: Cambridge study shows sustainable energy rising in Bitcoin mining">Cambridge Centre for Alternative Finance</a> estimates mining still uses about 138 TWh a year, around 0.5% of global electricity. Under pressure, the industry did shift: the same 2025 survey found 52.4% of miners' energy now comes from renewables and nuclear, up from 37.6% in 2022, and coal fell from 36.6% to 8.9%. That's real progress, though it's a survey of the miners willing to answer, and total consumption kept rising.
 
@@ -77,7 +77,7 @@ Ethereum went further and changed the design itself. In September 2022, <a href=
 
 The lesson for AI is direct: cleaner power helps, but the biggest wins come from changing the architecture. For Ethereum it was proof of stake. For AI, it's smaller, task-specific models instead of one giant model for everything.
 
-### The honest counterargument
+## The honest counterargument
 
 The IEA says data center emissions are small relative to the whole energy sector, and <a href="https://sustainabilityonline.net/news/global-data-centre-electricity-usage-to-double-by-2030/" target="_blank" rel="noopener noreferrer" title="Sustainability Online: Global data centre electricity usage to double by 2030">could be offset by reductions AI enables</a>. Agriculture is a plausible place for that, if better advice means less wasted fertilizer and water. A freeze in one country might also just push construction somewhere with weaker rules.
 
@@ -85,6 +85,6 @@ AI on the farm isn't risk-free either. In <a href="https://www.repository.cam.ac
 
 And cheaper AI doesn't automatically mean less energy. When something gets cheaper, we use more of it. That's why I think efficiency alone isn't enough and some limits are needed. It's a real tension, and I'd rather name it than hide it.
 
-### Wrapping up
+## Wrapping up
 
 LLMs are already helping industries most of tech ignores, and the best examples are modest, specific and cheap. Decades of research on agricultural advice tell us what works: local knowledge, trusted delivery, and measuring whether farmers actually end up better off. None of that needs a bigger data center. The race for ever larger models is a different project, paid for in water, air and health by people who don't get a say, including the farmers who need that water most. We have the research and the cheap models. So here's my question: shouldn't we stop chasing bigger models and focus on making LLMs use less energy, then put them to work where people actually live, in health, agriculture, education and the places most of tech still ignores?

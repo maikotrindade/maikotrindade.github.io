@@ -841,3 +841,8 @@ a.post-tag:hover {
   text-transform: uppercase;
   color: var(--text-muted);
 }
+
+/* Blog list titles stay larger than the h2 section headings inside each post */
+h2.post-title {
+  font-size: 2.25rem;
+}
