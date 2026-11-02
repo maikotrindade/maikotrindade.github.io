@@ -20,6 +20,9 @@ social:
     - https://github.com/maikotrindade
     - https://www.linkedin.com/in/maikotrindade
 
+# AdSense display unit (234x60). The ad slot renders only when this is set
+adsense_slot:
+
 # SEO settings
 lang: en_US
 timezone: America/Vancouver
