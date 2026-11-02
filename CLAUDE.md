@@ -37,6 +37,7 @@ blog/                    Blog index (paginated, 5/page) and archive
 capitol-trades-tracker/  Standalone app showcase (en/, fr/ subdirs)
 index.html               Home page (layout: default_no_ads)
 about.html               About (layout: page_no_ads)
+privacy.html             Privacy policy: cookies, analytics, ads (layout: page_no_ads)
 experience.html          Career timeline (layout: page_no_ads)
 projects.html            Portfolio with filter tabs (layout: page_no_ads)
 education.html           Education (layout: page_no_ads)
@@ -55,13 +56,13 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 
 | Layout           | Has ads? | `head.html` included? | Used by                                |
 | ---------------- | -------- | --------------------- | -------------------------------------- |
-| `default`        | yes      | yes                   | blog/index.html                        |
+| `default`        | no       | yes                   | blog/index.html                        |
 | `default_no_ads` | no       | yes                   | index.html (Home)                      |
-| `post`           | yes      | yes (via default)     | all blog posts                         |
-| `page`           | yes      | yes (via default)     | static pages (with ads)                |
-| `page_no_ads`    | no       | yes (via no_ads)      | about, experience, projects, education |
+| `post`           | 300+ words | yes (via default)   | all blog posts                         |
+| `page`           | no       | yes (via default)     | unused                                 |
+| `page_no_ads`    | no       | yes (via no_ads)      | about, experience, projects, education, privacy |
 
-All layouts include `_includes/head.html`, so SEO/meta changes go there only. Ads are suppressed via `page.layout` checks inside it.
+All layouts include `_includes/head.html`, so SEO/meta changes go there only. `_includes/ad-eligible.html` decides which pages get ads: `layout: post` with 300+ words. The AdSense script (`head.html`) and the single 234x60 unit (`ad-slot.html`) both use it. The unit renders only when `adsense_slot` is set in `_config.yml`.
 
 **Sidebar auto-nav:** `sidebar.html` discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the sidebar — no changes to `sidebar.html` needed.
 
@@ -71,6 +72,8 @@ All layouts include `_includes/head.html`, so SEO/meta changes go there only. Ad
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | `_includes/head.html`      | Meta tags, OG, Twitter Cards, JSON-LD schema, GA4, AdSense, CSS links, `theme-toggle.js` |
 | `_includes/sidebar.html`   | Profile photo, social links, auto-generated nav, last 3 posts                            |
+| `_includes/ad-eligible.html` | Sets `show_ads` for the current page (posts of 300+ words) |
+| `_includes/ad-slot.html`   | One fixed 234x60 AdSense unit after the post content |
 | `_includes/analytics.html` | Legacy UA analytics (`UA-66120129-1`) — keep intact                                      |
 
 ### SEO metadata fallback chain (`head.html`)
