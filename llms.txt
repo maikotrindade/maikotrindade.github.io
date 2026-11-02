@@ -15,6 +15,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 - [Experience](https://maikotrindade.com/experience.html): Professional history at Neo Financial, Itaú Bank, SmartBank, Ubby Inc, Monitora, Cast IT Group, and Bluedotsoft. Technical skills covering Android, AI tools, blockchain, and miscellaneous technologies.
 - [Projects](https://maikotrindade.com/projects.html): Portfolio including Capitol Trades Tracker (AI agents), Mobile Tester Agent (agentic testing), Nomad Token (blockchain hackathon), and Android XR Demo.
 - [About](https://maikotrindade.com/about.html): Background and bio.
+- [Privacy](https://maikotrindade.com/privacy.html): Cookies, analytics and advertising on this site.
 - [Blog](https://maikotrindade.com/blog/): All articles on Android, Kotlin, AI agents, and blockchain.
 
 ## Blog — AI & Agents
