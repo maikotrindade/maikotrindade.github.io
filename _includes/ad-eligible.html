@@ -1,0 +1,1 @@
+{% assign show_ads = false %}{% if page.layout == "post" %}{% assign ad_word_count = page.content | strip_html | number_of_words %}{% if ad_word_count >= 300 %}{% assign show_ads = true %}{% endif %}{% endif %}
