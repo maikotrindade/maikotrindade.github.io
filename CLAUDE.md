@@ -64,7 +64,7 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 
 All layouts include `_includes/head.html`, so SEO/meta changes go there only. `_includes/ad-eligible.html` decides which pages get ads: `layout: post` with 300+ words. The AdSense script (`head.html`) and the single 234x60 unit (`ad-slot.html`) both use it. The unit renders only when `adsense_slot` is set in `_config.yml`.
 
-**Sidebar auto-nav:** `sidebar.html` discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the sidebar — no changes to `sidebar.html` needed.
+**Sidebar auto-nav:** `sidebar.html` discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the sidebar — no changes to `sidebar.html` needed. The exception is Privacy, which is excluded from the nav and linked below the copyright line instead.
 
 ## Includes
 
