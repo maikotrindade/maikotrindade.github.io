@@ -106,6 +106,15 @@ Link attribute rules:
 - **Anchor text** must be descriptive and keyword-relevant. Avoid generic anchors like "click here" or "this article".
 - Never add `rel="nofollow"` to legitimate citations or your own internal links.
 
+### SEO Review Before Commit
+
+Every post must be reviewed with **both** plugins before it is committed and pushed:
+
+- `claude-seo` (for example `claude-seo:seo-page`)
+- `marketing-skills` (for example `marketing-skills:ai-seo`)
+
+Apply the fixes to the post first, then commit. Record both sets of findings and fixes in the pull request. If a plugin can't run, say so instead of treating the review as passed.
+
 ### Post-Creation Checklist
 
 Run through every item before presenting the final file:
@@ -126,6 +135,7 @@ Run through every item before presenting the final file:
 [ ] Links: inline HTML anchors with target="_blank", rel="noopener noreferrer" (external) or rel="noopener" (internal), descriptive title attribute
 [ ] SEO: description ≤160 chars with primary keywords, optional keywords meta, image set when a relevant asset exists
 [ ] Update llms.txt if post is significant
+[ ] Reviewed with claude-seo and marketing-skills, and fixes applied, before commit and push
 ```
 
 ### Updating `llms.txt`
