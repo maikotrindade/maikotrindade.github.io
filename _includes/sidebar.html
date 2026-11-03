@@ -32,9 +32,11 @@
                 {% for node in pages_list %}
                 {% if node.title != null %}
                 {% if node.layout == "page" or node.layout == "page_no_ads" %}
+                {% unless node.url == "/privacy.html" %}
                 <li class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}">
                     <a href="{{ node.url }}" {% if page.url == node.url %}aria-current="page"{% endif %}>{{ node.title }}</a>
                 </li>
+                {% endunless %}
                 {% endif %}
                 {% endif %}
                 {% endfor %}
@@ -57,5 +59,6 @@
             </ul>
         </nav>
         <p style="font-size: 12px;">by @maikotrindade &copy; {{ site.time | date: '%Y' }}</p>
+        <p style="font-size: 12px;"><a href="/privacy.html" {% if page.url == "/privacy.html" %}aria-current="page"{% endif %}>Privacy</a></p>
     </div>
 </div>
