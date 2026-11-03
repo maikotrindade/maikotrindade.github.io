@@ -12,7 +12,7 @@ description: "An introduction to Koog, JetBrains' open-source agentic AI framewo
 
 <img src="https://maikotrindade.com/public/img/koog-ai-agent.png" width="350" height="350" alt="koog-ai-agent"/> 
 
-### The Benefits of Koog for Your AI Agentic Projects
+## The Benefits of Koog for Your AI Agentic Projects
 
 Koog offers a compelling set of features and advantages that make it an excellent choice for anyone looking to dive into AI agent development with Kotlin:
 
@@ -25,10 +25,10 @@ Koog offers a compelling set of features and advantages that make it an excellen
 * **Comprehensive Tracing:** Debug and monitor agent execution with detailed and configurable tracing of LLM calls, tools, and agent stages. This provides invaluable insight into your agent's behavior.
 * **Support for Various LLM Providers:** Koog integrates with popular LLM providers like Google, OpenAI, Anthropic, OpenRouter, and Ollama, giving you flexibility in choosing your underlying AI models.
 
-### My Experience with Koog
+## My Experience with Koog
 
 As someone who is currently working on an **AI agentic project** and, honestly, without previous AI code experience, I can confidently say that Koog (version 0.2.1) is **super good for it**. The framework's design is incredibly intuitive, making it easy to grasp the core concepts of building AI agents. The clear documentation and the idiomatic Kotlin approach meant that I could quickly get started and see tangible results. The ability to integrate tools and design complex workflows without getting bogged down in low-level AI complexities has been a game-changer for my project.
 
-### Conclusion
+## Conclusion
 
 **Koog** is truly a game-changer for Kotlin developers venturing into the exciting field of AI agents. Its pure Kotlin implementation, comprehensive features, and developer-friendly design make it an exceptionally powerful and enjoyable framework to work with. It's clear that JetBrains has put a lot of thought into making AI agent development accessible and efficient. Even for someone like me, who previously lacked extensive AI coding experience, **Koog has proven to be incredibly easy to work with** and an excellent foundation for building sophisticated AI agentic projects. If you're a Kotlin developer looking to build AI agents, I highly recommend giving Koog a try – you won't be disappointed!

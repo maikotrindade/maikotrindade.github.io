@@ -5,28 +5,28 @@ layout: post
 description: "Android accessibility tools, from TalkBack and Select to Speak to font size and high-contrast text, and practical steps to build more inclusive apps."
 ---
 
-### Accessibility tooling on Android
+## Accessibility tooling on Android
 
 Android has a collection of tools which can help people with disability and the following list has the most important features in my opnion:
 
-#### ✨ Talkback screen reader and Select to Speak 
+### ✨ Talkback screen reader and Select to Speak 
 
 This feature helps you as you navigate your smartphone. On a given screen, it will tell you what kind of screen it is, and what's on it. For example, if you're on a settings page, Talkback will read out the section name (such as notifications). When you tap an icon or item, your selection gets a green outline, and the assistant identifies it. Double tapping the same icon opens it. Talkback reminds you to double-tap when you tap on an item.
 
-#### ✨ Font Size and High Contrast Text 
+### ✨ Font Size and High Contrast Text 
 
 This setting lets you change the font size on your device from the default. You can make the text smaller than the default, or various levels larger. As you make adjustments, you can see how it will look.
 
-#### ✨ Magnification 🔍
+### ✨ Magnification 🔍
 
 The user can use a gesture to zoom in on certain parts of your screen. Once you enable the feature in settings, you can zoom in by tapping the screen three times with your finger.
 
-#### ✨Switch Access 
+### ✨Switch Access 
 
 Users can Interact with Android app using one or more switches or a keyboard instead of the touch screen. It is also possible to use Camera Switches to navigate with facial gestures.
 
 
-### Jetpack Compose & Accessibility
+## Jetpack Compose & Accessibility
 
 Jetpack Compose is great when it comes [accessibility] - it uses semantics properties to pass information to Accessibility services to transform what’s shown on screen to a more fitting format for a user with a specific need.
 
@@ -36,7 +36,7 @@ However, sometimes the framework needs more information to understand how to des
 
 <img src="https://maikotrindade.com/public/img/mobile-accessibility.png" width="350" height="220" alt="Jetpack compose accessibility"/> 
 
-### Improving accessibility using Jetpack compose
+## Improving accessibility using Jetpack compose
 
 This list is mainly focused on some approaches you should think about while developing the app.
 

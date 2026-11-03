@@ -4,11 +4,11 @@ title: Nomad token - Chainlink Spring 2023 Hackathon
 layout: post
 ---
 
-### Introduction
+## Introduction
 No significant change happened to the $1.9 trillion travel industry. The pandemic led to unprecedented low travel volumes and financial strain, and all those business trips year-round are now 30-minute Zoom meetings.
 The travel and hospitality industries (and their customers) are stuck with dated solutions, where online booking, cheap flight platforms, and lousy loyalty mechanics are not sufficing modern travelers and modern challenges and needs. Nomad rethinks the role of blockchain, empowering travelers and companies alike with unprecedented opportunities and creating a harmonious ecosystem that fosters trust, transparency, and unforgettable experiences.
 
-### What it does
+## What it does
 The user's journey starts when he/she decides to book a flight. To do so, the user can install the Nomad App and check the flights available. Due to the hackathon, we are using a specific flight (YYC - SEA) as a use case but the project can be more flexible and include more flight legs.
 
 The app's home screen integrates with Nomad core (NodeJs app - Backend) which provides a list of flights based on Flights API (Aviation stack API). Our Backend is hosted on [Heroku platform] Nomad Backend.
@@ -27,7 +27,7 @@ We used a Soulbound token as a reference to a user’s non-transferable experien
 
 After that, the [NomadBadge] attributes rewards points to the user token and also transfers ERC20 tokens (NomadRewardToken - NRT) to the user's wallet. The ERC20 tokens can be transferred at any time by the user. By the end of the process, [NomadBadge] changes the flight status to REWARDED.
 
-### Built With
+## Built With
 - alchemyapi
 - chainlink
 - ethersjs

@@ -4,7 +4,7 @@ title: Coroutines basics
 layout: post
 ---
 
-### Intro
+## Intro
 
 Kotlin, as a language, provides only minimal low-level APIs in its standard library to enable various other libraries to utilize [coroutines]. Unlike many other languages with similar capabilities, *async* and *await* are not keywords in Kotlin and are not even part of its standard library. Moreover, Kotlin's concept of suspending function provides a safer and less error-prone abstraction for asynchronous operations than futures and promises.
 
@@ -13,7 +13,7 @@ On Android, coroutines help to solve two primary problems:
 * Manage long-running tasks that might otherwise block the main thread and cause your app to freeze.
 * Providing main-safety, or safely calling network or disk operations from the main thread.
 
-### Get Started 
+## Get Started 
 
 Essentially, coroutines are light-weight threads. They are launched with launch coroutine builder in a context of some `CoroutineScope`. Here we are launching a new coroutine in the `GlobalScope`, meaning that the lifetime of the new coroutine is limited only by the lifetime of the whole application.
 
@@ -47,7 +47,7 @@ Coroutines allows us to mix _blocking_ and _non-blocking_ code in the same place
 >		delay(2000L)      // delaying
 >	}
 
-### Designate a CoroutineScope
+## Designate a CoroutineScope
 
 When defining a coroutine, you must also designate its `coroutineScope`. A `coroutineScope` manages one or more related coroutines. You can also use a `coroutineScope` to start a new coroutine within that scope. Unlike a dispatcher, however, a `coroutineScope` doesn't run the coroutines.
 

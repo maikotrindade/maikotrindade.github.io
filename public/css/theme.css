@@ -827,3 +827,22 @@ a.post-tag:hover {
   outline-offset: 2px;
   border-radius: 3px;
 }
+
+/* Ad slot: space is reserved so loading an ad does not shift the page */
+.ad-slot {
+  margin: 2rem 0;
+  text-align: center;
+}
+.ad-slot-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Blog list titles stay larger than the h2 section headings inside each post */
+h2.post-title {
+  font-size: 2.25rem;
+}

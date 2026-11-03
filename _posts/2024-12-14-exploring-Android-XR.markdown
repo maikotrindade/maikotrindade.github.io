@@ -8,7 +8,7 @@ description: "An introduction to Android XR development: building augmented and 
 The world of extended reality (XR) is expanding rapidly, merging physical and digital realms to create immersive experiences. Android XR offers a versatile platform for developers to build applications that blend augmented reality (AR) and virtual reality (VR) into everyday life. In this post, we’ll explore the essentials of Android XR and provide you with a starting point to dive into this exciting technology.
 
 
-### What is Android XR?
+## What is Android XR?
 
 - XR (Extended Reality) encompasses all immersive technologies—AR, VR, and mixed reality (MR). Android XR integrates these experiences seamlessly into Android devices, allowing developers to create cutting-edge applications that:
 
@@ -21,7 +21,7 @@ The world of extended reality (XR) is expanding rapidly, merging physical and di
 - Android’s XR ecosystem is built on frameworks like ARCore and leverages powerful hardware capabilities available in modern devices.
 
 
-### Key Components of Android XR
+## Key Components of Android XR
 
 **1. ARCore**
 
@@ -42,7 +42,7 @@ Android XR provides APIs and libraries to simplify interactions, such as detecti
 Android XR supports frameworks like OpenXR, making it easier to build applications that work across multiple devices, from smartphones to head-mounted displays (HMDs).
 
 
-### Getting Started with Android XR Development
+## Getting Started with Android XR Development
 
 **1. Set Up Your Development Environment**
 
@@ -67,7 +67,7 @@ Explore Android XR’s official documentation:
 Try creating a simple AR app that displays a 3D object on a flat surface. ARCore’s Plane Detection API can help you get started quickly.
 
 
-### My Android XR Demo Project
+## My Android XR Demo Project
 
 To help you jumpstart your journey, I’ve created a simple demo app showcasing basic XR features using ARCore and Jetpack Compose. This project serves as a practical example to learn XR development fundamentals.
 

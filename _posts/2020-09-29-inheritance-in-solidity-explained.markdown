@@ -5,7 +5,7 @@ layout: post
 ---
 
 
-### Intro
+## Intro
 
 Solidity supports multiple inheritance including polymorphism. Inheritance is the process of defining multiple contracts that are related to each other through parent-child relationships. The contract that is inherited is called the parent contract and the contract that inherits is called the child contract. 
 
@@ -13,7 +13,7 @@ When a contract inherits from other contracts, only a single contract is created
 
 The benefits of using inheritance are: Ability to change one contract and have those modifications reflected in others, Reducement of dependency nad Ability to reuse existing code more.
 
-### Example of Inheritance
+## Example of Inheritance
 
 ```
 pragma solidity ^0.8.0;
@@ -44,7 +44,7 @@ contract Uncle is Grandparent {
 
 
 
-### 💡 Gotchas
+## 💡 Gotchas
 
 - In the case of multiple inheritances, function calls using super gives preference to most derived contracts;
 - There are different types of inheritances: Single, Multi-level, Multiple and Hierarchical;
@@ -53,7 +53,7 @@ contract Uncle is Grandparent {
 
 
  
-### Additional Information
+## Additional Information
 	
 [Inheritance in Solidity] – Solidity docs
 

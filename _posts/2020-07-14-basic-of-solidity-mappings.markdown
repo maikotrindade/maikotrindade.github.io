@@ -16,7 +16,7 @@ Although it is similar to a hash table and dictionary, Solidity does not allow i
 Another characteristic about mapping is the absence of iteration support but there are ways to work round this limitation. Notice that iterating and looping are an expensive operation in Ethereum in terms of gas usage and should generally be avoided.
 
 
-### 💡 Gotchas 
+## 💡 Gotchas 
 
 * Mappings do not have a length, nor do they have a concept of a key or a value being set
 * It is also possible to have nested mapping, that is mapping consisting of mappings
@@ -25,7 +25,7 @@ Another characteristic about mapping is the absence of iteration support but the
 * When mappings are initialized every possible key exists in the mappings and are mapped to values whose byte-representations are all zeros
 
 
-### Additional Information
+## Additional Information
 	
 [Types in Solidity] – Solidity Docs v0.4.21
 

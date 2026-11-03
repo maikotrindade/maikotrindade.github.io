@@ -4,7 +4,7 @@ title: Introduction to Android WorkManager
 layout: post
 ---
 
-### Introduction
+## Introduction
 
 Every Android app has a main thread which is in charge of handling UI (including measuring and drawing views), coordinating user interactions, and receiving lifecycle events. If there is too much work happening on this thread, the app appears to hang or slow down, leading to an undesirable user experience. Any long-running computations and operations such as decoding a bitmap, accessing the disk, or performing network requests should be done on a separate background thread. 
 
@@ -14,7 +14,7 @@ Applications may also require some tasks to run even when the user is not active
 
 _Diagram from [Modern background execution in Android]_
 
-### WorkManager
+## WorkManager
 [Title](https://maikotrindade.github.io/2022/02/15/improving-accessibility-jetpack-compose-app.html)
 [WorkManager] is part of [Android Jetpack] and an Architecture Component for background work that needs a combination of opportunistic and guaranteed execution. Opportunistic execution means that WorkManager will do your background work as soon as it can. Guaranteed execution means that WorkManager will take care of the logic to start your work under a variety of situations, even if you navigate away from your app.
 
@@ -31,7 +31,7 @@ WorkManager is a simple, but incredibly flexible library that has many additiona
 
 ---
 
-### Get started 
+## Get started 
 
 Add the WorkManager dependency in Java or Kotlin to your Android project by openning the `build.gradle` file for your project and add the google() repository as shown below:
 
@@ -86,7 +86,7 @@ WorkManager uses the following permissions:
 
 Note that WorkManager may enable or disable some of its BroadcastReceivers at runtime as needed. This has the side-effect of the system sending `ACTION_PACKAGE_CHANGED` broadcasts to your app. Please be aware of this use case and architect your app appropriately.
 
-### Further Details
+## Further Details
 
 Watch the full session: [WorkManager — Android Jetpack (YouTube)](https://www.youtube.com/watch?v=pe_yqM16hPQ)
 

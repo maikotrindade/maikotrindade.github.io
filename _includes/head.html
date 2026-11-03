@@ -151,10 +151,11 @@
     {% endif %}
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPGMKKGTDM"></script>
-    {% unless page.layout == "default_no_ads" or page.layout == "page_no_ads" %}
+    {% include ad-eligible.html %}
+    {% if show_ads %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4415452186185932"
      crossorigin="anonymous"></script>
-    {% endunless %}
+    {% endif %}
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}

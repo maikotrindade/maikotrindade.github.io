@@ -68,10 +68,10 @@ keywords: "word, word"            # Overrides tags for the keywords meta tag
 **Opening paragraph** — the excerpt. No heading before it. Must be standalone and descriptive (shown on blog index and used as SEO fallback).
 
 **Headings:**
-- `###` — main sections
-- `####` — subsections
+- `##` — main sections
+- `###` — subsections
 - Never `#` (H1) — the post layout already renders `page.title` as H1
-- `##` is acceptable only for major top-level sections in very long posts
+- Don't skip levels: the first heading in a post is always `##`
 
 **Images** — inline HTML only (not Markdown `![]()` syntax):
 ```html

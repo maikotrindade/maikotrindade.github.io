@@ -6,7 +6,7 @@ layout: post
 
 [Material3] is the latest design system from Google that brings a fresh look and feel to Android apps. When combined with Jetpack Compose, Google's modern UI toolkit for building native Android apps, developers have a powerful combination at their disposal. Let's delve into the main components of Material3 for Android and how they integrate with Jetpack Compose.
 
-### Material3 Components
+## Material3 Components
 
 1. **Typography**
 Typography in Material3 focuses on readability and hierarchy. It includes a range of text styles and weights to help developers create visually appealing and accessible interfaces.
@@ -19,7 +19,7 @@ Elevation helps create a sense of depth and hierarchy in the UI. [Material3] pro
 5. **Motion**
 Motion in [Material3] adds fluidity and responsiveness to app interactions. It includes predefined animations for common UI transitions, enhancing the user experience and making the app feel more dynamic.
 
-### Integrating Material3 with Jetpack Compose
+## Integrating Material3 with Jetpack Compose
 
 Jetpack Compose simplifies UI development by using a declarative approach to building interfaces. When integrating Material3 with Jetpack Compose, developers can leverage the following:
 1. **MaterialTheme**

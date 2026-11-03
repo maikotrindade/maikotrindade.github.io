@@ -1,0 +1,11 @@
+{% include ad-eligible.html %}
+{% if show_ads and site.adsense_slot %}
+<aside class="ad-slot" aria-label="Advertisement">
+    <span class="ad-slot-label">Advertisement</span>
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:234px;height:60px"
+         data-ad-client="ca-pub-4415452186185932"
+         data-ad-slot="{{ site.adsense_slot }}"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</aside>
+{% endif %}

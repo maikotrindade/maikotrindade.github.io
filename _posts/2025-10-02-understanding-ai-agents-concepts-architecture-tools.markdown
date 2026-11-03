@@ -12,7 +12,7 @@ AI agents are a paradigm shift in how we design and interact with artificial int
 
 This piece will examine what AI agents are, how they function, what distinguishes them from traditional AI processes, the skills needed to excel at agentic AI, and the most popular tools you can currently utilize to build your own AI agents.
 
-### What is an AI Agent?
+## What is an AI Agent?
 
 An [AI agent](https://www.ibm.com/think/topics/ai-agents) is a smart system capable of:
 
@@ -36,7 +36,7 @@ It is useful to distinguish between:
 
 **Agents** → Systems that choose and control the workflow themselves;
 
-### Core Components of an AI Agent
+## Core Components of an AI Agent
 
 Most AI agents are based upon a few key elements:
 
@@ -60,7 +60,7 @@ The agents interact with the world through tools such as: APIs, Databases, File 
 
 The agents assess the outcome of their actions and make decisions on whether to continue, retry, or modify their strategy. This process is what gives the agents autonomy. In agentic systems, decision-making is entrusted to the AI itself and not hard-coded by programmers.
 
-### Skills Needed to Master Agentic AI
+## Skills Needed to Master Agentic AI
 
 Agentic AI requires more system design skill than prompt writing skill. The important skills are:
 
@@ -78,7 +78,7 @@ Agentic AI requires more system design skill than prompt writing skill. The impo
 
 **Systems Thinking** — In Agentic AI, one has to think beyond the response, including orchestration, observability, failure modes, and scalability.
 
-### Agent Frameworks for Developers
+## Agent Frameworks for Developers
 
 The environment for developing AI agents is an ever-changing one. Some of the most popular tools being used currently are listed below.
 

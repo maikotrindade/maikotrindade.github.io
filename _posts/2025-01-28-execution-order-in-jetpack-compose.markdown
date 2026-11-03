@@ -7,7 +7,7 @@ description: "How LaunchedEffect, DisposableEffect and composables execute in Je
 
 Understanding when `LaunchedEffect`, `DisposableEffect`, and composables run in Jetpack Compose can be tricky. Let’s simplify with a few real-world analogies.
 
-### 🎭 Composables = Stage Actors
+## 🎭 Composables = Stage Actors
 
 Composables are like actors:
 
@@ -17,7 +17,7 @@ Composables are like actors:
 
 - They exit when removed from the UI.
 
-### 🕯️ LaunchedEffect = Candle in a Room
+## 🕯️ LaunchedEffect = Candle in a Room
 
 - You light a candle when entering a room → `LaunchedEffect` runs.
 
@@ -27,17 +27,17 @@ Composables are like actors:
 
 - Use it for one-time effects or state collection.
 
-### 🧹 DisposableEffect = Hotel Housekeeping
+## 🧹 DisposableEffect = Hotel Housekeeping
 - Housekeeper sets up the room → `DisposableEffect` runs.
 
 - When you check out (or key changes), the room is cleaned → onDispose is called.
 
 - Perfect for listeners or subscriptions that need cleanup.
 
-### 🔄 Recomposition = Changing Actor’s Lines
+## 🔄 Recomposition = Changing Actor’s Lines
 If the script (state) changes, actors stay on stage but adjust their lines. No need to re-run effects unless keys change.
 
-### Quick Comparison
+## Quick Comparison
 
 | Concept          | Analogy      | When It Runs         | When It Cleans Up     |
 | ---------------- | ------------ | -------------------- | --------------------- |
@@ -46,7 +46,7 @@ If the script (state) changes, actors stay on stage but adjust their lines. No n
 | DisposableEffect | Housekeeping | On enter/key change  | On key change/removal |
 
 
-### ✅ Final Tip
+## ✅ Final Tip
 So next time you add a `LaunchedEffect` or a `DisposableEffect`, ask yourself:
 
 - Is this a one-time action? → Use `LaunchedEffect`.

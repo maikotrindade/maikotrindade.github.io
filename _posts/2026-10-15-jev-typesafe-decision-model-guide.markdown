@@ -15,7 +15,7 @@ Most of the LLM calls I've put in production aren't really asking the model to w
 
 <img src="https://maikotrindade.com/public/img/jev-typesafe.png" width="380" height="291" alt="Line-art eye with radiating rays and sparkles on a pink background, illustrating Jev as a decision model"/>
 
-### What Jev actually is
+## What Jev actually is
 
 TypeSafe calls Jev a *System One Model*. The name borrows from the fast, intuitive half of Kahneman's thinking model, and the idea is that a lot of software needs quick judgment calls, not essays. TypeSafe spent about two years in stealth building it and describes the company as building "machine-native intelligence infrastructure for automation."
 
@@ -60,13 +60,13 @@ curl https://api.typesafe.ai/v1/systemone \
 
 The response comes back keyed by your question IDs, each with its typed answer and probabilities, plus token usage. There's no parsing of free text, no "please respond in JSON" prompt, and no retry loop for malformed output. There are official SDKs too (`pip install typesafe-sdk` and `npm install @typesafe-ai/sdk`) if you'd rather not hand-roll HTTP.
 
-### Why it's interesting: the price
+## Why it's interesting: the price
 
 The number that got my attention came from Claire Vo's <a href="https://www.lennysnewsletter.com/p/jev-for-beginners-how-to-use-it-and" target="_blank" rel="noopener noreferrer" title="How I AI: Jev for beginners, how to use it and what to build">How I AI episode on Jev for beginners</a>. Jev costs 4 cents per million input tokens, and there's no output charge. Since the output is just a handful of numbers and labels, that's most of the bill.
 
 At that price, classification stops being something you budget for. Vo ran Jev over 1,700 pull requests for 9 cents and used pairwise clustering to see where her engineering time was actually going. That's a task I'd normally skip because it isn't worth a few dollars of GPT calls plus the time spent cleaning up the outputs. At 9 cents, you just do it.
 
-### What people are building with it
+## What people are building with it
 
 The examples from the episode are a good map of where a decision model fits:
 
@@ -81,11 +81,11 @@ The pattern across all of them is the same. Jev handles the high-volume scoring,
 
 If you've read my post on <a href="https://maikotrindade.com/ai-agents/engineering/2026/07/02/loop-engineering-autonomous-agents.html" target="_blank" rel="noopener" title="Loop Engineering: designing the control loop behind autonomous agents">designing the control loop behind autonomous agents</a>, this is the "should I keep going?" and "which tool next?" kind of decision. Having those come back as a typed value with a probability attached makes termination conditions and routing a lot easier to reason about than parsing a sentence.
 
-### What's new in Jev 1.14
+## What's new in Jev 1.14
 
 TypeSafe published the <a href="https://typesafe.ai/blog/jev-1-14" target="_blank" rel="noopener noreferrer" title="Jev 1.14 release notes from TypeSafe AI">Jev 1.14 release notes</a> on October 14, 2026, framed around two audiences: builders who need production reliability, and dreamers who want to experiment. Their answer is a set of "danger zone" flags. Experimental features sit behind API headers, so you have to opt in explicitly, and TypeSafe is clear that they aren't ready for production.
 
-#### Composable images (danger zone)
+### Composable images (danger zone)
 
 It turns out Jev 1.13 was already multimodal, it just wasn't advertised. Now you can add images through a find-and-replace in `assets`, and reference them in `state`, `instructions` or `criteria`. Turn it on with:
 
@@ -95,11 +95,11 @@ TypeSafe-Danger-Zone-Images: true
 
 TypeSafe's own advice is worth repeating: every model, Jev included, does worse on multimodal input than on pure text. Break your questions into the simplest pieces you can.
 
-#### The new `box` type
+### The new `box` type
 
 This one is only enabled for `jev-1.14.0`. It returns a single bounding box, and it's the first output type that isn't just a smarter `if` statement. I read it as a hint about where System One models are heading: still typed and constrained, but answering more than "which one?" or "how much?".
 
-#### Longer context (danger zone)
+### Longer context (danger zone)
 
 Jev can handle more context than the production limit allows. TypeSafe capped it on purpose because reliability drops on long inputs. You can lift the cap with:
 
@@ -109,7 +109,7 @@ TypeSafe-Danger-Zone-Long-Context: true
 
 They still recommend keeping context short, and honestly that's good advice for any classifier. If the decision depends on 50 pages of input, it's probably more than one decision.
 
-#### Model aliases and deprecation
+### Model aliases and deprecation
 
 - `jev-1.14.0` is available now under the `jev-preview` alias. Improvements are small and broad, with multilingual support expected to gain the most.
 - `jev-latest` moves to 1.14.0 one week after the announcement.
@@ -117,11 +117,11 @@ They still recommend keeping context short, and honestly that's good advice for 
 
 If you're in production, pin a version. Pointing a pipeline at `jev-latest` and letting a model swap happen under you is a classic way to get a silent shift in your label distribution.
 
-#### Opt-in data sharing and an internal benchmark
+### Opt-in data sharing and an internal benchmark
 
 You can now opt in to let your queries help TypeSafe find model weaknesses. They say they still won't train on your queries. They also shared an internal estimate of developer-relevant intelligence, with a lot of caveats: it compares only open-weight models, the methodology will change, and it's probably biased toward Jev. Their own advice is to trust your evals over theirs, which I appreciate.
 
-### Should you try it?
+## Should you try it?
 
 If you have a pipeline where an LLM is being used as a glorified `when` expression, yes, probably. Ticket routing, content moderation, lead scoring, log triage, agent routing. Those are the places where typed outputs and near-zero cost add up fast.
 
