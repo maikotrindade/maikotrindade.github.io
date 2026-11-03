@@ -20,6 +20,7 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — AI & Agents
 
+- [Why Coding Agents Struggle With Mobile, and the Harness That Fixes It](https://maikotrindade.com/ai-agents/engineering/2026/11/02/why-coding-agents-struggle-mobile-harness.html): Why mobile feedback loops are hard on coding agents, what Android agent research shows, and a seven-step harness built on narrow tools, device tests, and honest failure reporting.
 - [Jev: A Decision Model for the Boring, Important Parts of Your Pipeline](https://maikotrindade.com/ai-agents/llm/2026/10/15/jev-typesafe-decision-model-guide.html): What TypeSafe AI's type-safe Jev decision model is, what changed in Jev 1.14, and how to pair it with an LLM for cheap classification.
 - [An Introduction to Edge Computing and Edge AI](https://maikotrindade.com/ai/edge-computing/2026/09/14/introduction-edge-computing-edge-ai.html): What edge computing and Edge AI are, the newest small on-device models (Gemma 4, SmolLM3, Phi-4-mini), Edge AI in AgTech, and research on where it goes next.
 - [AI Beyond Tech: Slower Data Centers, Smarter Human Uses](https://maikotrindade.com/ai/sustainability/2026/08/14/ai-beyond-tech-farms-data-center-race.html): How LLMs help smallholder farmers, builders and sustainability teams, what agricultural-advice research shows, why small efficient models beat the data center race, and what blockchain's energy shift teaches AI.
