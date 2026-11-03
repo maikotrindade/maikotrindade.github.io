@@ -3,7 +3,7 @@ layout: post
 title: "Why Coding Agents Struggle With Mobile, and the Harness That Fixes It"
 seo_title: "Why Coding Agents Struggle With Mobile Development"
 date: 2026-11-02 09:00:00 -0700
-published: false
+published: true
 categories: [ai-agents, engineering]
 tags: [AI, agents, coding agents, harness engineering, loop engineering, Android, mobile testing, Gradle]
 description: "Coding agents can't see whether a mobile app works until it runs on a device. This harness gives them narrow tools, device tests, and honest failures."
