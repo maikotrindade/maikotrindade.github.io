@@ -842,6 +842,47 @@ a.post-tag:hover {
   color: var(--text-muted);
 }
 
+/* Post share buttons (icons only) */
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem;
+}
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+.share-button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: var(--accent-soft);
+}
+.share-icon-check,
+.share-copy.is-copied .share-icon-link {
+  display: none;
+}
+.share-copy.is-copied .share-icon-check {
+  display: block;
+}
+.share-copy.is-copied {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* Blog list titles stay larger than the h2 section headings inside each post */
 h2.post-title {
   font-size: 2.25rem;
