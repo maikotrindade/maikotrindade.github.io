@@ -7,7 +7,7 @@ layout: default
         <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
         <div class="post-meta">
             <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date_to_string }}
+                {{ page.date | date: "%B %-d, %Y" }}
             </time>
         </div>
     </header>
@@ -39,18 +39,16 @@ layout: default
     </footer>
 </article>
 
-<div class="related">
-    <h2>Related Posts</h2>
-    <ul class="related-posts">
+<aside class="related" aria-labelledby="related-heading">
+    <h2 id="related-heading" class="section-title">Related Posts</h2>
+    <ul class="post-list">
         {% for post in site.related_posts limit:4 %}
         <li>
-            <h4>
-                <a href="{{ post.url }}">
-                    {{ post.title }}
-                    <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-                </a>
-            </h4>
+            <a href="{{ post.url }}">
+                <span class="post-list-title">{{ post.title }}</span>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+            </a>
         </li>
         {% endfor %}
     </ul>
-</div>
+</aside>

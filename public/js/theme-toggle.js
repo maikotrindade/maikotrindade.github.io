@@ -37,7 +37,7 @@
       meta.setAttribute('name', 'theme-color');
       document.head.appendChild(meta);
     }
-    meta.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
+    meta.setAttribute('content', theme === 'dark' ? '#0a0a0a' : '#ffffff');
   }
 
   function applyTheme(theme) {
@@ -81,7 +81,8 @@
     button.innerHTML = theme === 'dark' ? SUN_SVG : MOON_SVG;
     button.addEventListener('click', toggleTheme);
 
-    document.body.appendChild(button);
+    var slot = document.getElementById('theme-toggle-slot');
+    (slot || document.body).appendChild(button);
   }
 
   if (window.matchMedia) {

@@ -4,58 +4,29 @@ title: Home
 description: "Senior Mobile Engineer with 14+ years in software and 10 in Android. Kotlin, Jetpack Compose, React Native and AI agents — blog, projects and résumé."
 ---
 
-<div class="hero-section">
-  <div class="container">
-    <p class="hero-eyebrow">Senior Software Engineer</p>
-    <h1>Hello, I'm Maiko Trindade</h1>
-    <p>Building high-performance mobile apps with Android, Kotlin, Jetpack Compose, React Native and AI agents. 14+ years shipping resilient products for fintech and beyond.</p>
-    <div class="hero-actions">
-      <a href="/about.html" class="btn">Learn More</a>
-      <a href="/public/maikotrindade.pdf" class="btn" target="_blank" rel="noopener noreferrer">Get Résumé</a>
-    </div>
+<section class="intro" aria-labelledby="intro-heading">
+  <img class="intro-avatar" src="/public/img/maiko-trindade.webp" width="72" height="72" alt="Maiko Trindade" />
+  <h1 id="intro-heading">Maiko Trindade</h1>
+  <p class="intro-role">Senior Software Engineer</p>
+  <p class="intro-lead">Building high-performance mobile apps with Android, Kotlin, Jetpack Compose, React Native and AI agents. 14+ years shipping resilient products for fintech and beyond.</p>
+  <div class="intro-actions">
+    <a href="/public/maikotrindade.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get Résumé</a>
+    <a href="/about.html" class="btn">Learn More</a>
   </div>
-</div>
+</section>
 
-<section class="recent-posts-section" aria-labelledby="latest-updates-heading">
-  <h2 id="latest-updates-heading">Latest Updates</h2>
-  <ul class="recent-posts-nav">
-    {% for post in site.posts | limit:12 %}
-    <li class="recent-posts-nav-item">
-      <span>{{ post.date | date_to_string }}</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+<section class="post-index" aria-labelledby="latest-updates-heading">
+  <h2 id="latest-updates-heading" class="section-title">Latest Updates</h2>
+  <ul class="post-list">
+    {% for post in site.posts limit:12 %}
+    <li>
+      <a href="{{ post.url }}">
+        <span class="post-list-title">{{ post.title }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </a>
     </li>
     {% endfor %}
   </ul>
 
-  <a href="/blog/" class="see-more-link">See other articles &rarr;</a>
+  <a href="/blog/" class="more-link">See other articles <span aria-hidden="true">&rarr;</span></a>
 </section>
-
-<style>
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-  padding: 0.3rem 0.8rem;
-  background: var(--accent-soft, #dbeafe);
-  border-radius: var(--radius-pill, 999px);
-}
-.hero-actions {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.see-more-link {
-  display: inline-block;
-  margin-top: 1.25rem;
-  font-weight: 600;
-}
-[data-theme="dark"] .hero-eyebrow {
-  background: rgba(96, 165, 250, 0.15);
-}
-</style>
-

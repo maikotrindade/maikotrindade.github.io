@@ -1,0 +1,25 @@
+<header class="site-header">
+    <div class="container site-header-inner">
+        <a class="site-brand" href="/" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>
+            <img class="site-brand-avatar" src="/public/img/maiko-trindade.webp" width="28" height="28" alt="" />
+            <span>{{ site.title }}</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+                {% assign in_blog = false %}
+                {% if page.layout == "post" or page.url contains "/blog/" %}{% assign in_blog = true %}{% endif %}
+                <li><a href="/blog/" {% if in_blog %}aria-current="page"{% endif %}>Blog</a></li>
+                {% for node in site.pages %}
+                {% if node.title != null %}
+                {% if node.layout == "page" or node.layout == "page_no_ads" %}
+                {% unless node.url == "/privacy.html" %}
+                <li><a href="{{ node.url }}" {% if page.url == node.url %}aria-current="page"{% endif %}>{{ node.title }}</a></li>
+                {% endunless %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="theme-toggle-slot" id="theme-toggle-slot"></div>
+    </div>
+</header>
