@@ -648,6 +648,9 @@ tbody tr:hover {
 .recent-posts-nav-item a {
   flex: 1;
 }
+.recent-posts-nav-item a:hover {
+  border-bottom: none;
+}
 
 /* Page fade-in animation */
 @media (prefers-reduced-motion: no-preference) {
