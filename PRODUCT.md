@@ -27,7 +27,6 @@ A working mobile engineer who writes from production experience across Android/K
 - ~75 posts, paginated blog index (5/page), archive, categories, tags.
 - Static pages: Home, About, Experience, Projects (filter tabs), Education, Privacy.
 - Ads only on posts of 300+ words (one 234x60 unit); AdSense script gated the same way.
-- Google "preferred source" button in the footer.
 
 ## Capabilities and Constraints
 

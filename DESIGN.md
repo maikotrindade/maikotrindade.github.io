@@ -36,13 +36,13 @@ Light/dark follows the visitor's OS, with the manual toggle in the header (persi
 
 - Container: 46rem max, 1.5rem side gutter (1rem under 30rem).
 - Sticky header: avatar + name (home link) left, nav + theme toggle right; translucent background with backdrop blur and a hairline bottom border. Static (not sticky) under 40rem, with the nav as a scrollable second row.
-- Footer: social icons (incl. RSS), preferred-source button, copyright, Privacy, Archive.
+- Footer: social icons (incl. RSS), copyright, Privacy, Archive.
 - Spacing rhythm: 0.25rem steps; sections separated by 4–5rem; more space above headings than below.
 
 ## Components
 
 - **Buttons:** 2.5rem tall, radius 8px. Primary is solid `--fg-strong` with `--bg` text; secondary is bordered. No lift on hover; background/border shift only.
-- **Post list rows:** title left, Mono date right (tabular), hairline separators; hover darkens the title and adds a faint underline.
+- **Post list rows:** title left, Mono date right (tabular), hairline separators; hover darkens the title (no underline, no slide).
 - **Chips (tags, categories, skills):** radius 6px, `--bg-muted` fill, `--fg-muted` text, 0.8125rem.
 - **Timeline (Experience, Education):** two-column grid, period in Mono on the left, role and description right; hairlines between entries; stacks on mobile.
 - **Cards (Projects only):** 1px border, radius 12px, no shadow; hover darkens the border.

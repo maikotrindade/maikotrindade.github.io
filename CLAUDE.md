@@ -72,7 +72,7 @@ All layouts include `_includes/head.html`, so SEO/meta changes go there only. `_
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | `_includes/head.html`      | Meta tags, OG, Twitter Cards, JSON-LD schema, GA4, AdSense, CSS links, `theme-toggle.js` |
 | `_includes/header.html`    | Sticky top bar: avatar + name (home link), auto-generated nav, theme toggle slot          |
-| `_includes/footer.html`    | Social links, RSS, Google preferred-source button, copyright, Privacy, Archive            |
+| `_includes/footer.html`    | Social links, RSS, copyright, Privacy, Archive                                           |
 | `_includes/ad-eligible.html` | Sets `show_ads` for the current page (posts of 300+ words) |
 | `_includes/ad-slot.html`   | One fixed 234x60 AdSense unit after the post content |
 | `_includes/analytics.html` | Legacy UA analytics (`UA-66120129-1`) — keep intact                                      |

@@ -404,12 +404,6 @@ body > .theme-toggle {
 .site-footer-meta a { color: var(--fg-muted); text-decoration: none; }
 .site-footer-meta a:hover { color: var(--fg-strong); }
 
-/* Google "Add as preferred source" button: one per theme */
-.preferred-source { margin: 0; }
-.preferred-source-dark,
-[data-theme="dark"] .preferred-source-light { display: none; }
-[data-theme="dark"] .preferred-source-dark { display: block; }
-
 /* --------------------------------------------------------------------------
    Shared components
    -------------------------------------------------------------------------- */
@@ -476,14 +470,10 @@ body > .theme-toggle {
 .post-list-title {
   font-weight: 450;
   line-height: 1.5;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-  transition: text-decoration-color var(--duration) var(--ease-out), color var(--duration) var(--ease-out);
+  transition: color var(--duration) var(--ease-out);
 }
 .post-list a:hover { text-decoration: none; }
-.post-list a:hover .post-list-title { color: var(--fg-strong); text-decoration-color: var(--border-strong); }
+.post-list a:hover .post-list-title { color: var(--fg-strong); }
 .post-list time {
   flex-shrink: 0;
   font-family: var(--font-mono);

@@ -92,7 +92,7 @@ Order is determined by Jekyll's `site.pages` (filename-alphabetical by default).
 
 ## _includes/footer.html
 
-Social icons (LinkedIn, GitHub, Devpost, Google Dev, RSS), Google "preferred source" button (one per theme), copyright, Privacy and Archive links.
+Social icons (LinkedIn, GitHub, Devpost, Google Dev, RSS), copyright, Privacy and Archive links.
 
 ## post.html layout
 
