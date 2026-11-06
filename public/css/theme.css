@@ -882,17 +882,3 @@ a.post-tag:hover {
 h2.post-title {
   font-size: 2.25rem;
 }
-
-/* Google "Add as preferred source" button: one per theme */
-.preferred-source {
-  margin: 1rem 0;
-}
-
-.preferred-source-dark,
-[data-theme="dark"] .preferred-source-light {
-  display: none;
-}
-
-[data-theme="dark"] .preferred-source-dark {
-  display: block;
-}
