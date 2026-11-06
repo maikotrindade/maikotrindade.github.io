@@ -636,11 +636,6 @@ tbody tr:hover {
   gap: 0.85rem;
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-color);
-  transition: padding-left var(--duration-fast) var(--ease-out),
-              background-color var(--duration-fast) var(--ease-out);
-}
-.recent-posts-nav-item:hover {
-  padding-left: 0.4rem;
 }
 .recent-posts-nav-item span {
   font-size: 0.78rem;
