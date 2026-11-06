@@ -39,6 +39,8 @@ exclude:
   - README.md
   - LICENSE.md
   - CLAUDE.md
+  - DESIGN.md
+  - PRODUCT.md
   - Gemfile
   - Gemfile.lock
   - node_modules

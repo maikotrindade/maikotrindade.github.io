@@ -274,9 +274,17 @@ tbody tr:hover { background: none; }
   letter-spacing: -0.01em;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
   margin-right: auto;
 }
 .site-brand:hover { color: var(--fg-strong); text-decoration: none; }
+/* A long nav scrolls inside its own box instead of squeezing the brand */
+.site-nav {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.site-nav::-webkit-scrollbar { display: none; }
 .site-brand-avatar {
   margin: 0;
   width: 28px;
@@ -306,7 +314,7 @@ tbody tr:hover { background: none; }
 .site-nav a:hover { color: var(--fg-strong); background-color: var(--bg-muted); text-decoration: none; }
 .site-nav a[aria-current="page"] { color: var(--fg-strong); font-weight: 500; }
 
-.theme-toggle-slot { display: flex; min-width: 2rem; }
+.theme-toggle-slot { display: flex; flex-shrink: 0; min-width: 2rem; }
 
 .theme-toggle {
   display: inline-flex;
