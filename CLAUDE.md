@@ -8,9 +8,9 @@ Personal blog/portfolio for Maiko Trindade, Senior Mobile Engineer (14+ years, s
 
 - **Generator:** Jekyll (kramdown, Liquid templates, Rouge syntax highlighting)
 - **Hosting:** GitHub Pages — push to `master` → auto-build
-- **CSS:** Poole + Hyde framework + custom `theme.css` (dark mode via `data-theme="dark"` attribute)
-- **JS:** Vanilla only — `theme-toggle.js` (light/dark toggle, localStorage persistence)
-- **Fonts:** Google Fonts (PT Sans, Abril Fatface)
+- **CSS:** Poole base + custom `theme.css` (the design system, see `DESIGN.md`; dark mode via `data-theme="dark"` attribute)
+- **JS:** Vanilla only — `theme-toggle.js` (light/dark toggle mounted in the header, localStorage persistence)
+- **Fonts:** Google Fonts (Geist, Geist Mono)
 - **Analytics:** GA4 (`G-NPGMKKGTDM`) + legacy UA (`UA-66120129-1`) + AdSense (`ca-pub-4415452186185932`)
 
 ## Development Workflow
@@ -28,9 +28,9 @@ git push origin master     # deploys to GitHub Pages automatically
 ```
 _posts/                  Blog posts: YYYY-MM-DD-slug.markdown
 _layouts/                Five layouts (see Layout System below)
-_includes/               head.html, sidebar.html, analytics.html
+_includes/               head.html, header.html, footer.html, analytics.html
 _config.yml              Jekyll config: url, author, pagination, exclude list
-public/css/              poole.css, hyde.css, syntax.css, theme.css
+public/css/              poole.css, syntax.css, theme.css
 public/js/               theme-toggle.js
 public/img/              Profile photo, social icons, OG images, post images
 blog/                    Blog index (paginated, 5/page) and archive
@@ -64,14 +64,15 @@ See the `/create-post` skill (`.claude/skills/create-post/Skill.md`) for the com
 
 All layouts include `_includes/head.html`, so SEO/meta changes go there only. `_includes/ad-eligible.html` decides which pages get ads: `layout: post` with 300+ words. The AdSense script (`head.html`) and the single 234x60 unit (`ad-slot.html`) both use it. The unit renders only when `adsense_slot` is set in `_config.yml`.
 
-**Sidebar auto-nav:** `sidebar.html` discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the sidebar — no changes to `sidebar.html` needed. The exception is Privacy, which is excluded from the nav and linked below the copyright line instead.
+**Header auto-nav:** `header.html` shows a fixed Blog link, then discovers nav items by filtering `site.pages` where `layout == "page"` or `layout == "page_no_ads"`. A new static page with the correct layout automatically appears in the header — no changes to `header.html` needed. The exception is Privacy, which is excluded from the nav and linked in the footer instead.
 
 ## Includes
 
 | File                       | Purpose                                                                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | `_includes/head.html`      | Meta tags, OG, Twitter Cards, JSON-LD schema, GA4, AdSense, CSS links, `theme-toggle.js` |
-| `_includes/sidebar.html`   | Profile photo, social links, auto-generated nav, last 3 posts                            |
+| `_includes/header.html`    | Sticky top bar: avatar + name (home link), auto-generated nav, theme toggle slot          |
+| `_includes/footer.html`    | Social links, RSS, Google preferred-source button, copyright, Privacy, Archive            |
 | `_includes/ad-eligible.html` | Sets `show_ads` for the current page (posts of 300+ words) |
 | `_includes/ad-slot.html`   | One fixed 234x60 AdSense unit after the post content |
 | `_includes/analytics.html` | Legacy UA analytics (`UA-66120129-1`) — keep intact                                      |
