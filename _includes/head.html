@@ -9,21 +9,19 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Theme color (synced by theme-toggle.js for runtime) -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
-    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark light">
 
-    <!-- Pre-paint theme to avoid FOUC -->
+    <!-- Pre-paint theme to avoid FOUC: dark by default, light only if the visitor chose it -->
     <script>
       (function () {
+        var theme = 'dark';
         try {
-          var stored = localStorage.getItem('theme-preference');
-          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = stored === 'light' || stored === 'dark' ? stored : (prefersDark ? 'dark' : 'light');
-          if (theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
+          if (localStorage.getItem('theme-preference') === 'light') theme = 'light';
         } catch (e) { /* ignore */ }
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
       })();
     </script>
 
