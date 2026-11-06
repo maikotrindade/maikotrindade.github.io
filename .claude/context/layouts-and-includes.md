@@ -6,7 +6,7 @@
 default_no_ads.html  (self-contained — does NOT use {% include head.html %})
   └── page_no_ads.html
 
-default.html  (uses {% include head.html %}, {% include sidebar.html %}, {% include analytics.html %})
+default.html  (uses {% include head.html %}, {% include header.html %}, {% include footer.html %}, {% include analytics.html %})
   ├── post.html
   └── page.html
 
@@ -41,7 +41,7 @@ blog/index.html  → layout: default (directly)
 7. GA4 gtag script: `G-NPGMKKGTDM`
 8. AdSense script (`ca-pub-4415452186185932`)
 9. `<title>` tag
-10. CSS: `poole.css`, `syntax.css`, `hyde.css`, `theme.css`
+10. CSS: `poole.css`, `syntax.css`, `theme.css`
 11. Favicon + Apple touch icon
 12. RSS/Atom feed link
 13. JSON-LD structured data (see below)
@@ -65,31 +65,34 @@ blog/index.html  → layout: default (directly)
 
 Contains legacy Universal Analytics (`analytics.js`) with property `UA-66120129-1`. Included at the bottom of `<body>` in both `default.html` and `default_no_ads.html`. **Keep intact — do not remove or modify.** GA4 tracking runs in parallel via `head.html`.
 
-## _includes/sidebar.html
+## _includes/header.html
 
-### Profile section
-- Links to `/`
-- Profile image: `https://maikotrindade.com/public/img/maiko-trindade.webp` (140×140)
-- `site.title` as `h2`
-- Social icons: LinkedIn, GitHub, Devpost, Google Dev, Mastodon
+Sticky top bar used by both base layouts.
+
+- Brand: avatar (`/public/img/maiko-trindade.webp`, 28×28) + `site.title`, links to `/`
+- Nav: hardcoded **Blog** link (active on posts and `/blog/` pages), then the auto-navigation loop below
+- `#theme-toggle-slot`: `theme-toggle.js` mounts the toggle button here
 
 ### Auto-navigation (Liquid)
 ```liquid
 {% for node in site.pages %}
   {% if node.title != null %}
   {% if node.layout == "page" or node.layout == "page_no_ads" %}
+  {% unless node.url == "/privacy.html" %}
     <li><a href="{{ node.url }}">{{ node.title }}</a></li>
+  {% endunless %}
   {% endif %}
   {% endif %}
 {% endfor %}
 ```
 
-**Effect:** Any page file with `layout: page` or `layout: page_no_ads` AND a frontmatter `title` appears in the sidebar nav automatically. No edits to `sidebar.html` are needed when adding pages.
+**Effect:** Any page file with `layout: page` or `layout: page_no_ads` AND a frontmatter `title` appears in the header nav automatically (Privacy excluded; it lives in the footer). No edits to `header.html` are needed when adding pages.
 
-Order is determined by Jekyll's `site.pages` (filename-alphabetical by default). Home link is hardcoded above the loop.
+Order is determined by Jekyll's `site.pages` (filename-alphabetical by default).
 
-### Latest Updates section
-Shows 3 most recent posts via `site.posts | limit:3`. Links to `/blog` and `/blog/archive` are hardcoded.
+## _includes/footer.html
+
+Social icons (LinkedIn, GitHub, Devpost, Google Dev, RSS), copyright, Privacy and Archive links.
 
 ## post.html layout
 
@@ -112,21 +115,20 @@ Difference: `page_no_ads` uses `default_no_ads` as parent (no AdSense); `page` u
    description: "SEO description"
    ---
    ```
-3. Page automatically appears in sidebar nav
-4. No changes needed to `sidebar.html` or `_config.yml`
+3. Page automatically appears in the header nav
+4. No changes needed to `header.html` or `_config.yml`
 
 ## CSS Load Order
 
 1. `poole.css` — base reset and typography (Poole framework)
 2. `syntax.css` — Rouge syntax highlighting
-3. `hyde.css` — sidebar layout and Hyde theme
-4. `theme.css` — dark mode, custom components, overrides
+3. `theme.css` — the design system (tokens, layout, components, dark mode); see `DESIGN.md`
 
 Dark mode: `document.documentElement.setAttribute('data-theme', 'dark')`. All dark mode CSS overrides use `[data-theme="dark"]` selectors in `theme.css`.
 
 ## Theme Toggle (theme-toggle.js)
 
-- Injects a `<button id="theme-toggle" class="theme-toggle">` into `<body>`
+- Injects a `<button id="theme-toggle" class="theme-toggle">` into `#theme-toggle-slot` in the header (falls back to `<body>`)
 - Reads/writes `localStorage` key: `"theme-preference"`
 - Falls back to `prefers-color-scheme: dark` if no stored preference
 - Listens for system theme changes
