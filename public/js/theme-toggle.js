@@ -21,13 +21,8 @@
     try {
       stored = localStorage.getItem(STORAGE_KEY);
     } catch (e) { /* localStorage may be unavailable */ }
-    if (stored === 'light' || stored === 'dark') {
-      return stored;
-    }
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    // Dark is the default; light only after the visitor picks it with the toggle.
+    return stored === 'light' ? 'light' : 'dark';
   }
 
   function setMetaThemeColor(theme) {
@@ -83,16 +78,6 @@
 
     var slot = document.getElementById('theme-toggle-slot');
     (slot || document.body).appendChild(button);
-  }
-
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-      var stored = null;
-      try { stored = localStorage.getItem(STORAGE_KEY); } catch (err) { /* ignore */ }
-      if (!stored) {
-        applyTheme(e.matches ? 'dark' : 'light');
-      }
-    });
   }
 
   if (document.readyState === 'loading') {

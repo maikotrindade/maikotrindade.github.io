@@ -30,7 +30,7 @@ Canon direction, chosen by the user on 2026-11-05: a modern, clean, professional
 | `--border-strong` | `#d4d4d4` | `#363636` |
 | `--accent` | `#0062d1` | `#52a8ff` |
 
-Light/dark follows the visitor's OS, with the manual toggle in the header (persisted in localStorage).
+Dark is the default for every visitor. The header toggle switches to light, and that choice persists in localStorage.
 
 ## Layout
 
