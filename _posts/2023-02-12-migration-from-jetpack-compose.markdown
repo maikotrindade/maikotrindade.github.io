@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /2023/10/05/benefits-of-compose-part-1.html
+  - /2023/11/15/benefits-of-compose-part-2.html
 published: true
 title: Migration from XML-based UI to Jetpack Compose
 layout: post

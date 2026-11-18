@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2023/03/22/comparing-jetpack-compose-reactive-js.html
 layout: post
 title: "Jetpack Compose and React Native: More Similar Than You Think"
 seo_title: "Jetpack Compose vs React Native: Surprising Similarities"

@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2024/10/20/gemini-ai-in-android-studio.html
 layout: post
 title: "Exploring Android Studio's Gemini Journeys: AI-Powered Testing Revolution"
 seo_title: "Gemini Journeys: AI-Powered Testing in Android Studio"
