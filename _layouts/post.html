@@ -9,6 +9,11 @@ layout: default
             <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: "%B %-d, %Y" }}
             </time>
+            {% if page.last_modified_at %}
+            <time class="post-date" datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">
+                Updated {{ page.last_modified_at | date: "%B %-d, %Y" }}
+            </time>
+            {% endif %}
         </div>
     </header>
     <div class="post-content" itemprop="articleBody">
