@@ -3,56 +3,109 @@ redirect_from:
   - /2023/10/05/benefits-of-compose-part-1.html
   - /2023/11/15/benefits-of-compose-part-2.html
 published: true
-title: Migration from XML-based UI to Jetpack Compose
+title: "Migrating from XML Views to Jetpack Compose: A Practical Guide"
+seo_title: "Migrating from XML Views to Jetpack Compose"
 layout: post
+last_modified_at: 2026-11-17
+tags: [JetpackCompose, Android, Migration, Views, Interoperability, Kotlin]
+description: "How to migrate an Android app from XML views to Jetpack Compose step by step: ComposeView, AndroidView, theming, navigation, testing and common pitfalls."
 ---
 
-Jetpack Compose is a modern UI toolkit by Google that simplifies and accelerates Android app development. With its declarative approach, Jetpack Compose allows developers to build beautiful and responsive user interfaces with less code. For developers who have been working with XML-based UI in Android, migrating to Jetpack Compose might seem like a daunting task. However, with some understanding of the process and best practices, the migration can be smooth and rewarding. In this blog post, we will explore the process of migrating existing XML-based UI code to Jetpack Compose, along with some best practices and common challenges.
+You don't migrate an Android app from XML views to Jetpack Compose in one go. You do it screen by screen, sometimes component by component, while the app keeps shipping. Compose was designed for this: a Compose UI can live inside a View layout, and a View can live inside a Compose UI. This guide covers why teams migrate, the order that works, the interop APIs, and the problems you'll run into on the way.
 
-## Understanding the Basics
+I've led migrations from XML to Compose on production apps, and the lessons below come from that work. This post also replaces two earlier posts on the benefits of Compose, which now redirect here.
 
-Before diving into the migration process, it's important to understand the basics of Jetpack Compose. Jetpack Compose uses a completely different approach to building UI compared to XML-based UI. Instead of defining UI elements in XML files, Jetpack Compose uses composable functions to create the user interface. Composable functions are lightweight and modular, allowing for easier composition and reuse. With Jetpack Compose, UI elements are defined using simple Kotlin functions that return UI components, making the code more concise and readable.
+## Why migrate
 
-## Step-by-Step Migration Process
+The practical benefits, beyond "it's the new thing":
 
-1.  **Identify the Scope of Migration**: Start by determining the scope of the migration. Analyze your XML-based UI code and identify the screens or components that you want to migrate to Jetpack Compose. It's a good idea to start with smaller, less complex screens for the initial migration.
-2.  **Create a Composable Function**: For each screen or component you want to migrate, start by creating a new composable function in your Jetpack Compose code. This function will replace the XML file and will be responsible for defining the UI elements and layout.
-3.  **Translate XML Elements to Compose**: Analyze the XML code and translate each XML element and its attributes to the equivalent Jetpack Compose code. For example, if you have a TextView in XML, you would replace it with a Text composable function in Jetpack Compose.
-4.  **Refactor Layouts**: XML-based layouts often use LinearLayout, RelativeLayout, or ConstraintLayout for positioning UI elements. In Jetpack Compose, you can use the powerful layout composable functions like Column, Row, and Box to achieve the desired layout. Refactor your layout code accordingly.
-5.  **Handle Styling**: XML-based UI often relies on styles and themes for consistent styling. In Jetpack Compose, you can use the Material Design Components library to apply styles and themes. Refactor your styling code to use the appropriate Compose functions and APIs.
-6.  **Migrate Business Logic**: Along with the UI code, you'll also need to migrate any associated business logic. This could include event handling, data binding, or any other logic related to the UI. Update your code to use the Jetpack Compose equivalents, such as using onClick instead of onClickListener for handling click events.
-7.  **Gradual Migration**: Consider adopting a gradual migration approach. Instead of migrating all screens at once, you can start by migrating individual screens or components and gradually expand the migration. This allows you to validate the changes, adapt to the new workflow, and measure the impact before fully migrating your entire application.
+- **Less code for the same UI.** No XML layouts, no `findViewById` or view binding, no adapters and view holders for lists. A `LazyColumn` with an item composable replaces a `RecyclerView`, an adapter, a view holder and an item layout.
+- **UI as a function of state.** You describe what the screen looks like for a given state, and Compose updates it when the state changes. A whole class of bugs where a view wasn't updated goes away.
+- **Reuse through functions.** A component is just a function with parameters, so composing and reusing UI is much easier than with custom views or `<include>` layouts.
+- **Faster iteration.** Previews and Live Edit in Android Studio show changes without a full rebuild and redeploy.
+- **Where Android is going.** New Material 3 components, Wear OS and TV libraries are built for Compose first.
 
-## Best Practices
+None of these justify a big-bang rewrite. They justify building new UI in Compose and moving old screens over when you touch them anyway.
 
-Here are some best practices to keep in mind during the migration process:
+## The order that works
 
-*   **Start with Small Screens** - Begin the migration process with smaller, less complex screens or components. This will help you learn and understand the Compose syntax and concepts before moving on to more complex parts of your application.
-*   **Refactor Incrementally** - Instead of rewriting your entire XML-based UI codebase, refactor and migrate sections incrementally. This ensures that your app remains functional during the migration and reduces the chances of introducing bugs.
-*   **Leverage Compatibility Libraries** - Jetpack Compose provides compatibility libraries that allow you to use Compose alongside your existing XML-based UI code. You can gradually start using Compose in existing activities or fragments before fully migrating them.
-*   **Validate and Test** - Thoroughly test and validate your migrated screens or components to ensure they are visually and functionally equivalent to the XML-based UI. Writing unit tests and UI tests for your Compose code is crucial to catch any potential issues.
+1. **Set up the foundation.** Add Compose to the build, then create a Compose theme (`MaterialTheme` with your colours, typography and shapes) that matches your existing XML theme. Do this first, so every Compose piece looks right from day one.
+2. **Build new features in Compose.** Every new screen is Compose from the start. This stops the amount of XML from growing, and the team learns on fresh code.
+3. **Build shared components.** Buttons, text fields, cards and empty states your designers use everywhere. Once these exist in Compose, migrating a screen is mostly assembly.
+4. **Migrate simple, low-risk screens.** Settings, about pages, static content. They build confidence without risking core flows.
+5. **Migrate complex screens when you're changing them anyway.** If a feature is getting a redesign, that's the time to move it. Rewriting a stable, complex screen just to change its technology is usually poor value.
+6. **Move navigation last.** Switching to Navigation Compose is easiest once most screens are composables.
 
-## Common Challenges
+## Interoperability: mixing Views and Compose
 
-Migrating from XML-based UI to Jetpack Compose can come with its fair share of challenges. Here are a few common challenges you might encounter:
+### Compose inside a View layout
 
-*   **Learning Curve** - Jetpack Compose introduces a new syntax and concept. It takes time to get familiar with the Compose way of building UI, especially if you are coming from an XML-based UI background.
-*   **Interoperability with Existing Code** - Integrating Jetpack Compose with existing XML-based UI code can be challenging. You might need to find workarounds or use compatibility libraries to bridge the gap between the two approaches.
-*   **Integrating with 3rd Party Libraries** - Some 3rd party libraries might not have built-in support for Jetpack Compose. You might need to find alternative libraries or write custom wrappers to integrate them seamlessly.
-*   **Limited Documentation and Resources** - Since Jetpack Compose is still relatively new, you might find limited documentation and resources compared to XML-based UI. However, the Jetpack Compose documentation and community are continuously growing.
+Use `ComposeView`, in XML or in code. Here's a Fragment that renders Compose:
 
-### Additional Information
+```kotlin
+class ProfileFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View = ComposeView(requireContext()).apply {
+        setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+        setContent {
+            AppTheme {
+                ProfileScreen()
+            }
+        }
+    }
+}
+```
 
-[Jetpack Compose official documentation]
+The **composition strategy** matters inside Fragments. The default disposes the composition when the view is detached from the window, but a Fragment's view lifecycle is different from its view's attachment. `DisposeOnViewTreeLifecycleDestroyed` ties the composition to the Fragment's view lifecycle, which avoids leaks and lost state.
 
-[Migrating an app to use Jetpack Compose]
+You can also drop a `ComposeView` into an existing XML layout to migrate one part of a screen, like a header or a single card.
 
-[Material Design Components for Jetpack Compose]
+### A View inside Compose
 
-[Jetpack Compose Samples GitHub repository]
+Some Views don't have a Compose equivalent yet, or you rely on a third-party View (a map, an ad, a video player). Wrap them with `AndroidView`:
 
+```kotlin
+@Composable
+fun LegacyChart(points: List<Float>, modifier: Modifier = Modifier) {
+    AndroidView(
+        modifier = modifier,
+        factory = { context -> LineChartView(context) },
+        update = { chart -> chart.setPoints(points) }
+    )
+}
+```
 
-[Jetpack Compose official documentation]: https://developer.android.com/jetpack/compose
-[Migrating an app to use Jetpack Compose]: https://developer.android.com/jetpack/compose/migration
-[Material Design Components for Jetpack Compose]: https://material.io/develop/android/docs/getting-started
-[Jetpack Compose Samples GitHub repository]: https://github.com/android/compose-samples
+`factory` runs once to create the View, and `update` runs whenever the state it reads changes. Keep the View's state flowing from Compose into the View through `update`, not the other way round. If you already have an XML layout, `AndroidViewBinding` lets you inflate it with view binding inside Compose.
+
+## Things that will bite you
+
+### Two themes during the transition
+
+Until the migration is done, the XML theme and the Compose theme both exist and have to match. Define colours and dimensions in one place and reference them from both, and review new Compose screens next to old XML ones. Small differences in text styles are the most common thing designers notice.
+
+### State that lived in Views
+
+Views kept some state themselves: the text in an `EditText`, the scroll position of a `RecyclerView`, which tab was selected. In Compose, you own that state. Hoist it to a `ViewModel` or use `rememberSaveable`, or users will lose their input on rotation. My post on <a href="https://maikotrindade.com/android/compose/development/2025/03/08/untangling-state-android-app-management.html" target="_blank" rel="noopener" title="State and side effects in Jetpack Compose">state and side effects in Compose</a> covers where state should live.
+
+### Lifecycle code in the wrong place
+
+Code in `onResume` or `onStart` that touches views needs a new home. Lifecycle-aware Flow collection (`collectAsStateWithLifecycle`) and effects like `LaunchedEffect` and `DisposableEffect` replace most of it.
+
+### Performance surprises
+
+Compose is fast, but a few habits from the View world hurt it: doing heavy work inside a composable body (it can run on every recomposition), passing unstable types like plain `List` from data classes the compiler can't prove are stable, and reading state higher up than needed so too much recomposes. Use Layout Inspector's recomposition counts to find hot spots, and test performance with release builds and Baseline Profiles. Debug builds are much slower.
+
+### Tests
+
+Espresso tests keep working for View screens, and Compose tests (`createAndroidComposeRule`) can find both composables and Views in a mixed screen. Add test tags or content descriptions while migrating. They make tests more robust, and good content descriptions make the screen <a href="https://maikotrindade.com/2024/12/03/a-guide-to-accessibiliy-in-android-apps-jetpack-compose.html" target="_blank" rel="noopener" title="Accessibility in Android apps with Jetpack Compose">accessible</a> too.
+
+## Measuring progress
+
+Track the migration so it doesn't stall halfway. Simple metrics are enough: the number of XML layout files, the number of screens fully in Compose, and APK size. Celebrate when a dependency like the RecyclerView or Fragment library can finally be removed.
+
+A migration is finished when nobody has to think about two UI systems anymore. Until then, the rule that keeps it moving is simple: anything new is Compose, and anything you touch moves to Compose if it's cheap to do.
+
+Android's <a href="https://developer.android.com/develop/ui/compose/migrate" target="_blank" rel="noopener noreferrer" title="Migrate to Jetpack Compose, Android Developers">migration guide</a> and <a href="https://developer.android.com/develop/ui/compose/migrate/interoperability-apis" target="_blank" rel="noopener noreferrer" title="Compose and Views interoperability APIs">interoperability API reference</a> cover more edge cases, like using Compose in RecyclerView items.
