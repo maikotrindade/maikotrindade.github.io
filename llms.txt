@@ -51,20 +51,12 @@ LinkedIn: https://linkedin.com/in/maikotrindade
 
 ## Blog — Blockchain & Solidity
 
+- [Solidity Fundamentals: A Practical Guide for 0.8.x](https://maikotrindade.com/blockchain/solidity/2026/11/17/solidity-fundamentals-guide.html): Solidity 0.8.x fundamentals in one guide: contract anatomy, types, data locations, mappings, events and custom errors, gas and EIP-1559 fees, calls vs transactions, global variables and inheritance.
 - [Integrate your Android app with a ERC20 smart contract](https://maikotrindade.com/2023/08/02/integrate-android-app-with-erc20-token.html): How to connect an Android app to an ERC20 token contract using Web3j.
 - [Nomad Token – Chainlink Hackathon](https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html): Building a full blockchain ecosystem for a Chainlink hackathon.
 - [Different types of Consensus mechanisms](https://maikotrindade.com/2022/03/12/consensus-types.html): Overview of blockchain consensus mechanisms including PoW, PoS, DPoS, and BFT variants.
-- [Inheritance in Solidity explained](https://maikotrindade.com/2020/09/29/inheritance-in-solidity-explained.html): How Solidity implements single and multiple inheritance, virtual functions, and the C3 linearization order.
-- [Basic of Mappings in Solidity](https://maikotrindade.com/2020/07/14/basic-of-solidity-mappings.html): How Solidity mappings work, their storage model, and common patterns for using them in smart contracts.
-- [How is the structure of a smart contract](https://maikotrindade.com/2020/05/01/structure-of-smart-contract.html): Anatomy of a Solidity smart contract — state variables, functions, events, modifiers, and constructors.
-- [EVM – Ethereum Virtual Machine](https://maikotrindade.com/2020/04/11/the-ethereum-virtual-machine.html): How the Ethereum Virtual Machine executes bytecode, manages the stack, and handles gas.
 - [How to start with the new token standard ERC777 with Solidity](https://maikotrindade.com/2019/03/29/solidity-erc777-new-token-standard.html): Introduction to the ERC777 advanced token standard and how it improves on ERC20.
 - [What is special about ERC1155?](https://maikotrindade.com/2018/11/20/what-is-special-about-ERC1155.html): Why ERC1155 is a powerful multi-token standard enabling both fungible and non-fungible tokens in one contract.
-- [Solidity – Call x Transactions and Solidity functions](https://maikotrindade.com/2018/02/20/solidity-call-vs-transaction.html): The difference between read-only calls and state-changing transactions in Solidity.
-- [Solidity – Gas, gas price, fee and gas usage](https://maikotrindade.com/2018/01/24/solidity-difference-gas-gas-price-fee.html): Explaining gas, gas price, and transaction fees in Ethereum smart contract execution.
-- [Solidity – Block and Transaction Properties](https://maikotrindade.com/2018/01/15/solidity-block-transaction-properties.html): Global variables available in Solidity for accessing block and transaction context.
-- [Solidity – Hashes and Typecasting](https://maikotrindade.com/2017/12/11/solidity-hash-type-casting.html): How hashing functions and type conversion work in Solidity.
-- [Hello Solidity, hello Ethereum](https://maikotrindade.com/2017/11/07/solidity-basics.html): A beginner's introduction to writing smart contracts with Solidity on Ethereum.
 
 ## Blog — General Development
 
