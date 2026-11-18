@@ -1,64 +1,136 @@
 ---
 published: true
-title: Build Better Apps with Kotlin Multiplatform for Android & iOS
+title: "Kotlin Multiplatform for Android and iOS: A Practical Introduction"
 seo_title: "Kotlin Multiplatform for Android & iOS Apps"
 layout: post
-description: "How Kotlin Multiplatform shares business logic between Android and iOS while keeping native UIs, compared with React Native, Flutter and Xamarin."
+last_modified_at: 2026-11-17
+tags: [KotlinMultiplatform, KMP, Kotlin, Android, iOS, ComposeMultiplatform]
+description: "Kotlin Multiplatform for Android and iOS: shared modules, expect/actual, libraries, calling Kotlin from Swift, Compose Multiplatform and when to choose it."
 ---
 
+Kotlin Multiplatform (KMP) lets you write code once in Kotlin and use it on Android, iOS, desktop, web and server. For mobile apps, the usual approach is to share the business logic (networking, data storage, validation, state) and keep each platform's UI native, though you can also share the UI with Compose Multiplatform. This guide explains how a KMP project is structured, how shared code reaches each platform, the libraries you'll use, and when KMP is a better fit than React Native or Flutter.
 
-In the ever-evolving world of mobile app development, creating seamless experiences across Android and iOS is no small feat. Traditionally, developers have had to choose between platform-specific native development, which provides the best performance and user experience but involves duplicate efforts, or cross-platform solutions like [React Native], [Flutter], or Xamarin, which promise "write once, run everywhere" with some compromises.
+I first wrote about KMP in 2024, mostly listing its benefits. Since then it has matured a lot, so I rewrote the post to show how it actually works.
 
-[Kotlin Multiplatform] (KMP) takes a unique approach by enabling code sharing while retaining native capabilities, making it a compelling choice for modern developers. Let’s dive into the benefits of KMP for [Android] and [iOS] development, compare it with other alternatives, and explore why KMP might be the right fit for your next project.
+## Where KMP stands
 
-## What is Kotlin Multiplatform?
-Kotlin Multiplatform (KMP) is a feature of Kotlin, a programming language developed by JetBrains and widely adopted for Android development. Unlike other cross-platform tools that require you to build the entire application using their framework, KMP focuses on sharing business logic, network code, and data layers while allowing you to write platform-specific UI code. This balance provides a unique blend of code reusability and platform fidelity.
+- KMP has been **stable** since Kotlin 1.9.20 in late 2023.
+- Google **officially supports** KMP for sharing business logic between Android and iOS, and several Jetpack libraries now publish multiplatform versions, including Room, DataStore, ViewModel and Lifecycle.
+- **Compose Multiplatform** for iOS reached stable in 2025, so sharing UI is now a supported option too.
 
-## Key Benefits of KMP
-1. Code Reuse with Platform Flexibility
-KMP allows you to write common business logic once and share it across platforms, reducing duplication and development time. At the same time, you can implement platform-specific UI and interactions, ensuring that your app feels native on both Android and iOS.
+## How a project is structured
 
-2. Native Performance
-Unlike JavaScript-based frameworks, KMP compiles shared code to native binaries using Kotlin/Native for iOS and the JVM for Android. This results in high-performance apps that leverage each platform's full capabilities.
+A typical mobile KMP project has three parts:
 
-3. Leverage Existing Ecosystems
-KMP integrates seamlessly with native development tools:
+```
+my-app/
+├── shared/                 # Kotlin Multiplatform module
+│   └── src/
+│       ├── commonMain/     # code for all platforms
+│       ├── androidMain/    # Android-specific implementations
+│       └── iosMain/        # iOS-specific implementations
+├── androidApp/             # regular Android app, depends on :shared
+└── iosApp/                 # Xcode project, uses the shared framework
+```
 
-For Android: KMP works directly with Android Studio, Gradle, and Kotlin extensions.
-For iOS: You can use Xcode and Swift alongside KMP-generated binaries.
-4. Interoperability
-KMP provides robust interoperability with both Java on Android and Swift/Objective-C on iOS, enabling you to integrate shared and native code effortlessly.
+The Kotlin compiler builds `shared` into a normal Android library for the Android app (running on the JVM/ART) and into a native **framework** for iOS through Kotlin/Native. Your iOS code imports that framework like any other Swift dependency. There's no JavaScript bridge and no runtime interpreter: on iOS, shared Kotlin code is compiled to native machine code.
 
-5. Future-Proof Solution
-As Kotlin is officially supported by Google and widely adopted for Android, KMP aligns with the long-term direction of modern Android development. Its active community and JetBrains’ backing ensure continued innovation.
+Most of your code goes in `commonMain`, which can only use multiplatform libraries and the Kotlin standard library. Platform folders exist for the parts that genuinely differ.
 
-## Why KMP is Better for Modern Teams
+## expect and actual
 
-1. Focus on Native-Like User Experiences
-Unlike Flutter and React Native, which use custom rendering engines, KMP encourages developers to craft native UIs for each platform. This ensures the app feels truly native, aligning with platform-specific design guidelines.
+When common code needs something only the platform provides, declare it with `expect` in `commonMain` and implement it with `actual` in each platform folder:
 
-2. Incremental Adoption
-You don’t need to rewrite your app to use KMP. It’s easy to adopt incrementally, sharing only selected modules like data access or networking while leaving existing code intact.
+```kotlin
+// commonMain
+expect fun platformName(): String
 
-3. Shared Code Without Compromising Control
-KMP provides the best of both worlds: code reuse where it matters (business logic) and full control over platform-specific implementations. This is ideal for teams that prioritize user experience.
+class Greeting {
+    fun greet(): String = "Hello from ${platformName()}"
+}
+```
 
-4. Fewer External Dependencies
-KMP uses Kotlin, which is already a familiar and powerful language for Android developers. There's no need to learn a new framework or deal with third-party dependencies for basic functionality.
+```kotlin
+// androidMain
+actual fun platformName(): String = "Android ${android.os.Build.VERSION.SDK_INT}"
+```
 
-## When to Choose KMP
-KMP is ideal if:
+```kotlin
+// iosMain
+import platform.UIKit.UIDevice
 
-- You already have an Android development team familiar with Kotlin.
-- You need a shared codebase for business logic but want platform-specific UIs.
-- Performance is critical, and you can't compromise with JavaScript-based solutions.
-- You're migrating an existing codebase and prefer incremental adoption.
+actual fun platformName(): String =
+    UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
+```
 
-## Conclusion
-Kotlin Multiplatform offers a pragmatic approach to cross-platform development, empowering developers to share code where it matters while crafting tailored, high-performance native experiences. Its seamless integration with native ecosystems, native performance, and incremental adoption make it a future-ready choice for teams looking to optimize their development processes. If you're building a new app or looking to reduce technical debt in an existing one, Kotlin Multiplatform might just be the game-changer you need.
+In `iosMain`, you can call Apple's frameworks (UIKit, Foundation and others) directly from Kotlin. In practice, I'd keep `expect`/`actual` for small, low-level pieces. For bigger platform differences, define an interface in common code and pass in a platform implementation, which is easier to test and to fake.
 
-[Kotlin Multiplatform]: https://kotlinlang.org/docs/multiplatform.html 
-[Android]: https://www.android.com/intl/en_ca/phones-tablets/ 
-[iOS]: https://www.apple.com/ca/ios
-[React Native]: https://reactnative.dev/  
-[Flutter]: https://flutter.dev/
+## Libraries you'll actually use
+
+You can't use Android-only or JVM-only libraries (Retrofit, Gson, OkHttp) in `commonMain`. The multiplatform equivalents:
+
+| Need | Library |
+|---|---|
+| HTTP client | Ktor client |
+| JSON | kotlinx.serialization |
+| Async | kotlinx.coroutines and Flow |
+| Database | Room (multiplatform) or SQLDelight |
+| Key-value storage | DataStore |
+| Dates and times | kotlinx-datetime |
+| Dependency injection | Koin, or manual DI |
+| Shared ViewModels | androidx.lifecycle ViewModel |
+
+A shared repository then looks like ordinary Kotlin:
+
+```kotlin
+@Serializable
+data class Article(val id: String, val title: String)
+
+class ArticleRepository(private val client: HttpClient) {
+    suspend fun latest(): List<Article> =
+        client.get("https://api.example.com/articles").body()
+}
+```
+
+## Calling shared code from Swift
+
+From Swift, the shared module looks like an Objective-C framework. Classes, functions and data classes work as you'd expect. A few things need attention:
+
+- **Suspend functions** are exposed to Swift as `async` functions (and as completion handlers), so `try await repository.latest()` works.
+- **Flows** don't map to anything in Swift out of the box. Most teams use SKIE or KMP-NativeCoroutines, which turn them into Swift `AsyncSequence`s.
+- **Sealed classes, generics and default arguments** lose some of their expressiveness on the way through Objective-C. SKIE fixes several of these. JetBrains is also working on direct Swift export, which will remove the Objective-C layer.
+
+That interop layer is where iOS developers on the team will form their opinion of KMP, so it's worth making the shared API pleasant to use from Swift.
+
+## Sharing UI with Compose Multiplatform
+
+With **Compose Multiplatform**, the same Compose code you write for Android can render on iOS, desktop and web. If your team already writes Jetpack Compose, the learning curve is small.
+
+You don't have to choose all or nothing. A common path is to share logic first, keep native UIs, and then share individual screens where the design is the same on both platforms. Compose screens can be embedded in a SwiftUI app and SwiftUI views in a Compose screen.
+
+## KMP compared with React Native and Flutter
+
+I work with both Kotlin and React Native, and they solve different problems:
+
+| | KMP | React Native | Flutter |
+|---|---|---|---|
+| Language | Kotlin | TypeScript/JavaScript | Dart |
+| What's shared | Logic by default, UI optional | Logic and UI | Logic and UI |
+| UI | Native, or Compose Multiplatform | Native components driven from JS | Its own rendering engine |
+| Adopting in an existing native app | Module by module | Possible but more work | Possible but more work |
+| Best fit | Teams with Android/Kotlin skills, apps with existing native code | Teams with web/React skills | Teams starting fresh that want one UI everywhere |
+
+KMP's biggest practical advantage is **incremental adoption**. You can add one shared module (say, your API client and models) to an existing Android and iOS app without rewriting anything else. That's much harder to do with React Native or Flutter, which want to own the screen.
+
+## When to choose KMP
+
+KMP is a good choice when:
+
+- your team already knows Kotlin, especially Android developers;
+- you have existing native Android and iOS apps and want to stop writing the same logic twice;
+- you want native UIs, or want to decide screen by screen whether to share UI;
+- you need direct access to platform APIs without writing bridges.
+
+It's a weaker fit when your team is mostly web developers (React Native will feel more natural), or when your iOS team doesn't want to work with Kotlin at all. KMP works best when both platforms' developers treat the shared module as their code.
+
+The official <a href="https://kotlinlang.org/docs/multiplatform/get-started.html" target="_blank" rel="noopener noreferrer" title="Get started with Kotlin Multiplatform">Kotlin Multiplatform getting started guide</a> sets up a project in a few minutes. If you're weighing KMP against React Native, my post on <a href="https://maikotrindade.com/android/react-native/2026/04/25/jetpack-compose-react-native-similarities.html" target="_blank" rel="noopener" title="Jetpack Compose and React Native similarities">Jetpack Compose and React Native similarities</a> compares the two UI models.

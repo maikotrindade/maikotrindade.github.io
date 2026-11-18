@@ -6,11 +6,31 @@ published: true
 categories: [AI, Kotlin, Android, Development, Agents]
 tags: [Koog, Kotlin, AI, Android, Agentic, Testing, Compose]
 description: "How to build an autonomous Android testing agent with Koog and Kotlin, replacing repetitive manual test scripts with LLM-driven end-to-end tests."
+last_modified_at: 2026-11-17
+redirect_from:
+  - /2025/06/18/koog-ai-framework-agents.html
 ---
 
 Testing Android apps is often repetitive, time-consuming, and hard to scale. Recently, I started experimenting with **agentic AI** to automate mobile testing—combining Kotlin, Koog, and LLMs to build a smart tester that can execute real end-to-end scenarios.  
 
 The result is my new project: **[Koog - Agentic Mobile Tester](https://github.com/maikotrindade/mobile-tester-agent)**.  
+
+---
+
+## What is Koog?
+
+<a href="https://github.com/JetBrains/koog" target="_blank" rel="noopener noreferrer" title="Koog, JetBrains' agent framework for Kotlin">Koog</a> is JetBrains' open-source framework for building AI agents in Kotlin. You define an agent with a Kotlin DSL, give it **tools** (ordinary Kotlin functions the LLM is allowed to call), and Koog runs the loop: send the goal to the model, execute the tool calls it asks for, feed the results back, and repeat until the task is done.
+
+<img src="https://maikotrindade.com/public/img/koog-ai-agent.png" width="350" height="350" alt="Koog AI agent framework illustration"/>
+
+The features that mattered most for this project:
+
+- **Tools as Kotlin functions.** My ADB actions (`tap`, `typeText`, `assertTextVisible`) became tools with almost no glue code.
+- **Several LLM providers** behind one API, including OpenAI, Anthropic, Google, OpenRouter and local models through Ollama, so I could switch models per test run.
+- **History compression** to keep long sessions within the model's context window, which matters when every step adds a UI hierarchy dump to the conversation.
+- **Tracing** of LLM calls and tool executions. When an agent does something strange, this is how you find out why.
+
+I started with Koog 0.2.1, with no previous experience writing AI code, and it was the first agent framework that felt like normal Kotlin to me. That's a big part of why this tester exists.
 
 ---
 
@@ -20,7 +40,7 @@ As an Android developer, I’ve used Espresso, UIAutomator, and other frameworks
 ---
 
 ## How It Works
-The project is powered by **Koog.ai** and **Kotlin**, using an **LLM as the reasoning engine** (options include Gemini, Llama, GPT, or Gwen). Here’s the flow:
+The project is powered by **Koog.ai** and **Kotlin**, using an **LLM as the reasoning engine** (options include Gemini, Llama, GPT or Qwen). Here’s the flow:
 
 
 ### [Ktor API & Koog Agent (Backend)](https://github.com/maikotrindade/mobile-tester-agent)
@@ -98,5 +118,7 @@ This mix of **Kotlin, LLMs, and Android dev tools** opens a new way of thinking 
 - 🔗 [LinkedIn post](https://www.linkedin.com/posts/maikotrindade_ai-aiagents-android-activity-7362894658969985025-02Jw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAUawAwBJqLuU627P_RUiatzkteEsE66KbY) 
 
 ---
+
+If you're new to agents, my post on <a href="https://maikotrindade.com/ai/agents/automation/agentic%20systems/llm/2025/10/02/understanding-ai-agents-concepts-architecture-tools.html" target="_blank" rel="noopener" title="Understanding AI agents: concepts, architecture and tools">AI agent concepts, architecture and tools</a> explains the building blocks used here.
 
 This was a fun experiment mixing **Kotlin + AI agents + Android testing**. If you’re curious about agentic AI, Koog, or just want to rethink mobile testing, I’d love feedback, feel free to DM on LinkedIn! 🚀

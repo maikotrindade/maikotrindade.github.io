@@ -1,97 +1,200 @@
 ---
 published: true
-title: Introduction to Android WorkManager
+title: "Android WorkManager: A Practical Guide to Background Work"
 layout: post
+last_modified_at: 2026-11-17
+tags: [Android, WorkManager, Kotlin, Coroutines, BackgroundWork, Jetpack]
+description: "Android WorkManager in Kotlin: CoroutineWorker, constraints, unique and periodic work, chaining, expedited jobs, observing progress and testing."
 ---
 
-## Introduction
+WorkManager is the Jetpack library for background work that must finish even if the user leaves the app or the device restarts: uploading a photo, syncing data, sending logs. You describe the work and the conditions it needs (network, charging, enough storage), and WorkManager decides when to run it, retries it if it fails, and survives process death and reboots. This guide covers the APIs you'll use in a modern Kotlin app.
 
-Every Android app has a main thread which is in charge of handling UI (including measuring and drawing views), coordinating user interactions, and receiving lifecycle events. If there is too much work happening on this thread, the app appears to hang or slow down, leading to an undesirable user experience. Any long-running computations and operations such as decoding a bitmap, accessing the disk, or performing network requests should be done on a separate background thread. 
+I first wrote about WorkManager in 2019, when version 2.0 was new and examples were in Groovy with JCenter. I've rewritten the post for current WorkManager with coroutines.
 
-Applications may also require some tasks to run even when the user is not actively using the app such as syncing periodically with a backend server or fetching new content within an app on a periodic basis. Applications may also require services to run immediately to completion even after the user has completed interacting with the app. Google created a guide called [Guide to background processing] which determines which solution best meets your needs for these use cases.
+## When to use WorkManager
 
-<img src="https://maikotrindade.com/public/img/background_diagram.png" width="380" height="270" alt="Background Diagram on Android"/>
+Android has several ways to do work off the main thread, and picking the wrong one causes most background bugs:
 
-_Diagram from [Modern background execution in Android]_
+| Situation | Use |
+|---|---|
+| Work tied to a screen (load data while it's visible) | Coroutines in `viewModelScope` |
+| Work that must complete even if the app closes, and can wait for the right conditions | **WorkManager** |
+| Work the user started and is watching right now (a long download, a workout) | A foreground service, or WorkManager long-running work |
+| Something at an exact time (an alarm clock, a calendar reminder) | `AlarmManager` exact alarms |
 
-## WorkManager
-[Title](https://maikotrindade.github.io/2022/02/15/improving-accessibility-jetpack-compose-app.html)
-[WorkManager] is part of [Android Jetpack] and an Architecture Component for background work that needs a combination of opportunistic and guaranteed execution. Opportunistic execution means that WorkManager will do your background work as soon as it can. Guaranteed execution means that WorkManager will take care of the logic to start your work under a variety of situations, even if you navigate away from your app.
+WorkManager is about **guaranteed**, **deferrable** work. It's not for things that must happen at a precise second, and it's not a replacement for coroutines inside a screen.
 
-WorkManager is a simple, but incredibly flexible library that has many additional benefits. These include:
+## Setup
 
-1. Support for both asynchronous one-off and periodic tasks
-2. Support for constraints such as network conditions, storage space, and charging status
-3. Chaining of complex work requests, including running work in parallel
-4. Output from one work request used as input for the next
-5. Handles API level compatibility back to API level 14(see note)
-6. Works with or without Google Play services
-7. Follows system health best practices
-8. LiveData support to easily display work request state in UI
+Add the KTX artifact, which includes coroutine support:
 
----
+```kotlin
+// build.gradle.kts (app module)
+dependencies {
+    implementation("androidx.work:work-runtime-ktx:<latest-version>")
+    androidTestImplementation("androidx.work:work-testing:<latest-version>")
+}
+```
 
-## Get started 
+Check the <a href="https://developer.android.com/jetpack/androidx/releases/work" target="_blank" rel="noopener noreferrer" title="WorkManager release notes">release notes</a> for the current version. WorkManager initializes itself on app start, so for most apps there's nothing else to configure.
 
-Add the WorkManager dependency in Java or Kotlin to your Android project by openning the `build.gradle` file for your project and add the google() repository as shown below:
+## Writing a worker
 
->	allprojects {
-	    repositories {
-	        google()
-	        jcenter()
-	    }
->	}
+Extend **`CoroutineWorker`** and put the work in `doWork()`, which is a suspend function. It runs on `Dispatchers.Default` by default, and you can call other suspend functions directly:
 
-Add the dependencies for the artifacts you need in the build.gradle file for your app or module. Currently you are able to add AndroidX dependencies or legacy Pre-AndroidX dependencies, so please choose the dependence what fit your project. Remember you can also add the `$work_version` into your `gradle.build` (project scope).
+```kotlin
+class UploadPhotoWorker(
+    context: Context,
+    params: WorkerParameters
+) : CoroutineWorker(context, params) {
 
->	dependencies {
->		def work_version = "2.0.1"
->	
->	 	// (Java only)
->		implementation "androidx.work:work-runtime:$work_version"
->	
->		// Kotlin + coroutines
->		implementation "androidx.work:work-runtime-ktx:$work_version"
->	    
->		// optional - RxJava2 support
->		implementation "androidx.work:work-rxjava2:$work_version"
->		// optional - Test helpers
->		androidTestImplementation "androidx.work:work-testing:$work_version"
->	}
+    override suspend fun doWork(): Result {
+        val uri = inputData.getString(KEY_URI) ?: return Result.failure()
+        return try {
+            val url = PhotoApi.upload(Uri.parse(uri))
+            Result.success(workDataOf(KEY_URL to url))
+        } catch (e: IOException) {
+            if (runAttemptCount < 3) Result.retry() else Result.failure()
+        }
+    }
 
+    companion object {
+        const val KEY_URI = "uri"
+        const val KEY_URL = "url"
+    }
+}
+```
 
-By default, WorkManager is initialized using a ContentProvider with a default Configuration. ContentProviders are created and run before the Application object, so this allows the WorkManager singleton to be setup before your code can run in most cases. This is suitable for most developers. However, you can provide a custom Configuration by using Configuration.Provider or initialize(android.content.Context, androidx.work.Configuration).
+The return value tells WorkManager what happened:
 
-WorkManager BroadcastReceivers to monitor Constraints on devices before API 23. The BroadcastReceivers are disabled on API 23 and up. In particular, WorkManager listens to the following Intents:
+- `Result.success()` means done, optionally with output data.
+- `Result.retry()` means try again later, using the backoff policy.
+- `Result.failure()` means give up. Work chained after this one is cancelled too.
 
-	android.intent.action.ACTION_POWER_CONNECTED
-	android.intent.action.ACTION_POWER_DISCONNECTED
-	android.intent.action.BATTERY_OKAY
-	android.intent.action.BATTERY_LOW
-	android.intent.action.DEVICE_STORAGE_LOW
-	android.intent.action.DEVICE_STORAGE_OK
-	android.net.conn.CONNECTIVITY_CHANGE
+`inputData` and output data are small key-value maps, limited to 10 KB. Pass IDs or URIs, not the content itself.
 
-In addition, WorkManager listens to system time changes and reboots to properly reschedule work in certain situations. For this, it listens to the following Intents:
+## Scheduling work
 
-	android.intent.action.BOOT_COMPLETED
-	android.intent.action.TIME_SET
-	android.intent.action.TIMEZONE_CHANGED
+### One-time work with constraints
 
-WorkManager uses the following permissions:
+```kotlin
+val request = OneTimeWorkRequestBuilder<UploadPhotoWorker>()
+    .setInputData(workDataOf(UploadPhotoWorker.KEY_URI to photoUri.toString()))
+    .setConstraints(
+        Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.UNMETERED)
+            .setRequiresBatteryNotLow(true)
+            .build()
+    )
+    .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 30, TimeUnit.SECONDS)
+    .addTag("photo-upload")
+    .build()
 
-	android.permission.WAKE_LOCK to make //it can keep the device awake to complete work before API 23
-	android.permission.ACCESS_NETWORK_STATE //to listen to network changes before API 23 and monitor network Constraints
-	android.permission.RECEIVE_BOOT_COMPLETED //to listen to reboots and reschedule work properly.
+WorkManager.getInstance(context).enqueue(request)
+```
 
-Note that WorkManager may enable or disable some of its BroadcastReceivers at runtime as needed. This has the side-effect of the system sending `ACTION_PACKAGE_CHANGED` broadcasts to your app. Please be aware of this use case and architect your app appropriately.
+The upload waits until the device is on Wi-Fi with a healthy battery, then runs. If it returns `retry()`, WorkManager waits 30 seconds, then 60, then 120, and so on.
 
-## Further Details
+### Unique work
 
-Watch the full session: [WorkManager — Android Jetpack (YouTube)](https://www.youtube.com/watch?v=pe_yqM16hPQ)
+If a user taps "sync" five times, you don't want five syncs. **Unique work** gives a job a name and lets you decide what happens on conflict:
 
-[Modern background execution in Android]: https://android-developers.googleblog.com/2018/10/modern-background-execution-in-android.html
-[WorkManager]: https://developer.android.com/topic/libraries/architecture/workmanager
-[Android Jetpack]: https://developer.android.com/jetpack
-[Guide to background processing]: https://developer.android.com/guide/background/
-[LifecycleOwner]: https://developer.android.com/reference/androidx/lifecycle/LifecycleOwner.html
+```kotlin
+WorkManager.getInstance(context).enqueueUniqueWork(
+    "sync",
+    ExistingWorkPolicy.KEEP, // ignore the new request if one is pending or running
+    OneTimeWorkRequestBuilder<SyncWorker>().build()
+)
+```
+
+`REPLACE` cancels the existing work and starts the new one, and `APPEND_OR_REPLACE` queues the new work after the existing one.
+
+### Periodic work
+
+```kotlin
+val dailySync = PeriodicWorkRequestBuilder<SyncWorker>(1, TimeUnit.DAYS)
+    .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())
+    .build()
+
+WorkManager.getInstance(context).enqueueUniquePeriodicWork(
+    "daily-sync",
+    ExistingPeriodicWorkPolicy.KEEP,
+    dailySync
+)
+```
+
+The minimum interval is 15 minutes, and the exact run time is flexible: Android batches work to save battery. Always enqueue periodic work as unique work. Otherwise every app start adds another copy.
+
+### Chaining
+
+Run work in sequence, passing each worker's output to the next as input:
+
+```kotlin
+WorkManager.getInstance(context)
+    .beginWith(listOf(compressPhoto1, compressPhoto2)) // these two run in parallel
+    .then(uploadAll)
+    .then(cleanUp)
+    .enqueue()
+```
+
+If any step fails, the steps after it are cancelled.
+
+## Expedited and long-running work
+
+For short, important work the user is waiting on, like sending a message, mark the request as **expedited**:
+
+```kotlin
+val send = OneTimeWorkRequestBuilder<SendMessageWorker>()
+    .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
+    .build()
+```
+
+Expedited work starts as soon as possible, but it's subject to a system quota. The out-of-quota policy says what to do when the quota runs out. On Android 11 and lower, expedited work runs as a foreground service, so your worker should override `getForegroundInfo()` to provide the notification.
+
+For work that runs for minutes, like a large download, call `setForeground()` from inside `doWork()` so the system keeps it alive and the user sees a notification. On Android 14 and up, the foreground service type must also be declared in the manifest.
+
+## Observing progress and results
+
+Every request has an ID, and WorkManager exposes its state as a `Flow`:
+
+```kotlin
+WorkManager.getInstance(context)
+    .getWorkInfoByIdFlow(request.id)
+    .collect { info ->
+        when (info?.state) {
+            WorkInfo.State.RUNNING -> showProgress(info.progress.getInt("percent", 0))
+            WorkInfo.State.SUCCEEDED -> showDone(info.outputData.getString(UploadPhotoWorker.KEY_URL))
+            WorkInfo.State.FAILED -> showError()
+            else -> Unit
+        }
+    }
+```
+
+Inside the worker, report progress with `setProgress(workDataOf("percent" to 40))`. You can also observe all work with a tag (`getWorkInfosByTagFlow`) or a unique name (`getWorkInfosForUniqueWorkFlow`). To stop work, call `cancelWorkById`, `cancelAllWorkByTag` or `cancelUniqueWork`.
+
+## Testing workers
+
+The `work-testing` artifact lets you run a worker directly in a test, without scheduling it:
+
+```kotlin
+@Test
+fun upload_withoutUri_fails() = runTest {
+    val worker = TestListenableWorkerBuilder<UploadPhotoWorker>(
+        context = ApplicationProvider.getApplicationContext()
+    ).build()
+
+    assertEquals(ListenableWorker.Result.failure(), worker.doWork())
+}
+```
+
+For end-to-end checks of constraints and delays, `WorkManagerTestInitHelper` gives you a test driver that can mark constraints as met and skip initial delays.
+
+## Common mistakes
+
+- **Using WorkManager for exact timing.** It may run your work minutes or hours later. Use `AlarmManager` for exact times.
+- **Enqueueing periodic work on every app start** without `enqueueUniquePeriodicWork`.
+- **Passing large data in `inputData`.** Store it in a file or database and pass the ID.
+- **Ignoring `isStopped`.** The system can stop a worker when constraints are no longer met. `CoroutineWorker` cancels the coroutine, so make long loops check for cancellation (see my <a href="https://maikotrindade.com/2020/02/20/coroutines-android-simplify-code.html" target="_blank" rel="noopener" title="Kotlin coroutines on Android guide">coroutines guide</a> on cooperative cancellation).
+- **Holding references to Activities or Views in a worker.** Workers outlive your UI.
+
+Android's <a href="https://developer.android.com/develop/background-work/background-tasks/persistent" target="_blank" rel="noopener noreferrer" title="Persistent work with WorkManager, Android Developers">WorkManager guide</a> covers advanced topics like custom initialization, multi-process apps and RxJava workers.
