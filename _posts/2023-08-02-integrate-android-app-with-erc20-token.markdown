@@ -1,104 +1,147 @@
 ---
 published: true
-title: Integrate your Android app with a ERC20 smart contract
+title: "Integrate an Android App with an ERC-20 Token in Kotlin"
 layout: post
+last_modified_at: 2026-11-17
+tags: [Android, Kotlin, ERC20, Ethereum, JSONRPC, Web3, Coroutines]
+description: "Read ERC-20 token balances in an Android app with Kotlin: JSON-RPC eth_call, ABI encoding, decimals, RPC keys and why writes belong in a wallet."
 ---
 
-Ethereum is a decentralized, open-source blockchain platform that enables the creation of smart contracts and decentralized applications (dApps). ERC20 is a standard for fungible tokens on the Ethereum blockchain. In this blog post, I will guide you through the process of creating a GraphQL(it could Rest too 🤷) app that connects with Ethereum networking to communicate with ERC20 tokens.
+An Android app can read data from an ERC-20 token, like a user's balance, without any blockchain SDK: it sends a JSON-RPC `eth_call` to an Ethereum node and decodes the result. Sending tokens is a different problem, because it needs a signed transaction and a private key that your app shouldn't hold. This guide shows how to read a balance in Kotlin, how the ABI encoding works under the hood, and how to handle writes safely.
 
-**Step 1: Setting up the Development Environment**
-Before we begin, make sure you have the following tools installed:
-Node.js and npm (Node Package Manager)
-A code editor or IDE (Integrated Development Environment) such as Visual Studio Code or IntelliJ IDEA
-A web3 library for JavaScript, such as Web3.js or ethers.js
+The first version of this post, from 2023, wasn't really about Android. It described a Node.js GraphQL server and called a `web3.eth.getToken` method that doesn't exist in web3.js. I rewrote it around what an Android developer actually needs.
 
-**Step 2: Creating a GraphQL Schema**
-A GraphQL schema is a definition of the types of data that can be queried and the relationships between them. To create a GraphQL schema for our app, we will use the GraphQL schema language.
+## How an app talks to Ethereum
 
-```
-`type Query {
-  token(id: ID!): Token
+Your app never connects to "the blockchain" directly. It talks to an **Ethereum node** over **JSON-RPC**, a simple protocol where you POST a JSON request and get JSON back. Most apps use a hosted node provider such as Infura, Alchemy or QuickNode rather than running their own.
+
+For reading data, the method you need is **`eth_call`**. It runs a contract function on the node without creating a transaction, so it's free and returns immediately. (My <a href="https://maikotrindade.com/blockchain/solidity/2026/11/17/solidity-fundamentals-guide.html" target="_blank" rel="noopener" title="Solidity fundamentals guide">Solidity fundamentals guide</a> explains the difference between calls and transactions in more detail.)
+
+## Encoding the call
+
+Contracts don't receive function names. They receive **calldata**: a 4-byte **function selector** followed by the arguments, each padded to 32 bytes. The selector is the first 4 bytes of the keccak-256 hash of the function signature.
+
+For the ERC-20 functions you'll use most:
+
+| Function | Selector |
+|---|---|
+| `balanceOf(address)` | `0x70a08231` |
+| `decimals()` | `0x313ce567` |
+| `symbol()` | `0x95d89b41` |
+| `transfer(address,uint256)` | `0xa9059cbb` |
+
+So `balanceOf(0xAbC…123)` becomes `0x70a08231` followed by the address without its `0x`, left-padded with zeros to 64 hex characters. The node returns the balance as a 32-byte hex number.
+
+## Reading a balance in Kotlin
+
+Here's a small client using OkHttp and coroutines. It doesn't need any web3 library:
+
+```kotlin
+class Erc20Reader(
+    private val rpcUrl: String,
+    private val http: OkHttpClient = OkHttpClient()
+) {
+    suspend fun balanceOf(token: String, owner: String): BigInteger {
+        val data = "0x70a08231" + owner.removePrefix("0x").lowercase().padStart(64, '0')
+        return ethCall(token, data).toBigInteger()
+    }
+
+    suspend fun decimals(token: String): Int =
+        ethCall(token, "0x313ce567").toBigInteger().toInt()
+
+    private suspend fun ethCall(to: String, data: String): String = withContext(Dispatchers.IO) {
+        val payload = JSONObject()
+            .put("jsonrpc", "2.0")
+            .put("id", 1)
+            .put("method", "eth_call")
+            .put("params", JSONArray()
+                .put(JSONObject().put("to", to).put("data", data))
+                .put("latest"))
+
+        val request = Request.Builder()
+            .url(rpcUrl)
+            .post(payload.toString().toRequestBody("application/json".toMediaType()))
+            .build()
+
+        http.newCall(request).execute().use { response ->
+            if (!response.isSuccessful) throw IOException("HTTP ${response.code}")
+            val json = JSONObject(response.body?.string() ?: throw IOException("Empty body"))
+            json.optJSONObject("error")?.let { throw IOException(it.optString("message")) }
+            json.getString("result")
+        }
+    }
+
+    private fun String.toBigInteger(): BigInteger =
+        BigInteger(removePrefix("0x").ifEmpty { "0" }, 16)
 }
-
-type Token {
-  id: ID!
-  name: String!
-  symbol: String!
-  totalSupply: Int!
-  balanceOf(address: String!): Int!
-}`
 ```
 
-In this schema, we have defined a Query type that has a single field called token. The token field takes an id argument of type ID!, which means that it is a required field. The token field returns a Token type, which has several fields: `id`, `name`, `symbol`, `totalSupply`, and `balanceOf`. The `balanceOf` field takes an address argument of type `String!`, which means that it is a required field.
+A few details worth pointing out:
 
-**Step 3: Creating a GraphQL Resolver**
-A GraphQL resolver is a function that is called when a query is executed. The resolver is responsible for fetching the data for the query and returning it in the correct format. To create a GraphQL resolver for our app, we will use the graphql-tools library.
+- The network call runs on `Dispatchers.IO`, so `balanceOf` is safe to call from a `ViewModel` on the main thread.
+- JSON-RPC errors come back with HTTP 200 and an `error` object, so checking the status code isn't enough.
+- Balances can exceed `Long`, so use `BigInteger`. A token with 18 decimals and a few million units already overflows a `Long`.
 
+## Turning units into a readable amount
+
+ERC-20 balances are integers. A token with 18 decimals stores 1.5 tokens as `1500000000000000000`. Convert with `BigDecimal` before showing anything to the user, never with `Double`:
+
+```kotlin
+fun formatTokenAmount(raw: BigInteger, decimals: Int): String =
+    BigDecimal(raw)
+        .movePointLeft(decimals)
+        .setScale(minOf(decimals, 4), RoundingMode.DOWN)
+        .stripTrailingZeros()
+        .toPlainString()
 ```
-const { graphqlHTTP } = require('express-graphql');
-const { buildSchema } = require('graphql');
 
-const schema = buildSchema(`
-  type Query {
-    token(id: ID!): Token
-  }
+`formatTokenAmount(BigInteger("1500000000000000000"), 18)` returns `"1.5"`. Round **down** for balances, so you never show a user more than they can actually send. And always read `decimals()` from the contract: USDC and USDT use 6, most other tokens use 18.
 
-  type Token {
-    id: ID!
-    name: String!
-    symbol: String!
-    totalSupply: Int!
-    balanceOf(address: String!): Int!
-  }
-`);
+## Using it from a ViewModel
 
-const rootValue = {
-  token: async (parent, { id }) => {
-    const token = await getToken(id);
-    return token;
-  },
-};
+```kotlin
+class WalletViewModel(private val reader: Erc20Reader) : ViewModel() {
+    private val _balance = MutableStateFlow<String?>(null)
+    val balance: StateFlow<String?> = _balance.asStateFlow()
 
-const app = express();
-app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: rootValue,
-  graphiql: true,
-}));
-
-app.listen(4000, () => {
-  console.log('GraphQL server running on port 4000');
-});
+    fun refresh(token: String, owner: String) {
+        viewModelScope.launch {
+            _balance.value = try {
+                val raw = reader.balanceOf(token, owner)
+                formatTokenAmount(raw, reader.decimals(token))
+            } catch (e: IOException) {
+                null
+            }
+        }
+    }
+}
 ```
-In this code, we have defined a schema object that contains our GraphQL schema. We have also defined a rootValue object that contains the resolver functions for our schema. The token resolver function takes an id argument and returns a Token object.
 
-**Step 4: Connecting to Ethereum Networking**
-To connect to the Ethereum network, we will use the web3 library.
-```
-const Web3 = require('web3');
+`decimals()` never changes for a given token, so in a real app you'd cache it instead of fetching it on every refresh. For live updates, either poll on an interval while the screen is visible or subscribe to the token's `Transfer` events through a WebSocket provider.
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/YOUR_PROJECT_ID'));
-```
-In this code, we have created a new Web3 object and passed it a HttpProvider object that connects to the Ethereum mainnet through Infura/Alchemy.
+## Don't ship your RPC key
 
-**Step 5: Querying ERC20 Tokens**
-To query ERC20 tokens, we will use the web3.eth.getToken method.
-const token = await web3.eth.getToken(tokenAddress);
+Hosted node URLs usually contain an API key, like `https://mainnet.infura.io/v3/YOUR_KEY`. Anything inside an APK can be extracted, so a key in `BuildConfig` is effectively public. Someone can copy it and burn through your quota.
 
-In this code, we have called the getToken method on the web3.eth object and passed it the address of the ERC20 token we want to query.
+Options, from simplest to most robust:
 
-**Step 6: Returning the Token Data**
-Once we have queried the ERC20 token, we can return the data to the client.
-```
-return {
-  id: token.id,
-  name: token.name,
-  symbol: token.symbol,
-  totalSupply: token.totalSupply,
-  balanceOf: token.balanceOf,
-};
-```
-In this code, we have returned an object that contains the id, name, symbol, totalSupply, and balanceOf fields of the ERC20 token.
+- Restrict the key in the provider's dashboard: most providers let you allowlist contract addresses and JSON-RPC methods and set rate limits.
+- Put a small backend in front of the node that forwards only the calls your app needs.
+- Use a public RPC endpoint for low-volume reads, accepting lower reliability.
 
-**Conclusion**
-In this blog post, we have covered the basics of creating a GraphQL app that connects with Ethereum networking to communicate with ERC20 tokens. We have learned how to create a GraphQL schema, create a GraphQL resolver, connect to Ethereum networking, query ERC20 tokens, and return the token data to the client. With this knowledge, you can build your own GraphQL app that interacts with the Ethereum blockchain.
+## Writing: let a wallet sign
+
+Reading is free and needs no keys. **Transferring tokens** means sending a transaction to `transfer(address,uint256)`, which must be signed with the user's private key and pay gas.
+
+Don't generate or store users' private keys in your app unless building a wallet is your product. Key storage, backup and recovery are hard, and a bug can lose people's money for good. The usual approaches:
+
+- **Connect to the user's wallet** with WalletConnect (now Reown). Your app builds the transaction, the wallet app shows it to the user and signs it, and you get back the transaction hash.
+- **Do it on a backend**, when the app's operator is the one sending tokens, for example rewards. The backend holds its own key in a secrets manager and the app just calls an API.
+
+My <a href="https://maikotrindade.com/2023/06/28/nomad-token-chainlink-hackathon.html" target="_blank" rel="noopener" title="Nomad Token Chainlink hackathon project">Nomad Token hackathon project</a> used the second approach: the Android app called a Node.js backend that used ethers.js to talk to the contracts, and the contracts sent ERC-20 reward tokens to users' wallets.
+
+## Where to go from here
+
+Hand-encoding calls is fine for a few read-only functions and helps you understand what's going on. Once you need many contract functions, events or transaction signing, use a library: <a href="https://docs.web3j.io/" target="_blank" rel="noopener noreferrer" title="web3j documentation">web3j</a> can generate type-safe Kotlin or Java wrappers from a contract's ABI.
+
+For how ERC-20 compares with NFT standards like ERC-721 and ERC-1155, see my <a href="https://maikotrindade.com/blockchain/solidity/2026/11/17/ethereum-token-standards-erc20-erc721-erc1155.html" target="_blank" rel="noopener" title="Ethereum token standards explained">guide to Ethereum token standards</a>. The <a href="https://ethereum.org/en/developers/docs/apis/json-rpc/" target="_blank" rel="noopener noreferrer" title="Ethereum JSON-RPC API reference">JSON-RPC reference on ethereum.org</a> lists every method a node supports.
