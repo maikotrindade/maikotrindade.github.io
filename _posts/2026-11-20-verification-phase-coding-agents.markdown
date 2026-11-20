@@ -152,7 +152,7 @@ The diff is still there, but it's no longer where trust comes from. Two rules ke
 
 ## The verification phase, organized
 
-<a href="https://maikotrindade.com/public/img/verification-phase-coding-agents.png" target="_blank" rel="noopener" title="Full-size verification phase diagram"><img src="https://maikotrindade.com/public/img/verification-phase-coding-agents.png" width="720" height="501" style="max-width: 100%; height: auto;" alt="Verification phase workflow for coding agents: an agent change passes lint and types, unit and component tests, integration and contract tests, then AI-driven end-to-end tests with agent-device and Maestro. Screenshot tests and observability feed an evidence bundle that a verifier agent and a human review before merge, with findings looping back to the agent."/></a>
+<a href="https://maikotrindade.com/public/img/verification-phase-coding-agents.png" target="_blank" rel="noopener" title="Full-size verification phase diagram"><img src="https://maikotrindade.com/public/img/verification-phase-coding-agents.png" width="720" height="453" style="max-width: 100%; height: auto;" alt="Verification phase workflow for coding agents: a task with a feature list starts with a smoke test, then static analysis, the test layers, and accessibility and performance checks lead to AI-driven end-to-end tests with agent-device, which are saved as Maestro flows. Screenshot tests and observability feed an evidence bundle that a verifier agent and then a human review before merge, with findings looping back to the agent."/></a>
 
 1. **Constrain.** Lint rules, types, and architecture make whole classes of bugs impossible.
 2. **Run the fast tests.** Unit, component, integration, contract, and design system tests on every change.
