@@ -55,7 +55,7 @@ AGSL fills an important gap:
 It is especially relevant in the **Jetpack Compose era**, where expressive UI and animations are core expectations.
 
 
-<img src="https://maikotrindade.com/public/img/shaders.gif" width="340" height="290" alt="skia-shaders-example"/> 
+<video src="https://maikotrindade.com/public/img/shaders.mp4" width="340" height="290" autoplay muted loop playsinline aria-label="skia-shaders-example"></video> 
 
 Shaders example from [https://shaders.skia.org/](https://shaders.skia.org/)
 

@@ -7,7 +7,7 @@ categories: [ai-agents, testing]
 tags: [AI, agents, testing, evaluation, LLM, observability, production]
 description: "Practical guide to testing autonomous AI agents using trajectory evaluation, LLM judges, observability, and production reliability practices."
 keywords: "ai agent testing, agent evaluation, trajectory evaluation, llm evals, agent observability, production ai, llm judge, ai reliability"
-image: /public/img/android-dev.png
+image: /public/img/android-dev.jpg
 ---
 
 Testing autonomous AI agents is the part of the stack that most teams underestimate. We have spent the last two years getting comfortable with prompt evaluation, golden datasets, and the occasional LLM judge. None of that is enough once the system starts planning, calling tools, and looping over its own decisions. Below is my synthesis of the best material I have read on agent evaluation recently, plus the approach that is actually working in production for <a href="https://maikotrindade.com/capitol-trades-tracker/" target="_blank" rel="noopener" title="Capitol Trades Tracker, an agentic AI app for congressional trades">Capitol Trades Tracker</a>, the agentic AI app I run for tracking congressional stock trades.

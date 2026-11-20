@@ -93,7 +93,7 @@ At the end, a structured report is generated with actions, results, and optional
 
 No need to maintain test scripts—just provide the goal.  
 
-<img src="https://maikotrindade.com/public/img/ai-agentic-mobile-tester-koog.gif" width="390" height="240" alt="AI Agentic Mobile Tester"/>
+<video src="https://maikotrindade.com/public/img/ai-agentic-mobile-tester-koog.mp4" width="390" height="240" autoplay muted loop playsinline aria-label="AI Agentic Mobile Tester"></video>
 
 ---
 
