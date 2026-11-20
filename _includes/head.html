@@ -254,6 +254,32 @@
         }
     }
     </script>
+    {% if page.url == "/" %}
+    <!-- Organization Schema (homepage) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://maikotrindade.com/#organization",
+        "name": {{ site.title | jsonify }},
+        "url": "{{ site.url }}/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://maikotrindade.com/public/apple-touch-icon-144-precomposed.png",
+            "width": 128,
+            "height": 128
+        },
+        "description": {{ site.description | jsonify }},
+        "founder": { "@id": "https://maikotrindade.com/#person" },
+        "sameAs": [
+            "https://www.linkedin.com/in/maikotrindade",
+            "https://github.com/maikotrindade",
+            "https://twitter.com/maikotrindade",
+            "https://mastodon.social/@maikotrindade"
+        ]
+    }
+    </script>
+    {% endif %}
     {% endif %}
 
     <!-- Theme Toggle Script -->
