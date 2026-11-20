@@ -8,7 +8,7 @@ categories: [ai-agents, engineering]
 tags: [AI, agents, loop engineering, autonomous agents, LLM, context management, production]
 description: "What loop engineering means: designing the plan, act, observe loop that keeps autonomous AI agents reliable instead of just impressive in a demo."
 keywords: "loop engineering, agent loop, autonomous agents, agentic loop, context window management, termination conditions, ai agents"
-image: /public/img/android-dev.png
+image: /public/img/android-dev.jpg
 ---
 
 Most of the interesting failures in an agentic system are not in the prompt. They are in the loop. Once an agent is planning, calling tools, checking its own output, and deciding whether to go again, the thing you are actually building is a control loop with an LLM sitting inside it. **Loop engineering** is the name that has stuck for the discipline of designing that structure on purpose, and it is worth understanding as its own layer, separate from prompt design.

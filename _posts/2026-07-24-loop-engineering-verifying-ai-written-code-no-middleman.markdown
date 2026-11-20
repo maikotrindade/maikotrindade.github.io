@@ -8,7 +8,7 @@ categories: [ai-agents, engineering]
 tags: [AI, agents, loop engineering, verification, Detox, React Native, XState, autonomous agents]
 description: "How the No Middleman loop verifies AI-written React Native code with Detox, an adversarial checker, and invariants, instead of trusting the diff."
 keywords: "loop engineering, AI code verification, Detox, React Native, adversarial checker, autonomous agents, XState"
-image: /public/img/android-dev.png
+image: /public/img/android-dev.jpg
 ---
 
 GitLab's <a href="https://ir.gitlab.com/news/news-details/2026/GitLab-Research-Reveals-Organizations-Are-Generating-AI-Code-Faster-Than-They-Can-Control-It/default.aspx" target="_blank" rel="noopener noreferrer" title="GitLab 2026 AI Accountability Report">2026 AI Accountability Report</a> found that 78% of developers say they're writing and committing code faster with AI tools. It also found that overall software delivery hasn't sped up to match. The gap is explained by one number: 85% of respondents say AI has shifted the bottleneck from writing code to reviewing and validating it. Everyone got a faster typist. Almost nobody got a faster team.

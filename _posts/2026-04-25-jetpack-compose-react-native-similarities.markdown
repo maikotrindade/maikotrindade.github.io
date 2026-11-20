@@ -9,7 +9,7 @@ published: true
 categories: [android, react-native]
 tags: [jetpack-compose, react-native, kotlin, javascript, declarative-ui, cross-platform]
 description: "How Jetpack Compose concepts map directly to React Native — state, composables, navigation, and lifecycle for Android developers."
-image: /public/img/android-dev.png
+image: /public/img/android-dev.jpg
 ---
 
 Android developers already fluent in Jetpack Compose will find React Native surprisingly familiar. Both share a declarative, component-driven model built around state — and if you've internalized the Compose mental model, the leap to React Native is much smaller than it looks from the outside.

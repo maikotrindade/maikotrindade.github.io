@@ -603,7 +603,8 @@ a.post-tag:hover { color: var(--fg-strong); background-color: var(--border); tex
 }
 
 .post-content > :first-child { margin-top: 0; }
-.post-content img { display: block; height: auto; margin: 2rem auto; }
+.post-content img,
+.post-content video { display: block; max-width: 100%; height: auto; margin: 2rem auto; border-radius: var(--radius-md); }
 .post-content ul,
 .post-content ol,
 .page ul,
