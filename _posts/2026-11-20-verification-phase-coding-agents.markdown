@@ -23,6 +23,7 @@ Nobody can read the diffs of 300 people. Generation takes minutes now, so the co
 
 - **They copy what they see.** An anti-pattern in the codebase gets copied by the next agent, then copied again.
 - **They justify their mistakes.** Her team saw agents patch a bug with timers, then write comments explaining why the timers were needed. The next agent trusted the comments and added more timers.
+- **They declare victory early.** Anthropic saw this while building long-running coding agents: Claude marked features as done after unit tests and a few `curl` calls, without noticing the feature didn't work end to end.
 - **Their own tests prove little.** Tests written by the agent that wrote the code encode the same misunderstanding. As the <a href="https://aiidelist.com/blog/lauren-tan-grok-bot-pstack-workflow" target="_blank" rel="noopener noreferrer" title="Lauren Tan's Grok Bot workflow with pstack and Cursor Cloud Agents">AI IDE List write-up of her workflow</a> notes, the builder saying the tests passed adds no independent evidence.
 
 ## Constrain first, then verify
@@ -118,6 +119,16 @@ appId: com.example.shop
 
 The AI does the expensive, exploratory part once. The deterministic tool keeps the result forever. Agents also help write flows from a plain-language description, fix flows when a label changes, and read failed runs to tell a real bug from a flaky wait. Lauren's team goes further: on every release, an agent uses the app, hunts for bugs, and opens fix PRs.
 
+### The same lesson from Anthropic's long-running agents
+
+Anthropic reached the same conclusion from a different direction. In <a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer" title="Anthropic: Effective harnesses for long-running agents">Effective harnesses for long-running agents</a>, Justin Young describes agents building a full web app across many sessions. What fixed premature "done" wasn't a better prompt about quality. It was giving the agent browser automation and telling it to "do all testing as a human user would." That change dramatically improved results, because the agent found bugs that weren't visible from the code. agent-device plays the same role on mobile.
+
+Three ideas from that harness carry over directly to a React Native project:
+
+- **A feature list as the definition of done.** Every feature starts as failing, and the agent may only flip it to passing after testing it end to end. Verification becomes the gate, not a step the agent can skip.
+- **A smoke test at the start of every session.** Before touching anything, the agent launches the app and runs one basic flow. If the last session left the app broken, it gets caught before new work piles on top. A single Maestro flow is a perfect fit here.
+- **Your tools' blind spots become bug hotspots.** Claude couldn't see browser-native alert dialogs, and features that relied on them ended up buggier. On mobile, check what your tooling can see: native alerts, permission prompts, and system sheets are where agent-verified features fail quietly.
+
 ## The human in the loop
 
 Automated checks answer "does it work?" They're weak at "is it good?" That's why verification has to produce **artifacts** that both an AI and a human can review:
@@ -145,7 +156,7 @@ The diff is still there, but it's no longer where trust comes from. Two rules ke
 
 1. **Constrain.** Lint rules, types, and architecture make whole classes of bugs impossible.
 2. **Run the fast tests.** Unit, component, integration, contract, and design system tests on every change.
-3. **Verify on a real app.** The agent drives the app with agent-device, then saves the path as a Maestro flow.
+3. **Verify on a real app.** The agent starts with a smoke test, drives the change with agent-device, then saves the path as a Maestro flow.
 4. **Collect evidence.** Videos, screenshots, accessibility snapshots, logs, traces, and observability data go on the PR.
 5. **Review by AI, then by a human.** A verifier agent checks the evidence. A human judges visuals, accessibility, and performance.
 6. **Merge, or loop back.** Findings go back to the agent, and a new commit means verifying again.
@@ -159,6 +170,7 @@ For the mobile side of this, I also wrote about <a href="https://maikotrindade.c
 - Lauren Tan, <a href="https://www.youtube.com/watch?v=O_zcc6Xl12g" target="_blank" rel="noopener noreferrer" title="All Code Is Slop (Except Mine) by Lauren Tan, AI Engineer on YouTube">All Code Is Slop (Except Mine)</a>, AI Engineer Code Summit, November 2026 (video), and the <a href="https://ai.engineer/code/2026/talks/lauren-tan" target="_blank" rel="noopener noreferrer" title="AI Engineer Code 2026 talk page for Lauren Tan">talk page</a>
 - Lauren Tan (@poteto), <a href="https://x.com/poteto/status/2111133080526495985" target="_blank" rel="noopener noreferrer" title="Lauren Tan (poteto) post on X">post on X</a>
 - AI IDE List, <a href="https://aiidelist.com/blog/lauren-tan-grok-bot-pstack-workflow" target="_blank" rel="noopener noreferrer" title="Lauren Tan's Grok Bot Workflow: Chief of Staff, Cloud Agents, and pstack">Lauren Tan's Grok Bot Workflow: Chief of Staff, Cloud Agents, and pstack</a>, September 2026
+- Justin Young, Anthropic, <a href="https://www.anthropic.com/research/effective-harnesses-for-long-running-agents" target="_blank" rel="noopener noreferrer" title="Effective harnesses for long-running agents by Anthropic">Effective harnesses for long-running agents</a>, November 2025
 - Flavio Copes, <a href="https://flaviocopes.com/pstack.md" target="_blank" rel="noopener noreferrer" title="A deep dive into pstack by Flavio Copes">A deep dive into pstack</a>, August 2026
 - Callstack, <a href="https://github.com/callstack/agent-device" target="_blank" rel="noopener noreferrer" title="agent-device on GitHub">agent-device</a>
 - <a href="https://maestro.dev/" target="_blank" rel="noopener noreferrer" title="Maestro mobile UI testing">Maestro</a>, <a href="https://callstack.github.io/react-native-testing-library/" target="_blank" rel="noopener noreferrer" title="React Native Testing Library documentation">React Native Testing Library</a>, <a href="https://fast-check.dev/" target="_blank" rel="noopener noreferrer" title="fast-check property-based testing">fast-check</a>, and <a href="https://docs.pact.io/" target="_blank" rel="noopener noreferrer" title="Pact contract testing documentation">Pact</a>
