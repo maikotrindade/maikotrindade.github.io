@@ -1,0 +1,57 @@
+name: Cross-post drafts
+
+# Creates dev.to and Hashnode drafts (never published) for posts added to master.
+# Each draft's canonical URL points back to maikotrindade.com.
+on:
+  push:
+    branches: [master]
+    paths: ["_posts/**"]
+  workflow_dispatch:
+    inputs:
+      posts:
+        description: "Space-separated post paths, e.g. _posts/2026-11-17-slug.markdown"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  crosspost:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find new posts
+        id: posts
+        env:
+          MANUAL_POSTS: ${{ inputs.posts }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -n "$MANUAL_POSTS" ]; then
+            files="$MANUAL_POSTS"
+          elif [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            files=""
+          else
+            files=$(git diff --name-only --diff-filter=A "$BEFORE" "$GITHUB_SHA" -- '_posts/*.markdown' '_posts/*.md' | tr '\n' ' ')
+          fi
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "New posts: ${files:-none}"
+
+      - uses: actions/setup-python@v5
+        if: steps.posts.outputs.files != ''
+        with:
+          python-version: "3.12"
+
+      - name: Create drafts
+        if: steps.posts.outputs.files != ''
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          FILES: ${{ steps.posts.outputs.files }}
+        run: |
+          pip install --quiet pyyaml
+          python scripts/crosspost.py $FILES
