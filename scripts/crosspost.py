@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Create dev.to and Hashnode drafts for new Jekyll posts.
+"""Create dev.to drafts for new Jekyll posts.
 
 Each draft points its canonical URL back to maikotrindade.com, so the original
 keeps the ranking credit. Drafts are never published: review them by hand.
 
 Usage: crosspost.py [--dry-run] _posts/2026-01-01-slug.markdown [...]
-Env:   DEVTO_API_KEY, HASHNODE_TOKEN, HASHNODE_PUBLICATION_ID (each optional;
-       a platform without its secret is skipped).
+Env:   DEVTO_API_KEY (optional; without it, nothing is posted).
 """
 import json
 import os
@@ -77,15 +76,6 @@ def devto_tags(meta):
     return tags[:4]
 
 
-def hashnode_tags(meta):
-    tags = []
-    for tag in as_list(meta.get("tags")):
-        slug = re.sub(r"[^a-z0-9]+", "-", str(tag).lower()).strip("-")
-        if slug and slug not in [t["slug"] for t in tags]:
-            tags.append({"slug": slug, "name": str(tag)})
-    return tags[:5]
-
-
 def request(url, payload, headers):
     data = json.dumps(payload).encode()
     req = urllib.request.Request(url, data=data, method="POST", headers={
@@ -129,34 +119,12 @@ def devto_draft(meta, body, url):
     return result.get("url") or result.get("id")
 
 
-def hashnode_draft(meta, body, url):
-    draft = {
-        "publicationId": os.environ["HASHNODE_PUBLICATION_ID"],
-        "title": meta["title"],
-        "contentMarkdown": body,
-        "originalArticleURL": url,
-        "tags": hashnode_tags(meta),
-    }
-    if meta.get("description"):
-        draft["subtitle"] = meta["description"][:250]
-    if image_url(meta):
-        draft["coverImageOptions"] = {"coverImageURL": image_url(meta)}
-    query = "mutation($input: CreateDraftInput!) { createDraft(input: $input) { draft { id } } }"
-    result = request("https://gql.hashnode.com", {"query": query, "variables": {"input": draft}},
-                     {"Authorization": os.environ["HASHNODE_TOKEN"]})
-    if result.get("errors"):
-        raise RuntimeError(f"Hashnode: {result['errors']}")
-    return result["data"]["createDraft"]["draft"]["id"]
-
-
 def main(argv):
     dry_run = "--dry-run" in argv
     paths = [a for a in argv if a != "--dry-run"]
     platforms = []
     if os.environ.get("DEVTO_API_KEY"):
         platforms.append(("dev.to", devto_draft))
-    if os.environ.get("HASHNODE_TOKEN") and os.environ.get("HASHNODE_PUBLICATION_ID"):
-        platforms.append(("Hashnode", hashnode_draft))
     if not platforms and not dry_run:
         print("No API secrets set; nothing to do.")
         return 0
@@ -171,7 +139,7 @@ def main(argv):
         body = absolutize(content.strip()) + footer(url)
         if dry_run:
             print(json.dumps({"post": path, "canonical": url, "devto_tags": devto_tags(meta),
-                              "hashnode_tags": hashnode_tags(meta), "image": image_url(meta),
+                              "image": image_url(meta),
                               "body_chars": len(body)}, indent=2))
             continue
         if not wait_until_live(url):
@@ -181,7 +149,7 @@ def main(argv):
         for name, create in platforms:
             try:
                 print(f"{name} draft for {path}: {create(meta, body, url)}")
-            except Exception as err:  # one platform failing shouldn't block the other
+            except Exception as err:  # report the failure and keep going with other posts
                 print(f"FAIL {name} for {path}: {err}")
                 failed = True
     return 1 if failed else 0
