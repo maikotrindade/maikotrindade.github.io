@@ -64,13 +64,19 @@ Verification is a stack. Each layer catches different mistakes at a different co
 
 | Layer | What it catches | Typical tools |
 | --- | --- | --- |
+| Static analysis | Type errors, broken hook rules, unsafe patterns, dead code | TypeScript in strict mode, ESLint with the React Hooks and React Native plugins, Knip |
 | Unit | Logic bugs in prices, reducers, validation | Jest, fast-check for property-based tests |
 | Component | A screen that renders or reacts wrong | React Native Testing Library |
 | Integration | Bugs between screen, store, and network | Jest with the network mocked (MSW) |
 | Contract | App and API disagreeing on a payload | Pact, or a schema check in CI |
 | Design system | Off-token colors, broken shared components | Storybook stories, lint rules |
 | Screenshot | Unintended visual changes | Image diffs on a fixed simulator |
-| End-to-end | The user can't actually finish the flow | agent-device, Maestro |
+| Accessibility | Missing labels and roles, tiny touch targets | eslint-plugin-react-native-a11y, role queries in tests, agent-device snapshots |
+| Performance | Slower renders, slower startup, dropped frames | Reassure, Flashlight, React Native DevTools profiler |
+| Dependencies | Vulnerable or mismatched native packages | `npm audit`, `npx expo-doctor` |
+| End-to-end | The user can't actually finish the flow | agent-device, Maestro, Detox |
+
+Static analysis is the cheapest layer and the one agents hit most often, so make it strict and run it first. TypeScript in strict mode and ESLint catch a whole class of agent mistakes before a single test runs, and Knip flags the unused files and exports agents tend to leave behind after a refactor. Reassure (from Callstack) is worth calling out too: it measures component render times and fails the PR when an agent's change makes a screen slower, which turns "it feels faster" into a number.
 
 Two tips make the lower layers much stronger with agents. Prefer **property-based tests** for core logic, because they describe intent ("the total always equals the sum of the items") instead of mirroring the implementation. And query components by role and label in React Native Testing Library, so a missing accessibility label fails the test.
 
