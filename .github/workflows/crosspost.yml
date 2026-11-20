@@ -1,6 +1,6 @@
 name: Cross-post drafts
 
-# Creates dev.to and Hashnode drafts (never published) for posts added to master.
+# Creates dev.to drafts (never published) for posts added to master.
 # Each draft's canonical URL points back to maikotrindade.com.
 on:
   push:
@@ -49,8 +49,6 @@ jobs:
         if: steps.posts.outputs.files != ''
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
-          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
           FILES: ${{ steps.posts.outputs.files }}
         run: |
           pip install --quiet pyyaml
