@@ -105,4 +105,4 @@ All layouts include `_includes/head.html`, so SEO/meta changes go there only. `_
 
 - `14b7422d297d698bea7e90c6ea969d3e.txt` at the root is the IndexNow ownership key (Bing, Yandex, Seznam, Naver, Yep; not Google). Do not rename or delete it. GitHub Pages can't set `X-Robots-Tag`, so it has no noindex header.
 - `python3 scripts/indexnow.py` sends every URL in the live `sitemap.xml`; `python3 scripts/indexnow.py <url>...` sends only those. The full list was sent once on 2026-11-20; from now on, after a deploy goes live, send only new or changed post URLs. Never run it on a schedule.
-- `scripts/` is excluded from the Jekyll build, so these scripts are not published.
+- `scripts/` is excluded from the Jekyll build, so these scripts are not published. Test the IndexNow URL helpers with `python3 -m unittest discover scripts`.
