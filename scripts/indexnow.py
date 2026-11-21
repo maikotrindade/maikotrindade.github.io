@@ -8,11 +8,11 @@ Usage: indexnow.py              # every URL in the live sitemap.xml
        indexnow.py <url> [...]  # only these URLs
 """
 import json
-import re
 import sys
 import urllib.error
 import urllib.request
-from urllib.parse import urlparse
+
+from indexnow_urls import batches, on_host, sitemap_urls
 
 HOST = "maikotrindade.com"
 KEY = "14b7422d297d698bea7e90c6ea969d3e"
@@ -28,24 +28,18 @@ def fetch(url):
         return res.read().decode("utf-8")
 
 
-def on_host(urls):
-    # IndexNow rejects the whole batch if any URL is on another host.
-    return [u for u in dict.fromkeys(urls) if urlparse(u).scheme == "https" and urlparse(u).hostname == HOST]
-
-
 def main(args):
     if fetch(KEY_LOCATION).strip() != KEY:
         sys.exit(f"Key file at {KEY_LOCATION} does not match; deploy it first.")
 
     if args:
-        urls = on_host(args)
+        urls = on_host(args, HOST)
     else:
-        urls = on_host(re.findall(r"<loc>\s*(.*?)\s*</loc>", fetch(f"https://{HOST}/sitemap.xml")))
+        urls = on_host(sitemap_urls(fetch(f"https://{HOST}/sitemap.xml")), HOST)
     if not urls:
         sys.exit("No https URLs on this host to submit.")
 
-    for start in range(0, len(urls), BATCH):
-        batch = urls[start : start + BATCH]
+    for batch in batches(urls, BATCH):
         body = json.dumps({"host": HOST, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": batch}).encode()
         req = urllib.request.Request(
             ENDPOINT,
