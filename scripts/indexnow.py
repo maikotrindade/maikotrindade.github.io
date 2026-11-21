@@ -12,7 +12,7 @@ import sys
 import urllib.error
 import urllib.request
 
-from indexnow_urls import batches, on_host, sitemap_urls
+from indexnow_urls import batches, describe_status, on_host, sitemap_urls
 
 HOST = "maikotrindade.com"
 KEY = "14b7422d297d698bea7e90c6ea969d3e"
@@ -39,6 +39,7 @@ def main(args):
     if not urls:
         sys.exit("No https URLs on this host to submit.")
 
+    failed = False
     for batch in batches(urls, BATCH):
         body = json.dumps({"host": HOST, "key": KEY, "keyLocation": KEY_LOCATION, "urlList": batch}).encode()
         req = urllib.request.Request(
@@ -48,11 +49,13 @@ def main(args):
         )
         try:
             with urllib.request.urlopen(req, timeout=30) as res:
-                status = res.status
+                status, detail = res.status, ""
         except urllib.error.HTTPError as err:
-            # 403 right after deploying the key: IndexNow cached the failed check. Retry in a few minutes.
-            sys.exit(f"IndexNow HTTP {err.code}: {err.read().decode('utf-8', 'replace')}")
-        print(f"Submitted {len(batch)} URLs: HTTP {status}.")
+            status, detail = err.code, err.read().decode("utf-8", "replace").strip()
+        print(f"Batch of {len(batch)} URLs: {describe_status(status)}." + (f" {detail}" if detail else ""))
+        failed = failed or status not in (200, 202)
+    if failed:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

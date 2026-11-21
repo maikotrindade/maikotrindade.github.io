@@ -1,7 +1,7 @@
 """Run: python3 -m unittest discover scripts"""
 import unittest
 
-from indexnow_urls import batches, on_host, sitemap_urls
+from indexnow_urls import batches, describe_status, on_host, sitemap_urls
 
 HOST = "maikotrindade.com"
 
@@ -36,6 +36,17 @@ class BatchesTest(unittest.TestCase):
 
     def test_empty_list_has_no_batches(self):
         self.assertEqual(batches([], 10_000), [])
+
+
+class DescribeStatusTest(unittest.TestCase):
+    def test_known_codes_have_plain_words(self):
+        self.assertEqual(describe_status(200), "HTTP 200 accepted")
+        self.assertIn("key not found", describe_status(403))
+        self.assertIn("do not match this host", describe_status(422))
+        self.assertIn("too many requests", describe_status(429))
+
+    def test_unknown_code(self):
+        self.assertEqual(describe_status(500), "HTTP 500 unexpected response")
 
 
 if __name__ == "__main__":
